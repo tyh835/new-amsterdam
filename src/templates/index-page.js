@@ -170,7 +170,6 @@ export const pageQuery = graphql`
             image
             text
           }
-          heading
         }
         main {
           heading
