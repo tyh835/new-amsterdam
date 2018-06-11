@@ -1,8 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Features from '../components/Features'
-import Testimonials from '../components/Testimonials'
-import Pricing from '../components/Pricing'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Features from '../components/Features';
+import Testimonials from '../components/Testimonials';
+import styled from 'styled-components';
+
+const BannerText = styled.h2`
+  background-color: #FF6037;
+  color: white !important;
+  padding: 1rem;
+`
 
 export const IndexPageTemplate = ({
   image,
@@ -11,9 +17,7 @@ export const IndexPageTemplate = ({
   description,
   intro,
   main,
-  testimonials,
-  fullImage,
-  pricing,
+  testimonials
 }) => (
   <section className="section section--gradient">
     <div className="container">
@@ -21,21 +25,10 @@ export const IndexPageTemplate = ({
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <div className="content">
-              <div
-                className="full-width-image-container margin-top-0"
-                style={{ backgroundImage: `url(${image})` }}
-              >
-                <h2
-                  className="has-text-weight-bold is-size-1"
-                  style={{
-                    boxShadow: '0.5rem 0 0 #f40, -0.5rem 0 0 #f40',
-                    backgroundColor: '#f40',
-                    color: 'white',
-                    padding: '1rem',
-                  }}
-                >
+              <div className="full-width-image-container margin-top-0" style={{ backgroundImage: `url(${image})` }}>
+                <BannerText className="has-text-weight-bold is-size-1">
                   {title}
-                </h2>
+                </BannerText>
               </div>
               <div className="columns">
                 <div className="column is-7">
@@ -88,15 +81,6 @@ export const IndexPageTemplate = ({
                 </div>
               </div>
               <Testimonials testimonials={testimonials} />
-              <div
-                className="full-width-image-container"
-                style={{ backgroundImage: `url(${fullImage})` }}
-              />
-              <h2 className="has-text-weight-semibold is-size-2">
-                {pricing.heading}
-              </h2>
-              <p className="is-size-5">{pricing.description}</p>
-              <Pricing data={pricing.plans} />
             </div>
           </div>
         </div>
@@ -120,13 +104,7 @@ IndexPageTemplate.propTypes = {
     image2: PropTypes.object,
     image3: PropTypes.object,
   }),
-  testimonials: PropTypes.array,
-  fullImage: PropTypes.string,
-  pricing: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    plans: PropTypes.array,
-  }),
+  testimonials: PropTypes.array
 }
 
 const IndexPage = ({ data }) => {
@@ -141,8 +119,6 @@ const IndexPage = ({ data }) => {
       intro={frontmatter.intro}
       main={frontmatter.main}
       testimonials={frontmatter.testimonials}
-      fullImage={frontmatter.full_image}
-      pricing={frontmatter.pricing}
     />
   )
 }
@@ -190,17 +166,6 @@ export const pageQuery = graphql`
         testimonials {
           author
           quote
-        }
-        full_image
-        pricing {
-          heading
-          description
-          plans {
-            description
-            items
-            plan
-            price
-          }
         }
       }
     }

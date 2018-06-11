@@ -9,9 +9,6 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   const entryTestimonials = entry.getIn(['data', 'testimonials'])
   const testimonials = entryTestimonials ? entryTestimonials.toJS() : []
 
-  const entryPricingPlans = entry.getIn(['data', 'pricing', 'plans'])
-  const pricingPlans = entryPricingPlans ? entryPricingPlans.toJS() : []
-
   return (
     <IndexPageTemplate
       image={entry.getIn(['data', 'image'])}
@@ -35,13 +32,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
           alt: entry.getIn(['data', 'main', 'image3', 'alt']),
         },
       }}
-      fullImage={entry.getIn(['data', 'full_image'])}
       testimonials={testimonials}
-      pricing={{
-        heading: entry.getIn(['data', 'pricing', 'heading']),
-        description: entry.getIn(['data', 'pricing', 'description']),
-        plans: pricingPlans,
-      }}
     />
   )
 }
