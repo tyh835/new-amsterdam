@@ -11,9 +11,9 @@ const Link = styled(Base.default)`
   display: flex;
   color: #363636;
   text-decoration: none;
-  transition: ${props => props.theme.hover.opacityTransition}
+  transition: ${props => props.theme.hover.opacityTransition};
   
-  &;hover {
+  &:hover {
     opacity: ${props => props.theme.hover.opacity}
   } 
 `;

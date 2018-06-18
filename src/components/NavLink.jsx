@@ -30,7 +30,7 @@ const StyledLink = styled(Link)`
 
   &:hover {
     opacity: ${props => props.theme.hover.opacity};
-    color: ${props => props.theme.hover.color}
+    color: ${props => props.theme.hover.color};
   }
   
   &:hover, &:focus {

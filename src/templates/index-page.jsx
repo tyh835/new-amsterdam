@@ -7,6 +7,22 @@ const BannerText = styled.h2`
   font-family: ${props => props.theme.fonts.sans};
 `;
 
+const Jumbotron = styled.div`
+  width: 100vw;
+  height: 650px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin: 5em -50vw;
+  margin-top: 0;
+  background-image: url(${props => props.jumbotron});
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 export const IndexPageTemplate = ({
   image,
   title,
@@ -15,14 +31,11 @@ export const IndexPageTemplate = ({
   intro
 }) => (
   <section>
-    <div
-      className="full-width-image-container margin-top-0"
-      style={{ backgroundImage: `url(${image})` }}
-    >
+    <Jumbotron jumbotron={image}>
       <BannerText>
         {title}
       </BannerText>
-    </div>
+    </Jumbotron>
     <h3>{heading}</h3>
     <p>{description}</p>
     <Features gridItems={intro.blurbs} />
