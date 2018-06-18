@@ -15,7 +15,6 @@ const Jumbotron = styled.div`
   right: 50%;
   margin: 5em -50vw;
   margin-top: 0;
-  background-image: url(${props => props.jumbotron});
   background-size: cover;
   background-position: top;
   display: flex;
@@ -31,7 +30,7 @@ export const IndexPageTemplate = ({
   intro
 }) => (
   <section>
-    <Jumbotron jumbotron={image}>
+    <Jumbotron style={{backgroundImage: `url(${image})`}}>
       <BannerText>
         {title}
       </BannerText>
