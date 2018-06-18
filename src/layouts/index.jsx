@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { Provider } from 'rebass';
-import { injectGlobal } from 'styled-components';
 
 import NavBar from './components/NavBar.jsx';
 import Footer from './components/Footer.jsx';
