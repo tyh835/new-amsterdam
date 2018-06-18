@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Disclaimer from '../Disclaimer.jsx';
+import Disclaimer from './Disclaimer.jsx';
 
 const Footer = props => {
   return (
