@@ -3,23 +3,17 @@ import PropTypes from 'prop-types';
 import Features from '../components/Features';
 import styled from 'styled-components';
 
+import Img from 'gatsby-image';
+
 const BannerText = styled.h2`
   font-family: ${props => props.theme.fonts.sans};
 `;
 
-const Jumbotron = styled.div`
+const Jumbotron = styled.img`
   width: 100vw;
   height: 650px;
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin: 5em -50vw;
   margin-top: 0;
-  background-size: cover;
-  background-position: top;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 export const IndexPageTemplate = ({
@@ -30,9 +24,7 @@ export const IndexPageTemplate = ({
   intro
 }) => (
   <section>
-    <Jumbotron style={{ backgroundImage: `url(${image})` }}>
-      <BannerText>{title}</BannerText>
-    </Jumbotron>
+    <Img resolutions={image.url.childImageSharp.resolutions} alt={title} />
     <h3>{heading}</h3>
     <p>{description}</p>
     <Features gridItems={intro.blurbs} />
@@ -78,12 +70,26 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        image
+        image {
+          url {
+            childImageSharp {
+              resolutions(width: 1280, height: 600, quality: 100, traceSVG: { color: "PapayaWhip"}) {
+                ...GatsbyImageSharpResolutions_tracedSVG
+              }
+            }
+          }
+        }
         heading
         description
         intro {
           blurbs {
-            image
+            image {
+              childImageSharp {
+                resolutions(width: 200, height: 200, quality: 100, traceSVG: { color: "PapayaWhip"}) {
+                  ...GatsbyImageSharpResolutions_tracedSVG
+                }
+              }
+            }
             text
           }
         }
