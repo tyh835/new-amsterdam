@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Provider} from 'rebass';
-import {StyleSheetManager} from 'styled-components';
+import { Provider } from 'rebass';
+import { StyleSheetManager } from 'styled-components';
 
 import { IndexPageTemplate } from '../../templates/index-page';
 import theme from '../../layouts/theme.js';
 
 const IndexPagePreview = ({ entry, getAsset }) => {
-  const iframe = document.querySelector(".nc-previewPane-frame")
+  const iframe = document.querySelector('.nc-previewPane-frame');
   const iframeHeadElem = iframe.contentDocument.head;
 
   const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs']);

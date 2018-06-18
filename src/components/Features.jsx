@@ -5,10 +5,10 @@ const FeatureGrid = ({ gridItems }) => (
   <div>
     {gridItems.map(item => (
       <div key={item.image}>
-          <p>
-            <img alt="" src={item.image} />
-          </p>
-          <p>{item.text}</p>
+        <p>
+          <img alt="" src={item.image} />
+        </p>
+        <p>{item.text}</p>
       </div>
     ))}
   </div>

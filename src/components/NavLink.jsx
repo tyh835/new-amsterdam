@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const buzz = keyframes`
   20% {
@@ -32,10 +32,11 @@ const StyledLink = styled(Link)`
     opacity: ${props => props.theme.hover.opacity};
     color: ${props => props.theme.hover.color};
   }
-  
-  &:hover, &:focus {
+
+  &:hover,
+  &:focus {
     animation: ${buzz} 0.5s linear 1;
-  } 
+  }
 `;
 
 const NavLink = props => {

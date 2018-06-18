@@ -15,7 +15,13 @@ const TemplateWrapper = props => {
       <Helmet
         title="New Amsterdam Bakery"
         meta={[{ property: 'og:title', content: 'New Amsterdam Bakery' }]}
-        link={[{href: 'https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700|Open+Sans', rel:'stylesheet'}]}
+        link={[
+          {
+            href:
+              'https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700|Open+Sans',
+            rel: 'stylesheet'
+          }
+        ]}
       />
       <NavBar />
       {children()}

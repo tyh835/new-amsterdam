@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, {injectGlobal} from 'styled-components';
+import styled, { injectGlobal } from 'styled-components';
 
 import * as Base from 'gatsby-link';
 import { Flex } from 'rebass';
@@ -12,10 +12,10 @@ const Link = styled(Base.default)`
   color: #363636;
   text-decoration: none;
   transition: ${props => props.theme.hover.opacityTransition};
-  
+
   &:hover {
-    opacity: ${props => props.theme.hover.opacity}
-  } 
+    opacity: ${props => props.theme.hover.opacity};
+  }
 `;
 
 const Img = styled.img`
@@ -51,7 +51,7 @@ const NavBar = ({ className }) => (
       justifyContent="space-around"
       alignItems="center"
       height={7}
-      width={[null, 1/2, 1/2, 2/5]}
+      width={[null, 1 / 2, 1 / 2, 2 / 5]}
     >
       <NavLink exact to="/cakes" children="Our Cakes" />
       <NavLink exact to="/pastries" children="Bread and Pastries" />

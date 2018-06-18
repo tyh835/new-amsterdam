@@ -20,7 +20,7 @@ const Jumbotron = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
 
 export const IndexPageTemplate = ({
   image,
@@ -30,10 +30,8 @@ export const IndexPageTemplate = ({
   intro
 }) => (
   <section>
-    <Jumbotron style={{backgroundImage: `url(${image})`}}>
-      <BannerText>
-        {title}
-      </BannerText>
+    <Jumbotron style={{ backgroundImage: `url(${image})` }}>
+      <BannerText>{title}</BannerText>
     </Jumbotron>
     <h3>{heading}</h3>
     <p>{description}</p>
