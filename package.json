@@ -1,15 +1,15 @@
 {
   "name": "new-amsterdam-bakery",
+  "author": "tyh835",
   "version": "0.0.1",
   "dependencies": {
-    "bulma": "^0.7.1",
     "gatsby": "^1.9.270",
     "gatsby-link": "^1.6.44",
     "gatsby-plugin-netlify": "^1.0.21",
     "gatsby-plugin-netlify-cms": "^1.0.9",
     "gatsby-plugin-react-helmet": "^2.0.5",
-    "gatsby-plugin-sass": "^1.0.17",
     "gatsby-plugin-sharp": "^1.6.34",
+    "gatsby-plugin-styled-components": "^2.0.11",
     "gatsby-remark-images": "^1.5.50",
     "gatsby-source-filesystem": "^1.5.38",
     "gatsby-transformer-remark": "^1.7.42",
@@ -18,6 +18,8 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-helmet": "^5.2.0",
+    "react-slick": "^0.23.1",
+    "rebass": "^2.0.0-6",
     "styled-components": "^3.3.2",
     "uuid": "^3.2.1"
   },
@@ -30,14 +32,13 @@
     "clean": "rm -r public && rm -r .cache",
     "start": "gatsby develop",
     "build": "gatsby build",
-    "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "format": "prettier es5 --single-quote --write \"{gatsby-*.js,src/**/*.js,src/**/*.jsx}\"",
     "test": "jest ./tests"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
     "jest": "^22.4.3",
-    "prettier": "^1.7.4"
+    "prettier": "^1.13.5"
   }
 }
