@@ -25,3 +25,4 @@ intro:
         own beans or just bought your first french press, you’ll find a gadget
         to fall in love with in our shop.
 ---
+![jumbotron](/img/jumbotron.jpg)

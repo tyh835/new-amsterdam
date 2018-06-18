@@ -19,16 +19,15 @@ module.exports = {
         name: 'images'
       }
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          'gatsby-plugin-sharp',
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 600,
+              maxWidth: 640,
               linkImagesToOriginal: false,
               backgroundColor: 'transparent'
             }
@@ -36,6 +35,7 @@ module.exports = {
         ]
       }
     },
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
