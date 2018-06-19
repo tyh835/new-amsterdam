@@ -3,7 +3,7 @@ templateKey: 'index-page'
 path: /
 title: New Amsterdam Bakery
 image: 
-  url: /img/jumbotron.jpg
+  - url: /img/jumbotron.jpg
 heading: What we offer
 description: >
   Kaldi is the ultimate spot for coffee lovers who want to learn about their

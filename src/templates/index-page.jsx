@@ -24,7 +24,7 @@ export const IndexPageTemplate = ({
   intro
 }) => (
   <section>
-    <Img resolutions={image.url.childImageSharp.resolutions} alt={title} />
+    <Img resolutions={image[0].url.childImageSharp.resolutions} alt={title} />
     <h3>{heading}</h3>
     <p>{description}</p>
     <Features gridItems={intro.blurbs} />
