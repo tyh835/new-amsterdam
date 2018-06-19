@@ -67,7 +67,7 @@ IndexPage.propTypes = {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query indexPage($id: String!) {
+  query indexPagePreview($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
