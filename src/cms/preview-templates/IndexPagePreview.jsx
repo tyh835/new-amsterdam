@@ -14,7 +14,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   const blurbs = entryBlurbs ? entryBlurbs.toJS() : [];
 
   const jumboImage = entry.getIn(['data', 'image']);
-  const image = entryBlurbs ? entryBlurbs.toJS() : [];
+  const image = jumboImage ? jumboImage.toJS() : [];
 
   return (
     <StyleSheetManager target={iframeHeadElem}>
