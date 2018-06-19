@@ -2,7 +2,7 @@
 templateKey: 'index-page'
 path: /
 title: New Amsterdam Bakery
-images: 
+image: 
   - url: /img/jumbotron.jpg
 heading: What we offer
 description: >
@@ -26,4 +26,3 @@ intro:
         own beans or just bought your first french press, you’ll find a gadget
         to fall in love with in our shop.
 ---
-![jumbotron](/img/jumbotron.jpg)
