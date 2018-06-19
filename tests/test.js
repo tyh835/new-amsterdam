@@ -1,1 +1,1 @@
-it('contains a test', () => {});
+it('There are no tests yet', () => {});

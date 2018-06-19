@@ -22,10 +22,12 @@ export const IndexPageTemplate = ({
 }) => {
   return (
     <section>
-      {preview ? (<Jumbotron src={images[0].url} alt={title} />) : (<Img resolutions={images[0].url.childImageSharp.resolutions} alt={title} />)}
+      {
+        images.map(image => preview ? (<Jumbotron src={image.url} alt={title} />) : (<Img resolutions={image.url.childImageSharp.resolutions} alt={title} />))
+      }
       <h3>{heading}</h3>
       <p>{description}</p>
-      <Features gridItems={intro.blurbs} preview />
+      <Features gridItems={intro.blurbs} preview={preview} />
     </section>
   )};
 
