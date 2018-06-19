@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Img from 'gatsby-image';
-
 const FeatureGrid = ({ gridItems }) => (
   <div>
     {gridItems.map(item => (
       <div key={item.image}>
         <p>
-          <Img resolutions={item.image.childImageSharp.resolutions} />
+          <img src={item.image.childImageSharp.resolutions.src} />
         </p>
         <p>{item.text}</p>
       </div>

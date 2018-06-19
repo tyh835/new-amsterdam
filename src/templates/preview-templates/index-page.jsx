@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Features from '../components/Features';
+import Features from './components/Features.jsx';
 import styled from 'styled-components';
-
-import Img from 'gatsby-image';
 
 const BannerText = styled.h2`
   font-family: ${props => props.theme.fonts.sans};
@@ -27,7 +25,7 @@ export const IndexPageTemplate = ({
 
   return (
     <section>
-      <Img resolutions={images[0].url.childImageSharp.resolutions} alt={title} />
+      <img src={images[0].url.childImageSharp.resolutions.src} alt={title} />
       <h3>{heading}</h3>
       <p>{description}</p>
       <Features gridItems={intro.blurbs} />

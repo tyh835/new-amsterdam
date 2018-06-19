@@ -1,6 +1,6 @@
 import CMS from 'netlify-cms';
 
-import NoPreview from './preview-templates/no-preview.jsx';
+import IndexPagePreview from './preview-templates/IndexPagePreview.jsx';
 
 CMS.registerPreviewStyle('/styles.css');
-CMS.registerPreviewTemplate('index', NoPreview);
+CMS.registerPreviewTemplate('index', IndexPagePreview);
