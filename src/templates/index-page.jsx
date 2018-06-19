@@ -1,13 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Features from './preview-components/Features';
+import Features from '../components/Features';
 import styled from 'styled-components';
 
 import Img from 'gatsby-image';
-
-const BannerText = styled.h2`
-  font-family: ${props => props.theme.fonts.sans};
-`;
 
 const Jumbotron = styled.img`
   width: 100vw;
@@ -21,14 +17,15 @@ export const IndexPageTemplate = ({
   title,
   heading,
   description,
-  intro
+  intro,
+  preview
 }) => {
   return (
     <section>
-      <Img resolutions={images[0].url.childImageSharp.resolutions} alt={title} />
+      {preview ? (<Jumbotron src={images[0].url} alt={title} />) : (<Img resolutions={images[0].url.childImageSharp.resolutions} alt={title} />)}
       <h3>{heading}</h3>
       <p>{description}</p>
-      <Features gridItems={intro.blurbs} />
+      <Features gridItems={intro.blurbs} preview />
     </section>
   )};
 
@@ -39,7 +36,8 @@ export const IndexPageTemplate = ({
     description: PropTypes.string,
     intro: PropTypes.shape({
       blurbs: PropTypes.array
-  })
+  }),
+  preview: PropTypes.boolean
 };
 
 const IndexPage = ({ data }) => {
@@ -52,6 +50,7 @@ const IndexPage = ({ data }) => {
       heading={frontmatter.heading}
       description={frontmatter.description}
       intro={frontmatter.intro}
+      preview={false}
     />
   );
 };

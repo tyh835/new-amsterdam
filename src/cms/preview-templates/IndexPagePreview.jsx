@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Provider } from 'rebass';
 import { StyleSheetManager } from 'styled-components';
 
-import { IndexPageTemplate } from '../../templates/preview-index-page.jsx';
+import { IndexPageTemplate } from '../../templates/index-page.jsx';
 import theme from '../../layouts/theme.js';
 
 const IndexPagePreview = ({ entry, getAsset }) => {
@@ -27,6 +27,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
           heading={entry.getIn(['data', 'heading'])}
           description={entry.getIn(['data', 'description'])}
           intro={{ blurbs }}
+          preview={true}
         />
       </Provider>
     </StyleSheetManager>
