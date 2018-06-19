@@ -13,14 +13,14 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs']);
   const blurbs = entryBlurbs ? entryBlurbs.toJS() : [];
 
-  const jumboImage = entry.getIn(['data', 'image']);
-  const image = jumboImage ? jumboImage.toJS() : [];
+  const jumboImages = entry.getIn(['data', 'images']);
+  const images = jumboImages ? jumboImages.toJS() : [];
 
   return (
     <StyleSheetManager target={iframeHeadElem}>
       <Provider theme={theme}>
         <IndexPageTemplate
-          image={{image}}
+          images={{images}}
           title={entry.getIn(['data', 'title'])}
           heading={entry.getIn(['data', 'heading'])}
           description={entry.getIn(['data', 'description'])}

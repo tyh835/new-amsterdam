@@ -17,14 +17,14 @@ const Jumbotron = styled.img`
 `;
 
 export const IndexPageTemplate = ({
-  image,
+  images,
   title,
   heading,
   description,
   intro
 }) => (
   <section>
-    <Img resolutions={image[0].url.childImageSharp.resolutions} alt={title} />
+    <Img resolutions={images[0].url.childImageSharp.resolutions} alt={title} />
     <h3>{heading}</h3>
     <p>{description}</p>
     <Features gridItems={intro.blurbs} />
@@ -32,7 +32,7 @@ export const IndexPageTemplate = ({
 );
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.string,
+  images: PropTypes.array,
   title: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
@@ -46,7 +46,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <IndexPageTemplate
-      image={frontmatter.image}
+      images={frontmatter.images}
       title={frontmatter.title}
       heading={frontmatter.heading}
       description={frontmatter.description}
@@ -70,7 +70,7 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        image {
+        images {
           url {
             childImageSharp {
               resolutions(width: 1280, height: 600, quality: 100, traceSVG: { color: "PapayaWhip"}) {
