@@ -40,16 +40,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           id
         }
       });
-      createPage({
-        path: `${edge.node.fields.slug}---preview`,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.previewKey)}.jsx`
-        ),
-        // additional data can be passed via context
-        context: {
-          id
-        }
-      });
     });
   });
 };
