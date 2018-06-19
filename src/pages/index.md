@@ -2,7 +2,7 @@
 templateKey: 'index-page'
 path: /
 title: New Amsterdam Bakery
-image: 
+images: 
   - url: /img/jumbotron.jpg
 heading: What we offer
 description: >
