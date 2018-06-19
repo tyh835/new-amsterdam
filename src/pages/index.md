@@ -1,5 +1,6 @@
 ---
 templateKey: 'index-page'
+previewKey: 'preview-index-page'
 path: /
 title: New Amsterdam Bakery
 images: 

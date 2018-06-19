@@ -16,6 +16,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             }
             frontmatter {
               templateKey
+              previewKey
             }
           }
         }
@@ -33,6 +34,16 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         path: edge.node.fields.slug,
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.templateKey)}.jsx`
+        ),
+        // additional data can be passed via context
+        context: {
+          id
+        }
+      });
+      createPage({
+        path: `${edge.node.fields.slug}-preview`,
+        component: path.resolve(
+          `src/templates/${String(edge.node.frontmatter.previewKey)}.jsx`
         ),
         // additional data can be passed via context
         context: {

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Features from './components/Features.jsx';
+import Features from './preview-components/Features.jsx';
 import styled from 'styled-components';
 
 const BannerText = styled.h2`
@@ -67,7 +67,8 @@ IndexPage.propTypes = {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query indexPagePreview($id: String!) {
+  query indexPagePreview
+  ($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title

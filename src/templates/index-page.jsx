@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Features from '../components/Features';
+import Features from './preview-components/Features';
 import styled from 'styled-components';
 
 import Img from 'gatsby-image';
@@ -23,8 +23,6 @@ export const IndexPageTemplate = ({
   description,
   intro
 }) => {
-  console.log(images);
-
   return (
     <section>
       <Img resolutions={images[0].url.childImageSharp.resolutions} alt={title} />
