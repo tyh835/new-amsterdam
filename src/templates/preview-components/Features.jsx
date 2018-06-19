@@ -6,7 +6,7 @@ const FeatureGrid = ({ gridItems }) => (
     {gridItems.map(item => (
       <div key={item.image}>
         <p>
-          <img src={item.image.childImageSharp.resolutions.src} />
+          <img src={item.image} />
         </p>
         <p>{item.text}</p>
       </div>

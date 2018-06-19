@@ -41,7 +41,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         }
       });
       createPage({
-        path: `${edge.node.fields.slug}-preview`,
+        path: `${edge.node.fields.slug}---preview`,
         component: path.resolve(
           `src/templates/${String(edge.node.frontmatter.previewKey)}.jsx`
         ),
