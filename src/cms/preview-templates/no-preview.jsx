@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default NoPreview = () => {
+export default NoPreview = (props) => {
   return (
     <div style={{width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center", fontFamily: "sans-serif"}}>
       <h2>Sorry No Preview is Available</h2>
