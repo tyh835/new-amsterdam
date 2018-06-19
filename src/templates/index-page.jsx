@@ -39,7 +39,7 @@ export const IndexPageTemplate = ({
     intro: PropTypes.shape({
       blurbs: PropTypes.array
   }),
-  preview: PropTypes.boolean
+  preview: PropTypes.bool
 };
 
 const IndexPage = ({ data }) => {
