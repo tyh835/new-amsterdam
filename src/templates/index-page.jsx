@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Features from '../components/Features';
 import styled from 'styled-components';
+import uuid from 'uuid/v4';
 
 import Img from 'gatsby-image';
 
+import Features from '../components/Features';
+
 const Jumbotron = styled.img`
   width: 100vw;
-  height: 650px;
+  height: auto;
   position: relative;
   margin-top: 0;
 `;
@@ -18,28 +20,38 @@ export const IndexPageTemplate = ({
   heading,
   description,
   intro,
-  preview
+  isPreview
 }) => {
   return (
     <section>
-      {
-        images.map(image => preview ? (<Jumbotron src={image.url} alt={title} />) : (<Img resolutions={image.url.childImageSharp.resolutions} alt={title} />))
-      }
-      <h3>{heading}</h3>
+      {images.map(
+        image =>
+          isPreview ? (
+            <Jumbotron src={image.url} alt={title} key={uuid()} />
+          ) : (
+            <Img
+              sizes={image.url.childImageSharp.sizes}
+              alt={title}
+              key={uuid()}
+            />
+          )
+      )}
+      <h3 style={{ marginTop: '32px' }}>{heading}</h3>
       <p>{description}</p>
-      <Features gridItems={intro.blurbs} preview={preview} />
+      <Features gridItems={intro.blurbs} isPreview={isPreview} />
     </section>
-  )};
+  );
+};
 
-  IndexPageTemplate.propTypes = {
-    images: PropTypes.array,
-    title: PropTypes.string,
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    intro: PropTypes.shape({
-      blurbs: PropTypes.array
+IndexPageTemplate.propTypes = {
+  images: PropTypes.array,
+  title: PropTypes.string,
+  heading: PropTypes.string,
+  description: PropTypes.string,
+  intro: PropTypes.shape({
+    blurbs: PropTypes.array
   }),
-  preview: PropTypes.bool
+  isPreview: PropTypes.bool
 };
 
 const IndexPage = ({ data }) => {
@@ -52,7 +64,7 @@ const IndexPage = ({ data }) => {
       heading={frontmatter.heading}
       description={frontmatter.description}
       intro={frontmatter.intro}
-      preview={false}
+      isPreview={false}
     />
   );
 };
@@ -75,8 +87,12 @@ export const pageQuery = graphql`
         images {
           url {
             childImageSharp {
-              resolutions(width: 1280, height: 600, quality: 100, traceSVG: { color: "PapayaWhip"}) {
-                ...GatsbyImageSharpResolutions_tracedSVG
+              sizes(
+                maxWidth: 1280
+                quality: 85
+                traceSVG: { color: "PapayaWhip" }
+              ) {
+                ...GatsbyImageSharpSizes_tracedSVG
               }
             }
           }
@@ -87,7 +103,12 @@ export const pageQuery = graphql`
           blurbs {
             image {
               childImageSharp {
-                resolutions(width: 200, height: 200, quality: 100, traceSVG: { color: "PapayaWhip"}) {
+                resolutions(
+                  width: 200
+                  height: 200
+                  quality: 100
+                  traceSVG: { color: "PapayaWhip" }
+                ) {
                   ...GatsbyImageSharpResolutions_tracedSVG
                 }
               }

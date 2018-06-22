@@ -1,8 +1,22 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const Disclaimer = props => {
+const Wrapper = styled.div`
+  width: 100%;
+  font-size: 8px;
+  text-align: right;
+  background-color: ${props => props.theme.color.footer};
+  color: #fff;
+
+  > a,
+  > a:visited {
+    color: #fff;
+  }
+`;
+
+export default () => {
   return (
-    <div style={{ fontSize: '0.4rem' }}>
+    <Wrapper>
       Windmill Icon made by{' '}
       <a
         href="https://www.flaticon.com/authors/zlatko-najdenovski"
@@ -22,8 +36,6 @@ const Disclaimer = props => {
       >
         CC 3.0 BY
       </a>
-    </div>
+    </Wrapper>
   );
 };
-
-export default Disclaimer;

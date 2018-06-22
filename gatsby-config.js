@@ -7,11 +7,11 @@ module.exports = {
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-filesystem',
-        options: {
-          path: `${__dirname}/static/img`,
-          name: 'media',
-        },
-      },
+      options: {
+        path: `${__dirname}/static/img`,
+        name: 'media'
+      }
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -31,7 +31,7 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-relative-images`,
+            resolve: `gatsby-remark-relative-images`
           },
           {
             resolve: 'gatsby-remark-images',

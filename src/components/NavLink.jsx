@@ -1,46 +1,68 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
-const buzz = keyframes`
-  20% {
-    transform: translateX(3px) rotate(2deg);
-  }
-  40% {
-    transform: translateX(-3px) rotate(-2deg);
-  }
-  60% {
-    transform: translateX(2px) rotate(1deg);
-  }
-  80% {
-    transform: translateX(-2px) rotate(-1deg);
-  }
-  100% {
-    transform: translateX(1px) rotate(0);
-  }
-`;
+import { withStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 
-const StyledLink = styled(Link)`
-  font-family: ${props => props.theme.fonts.heading};
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #363636;
-  text-decoration: none;
-  transition: ${props => props.theme.hover.opacityTransition};
-
-  &:hover {
-    opacity: ${props => props.theme.hover.opacity};
-    color: ${props => props.theme.hover.color};
+const styles = {
+  button: {
+    '&:hover': {
+      backgroundColor: 'white'
+    }
   }
-
-  &:hover,
-  &:focus {
-    animation: ${buzz} 0.5s linear 1;
-  }
-`;
-
-const NavLink = props => {
-  return <StyledLink activeClassName="active" {...props} />;
 };
 
-export default NavLink;
+const StyledLink = styled(Link)`
+  height: ${props => props.theme.height.header}px;
+  display: ${props => props.show ? '' : 'none'};
+  text-decoration: none;
+
+  > button {
+    height: 100%;
+    border-radius: 0;
+    font-family: ${props => props.theme.fonts.header};
+    font-size: 1.2rem;
+    color: #363636;
+    text-transform: none;
+    transition: ${props => props.theme.hover.transition};
+  }
+  
+  > button:hover {
+    opacity: ${props => props.theme.hover.opacity};
+    color: ${props => props.theme.color.hover};
+  }
+`;
+
+class NavLink extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      show: false
+    };
+  }
+  
+  componentDidMount() {
+    this.setState({show: true});
+  }
+  
+  render() {
+    const {classes, ...props} = this.props;
+
+    return (
+      <StyledLink activeClassName="active" {...props} show={this.state.show}>
+        <Button className={classes.button}>{props.children}</Button>
+      </StyledLink>);
+  }
+};
+
+NavLink.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func
+  ]),
+  shake: PropTypes.bool
+};
+
+export default withStyles(styles)(NavLink);

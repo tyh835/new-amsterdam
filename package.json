@@ -1,7 +1,7 @@
 {
   "name": "new-amsterdam-bakery",
   "author": "tyh835",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {
     "gatsby": "^1.9.270",
     "gatsby-image": "^1.0.54",
@@ -18,7 +18,7 @@
     "gatsby-transformer-sharp": "^1.6.21",
     "netlify-cms": "1.7.0",
     "prop-types": "^15.6.0",
-    "react": "^16.2.0",
+    "react": "^16.4.1",
     "react-helmet": "^5.2.0",
     "react-slick": "^0.23.1",
     "rebass": "^2.0.0-6",

@@ -25,7 +25,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
           heading={entry.getIn(['data', 'heading'])}
           description={entry.getIn(['data', 'description'])}
           intro={{ blurbs }}
-          preview={true}
+          isPreview={true}
         />
       </Provider>
     </StyleSheetManager>

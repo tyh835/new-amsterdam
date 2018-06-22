@@ -1,50 +1,41 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
-import { Provider } from 'rebass';
 
-import NavBar from './components/NavBar.jsx';
-import Footer from './components/Footer.jsx';
+import { Provider } from 'rebass';
 import theme from './theme.js';
 import './global.css';
 
-const TemplateWrapper = props => {
-  const { children } = props;
+import Helmet from './components/Helmet.jsx'
+import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
+import Disclaimer from './components/Disclaimer.jsx';
+
+const LayoutTemplate = ({children}) => {
   return (
     <Fragment>
-      <Helmet
-        title="New Amsterdam Bakery"
-        meta={[{ property: 'og:title', content: 'New Amsterdam Bakery' }]}
-        link={[
-          {
-            href:
-              'https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700|Open+Sans',
-            rel: 'stylesheet'
-          }
-        ]}
-      />
-      <NavBar />
+      <Helmet />
+      <Header />
       {children()}
       <Footer />
+      <Disclaimer />
     </Fragment>
   );
 };
 
-TemplateWrapper.propTypes = {
+LayoutTemplate.propTypes = {
   children: PropTypes.func
 };
 
-const ThemedTemplate = props => {
-  const { children } = props;
+const ThemedLayoutTemplate = props => {
   return (
     <Provider theme={theme}>
-      <TemplateWrapper children={children} />
+      <LayoutTemplate {...props} />
     </Provider>
   );
 };
 
-ThemedTemplate.propTypes = {
+ThemedLayoutTemplate.propTypes = {
   children: PropTypes.func
 };
 
-export default ThemedTemplate;
+export default ThemedLayoutTemplate;
