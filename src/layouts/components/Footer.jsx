@@ -38,7 +38,7 @@ const Divider = styled.div`
 const Text = styled.p`
   font-family: ${props => props.theme.fonts.sans};
   font-weight: ${props => (props.bold ? '400' : '300')};
-  font-size: 0.9rem;
+  font-size: 15px;
   line-height: 1.5;
 `;
 

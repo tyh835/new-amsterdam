@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Flex as Base } from 'rebass';
+import { Flex } from 'rebass';
 
-const Flex = styled(Base)`
-  font-family: ${props => props.theme.fonts.header};
+import theme from '../layouts/theme.js';
+
+const Wrapper = Flex.extend`
+  font-family: ${theme.fonts.header};
 `;
 
 const Title = styled.h1`
@@ -13,16 +15,16 @@ const Title = styled.h1`
 `;
 
 const NotFoundPage = ({ className }) => (
-  <Flex
+  <Wrapper
     className={className}
     width="100%"
-    py="180px"
+    py="120px"
     flexDirection="column"
     alignItems="center"
   >
     <Title>404 NOT FOUND</Title>
     <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Flex>
+  </Wrapper>
 );
 
 export default NotFoundPage;

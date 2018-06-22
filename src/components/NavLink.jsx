@@ -49,7 +49,6 @@ class NavLink extends React.Component {
   
   render() {
     const {classes, ...props} = this.props;
-
     return (
       <StyledLink activeClassName="active" {...props} show={this.state.show}>
         <Button className={classes.button}>{props.children}</Button>
@@ -61,8 +60,7 @@ NavLink.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.func
-  ]),
-  shake: PropTypes.bool
+  ])
 };
 
 export default withStyles(styles)(NavLink);

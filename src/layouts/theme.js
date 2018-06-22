@@ -1,4 +1,4 @@
-const theme = {
+export default {
   breakpoints: [
     '32rem',
     '48rem',
@@ -31,5 +31,3 @@ const theme = {
     footer: '320'
   }
 };
-
-export default theme;

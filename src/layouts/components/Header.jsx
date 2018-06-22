@@ -60,9 +60,10 @@ const Header = () => {
     <HeaderWrapper
       is="header"
       width="100%"
+      pr={3}
       py={3}
     >
-      <NavLink exact to="/" shake>
+      <NavLink exact to="/">
         <Logo src={logo} alt="New Amsterdam Bakery" />
         <Title>New Amsterdam Bakery</Title>
       </NavLink>
