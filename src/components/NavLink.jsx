@@ -16,7 +16,7 @@ const styles = {
 
 const StyledLink = styled(Link)`
   height: ${props => props.theme.height.header}px;
-  display: ${props => props.show ? '' : 'none'};
+  display: ${props => props.loaded ? '' : 'none'};
   text-decoration: none;
 
   > button {
@@ -39,28 +39,21 @@ class NavLink extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: false
+      loaded: false
     };
   }
   
   componentDidMount() {
-    this.setState({show: true});
+    this.setState({loaded: true});
   }
   
   render() {
     const {classes, ...props} = this.props;
     return (
-      <StyledLink activeClassName="active" {...props} show={this.state.show}>
+      <StyledLink activeClassName="active" {...props} loaded={this.state.loaded}>
         <Button className={classes.button}>{props.children}</Button>
       </StyledLink>);
   }
-};
-
-NavLink.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.func
-  ])
 };
 
 export default withStyles(styles)(NavLink);

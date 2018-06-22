@@ -11,13 +11,12 @@ export default {
     sans: `"Lato", Arial, sans-serif`,
     serif: `"Playfair Display", Times, serif`,
     header: `"Roboto Condensed", sans-serif`,
-    title: `"Cabin Sketch", sans-serif`
+    title: `"Pacifico", sans-serif`
   },
 
   color: {
     header: 'white',
-    footer: 'PapayaWhip',
-    skyblue: 'LightSkyBlue',
+    footer: 'LightSkyBlue',
     info: 'white',
     hover: 'orange'
   },

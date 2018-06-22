@@ -30,7 +30,7 @@ const Nav = Flex.extend`
 
 // Styled Native DOM Elements
 const Logo = styled.img`
-  height: 50px;
+  height: 55px;
 `;
 
 const Title = styled.span`
@@ -39,6 +39,11 @@ const Title = styled.span`
   font-size: 2.3rem;
   margin-left: 20px;
   align-self: center;
+  color: #363636;
+
+  &:hover {
+    color: orange;
+  }
 
   &:hover,
   &:focus {
@@ -71,9 +76,9 @@ const Header = () => {
         is="nav"
         width={[0, 1 / 2, 1 / 2, 'auto']}
       >
-        <NavLink exact to="/cakes" children="Our Cakes" />
-        <NavLink exact to="/pastries" children="Bread and Pastries" />
-        <NavLink exact to="/contact" children="Contact Us" />
+        <NavLink exact to="/cakes">Our Cakes</NavLink>
+        <NavLink exact to="/pastries">Bread and Pastries</NavLink>
+        <NavLink exact to="/contact">Contact Us</NavLink>
       </Nav>
     </HeaderWrapper>
   );

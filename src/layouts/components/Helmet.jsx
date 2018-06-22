@@ -26,7 +26,7 @@ export default () => (
     ]}
     link={[
       {
-        href: `https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Playfair+Display:400,700|Roboto+Condensed:300,400|Roboto:400,700|Lato:300,400|Merriweather:400,700`,
+        href: `https://fonts.googleapis.com/css?family=Pacifico|Playfair+Display:400,700|Roboto+Condensed:300,400|Lato:300,400`,
         rel: 'stylesheet'
       },
       {
