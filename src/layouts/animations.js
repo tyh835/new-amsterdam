@@ -17,3 +17,12 @@ export const shake = keyframes`
     transform: translateX(1px) rotate(0);
   }
 `;
+
+export const moveclouds = keyframes`
+  0% {
+    margin-left: 1000px;
+  }
+  100% {
+    margin-left: -1000px;
+  }
+`;

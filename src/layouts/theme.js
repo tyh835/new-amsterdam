@@ -17,6 +17,7 @@ export default {
   color: {
     header: 'white',
     footer: 'PapayaWhip',
+    skyblue: 'LightSkyBlue',
     info: 'white',
     hover: 'orange'
   },
