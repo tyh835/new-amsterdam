@@ -7,7 +7,7 @@ const FooterWrapper = Flex.extend`
   height: ${props => props.theme.height.footer}px;
   background-color: ${props => props.theme.color.footer};
 
-  @media (max-width: ${props => props.theme.breakpoints[0]}) {
+  @media (max-width: ${props => props.theme.breakpoints[1]}) {
     height: auto;
   }
 `;
@@ -20,11 +20,19 @@ const InfoBox = Flex.extend`
   justify-content: flex-start;
   align-items: center;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+  @media (max-width: ${props => props.theme.breakpoints[1]}) {
+    height: 180px;
+  }
 `;
 
 const SubHeader = styled.h2`
   font-family: ${props => props.theme.fonts.header};
   margin-top: 1.4rem;
+
+  @media (max-width: ${props => props.theme.breakpoints[1]}) {
+    margin-top: 1rem;
+  }
 `;
 
 const Divider = styled.div`
@@ -43,8 +51,8 @@ const Text = styled.p`
 `;
 
 const Footer = () => {
-  const responsiveWidth = [0.8, 1 / 4, 240];
-  const responsiveMarginTop = [3, 0];
+  const responsiveWidth = [0.8, 0.6, 240];
+  const responsiveMarginTop = [3, 3, 0];
 
   return (
     <FooterWrapper
@@ -52,8 +60,8 @@ const Footer = () => {
       justifyContent="space-around"
       alignItems="center"
       px={[0, 1, 3, 4]}
-      py={[3, 0]}
-      flexDirection={['column', 'row']}
+      py={[3, 3, 0]}
+      flexDirection={['column', 'column', 'row']}
     >
       <InfoBox width={responsiveWidth} mt={responsiveMarginTop}>
         <SubHeader>Contact Us</SubHeader>

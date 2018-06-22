@@ -23,10 +23,14 @@ const StyledLink = styled(Link)`
     height: 100%;
     border-radius: 0;
     font-family: ${props => props.theme.fonts.header};
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: #363636;
     text-transform: none;
     transition: ${props => props.theme.hover.transition};
+
+    @media (max-width: ${props => props.theme.breakpoints[2]}) {
+      font-size: 1.1rem;
+    }
   }
   
   > button:hover {

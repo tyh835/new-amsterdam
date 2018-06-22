@@ -31,6 +31,10 @@ const Nav = Flex.extend`
 // Styled Native DOM Elements
 const Logo = styled.img`
   height: 55px;
+
+  @media (max-width: ${props => props.theme.breakpoints[0]}) {
+    display: none;
+  }
 `;
 
 const Title = styled.span`
@@ -51,7 +55,7 @@ const Title = styled.span`
   }
 
   @media (max-width: ${props => props.theme.breakpoints[2]}) {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
@@ -65,7 +69,7 @@ const Header = () => {
     <HeaderWrapper
       is="header"
       width="100%"
-      pr={3}
+      pr={[0, 0, 0, 3]}
       py={3}
     >
       <NavLink exact to="/">
