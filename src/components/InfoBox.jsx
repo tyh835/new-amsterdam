@@ -5,7 +5,7 @@ import uuid from 'uuid/v4';
 import Img from 'gatsby-image';
 import { Flex, Box } from 'rebass';
 
-const FeatureGrid = ({ gridItems, isPreview }) => (
+const InfoBox = ({ gridItems, isPreview }) => (
   <Flex py={3} my={3}>
     {gridItems.map(item => {
       return (
@@ -24,7 +24,7 @@ const FeatureGrid = ({ gridItems, isPreview }) => (
   </Flex>
 );
 
-FeatureGrid.propTypes = {
+InfoBox.propTypes = {
   gridItems: PropTypes.arrayOf(
     PropTypes.shape({
       image: PropTypes.object,
@@ -34,4 +34,4 @@ FeatureGrid.propTypes = {
   isPreview: PropTypes.bool
 };
 
-export default FeatureGrid;
+export default InfoBox;

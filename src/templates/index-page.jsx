@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import uuid from 'uuid/v4';
 
-import Img from 'gatsby-image';
-
-import Features from '../components/Features';
+import Carousel from '../components/Carousel.jsx'
+import InfoBox from '../components/InfoBox.jsx';
 
 const Jumbotron = styled.img`
   width: 100vw;
@@ -24,21 +22,10 @@ export const IndexPageTemplate = ({
 }) => {
   return (
     <section>
-      {images.map(
-        image =>
-          isPreview ? (
-            <Jumbotron src={image.url} alt={title} key={uuid()} />
-          ) : (
-            <Img
-              sizes={image.url.childImageSharp.sizes}
-              alt={title}
-              key={uuid()}
-            />
-          )
-      )}
+      <Carousel images={images} isPreview={isPreview} />
       <h3 style={{ marginTop: '32px' }}>{heading}</h3>
       <p>{description}</p>
-      <Features gridItems={intro.blurbs} isPreview={isPreview} />
+      <InfoBox gridItems={intro.blurbs} isPreview={isPreview} />
     </section>
   );
 };
@@ -85,17 +72,19 @@ export const pageQuery = graphql`
       frontmatter {
         title
         images {
-          url {
+          path {
             childImageSharp {
               sizes(
-                maxWidth: 1280
+                maxWidth: 1800
+                maxHeight: 900
                 quality: 85
-                traceSVG: { color: "PapayaWhip" }
+                traceSVG: { color: "LightSkyBlue" }
               ) {
                 ...GatsbyImageSharpSizes_tracedSVG
               }
             }
           }
+          text
         }
         heading
         description

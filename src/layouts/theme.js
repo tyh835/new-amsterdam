@@ -27,7 +27,8 @@ export default {
   },
 
   height: {
-    header: '80',
-    footer: '320'
+    header: 80,
+    footer: 320,
+    carousel: 550
   }
 };

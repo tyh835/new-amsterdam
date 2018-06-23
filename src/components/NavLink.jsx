@@ -60,4 +60,9 @@ class NavLink extends React.Component {
   }
 };
 
+NavLink.propTypes = {
+  classes: PropTypes.object,
+  to: PropTypes.string.isRequired
+};
+
 export default withStyles(styles)(NavLink);
