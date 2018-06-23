@@ -2,31 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Carousel from '../components/Carousel.jsx'
+import Carousel from '../components/Carousel.jsx';
 import InfoBox from '../components/InfoBox.jsx';
 
-const Jumbotron = styled.img`
+const IndexWrapper = styled.section`
   width: 100vw;
-  height: auto;
-  position: relative;
-  margin-top: 0;
+  overflow: hidden;
 `;
 
 export const IndexPageTemplate = ({
   images,
-  title,
   heading,
   description,
   intro,
   isPreview
 }) => {
   return (
-    <section>
+    <IndexWrapper>
       <Carousel images={images} isPreview={isPreview} />
       <h3 style={{ marginTop: '32px' }}>{heading}</h3>
       <p>{description}</p>
       <InfoBox gridItems={intro.blurbs} isPreview={isPreview} />
-    </section>
+    </IndexWrapper>
   );
 };
 
@@ -70,7 +67,6 @@ export const pageQuery = graphql`
   query indexPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        title
         images {
           path {
             childImageSharp {

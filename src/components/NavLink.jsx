@@ -16,7 +16,7 @@ const styles = {
 
 const StyledLink = styled(Link)`
   height: ${props => props.theme.height.header}px;
-  display: ${props => props.loaded ? '' : 'none'};
+  display: ${props => (props.loaded ? '' : 'none')};
   text-decoration: none;
 
   > button {
@@ -32,7 +32,7 @@ const StyledLink = styled(Link)`
       font-size: 1.1rem;
     }
   }
-  
+
   > button:hover {
     opacity: ${props => props.theme.hover.opacity};
     color: ${props => props.theme.color.hover};
@@ -46,19 +46,24 @@ class NavLink extends React.Component {
       loaded: false
     };
   }
-  
+
   componentDidMount() {
-    this.setState({loaded: true});
+    this.setState({ loaded: true });
   }
-  
+
   render() {
-    const {classes, ...props} = this.props;
+    const { classes, ...props } = this.props;
     return (
-      <StyledLink activeClassName="active" {...props} loaded={this.state.loaded}>
+      <StyledLink
+        activeClassName="active"
+        {...props}
+        loaded={this.state.loaded}
+      >
         <Button className={classes.button}>{props.children}</Button>
-      </StyledLink>);
+      </StyledLink>
+    );
   }
-};
+}
 
 NavLink.propTypes = {
   classes: PropTypes.object,

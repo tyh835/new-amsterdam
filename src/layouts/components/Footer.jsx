@@ -19,7 +19,7 @@ const InfoBox = Flex.extend`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     height: 180px;

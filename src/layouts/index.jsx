@@ -5,12 +5,12 @@ import { Provider } from 'rebass';
 import theme from './theme.js';
 import './global.css';
 
-import Helmet from './components/Helmet.jsx'
+import Helmet from './components/Helmet.jsx';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Disclaimer from './components/Disclaimer.jsx';
 
-const LayoutTemplate = ({children}) => {
+const LayoutTemplate = ({ children }) => {
   return (
     <Fragment>
       <Helmet />

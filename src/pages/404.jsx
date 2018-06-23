@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Flex } from 'rebass';
 
 import theme from '../layouts/theme.js';
-import {moveclouds} from '../layouts/animations.js';
+import { moveclouds } from '../layouts/animations.js';
 
 const Wrapper = Flex.extend`
   font-family: ${theme.fonts.header};
@@ -25,35 +25,36 @@ const Text = styled.p`
 
 // Floating Clouds LOL
 const Cloud = styled.div`
-  width: 350px; 
+  width: 350px;
   height: 120px;
-  background-color: #FFF;
-  background: linear-gradient(top, #FFF 100%);
+  background-color: #fff;
+  background: linear-gradient(top, #fff 100%);
   border-radius: 100px;
   position: absolute;
   margin: 120px auto 20px;
   z-index: 3;
   transition: all 1s ease;
 
-  &:after, &:before {
+  &:after,
+  &:before {
     content: '';
     position: absolute;
-    background: #FFF;
+    background: #fff;
     z-index: 3;
   }
 
   &:after {
-    width: 100px; 
+    width: 100px;
     height: 100px;
-    top: -50px; 
+    top: -50px;
     left: 50px;
     border-radius: 100px;
   }
 
   &:before {
-    width: 180px; 
+    width: 180px;
     height: 180px;
-    top: -90px; 
+    top: -90px;
     right: 50px;
     border-radius: 200px;
   }
@@ -69,7 +70,7 @@ const Cloud1a = Cloud.extend`
 
 const Cloud1b = Cloud.extend`
   top: 0px;
-  left:250px;
+  left: 250px;
   transform: scale(0.3);
   animation: ${moveclouds} 15s linear infinite;
 `;
@@ -78,19 +79,20 @@ const Cloud2 = Cloud.extend`
   left: 250px;
   top: 100px;
   transform: scale(0.6);
-  opacity: 0.6; 
+  opacity: 0.6;
   animation: ${moveclouds} 25s linear infinite;
 `;
 
 const Cloud3 = Cloud.extend`
-  left: 250px; bottom: -70px;
+  left: 250px;
+  bottom: -70px;
   transform: scale(0.6);
-  opacity: 0.8; 
+  opacity: 0.8;
   animation: ${moveclouds} 25s linear infinite;
 `;
 
 const Cloud4 = Cloud.extend`
-  left: 470px; 
+  left: 470px;
   bottom: 50px;
   transform: scale(0.75);
   opacity: 0.75;
@@ -98,10 +100,10 @@ const Cloud4 = Cloud.extend`
 `;
 
 const Cloud5 = Cloud.extend`
-  left: 200px; 
+  left: 200px;
   top: 300px;
   transform: scale(0.5);
-  opacity: 0.8; 
+  opacity: 0.8;
   animation: ${moveclouds} 20s linear infinite;
 `;
 

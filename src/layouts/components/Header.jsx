@@ -6,7 +6,7 @@ import Link from 'gatsby-link';
 import HeadRoom from 'react-headroom';
 
 import NavLink from '../../components/NavLink.jsx';
-import {shake} from '../animations.js'
+import { shake } from '../animations.js';
 import logo from '../../img/windmill.svg';
 
 // Styled Library Components
@@ -16,7 +16,7 @@ const HeaderWrapper = Flex.extend`
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 `;
 
 const Nav = Flex.extend`
@@ -66,29 +66,27 @@ const Title = styled.span`
 // Main Header Component
 const Header = () => {
   return (
-    <HeaderWrapper
-      is="header"
-      width="100%"
-      pr={[0, 0, 0, 3]}
-      py={3}
-    >
+    <HeaderWrapper is="header" width="100%" pr={[0, 0, 0, 3]} py={3}>
       <NavLink exact to="/">
         <Logo src={logo} alt="New Amsterdam Bakery" />
         <Title>New Amsterdam Bakery</Title>
       </NavLink>
-      <Nav
-        is="nav"
-        width={[0, 1 / 2, 1 / 2, 'auto']}
-      >
-        <NavLink exact to="/cakes">Our Cakes</NavLink>
-        <NavLink exact to="/pastries">Bread and Pastries</NavLink>
-        <NavLink exact to="/contact">Contact Us</NavLink>
+      <Nav is="nav" width={[0, 1 / 2, 1 / 2, 'auto']}>
+        <NavLink exact to="/cakes">
+          Our Cakes
+        </NavLink>
+        <NavLink exact to="/pastries">
+          Bread and Pastries
+        </NavLink>
+        <NavLink exact to="/contact">
+          Contact Us
+        </NavLink>
       </Nav>
     </HeaderWrapper>
   );
 };
 
-export default (props) => (
+export default props => (
   <HeadRoom downTolerance={15}>
     <Header {...props} />
   </HeadRoom>

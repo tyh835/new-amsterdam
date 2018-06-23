@@ -6,7 +6,6 @@ import Img from 'gatsby-image';
 const Jumbotron = styled.img`
   width: 100vw;
   height: auto;
-  position: relative;
   margin-top: 0;
 `;
 
@@ -15,5 +14,6 @@ export default props => {
   return (
     isPreview 
       ? <Jumbotron src={image.path} alt={image.text} /> 
-      : <Img sizes={image.path.childImageSharp.sizes} alt={image.text} />)
+      : <Img sizes={image.path.childImageSharp.sizes} alt={image.text} />
+    )
 };

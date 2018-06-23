@@ -1,10 +1,5 @@
 export default {
-  breakpoints: [
-    '32rem',
-    '48rem',
-    '64rem',
-    '80rem'
-  ],
+  breakpoints: ['32rem', '48rem', '64rem', '80rem'],
 
   fonts: {
     // Make sure to remove unused fonts in <link /> once site is finished!
