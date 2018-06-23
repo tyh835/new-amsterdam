@@ -5,7 +5,7 @@ title: New Amsterdam Bakery
 images: 
   - path: /img/jumbotron1.jpg
     text: >
-      Customly Made Cakes
+      Custom Made Cakes
   - path: /img/jumbotron2.jpg
     text: >
       Freshly Made Bread

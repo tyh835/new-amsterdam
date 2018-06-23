@@ -62,7 +62,6 @@ export default class Carousel extends React.Component {
     this.state = {
       totalSlides: this.props.images.length,
       currentSlide: 0,
-      transition: true
     };
     this.changeSlide = this.changeSlide.bind(this);
   }
@@ -89,7 +88,6 @@ export default class Carousel extends React.Component {
       <CarouselWrapper
         totalSlides={this.state.totalSlides}
         currentSlide={this.state.currentSlide}
-        transition={this.state.transition}
       >
         {images.map((image, i) => {
           return (

@@ -37,6 +37,10 @@ const StyledLink = styled(Link)`
     opacity: ${props => props.theme.hover.opacity};
     color: ${props => props.theme.color.hover};
   }
+
+  > button:hover span {
+    color: ${props => props.theme.color.hover};
+  }
 `;
 
 class NavLink extends React.Component {
