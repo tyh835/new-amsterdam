@@ -26,7 +26,7 @@ export default () => (
     ]}
     link={[
       {
-        href: `https://fonts.googleapis.com/css?family=Pacifico|Playfair+Display:400,700|Roboto+Condensed:300,400|Lato:300,400`,
+        href: `https://fonts.googleapis.com/css?family=Pacifico|Playfair+Display:400,700|Roboto+Condensed:300,400|Fredoka+One|Lato:300,400`,
         rel: 'stylesheet'
       },
       {

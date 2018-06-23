@@ -3,9 +3,10 @@ export default {
 
   fonts: {
     // Make sure to remove unused fonts in <link /> once site is finished!
-    sans: `"Lato", Arial, sans-serif`,
-    serif: `"Playfair Display", Times, serif`,
+    sans: `"Lato", sans-serif`,
+    serif: `"Playfair Display", serif`,
     header: `"Roboto Condensed", sans-serif`,
+    banner: `"Fredoka One", "Roboto Condensed", sans-serif`,
     title: `"Pacifico", sans-serif`
   },
 

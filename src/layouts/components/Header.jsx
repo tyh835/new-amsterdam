@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { Flex } from 'rebass';
-import Link from 'gatsby-link';
 import HeadRoom from 'react-headroom';
 
 import NavLink from '../../components/NavLink.jsx';
@@ -87,7 +86,7 @@ const Header = () => {
 };
 
 export default props => (
-  <HeadRoom downTolerance={15}>
+  <HeadRoom downTolerance={15} pinStart={50}>
     <Header {...props} />
   </HeadRoom>
 );

@@ -6,7 +6,7 @@ import uuid from 'uuid/v4';
 import Jumbotron from './Jumbotron.jsx';
 
 const Banner = styled.p`
-  font-family: ${props => props.theme.fonts.title};
+  font-family: ${props => props.theme.fonts.banner};
   font-size: 3.5rem;
   color: ${props => props.orange ? 'orange' : 'LightSkyBlue'};
   background-color: white;
