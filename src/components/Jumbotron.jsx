@@ -14,6 +14,6 @@ export default props => {
   const {image, isPreview} = props;
   return (
     isPreview 
-      ? <Jumbotron src={image.src} alt={image.text} /> 
+      ? <Jumbotron src={image.path} alt={image.text} /> 
       : <Img sizes={image.path.childImageSharp.sizes} alt={image.text} />)
 };
