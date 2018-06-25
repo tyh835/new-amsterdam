@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 const PreviewImg = styled.img`
-  width: 100vw;
+  width: 100%;
   height: auto;
   margin-top: 0;
 `;
