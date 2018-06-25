@@ -8,7 +8,7 @@ import { moveclouds } from '../layouts/animations.js';
 
 const Wrapper = Flex.extend`
   font-family: ${theme.fonts.header};
-  background-color: ${theme.color.footer};
+  background-color: ${theme.color.blue};
   color: white;
   overflow: hidden;
 `;

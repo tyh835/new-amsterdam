@@ -5,7 +5,9 @@ import { Flex } from 'rebass';
 
 const FooterWrapper = Flex.extend`
   height: ${props => props.theme.height.footer}px;
-  background-color: ${props => props.theme.color.footer};
+  background-color: ${props => props.theme.color.blue};
+  justify-content: space-around;
+  align-items: center;
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     height: auto;
@@ -14,7 +16,7 @@ const FooterWrapper = Flex.extend`
 
 const InfoBox = Flex.extend`
   height: ${props => props.theme.height.footer * 0.7}px;
-  background-color: ${props => props.theme.color.info};
+  background-color: ${props => props.theme.color.white};
   border-radius: 25px;
   flex-direction: column;
   justify-content: flex-start;
@@ -57,8 +59,6 @@ const Footer = () => {
   return (
     <FooterWrapper
       is="footer"
-      justifyContent="space-around"
-      alignItems="center"
       px={[0, 1, 3, 4]}
       py={[3, 3, 0]}
       flexDirection={['column', 'column', 'row']}

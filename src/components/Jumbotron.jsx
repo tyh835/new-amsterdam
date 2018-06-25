@@ -1,19 +1,28 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Img from 'gatsby-image';
 
-const Jumbotron = styled.img`
+const PreviewImg = styled.img`
   width: 100vw;
   height: auto;
   margin-top: 0;
 `;
 
-export default props => {
-  const {image, isPreview} = props;
+const Jumbotron = ({image, isPreview}) => {
+  image.text = image.text || image.alt;
+  image.path = image.path || image
   return (
     isPreview 
-      ? <Jumbotron src={image.path} alt={image.text} /> 
+      ? <PreviewImg src={image.path} alt={image.text} /> 
       : <Img sizes={image.path.childImageSharp.sizes} alt={image.text} />
     )
 };
+
+Jumbotron.propTypes = {
+  image: PropTypes.object.isRequired,
+  isPreview: PropTypes.bool.isRequired
+}
+
+export default Jumbotron;

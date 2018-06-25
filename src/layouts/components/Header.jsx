@@ -11,7 +11,7 @@ import logo from '../../img/windmill.svg';
 // Styled Library Components
 const HeaderWrapper = Flex.extend`
   height: ${props => props.theme.height.header}px;
-  background-color: ${props => props.theme.color.header};
+  background-color: ${props => props.theme.color.white};
   justify-content: space-between;
   align-items: center;
   z-index: 100;
@@ -44,10 +44,6 @@ const Title = styled.span`
   align-self: center;
   color: #363636;
 
-  &:hover {
-    color: orange;
-  }
-
   &:hover,
   &:focus {
     animation: ${shake} 0.5s linear 1;
@@ -59,6 +55,7 @@ const Title = styled.span`
 
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
     font-size: 1.5rem;
+    margin-left: 0px;
   }
 `;
 

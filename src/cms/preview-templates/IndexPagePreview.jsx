@@ -6,25 +6,27 @@ import { StyleSheetManager } from 'styled-components';
 import { IndexPageTemplate } from '../../templates/index-page.jsx';
 import theme from '../../layouts/theme.js';
 
-const IndexPagePreview = ({ entry, getAsset }) => {
+const IndexPagePreview = ({ entry }) => {
   const iframe = document.querySelector('.nc-previewPane-frame');
-  const iframeHeadElem = iframe.contentDocument.head;
+  const iframeHeadElement = iframe.contentDocument.head;
 
-  const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs']);
-  const blurbs = entryBlurbs ? entryBlurbs.toJS() : [];
+  const imagesPre = entry.getIn(['data', 'images']);
+  const images = imagesPre ? imagesPre.toJS() : [];
 
-  const jumboImages = entry.getIn(['data', 'images']);
-  const images = jumboImages ? jumboImages.toJS() : [];
+  const aboutPre = entry.getIn(['data', 'about'])
+  const about = aboutPre ? aboutPre.toJS() : {}
+
+  const cardsPre = entry.getIn(['data', 'cards'])
+  const cards = cardsPre ? cardsPre.toJS() : []
 
   return (
-    <StyleSheetManager target={iframeHeadElem}>
+    <StyleSheetManager target={iframeHeadElement}>
       <Provider theme={theme}>
         <IndexPageTemplate
-          images={images}
           title={entry.getIn(['data', 'title'])}
-          heading={entry.getIn(['data', 'heading'])}
-          description={entry.getIn(['data', 'description'])}
-          intro={{ blurbs }}
+          images={images}
+          about={about}
+          cards={cards}
           isPreview={true}
         />
       </Provider>
@@ -36,7 +38,6 @@ IndexPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func
   }),
-  getAsset: PropTypes.func
 };
 
 export default IndexPagePreview;

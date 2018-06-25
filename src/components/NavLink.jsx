@@ -24,7 +24,7 @@ const StyledLink = styled(Link)`
     border-radius: 0;
     font-family: ${props => props.theme.fonts.header};
     font-size: 1.25rem;
-    color: #363636;
+    color: ${props => props.theme.color.black};
     text-transform: none;
     transition: ${props => props.theme.hover.transition};
 
@@ -35,11 +35,10 @@ const StyledLink = styled(Link)`
 
   > button:hover {
     opacity: ${props => props.theme.hover.opacity};
-    color: ${props => props.theme.color.hover};
   }
 
   > button:hover span {
-    color: ${props => props.theme.color.hover};
+    color: orange;
   }
 `;
 

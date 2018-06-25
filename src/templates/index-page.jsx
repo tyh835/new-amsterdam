@@ -2,27 +2,50 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import Carousel from '../components/Carousel.jsx';
-import InfoBox from '../components/InfoBox.jsx';
+import {Flex} from 'rebass';
+import Link from 'gatsby-link';
 
-const IndexWrapper = styled.section`
+import Carousel from '../components/Carousel.jsx';
+import About from '../components/About.jsx';
+import Card from '../components/Card.jsx';
+
+const IndexWrapper = styled.main`
   width: 100vw;
   overflow: hidden;
 `;
 
+const CardsWrapper = Flex.extend`
+  height: 600px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: ${props => props.theme.breakpoints[1]}) {
+    height: auto;
+  }
+`
+
 export const IndexPageTemplate = ({
   images,
-  heading,
-  description,
-  intro,
+  about,
+  cards,
   isPreview
 }) => {
   return (
     <IndexWrapper>
       <Carousel images={images} isPreview={isPreview} />
-      <h3 style={{ marginTop: '32px' }}>{heading}</h3>
-      <p>{description}</p>
-      <InfoBox gridItems={intro.blurbs} isPreview={isPreview} />
+      <About data={about} isPreview={isPreview} />
+      <CardsWrapper flexDirection={['column', 'column', 'row']}>
+      {
+        cards.map(card => {
+          return (
+            <Link exact to={card.link} key={card.link} style={{textDecoration: 'none'}}>
+              <Card image={card.image} label={card.label} />
+            </Link>
+          );
+        })
+      }
+      </CardsWrapper>
     </IndexWrapper>
   );
 };
@@ -30,11 +53,8 @@ export const IndexPageTemplate = ({
 IndexPageTemplate.propTypes = {
   images: PropTypes.array,
   title: PropTypes.string,
-  heading: PropTypes.string,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array
-  }),
+  about: PropTypes.object,
+  cards: PropTypes.array,
   isPreview: PropTypes.bool
 };
 
@@ -45,9 +65,8 @@ const IndexPage = ({ data }) => {
     <IndexPageTemplate
       images={frontmatter.images}
       title={frontmatter.title}
-      heading={frontmatter.heading}
-      description={frontmatter.description}
-      intro={frontmatter.intro}
+      about={frontmatter.about}
+      cards={frontmatter.cards}
       isPreview={false}
     />
   );
@@ -74,32 +93,46 @@ export const pageQuery = graphql`
                 maxWidth: 1800
                 maxHeight: 900
                 quality: 85
-                traceSVG: { color: "LightSkyBlue" }
+                traceSVG: { color: "lightskyblue" }
               ) {
-                ...GatsbyImageSharpSizes_tracedSVG
+                ...GatsbyImageSharpSizes_withWebp_tracedSVG
               }
             }
           }
           text
         }
-        heading
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                resolutions(
-                  width: 200
-                  height: 200
-                  quality: 100
-                  traceSVG: { color: "PapayaWhip" }
-                ) {
-                  ...GatsbyImageSharpResolutions_tracedSVG
-                }
+        about {
+          image {
+            childImageSharp {
+              sizes(
+                maxWidth: 300
+                maxHeight: 300
+                quality: 85
+                traceSVG: { color: "orange" }
+              ) {
+                ...GatsbyImageSharpSizes_withWebp_tracedSVG
               }
             }
-            text
           }
+          alt
+          heading
+          description
+        }
+        cards {
+          image {
+            childImageSharp {
+              sizes(
+                maxWidth: 500
+                maxHeight: 500
+                quality: 85
+                traceSVG: { color: "orange" }
+              ) {
+                ...GatsbyImageSharpSizes_withWebp_tracedSVG
+              }
+            }
+          }
+          label
+          link
         }
       }
     }

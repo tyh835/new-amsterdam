@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   width: 100%;
   font-size: 8px;
   text-align: right;
-  background-color: ${props => props.theme.color.footer};
+  background-color: ${props => props.theme.color.blue};
   color: #fff;
 
   > a,

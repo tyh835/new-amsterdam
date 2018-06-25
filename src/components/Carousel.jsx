@@ -8,7 +8,7 @@ import Jumbotron from './Jumbotron.jsx';
 const Banner = styled.p`
   font-family: ${props => props.theme.fonts.banner};
   font-size: 3.5rem;
-  color: ${props => props.orange ? 'orange' : 'LightSkyBlue'};
+  color: ${props => props.orange ? props.theme.color.orange : props.theme.color.blue};
   background-color: white;
   opacity: 0.95;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -50,10 +50,14 @@ const JumbotronWrapper = styled.div`
 const CarouselWrapper = styled.div`
   width: ${props => props.totalSlides * 100}vw;
   height: 50vw;
-  display: flex;
+  display: block;
   overflow: hidden;
   transition: transform 0.4s ease-out;
   transform: ${props => `translateX(-${props.currentSlide * 100}vw)`};
+
+  > div, >img {
+    display: inline-block;
+  }
 `;
 
 export default class Carousel extends React.Component {
@@ -66,6 +70,11 @@ export default class Carousel extends React.Component {
     this.changeSlide = this.changeSlide.bind(this);
   }
 
+  static propTypes() {
+    images = PropTypes.array;
+    isPreview = PropTypes.bool
+  }
+
   changeSlide() {
     let nextSlide = this.state.currentSlide + 1;
     nextSlide = nextSlide >= this.state.totalSlides ? 0 : nextSlide;
@@ -75,7 +84,13 @@ export default class Carousel extends React.Component {
   componentDidMount() {
     this.slideInterval = setInterval(() => {
       this.changeSlide();
-    }, 3000);
+    }, 5000);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.images.length !== prevProps.images.length) {
+      this.setState({totalSlides: this.props.images.length});
+    }
   }
 
   componentWillUnmount() {
