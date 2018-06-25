@@ -40,7 +40,7 @@ export const IndexPageTemplate = ({
         cards.map(card => {
           return (
             <Link exact to={card.link} key={card.link} style={{textDecoration: 'none'}}>
-              <Card image={card.image} label={card.label} />
+              <Card image={card.image} label={card.label} isPreview={isPreview} />
             </Link>
           );
         })
