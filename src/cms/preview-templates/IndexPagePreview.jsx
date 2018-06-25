@@ -13,11 +13,8 @@ const IndexPagePreview = ({ entry }) => {
   const imagesPre = entry.getIn(['data', 'images']);
   const images = imagesPre ? imagesPre.toJS() : [];
 
-  const aboutPre = entry.getIn(['data', 'about'])
-  const about = aboutPre ? aboutPre.toJS() : {}
-
-  const cardsPre = entry.getIn(['data', 'cards'])
-  const cards = cardsPre ? cardsPre.toJS() : []
+  const cardsPre = entry.getIn(['data', 'cards']);
+  const cards = cardsPre ? cardsPre.toJS() : [];
 
   return (
     <StyleSheetManager target={iframeHeadElement}>
@@ -25,7 +22,11 @@ const IndexPagePreview = ({ entry }) => {
         <IndexPageTemplate
           title={entry.getIn(['data', 'title'])}
           images={images}
-          about={about}
+          about={{
+            image: entry.getIn(['data', 'about', 'image']),
+            heading: entry.getIn(['data', 'about', 'heading']),
+            description: entry.getIn(['data', 'about', 'description'])
+          }}
           cards={cards}
           isPreview={true}
         />
