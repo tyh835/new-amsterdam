@@ -107,7 +107,7 @@ export default class Carousel extends React.Component {
         {images.map((image, i) => {
           return (
             <JumbotronWrapper key={uuid()}>
-              <Jumbotron image={image} isPreview={isPreview} />
+              <Jumbotron image={image.path} alt={image.text} isPreview={isPreview} />
               <Banner position={i} orange={i % 2 === 1 ? true: false}>{image.text}</Banner>
             </JumbotronWrapper>
           );

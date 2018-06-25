@@ -50,9 +50,7 @@ const TextBox = styled.div`
 const Card = ({image, label, isPreview}) => {
   return (
     <Wrapper>
-      {image 
-        ? (<ImageBox><Jumbotron image={image} isPreview={isPreview} /></ImageBox>)
-        : ''}
+      {image ? (<ImageBox><Jumbotron image={image} alt={label} isPreview={isPreview} /></ImageBox>): ''}
       {label ? (<TextBox>{label}</TextBox>): ''}
     </Wrapper>
   )

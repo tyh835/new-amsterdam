@@ -10,18 +10,17 @@ const PreviewImg = styled.img`
   margin-top: 0;
 `;
 
-const Jumbotron = ({image, isPreview}) => {
-  image.text = image.text || image.alt;
-  image.path = image.path || image
+const Jumbotron = ({image, alt, isPreview}) => {
   return (
     isPreview 
-      ? <PreviewImg src={image.path} alt={image.text} /> 
-      : <Img sizes={image.path.childImageSharp.sizes} alt={image.text} />
+      ? <PreviewImg src={image} alt={alt} /> 
+      : <Img sizes={image.childImageSharp.sizes} alt={alt} />
     )
 };
 
 Jumbotron.propTypes = {
-  image: PropTypes.object.isRequired,
+  image: PropTypes.oneOf([PropTypes.string, PropTypes.object]).isRequired,
+  alt: PropTypes.string,
   isPreview: PropTypes.bool.isRequired
 }
 
