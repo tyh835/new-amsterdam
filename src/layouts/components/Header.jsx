@@ -62,7 +62,7 @@ const Title = styled.span`
 const Header = () => {
   return (
     <HeaderWrapper is="header" width="100%" pr={[0, 0, 0, 3]} py={3}>
-      <NavLink exact to="/" style={{ display: 'flex' }}>
+      <NavLink exact to="/">
         <Logo src={logo} alt="New Amsterdam Bakery" />
         <Title>New Amsterdam Bakery</Title>
       </NavLink>
