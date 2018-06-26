@@ -4,13 +4,14 @@ import styled from 'styled-components';
 import { Flex } from 'rebass';
 
 import theme from '../layouts/theme.js';
-import { moveclouds } from '../layouts/animations.js';
+import { moveclouds } from '../utils/animations.js';
 
 const Wrapper = Flex.extend`
+  float: left;
+  width: 100%;
   font-family: ${theme.fonts.header};
   background-color: ${theme.color.blue};
   color: white;
-  overflow: hidden;
 `;
 
 const Title = styled.h1`
@@ -110,7 +111,6 @@ const Cloud5 = Cloud.extend`
 const NotFoundPage = ({ className }) => (
   <Wrapper
     className={className}
-    width="100%"
     py="250px"
     flexDirection="column"
     alignItems="center"

@@ -26,10 +26,6 @@ export default () => (
     ]}
     link={[
       {
-        href: `https://fonts.googleapis.com/css?family=Pacifico|Lora|Roboto+Condensed:300,400|Fredoka+One|Lato:300,400`,
-        rel: 'stylesheet'
-      },
-      {
         href: `${appleIcon}`,
         rel: 'icon',
         size: '180x180'

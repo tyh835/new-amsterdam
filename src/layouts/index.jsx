@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 import { Provider } from 'rebass';
 import theme from './theme.js';
-import './global.css';
+import './styles/fonts.css';
+import './styles/global.css';
 
 import Helmet from './components/Helmet.jsx';
 import Header from './components/Header.jsx';

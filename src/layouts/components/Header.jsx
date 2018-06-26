@@ -5,7 +5,7 @@ import { Flex } from 'rebass';
 import HeadRoom from 'react-headroom';
 
 import NavLink from '../../components/NavLink.jsx';
-import { shake } from '../animations.js';
+import { shake } from '../../utils/animations.js';
 import logo from '../../img/windmill.svg';
 
 // Styled Library Components
@@ -41,7 +41,6 @@ const Title = styled.span`
   font-weight: bold;
   font-size: 2.3rem;
   margin-left: 20px;
-  align-self: center;
   color: #363636;
 
   &:hover,
@@ -63,7 +62,7 @@ const Title = styled.span`
 const Header = () => {
   return (
     <HeaderWrapper is="header" width="100%" pr={[0, 0, 0, 3]} py={3}>
-      <NavLink exact to="/">
+      <NavLink exact to="/" style={{ display: 'flex' }}>
         <Logo src={logo} alt="New Amsterdam Bakery" />
         <Title>New Amsterdam Bakery</Title>
       </NavLink>

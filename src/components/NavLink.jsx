@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
+import GatsbyLink from 'gatsby-link';
 import styled from 'styled-components';
 
 import { withStyles } from '@material-ui/core/styles';
@@ -14,10 +14,11 @@ const styles = {
   }
 };
 
-const StyledLink = styled(Link)`
+const Link = styled(GatsbyLink)`
   height: ${props => props.theme.height.header}px;
-  display: ${props => (props.loaded ? '' : 'none')};
+  display: ${props => (props.loaded ? 'flex' : 'none')};
   text-decoration: none;
+  align-items: center;
 
   > button {
     height: 100%;
@@ -32,13 +33,12 @@ const StyledLink = styled(Link)`
       font-size: 1.1rem;
     }
   }
-
   > button:hover {
-    opacity: ${props => props.theme.hover.opacity};
+    opacity: 0.9;
   }
 
   > button:hover span {
-    color: orange;
+    color: ${props => props.theme.color.lightorange};
   }
 `;
 
@@ -57,13 +57,9 @@ class NavLink extends React.Component {
   render() {
     const { classes, ...props } = this.props;
     return (
-      <StyledLink
-        activeClassName="active"
-        {...props}
-        loaded={this.state.loaded}
-      >
+      <Link activeClassName="active" loaded={this.state.loaded} {...props}>
         <Button className={classes.button}>{props.children}</Button>
-      </StyledLink>
+      </Link>
     );
   }
 }

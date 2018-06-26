@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import uuid from 'uuid/v4';
 
-import Jumbotron from './Jumbotron.jsx';
+import Image from './Image.jsx';
 
 const Banner = styled.p`
   font-family: ${props => props.theme.fonts.banner};
   font-size: 3.5rem;
-  color: ${props => props.orange ? props.theme.color.orange : props.theme.color.blue};
+  color: ${props =>
+    props.orange ? props.theme.color.orange : props.theme.color.blue};
   background-color: white;
   opacity: 0.95;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
@@ -55,7 +56,8 @@ const CarouselWrapper = styled.div`
   transition: transform 0.4s ease-out;
   transform: ${props => `translateX(-${props.currentSlide * 100}vw)`};
 
-  > div, >img {
+  > div,
+  > img {
     display: inline-block;
   }
 `;
@@ -65,14 +67,14 @@ export default class Carousel extends React.Component {
     super(props);
     this.state = {
       totalSlides: this.props.images.length,
-      currentSlide: 0,
+      currentSlide: 0
     };
     this.changeSlide = this.changeSlide.bind(this);
   }
 
   static propTypes() {
     images = PropTypes.array;
-    isPreview = PropTypes.bool
+    isPreview = PropTypes.bool;
   }
 
   changeSlide() {
@@ -89,7 +91,7 @@ export default class Carousel extends React.Component {
 
   componentDidUpdate(prevProps) {
     if (this.props.images.length !== prevProps.images.length) {
-      this.setState({totalSlides: this.props.images.length});
+      this.setState({ totalSlides: this.props.images.length });
     }
   }
 
@@ -107,8 +109,14 @@ export default class Carousel extends React.Component {
         {images.map((image, i) => {
           return (
             <JumbotronWrapper key={uuid()}>
-              <Jumbotron image={image.path} alt={image.text} isPreview={isPreview} />
-              <Banner position={i} orange={i % 2 === 1 ? true: false}>{image.text}</Banner>
+              <Image
+                image={image.path}
+                alt={image.text}
+                isPreview={isPreview}
+              />
+              <Banner position={i} orange={i % 2 === 1 ? true : false}>
+                {image.text}
+              </Banner>
             </JumbotronWrapper>
           );
         })}

@@ -1,5 +1,3 @@
-import {darken} from 'polished';
-
 export default {
   breakpoints: ['32rem', '48rem', '64rem', '80rem'],
 
@@ -15,14 +13,14 @@ export default {
   color: {
     beige: '#E0E4CC',
     black: '#363636',
-    blue: 'lightskyblue',
-    orange: 'orange',
-    teal: darken(0.02, '#CEFCF0'),
+    blue: '#69D2E7',
+    orange: '#FA6900',
+    lightorange: '#F38630',
+    teal: '#A7DBD8',
     white: '#FFFFFF'
   },
 
   hover: {
-    opacity: '0.75',
     transition: 'all 0.3s'
   },
 
