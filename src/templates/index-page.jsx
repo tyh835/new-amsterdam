@@ -36,12 +36,9 @@ const AboutWrapper = Flex.extend`
     margin-left: 0;
   }
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
-    height: 450px;
-    text-align: center;
-  }
-  @media (max-width: ${props => props.theme.breakpoints[0]}) {
     height: 400px;
     background-color: ${props => props.theme.color.white};
+    text-align: center;
   }
 `;
 
@@ -68,14 +65,19 @@ export const IndexPageTemplate = ({ images, about, cards, isPreview }) => {
   return (
     <Fragment>
       <Carousel images={images} isPreview={isPreview} />
-      <AboutWrapper is="section" mt={[0, 80, 100]}>
+      <AboutWrapper is="section" mt={[0, 10, 100]}>
         <About data={about} isPreview={isPreview} />
       </AboutWrapper>
       <CardsWrapper flexDirection={['column', 'column', 'row']}>
         {cards.map(card => {
           return (
             <Link exact to={card.link} key={card.link}>
-              <Card dimensions={dimensions} data={card} isPreview={isPreview} />
+              <Card
+                dimensions={dimensions}
+                data={card}
+                isPreview={isPreview}
+                link
+              />
             </Link>
           );
         })}

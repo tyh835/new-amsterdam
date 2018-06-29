@@ -9,12 +9,12 @@ export const Banner = styled.p`
   font-family: ${props => props.theme.fonts.banner};
   font-size: ${props => (props.small ? '2.5rem' : '3.5rem')};
   color: ${props => props.theme.color.blue};
-  color: ${props => (props.orange && props.theme.color.orange)};
-  color: ${props => (props.teal && props.theme.color.teal)};
+  color: ${props => props.orange && props.theme.color.orange};
+  color: ${props => props.teal && props.theme.color.teal};
   background-color: white;
   opacity: 0.95;
   border-radius: 15px;
-  
+
   position: absolute;
   width: 60vw;
   padding: 1rem;

@@ -84,22 +84,22 @@ export class CakesPageTemplate extends Component {
   constructor(props) {
     super(props);
     const data = this.props.categories.map(category => {
+      const { cards, ...rest } = category;
       return {
-        cards: category.cards.map(card => {
+        cards: cards.map(card => {
           return {
             key: uuid(),
             ...card
-          }
+          };
         }),
-        about: category.about,
-        name: category.name
-      }
+        ...rest
+      };
     });
     this.state = {
-      categoryNames: this.props.categories.map(category => category.name),
+      categoryNames: data.map(category => category.name),
       data: data,
-      currentData: this.props.categories[0],
-      currentCategory: this.props.categories[0].name,
+      currentData: data[0],
+      currentCategory: data[0].name,
       showModal: false,
       modalData: {}
     };
@@ -107,7 +107,7 @@ export class CakesPageTemplate extends Component {
 
   exitModal = () => {
     this.toggleModal({});
-  }
+  };
 
   changeCategory = newCategory => {
     if (newCategory !== undefined) {
@@ -117,14 +117,14 @@ export class CakesPageTemplate extends Component {
       this.setState({
         currentCategory: newCategory,
         currentData: currentData
-      }); 
+      });
     }
   };
 
   toggleModal = data => {
     const newShowModal = !this.state.showModal;
-    this.setState({showModal: newShowModal, modalData: data});
-  }
+    this.setState({ showModal: newShowModal, modalData: data });
+  };
 
   shouldComponentUpdate = (nextProps, nextState) => {
     if (nextState.showModal !== this.state.showModal) {
@@ -187,7 +187,13 @@ export class CakesPageTemplate extends Component {
                 handleClick={this.toggleModal}
               />
             ))}
-            {this.state.showModal && <Modal data={this.state.modalData} exitModal={this.exitModal} isPreview={isPreview} />}
+            {this.state.showModal && (
+              <Modal
+                data={this.state.modalData}
+                exitModal={this.exitModal}
+                isPreview={isPreview}
+              />
+            )}
           </Fragment>
         </CardsGrid>
       </Fragment>

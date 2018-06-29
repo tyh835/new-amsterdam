@@ -11,6 +11,7 @@ import Image from './Image.jsx';
 const Wrapper = Box.extend`
   height: 400px;
   display: grid;
+  margin: 0;
   border-radius: 25px;
   background-color: white;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -73,7 +74,7 @@ const Title = styled.h2`
 const About = ({ flat, data, isPreview }) => {
   return (
     <Fade bottom duration={1000} distance="120px" key={data.heading}>
-      <Wrapper flat={flat} width={[1, 0.8, 800, 800]}>
+      <Wrapper flat={flat} width={[1, 1, 800, 800]}>
         <Title>{data.heading}</Title>
         <ImageWrap>
           <ImageCircle>
@@ -85,7 +86,6 @@ const About = ({ flat, data, isPreview }) => {
         </TextBox>
       </Wrapper>
     </Fade>
-    
   );
 };
 

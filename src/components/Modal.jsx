@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import { Fixed, Modal as BaseModal, Heading } from 'rebass';
@@ -17,7 +17,7 @@ const ModalHeading = Heading.extend`
   font-weight: 400;
 `;
 
-const Modal = ({data, exitModal, isPreview}) => {
+const Modal = ({ data, exitModal, isPreview }) => {
   return (
     <Fragment>
       <Fixed
@@ -25,16 +25,16 @@ const Modal = ({data, exitModal, isPreview}) => {
         right={0}
         bottom={0}
         left={0}
-        style={{zIndex: '999'}}
+        style={{ zIndex: '999' }}
         onClick={exitModal}
       />
-      <ModalWrapper width={400}>
+      <ModalWrapper width={[300, 400]}>
         <Image image={data.image} isPreview={isPreview} />
         <ModalHeading>{data.label}</ModalHeading>
         <p>{data.alt}</p>
       </ModalWrapper>
     </Fragment>
-  )
+  );
 };
 
 Modal.propTypes = {
@@ -45,6 +45,6 @@ Modal.propTypes = {
   }).isRequired,
   exitModal: PropTypes.func.isRequired,
   isPreview: PropTypes.bool.isRequired
-}
+};
 
 export default Modal;

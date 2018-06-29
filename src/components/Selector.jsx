@@ -12,6 +12,10 @@ const OuterWrapper = styled.div`
   @media (max-width: ${props => props.theme.breakpoints[2]}) {
     margin-top: 1rem;
   }
+
+  @media (max-width: ${props => props.theme.breakpoints[0]}) {
+    margin-top: 0rem;
+  }
 `;
 
 const InnerWrapper = styled.div`
@@ -57,14 +61,14 @@ const Button = styled.a`
 
   &:active {
     background-color: ${props => props.theme.color.teal};
-	}
+  }
 `;
 
 export default class Selector extends Component {
   onClick = e => {
     e.preventDefault();
     this.props.handleChange(e.target.innerText);
-  }
+  };
 
   render() {
     const { categories } = this.props;
@@ -76,7 +80,9 @@ export default class Selector extends Component {
               <Button
                 key={category}
                 value={category}
-                className={category === this.props.activeCategory ? 'active-button' : ''}
+                className={
+                  category === this.props.activeCategory ? 'active-button' : ''
+                }
                 onClick={this.onClick}
               >
                 {category}
@@ -85,7 +91,6 @@ export default class Selector extends Component {
           })}
         </InnerWrapper>
       </OuterWrapper>
-      
     );
   }
 }

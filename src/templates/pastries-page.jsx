@@ -71,7 +71,6 @@ const Title = styled.h2`
   align-items: center;
   grid-column: span 4;
 
-
   @media (max-width: ${props => props.theme.gridBreakpoints[1]}) {
     grid-column: span 3;
   }
@@ -91,17 +90,17 @@ export class PastriesPageTemplate extends Component {
     this.state = {
       showModal: false,
       modalData: {}
-    }
+    };
   }
 
   exitModal = () => {
     this.toggleModal({});
-  }
+  };
 
   toggleModal = data => {
     const newShowModal = !this.state.showModal;
-    this.setState({showModal: newShowModal, modalData: data});
-  }
+    this.setState({ showModal: newShowModal, modalData: data });
+  };
 
   render() {
     const dimensions = {
@@ -112,12 +111,7 @@ export class PastriesPageTemplate extends Component {
       image: '200px'
     };
 
-    const {
-      jumbotron,
-      title,
-      pastries,
-      isPreview
-    } = this.props;
+    const { jumbotron, title, pastries, isPreview } = this.props;
 
     return (
       <Fragment>
@@ -127,7 +121,7 @@ export class PastriesPageTemplate extends Component {
             {title}
           </Banner>
         </JumbotronWrapper>
-        <CardsGrid px={[0, 10, 40]} my={[0, 50, 80]}>
+        <CardsGrid px={[0, 10, 40]} my={[0, 50]}>
           <Title>Bread and Pastries</Title>
           {pastries.map((card, i) => (
             <Card
@@ -139,10 +133,16 @@ export class PastriesPageTemplate extends Component {
             />
           ))}
         </CardsGrid>
-        {this.state.showModal && <Modal data={this.state.modalData} exitModal={this.exitModal} isPreview={isPreview} />}
+        {this.state.showModal && (
+          <Modal
+            data={this.state.modalData}
+            exitModal={this.exitModal}
+            isPreview={isPreview}
+          />
+        )}
       </Fragment>
     );
-  };
+  }
 }
 
 PastriesPageTemplate.propTypes = {

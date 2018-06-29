@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
@@ -30,7 +30,7 @@ const ImageBox = styled.div`
 
 const TextBox = styled.div`
   font-family: ${props => props.theme.fonts.header};
-  font-size: 1rem;
+  font-size: ${props => (props.link ? '1.2rem' : '1rem')};
   color: ${props => props.theme.color.black};
   width: 100%;
   margin-top: 1rem;
@@ -42,18 +42,18 @@ class Card extends Component {
     super(props);
     this.state = {
       showModal: false
-    }
+    };
   }
 
   onClick = () => {
     if (this.props.handleClick) {
       this.props.handleClick(this.props.data);
     }
-  }
+  };
 
   render() {
-  const { data, isPreview, dimensions } = this.props;
-  return (
+    const { data, isPreview, dimensions, link } = this.props;
+    return (
       <Fade bottom duration={1000} distance="120px">
         <Wrapper dimensions={dimensions} onClick={this.onClick}>
           {data.image ? (
@@ -63,13 +63,12 @@ class Card extends Component {
           ) : (
             ''
           )}
-          {data.label ? <TextBox>{data.label}</TextBox> : ''}
+          {data.label ? <TextBox link={link}>{data.label}</TextBox> : ''}
         </Wrapper>
       </Fade>
     );
-  };
+  }
 }
- 
 
 Card.propTypes = {
   data: PropTypes.shape({
@@ -77,7 +76,8 @@ Card.propTypes = {
     label: PropTypes.string
   }),
   isPreview: PropTypes.bool,
-  dimenstions: PropTypes.object
+  dimenstions: PropTypes.object,
+  link: PropTypes.bool
 };
 
 export default Card;
