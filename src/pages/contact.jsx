@@ -5,6 +5,7 @@ export default class Contact extends Component {
   render() {
     return (
       <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />  
         <p>
           <label>Email: <input type="text" name="name" /></label>
         </p>

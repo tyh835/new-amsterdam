@@ -161,7 +161,7 @@ export const indexPageQuery = graphql`
                 maxWidth: 500
                 maxHeight: 500
                 quality: 85
-                traceSVG: { color: "#A7DBD8" }
+                traceSVG: { color: "#69D2E7" }
               ) {
                 ...GatsbyImageSharpSizes_withWebp_tracedSVG
               }
