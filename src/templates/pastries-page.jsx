@@ -24,6 +24,7 @@ const Banner = Base.extend`
 
 const JumbotronWrapper = BaseWrapper.extend`
   height: 25vw;
+  overflow-y: hidden;
 `;
 
 const CardsGrid = Box.extend`

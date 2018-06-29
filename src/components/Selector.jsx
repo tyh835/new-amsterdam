@@ -3,11 +3,15 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const OuterWrapper = styled.div`
-  margin-top: 1rem;
+  margin-top: 2rem;
   width: 100%;
   height: 70px;
   display: flex;
   justify-content: center;
+
+  @media (max-width: ${props => props.theme.breakpoints[2]}) {
+    margin-top: 1rem;
+  }
 `;
 
 const InnerWrapper = styled.div`

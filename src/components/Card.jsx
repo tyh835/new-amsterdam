@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 import Image from './Image.jsx';
 
@@ -14,7 +15,7 @@ const Wrapper = styled.div`
   align-items: center;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  grid-column: span 1
+  grid-column: span 1;
 
   &:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -37,16 +38,18 @@ const TextBox = styled.div`
 
 const Card = ({ data, isPreview, dimensions }) => {
   return (
-    <Wrapper dimensions={dimensions}>
-      {data.image ? (
-        <ImageBox dimensions={dimensions}>
-          <Image image={data.image} alt={data.label} isPreview={isPreview} />
-        </ImageBox>
-      ) : (
-        ''
-      )}
-      {data.label ? <TextBox>{data.label}</TextBox> : ''}
-    </Wrapper>
+    <Fade bottom duration={1200} distance="120px">
+      <Wrapper dimensions={dimensions}>
+        {data.image ? (
+          <ImageBox dimensions={dimensions}>
+            <Image image={data.image} alt={data.label} isPreview={isPreview} />
+          </ImageBox>
+        ) : (
+          ''
+        )}
+        {data.label ? <TextBox>{data.label}</TextBox> : ''}
+      </Wrapper>
+    </Fade>
   );
 };
 
