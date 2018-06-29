@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const OuterWrapper = styled.div`
+  margin-top: 1rem;
   width: 100%;
   height: 70px;
   display: flex;
