@@ -9,11 +9,6 @@ import Carousel from '../components/Carousel.jsx';
 import About from '../components/About.jsx';
 import Card from '../components/Card.jsx';
 
-const IndexWrapper = styled.main`
-  width: 100vw;
-  overflow: hidden;
-`;
-
 const CardsWrapper = Flex.extend`
   height: 540px;
   background-color: white;
@@ -26,11 +21,7 @@ const CardsWrapper = Flex.extend`
 `;
 
 const AboutWrapper = Flex.extend`
-  background: linear-gradient(
-    to bottom right,
-    ${props => props.theme.color.teal},
-    ${props => props.theme.color.beige}
-  );
+  background: linear-gradient(to bottom right, ${props => props.theme.color.teal}, ${props => props.theme.color.beige});
   color: ${props => props.theme.color.black};
   width: 90%;
   height: 50vw;
@@ -136,7 +127,7 @@ export const indexPageQuery = graphql`
                 maxWidth: 2000
                 maxHeight: 1000
                 quality: 85
-                traceSVG: { color: "#A7DBD8" }
+                traceSVG: { color: "#69D2E7" }
               ) {
                 ...GatsbyImageSharpSizes_withWebp_tracedSVG
               }
@@ -151,7 +142,7 @@ export const indexPageQuery = graphql`
                 maxWidth: 300
                 maxHeight: 300
                 quality: 85
-                traceSVG: { color: "#A7DBD8" }
+                traceSVG: { color: "#69D2E7" }
               ) {
                 ...GatsbyImageSharpSizes_withWebp_tracedSVG
               }

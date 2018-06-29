@@ -72,9 +72,7 @@ export default class Selector extends Component {
               <Button
                 key={category}
                 value={category}
-                className={
-                  category === this.props.activeCategory ? 'active-button' : ''
-                }
+                className={category === this.props.activeCategory ? 'active-button' : ''}
                 onClick={this.onClick}
               >
                 {category}
