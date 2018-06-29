@@ -6,6 +6,8 @@ jumbotron: /img/jumbotron_pastries.jpg
 pastries:
   - image: /img/pastries_1.jpg
     label: Cinnamon Buns
+    alt: something
   - image: /img/pastries_2.jpg
     label: Carrot Cakes
+    alt: something
 ---

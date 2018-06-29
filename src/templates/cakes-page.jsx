@@ -12,6 +12,7 @@ import Image from '../components/Image.jsx';
 import Selector from '../components/Selector.jsx';
 import About from '../components/About.jsx';
 import Card from '../components/Card.jsx';
+import Modal from '../components/Modal.jsx';
 
 const Banner = Base.extend`
   top: 15vw;
@@ -82,12 +83,30 @@ const AboutWrapper = Box.extend`
 export class CakesPageTemplate extends Component {
   constructor(props) {
     super(props);
+    const data = this.props.categories.map(category => {
+      return {
+        cards: category.cards.map(card => {
+          return {
+            key: uuid(),
+            ...card
+          }
+        }),
+        about: category.about,
+        name: category.name
+      }
+    });
     this.state = {
       categoryNames: this.props.categories.map(category => category.name),
-      data: this.props.categories,
+      data: data,
       currentData: this.props.categories[0],
       currentCategory: this.props.categories[0].name,
+      showModal: false,
+      modalData: {}
     };
+  }
+
+  exitModal = () => {
+    this.toggleModal({});
   }
 
   changeCategory = newCategory => {
@@ -97,19 +116,20 @@ export class CakesPageTemplate extends Component {
       );
       this.setState({
         currentCategory: newCategory,
-        currentData: currentData,
-      });
+        currentData: currentData
+      }); 
     }
   };
 
-  componentDidMount() {
-    this.setState({
-      currentData: this.state.data[0],
-      currentCategory: this.state.categoryNames[0]
-    });
+  toggleModal = data => {
+    const newShowModal = !this.state.showModal;
+    this.setState({showModal: newShowModal, modalData: data});
   }
 
   shouldComponentUpdate = (nextProps, nextState) => {
+    if (nextState.showModal !== this.state.showModal) {
+      return true;
+    }
     return (
       nextState.currentData !== undefined &&
       nextState.currentCategory !== this.state.currentCategory
@@ -158,14 +178,16 @@ export class CakesPageTemplate extends Component {
                 isPreview={isPreview}
               />
             </AboutWrapper>
-            {this.state.currentData.cards.map((card, i) => (
+            {this.state.currentData.cards.map(card => (
               <Card
                 dimensions={dimensions}
                 data={card}
-                key={uuid()}
+                key={card.key}
                 isPreview={isPreview}
+                handleClick={this.toggleModal}
               />
             ))}
+            {this.state.showModal && <Modal data={this.state.modalData} exitModal={this.exitModal} isPreview={isPreview} />}
           </Fragment>
         </CardsGrid>
       </Fragment>
@@ -243,8 +265,8 @@ export const cakesPageQuery = graphql`
             image {
               childImageSharp {
                 sizes(
-                  maxWidth: 500
-                  maxHeight: 500
+                  maxWidth: 600
+                  maxHeight: 600
                   quality: 85
                   traceSVG: { color: "#A7DBD8" }
                 ) {
@@ -253,6 +275,7 @@ export const cakesPageQuery = graphql`
               }
             }
             label
+            alt
           }
         }
       }

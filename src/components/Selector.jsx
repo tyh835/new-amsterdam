@@ -91,12 +91,7 @@ export default class Selector extends Component {
 }
 
 Selector.propTypes = {
-  categories: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-      about: PropTypes.object,
-      cards: PropTypes.array
-    })
-  ),
+  categories: PropTypes.arrayOf(PropTypes.string),
+  activeCategory: PropTypes.string,
   handleChange: PropTypes.func
 };

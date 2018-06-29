@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
@@ -19,6 +19,7 @@ const Wrapper = styled.div`
 
   &:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    cursor: pointer;
   }
 `;
 
@@ -36,22 +37,39 @@ const TextBox = styled.div`
   text-align: center;
 `;
 
-const Card = ({ data, isPreview, dimensions }) => {
+class Card extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showModal: false
+    }
+  }
+
+  onClick = () => {
+    if (this.props.handleClick) {
+      this.props.handleClick(this.props.data);
+    }
+  }
+
+  render() {
+  const { data, isPreview, dimensions } = this.props;
   return (
-    <Fade bottom duration={1200} distance="120px">
-      <Wrapper dimensions={dimensions}>
-        {data.image ? (
-          <ImageBox dimensions={dimensions}>
-            <Image image={data.image} alt={data.label} isPreview={isPreview} />
-          </ImageBox>
-        ) : (
-          ''
-        )}
-        {data.label ? <TextBox>{data.label}</TextBox> : ''}
-      </Wrapper>
-    </Fade>
-  );
-};
+      <Fade bottom duration={1000} distance="120px">
+        <Wrapper dimensions={dimensions} onClick={this.onClick}>
+          {data.image ? (
+            <ImageBox dimensions={dimensions}>
+              <Image image={data.image} alt={data.alt} isPreview={isPreview} />
+            </ImageBox>
+          ) : (
+            ''
+          )}
+          {data.label ? <TextBox>{data.label}</TextBox> : ''}
+        </Wrapper>
+      </Fade>
+    );
+  };
+}
+ 
 
 Card.propTypes = {
   data: PropTypes.shape({

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -10,6 +10,7 @@ import {
   Banner as Base,
   JumbotronWrapper as BaseWrapper
 } from '../components/Carousel.jsx';
+import Modal from '../components/Modal.jsx';
 
 const Banner = Base.extend`
   top: 15vw;
@@ -84,42 +85,65 @@ const Title = styled.h2`
   }
 `;
 
-export const PastriesPageTemplate = ({
-  jumbotron,
-  title,
-  pastries,
-  isPreview
-}) => {
-  const dimensions = {
-    card: {
-      width: '240px',
-      height: '270px'
-    },
-    image: '200px'
-  };
+export class PastriesPageTemplate extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showModal: false,
+      modalData: {}
+    }
+  }
 
-  return (
-    <Fragment>
-      <JumbotronWrapper>
-        <Image image={jumbotron} isPreview={isPreview} />
-        <Banner orange small>
-          {title}
-        </Banner>
-      </JumbotronWrapper>
-      <CardsGrid px={[0, 10, 40]} my={[0, 50, 80]}>
-        <Title>Bread and Pastries</Title>
-        {pastries.map((card, i) => (
-          <Card
-            dimensions={dimensions}
-            data={card}
-            key={`card${i}`}
-            isPreview={isPreview}
-          />
-        ))}
-      </CardsGrid>
-    </Fragment>
-  );
-};
+  exitModal = () => {
+    this.toggleModal({});
+  }
+
+  toggleModal = data => {
+    const newShowModal = !this.state.showModal;
+    this.setState({showModal: newShowModal, modalData: data});
+  }
+
+  render() {
+    const dimensions = {
+      card: {
+        width: '240px',
+        height: '270px'
+      },
+      image: '200px'
+    };
+
+    const {
+      jumbotron,
+      title,
+      pastries,
+      isPreview
+    } = this.props;
+
+    return (
+      <Fragment>
+        <JumbotronWrapper>
+          <Image image={jumbotron} isPreview={isPreview} />
+          <Banner orange small>
+            {title}
+          </Banner>
+        </JumbotronWrapper>
+        <CardsGrid px={[0, 10, 40]} my={[0, 50, 80]}>
+          <Title>Bread and Pastries</Title>
+          {pastries.map((card, i) => (
+            <Card
+              dimensions={dimensions}
+              data={card}
+              key={`card${i}`}
+              isPreview={isPreview}
+              handleClick={this.toggleModal}
+            />
+          ))}
+        </CardsGrid>
+        {this.state.showModal && <Modal data={this.state.modalData} exitModal={this.exitModal} isPreview={isPreview} />}
+      </Fragment>
+    );
+  };
+}
 
 PastriesPageTemplate.propTypes = {
   jumbotron: PropTypes.object,
@@ -172,8 +196,8 @@ export const pastriesPageQuery = graphql`
           image {
             childImageSharp {
               sizes(
-                maxWidth: 500
-                maxHeight: 500
+                maxWidth: 600
+                maxHeight: 600
                 quality: 85
                 traceSVG: { color: "#A7DBD8" }
               ) {
@@ -182,6 +206,7 @@ export const pastriesPageQuery = graphql`
             }
           }
           label
+          alt
         }
       }
     }

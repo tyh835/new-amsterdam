@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
+import uuid from 'uuid/v4';
 
 import { Flex, Box } from 'rebass';
 
@@ -71,7 +72,7 @@ const Title = styled.h2`
 
 const About = ({ flat, data, isPreview }) => {
   return (
-    <Fade bottom duration={1200} distance="120px">
+    <Fade bottom duration={1000} distance="120px" key={data.heading}>
       <Wrapper flat={flat} width={[1, 0.8, 800, 800]}>
         <Title>{data.heading}</Title>
         <ImageWrap>

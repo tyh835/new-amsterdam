@@ -14,14 +14,19 @@ categories:
     cards: 
       - image: /img/birthday_1.jpg
         label: Flowery 30
+        alt: something
       - image: /img/birthday_2.png
         label: Double the fun at 60
+        alt: something
       - image: /img/birthday_3.png
         label: Back to 30 again
+        alt: something
       - image: /img/birthday_4.jpg
         label: Forever 21
+        alt: something
       - image: /img/card_cakes.jpg
         label: Dapper As Fuck
+        alt: something
   - name: Wedding
     about: 
       image: /img/about_wedding.jpg
@@ -32,8 +37,11 @@ categories:
     cards: 
       - image: /img/wedding_1.jpg
         label: We So Dope
+        alt: something
       - image: /img/wedding_2.jpg
         label: We So Dope
+        alt: something
       - image: /img/wedding_3.png
         label: We So Dope
+        alt: something
 ---
