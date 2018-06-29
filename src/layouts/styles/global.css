@@ -5,3 +5,7 @@ html, body {overflow-x: hidden}
 .active > button > span {
   color: orange;
 }
+
+.active-button {
+  color: #A7DBD8;
+}

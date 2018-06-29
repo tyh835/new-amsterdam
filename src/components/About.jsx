@@ -11,7 +11,11 @@ const Wrapper = Box.extend`
   display: grid;
   border-radius: 25px;
   background-color: white;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: ${props =>
+    props.flat
+      ? '0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)'
+      : ''};
   grid-template: 20% 80% / repeat(3, 1fr);
   grid-template-areas:
     'image title .'
@@ -19,7 +23,7 @@ const Wrapper = Box.extend`
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     grid-template-areas:
-      '. title .'
+      'title title title'
       'text text text';
   }
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
@@ -43,6 +47,7 @@ const TextBox = Flex.extend`
   font-size: 1rem;
   width: 100%;
   line-height: 2;
+  overflow-y: scroll;
   grid-area: text;
 `;
 
@@ -63,16 +68,16 @@ const Title = styled.h2`
   grid-area: title;
 `;
 
-const About = ({ data, isPreview }) => {
+const About = ({ flat, data, isPreview }) => {
   return (
-    <Wrapper width={[1, 0.8, 800, 800]}>
+    <Wrapper flat={flat} width={[1, 0.8, 800, 800]}>
       <Title>{data.heading}</Title>
       <ImageWrap>
         <ImageCircle>
           <Image image={data.image} alt={data.alt} isPreview={isPreview} />
         </ImageCircle>
       </ImageWrap>
-      <TextBox px={5} py={4}>
+      <TextBox px={5} py={4} mb={4}>
         {data.description}
       </TextBox>
     </Wrapper>
@@ -80,7 +85,11 @@ const About = ({ data, isPreview }) => {
 };
 
 About.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.shape({
+    heading: PropTypes.string,
+    image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    description: PropTypes.string
+  }),
   isPreview: PropTypes.bool
 };
 

@@ -1,18 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import GatsbyLink from 'gatsby-link';
 import styled from 'styled-components';
 
-import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-
-const styles = {
-  button: {
-    '&:hover': {
-      backgroundColor: 'white'
-    }
-  }
-};
 
 const Link = styled(GatsbyLink)`
   height: ${props => props.theme.height.header}px;
@@ -34,15 +25,16 @@ const Link = styled(GatsbyLink)`
     }
   }
   > button:hover {
+    background-color: ${props => props.theme.color.white};
     opacity: 0.9;
   }
 
   > button:hover span {
-    color: ${props => props.theme.color.lightorange};
+    color: ${props => props.theme.color.orange};
   }
 `;
 
-class NavLink extends React.Component {
+class NavLink extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -55,10 +47,9 @@ class NavLink extends React.Component {
   }
 
   render() {
-    const { classes, ...props } = this.props;
     return (
-      <Link activeClassName="active" loaded={this.state.loaded} {...props}>
-        <Button className={classes.button}>{props.children}</Button>
+      <Link activeClassName="active" loaded={this.state.loaded} {...this.props}>
+        <Button>{this.props.children}</Button>
       </Link>
     );
   }
@@ -69,4 +60,4 @@ NavLink.propTypes = {
   to: PropTypes.string.isRequired
 };
 
-export default withStyles(styles)(NavLink);
+export default NavLink;

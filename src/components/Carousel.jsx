@@ -5,32 +5,29 @@ import uuid from 'uuid/v4';
 
 import Image from './Image.jsx';
 
-const Banner = styled.p`
+export const Banner = styled.p`
   font-family: ${props => props.theme.fonts.banner};
-  font-size: 3.5rem;
-  color: ${props =>
-    props.orange ? props.theme.color.orange : props.theme.color.blue};
+  font-size: ${props => (props.small ? '2.5rem' : '3.5rem')};
+  color: ${props => props.theme.color.blue};
+  color: ${props => (props.orange ? props.theme.color.orange : '')};
+  color: ${props => (props.teal ? props.theme.color.teal : '')};
   background-color: white;
   opacity: 0.95;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   border-radius: 15px;
 
   position: absolute;
   width: 60vw;
   padding: 1rem;
-  top: 32%;
-  left: ${props => Number(props.position) * 100 + 20}vw;
+  top: 35%;
+  left: ${props => Number(props.position) * 100 + 20 || 20}vw;
   text-align: center;
 
-  @media (max-width: ${props => props.theme.breakpoints[2]}) {
-    font-size: 3rem;
-  }
   @media (max-width: ${props => props.theme.breakpoints[2]}) {
     font-size: 2.5rem;
   }
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     font-size: 2rem;
-    left: ${props => Number(props.position) * 100}vw;
+    left: ${props => Number(props.position) * 100 || 0}vw;
     width: 100vw;
     border-radius: 0px;
   }
@@ -39,13 +36,9 @@ const Banner = styled.p`
   }
 `;
 
-const JumbotronWrapper = styled.div`
+export const JumbotronWrapper = styled.div`
   width: 100vw;
-  height: 100%;
-
-  &:focus {
-    outline: none !important;
-  }
+  height: 50vw;
 `;
 
 const CarouselWrapper = styled.div`
@@ -114,7 +107,7 @@ export default class Carousel extends React.Component {
                 alt={image.text}
                 isPreview={isPreview}
               />
-              <Banner position={i} orange={i % 2 === 1 ? true : false}>
+              <Banner position={i} orange={i % 3 === 1} teal={i % 3 === 2}>
                 {image.text}
               </Banner>
             </JumbotronWrapper>

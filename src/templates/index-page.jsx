@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -15,7 +15,7 @@ const IndexWrapper = styled.main`
 `;
 
 const CardsWrapper = Flex.extend`
-  height: 600px;
+  height: 540px;
   background-color: white;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,11 @@ const CardsWrapper = Flex.extend`
 `;
 
 const AboutWrapper = Flex.extend`
-  background-color: ${props => props.theme.color.beige};
+  background: linear-gradient(
+    to bottom right,
+    ${props => props.theme.color.teal},
+    ${props => props.theme.color.beige}
+  );
   color: ${props => props.theme.color.black};
   width: 90%;
   height: 50vw;
@@ -64,33 +68,28 @@ const Link = styled(GatsbyLink)`
 export const IndexPageTemplate = ({ images, about, cards, isPreview }) => {
   const dimensions = {
     card: {
-      width: 350,
-      height: 380
+      width: '300px',
+      height: '340px'
     },
-    image: 280
+    image: '240px'
   };
 
   return (
-    <IndexWrapper>
+    <Fragment>
       <Carousel images={images} isPreview={isPreview} />
-      <AboutWrapper is="section" mt={[0, 80]}>
+      <AboutWrapper is="section" mt={[0, 80, 100]}>
         <About data={about} isPreview={isPreview} />
       </AboutWrapper>
       <CardsWrapper flexDirection={['column', 'column', 'row']}>
         {cards.map(card => {
           return (
             <Link exact to={card.link} key={card.link}>
-              <Card
-                dimensions={dimensions}
-                image={card.image}
-                label={card.label}
-                isPreview={isPreview}
-              />
+              <Card dimensions={dimensions} data={card} isPreview={isPreview} />
             </Link>
           );
         })}
       </CardsWrapper>
-    </IndexWrapper>
+    </Fragment>
   );
 };
 
@@ -126,7 +125,7 @@ IndexPage.propTypes = {
 
 export default IndexPage;
 
-export const pageQuery = graphql`
+export const indexPageQuery = graphql`
   query indexPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
@@ -137,7 +136,7 @@ export const pageQuery = graphql`
                 maxWidth: 2000
                 maxHeight: 1000
                 quality: 85
-                traceSVG: { color: "lightskyblue" }
+                traceSVG: { color: "#A7DBD8" }
               ) {
                 ...GatsbyImageSharpSizes_withWebp_tracedSVG
               }
@@ -152,7 +151,7 @@ export const pageQuery = graphql`
                 maxWidth: 300
                 maxHeight: 300
                 quality: 85
-                traceSVG: { color: "orange" }
+                traceSVG: { color: "#A7DBD8" }
               ) {
                 ...GatsbyImageSharpSizes_withWebp_tracedSVG
               }
@@ -169,7 +168,7 @@ export const pageQuery = graphql`
                 maxWidth: 500
                 maxHeight: 500
                 quality: 85
-                traceSVG: { color: "orange" }
+                traceSVG: { color: "#A7DBD8" }
               ) {
                 ...GatsbyImageSharpSizes_withWebp_tracedSVG
               }

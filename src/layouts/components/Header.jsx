@@ -73,7 +73,7 @@ const Header = () => {
         <NavLink exact to="/pastries">
           Bread and Pastries
         </NavLink>
-        <NavLink exact to="/contact">
+        <NavLink exact to="/404">
           Contact Us
         </NavLink>
       </Nav>
@@ -81,8 +81,36 @@ const Header = () => {
   );
 };
 
-export default props => (
-  <HeadRoom downTolerance={15} pinStart={50}>
-    <Header {...props} />
-  </HeadRoom>
-);
+export default class ReactiveHeader extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      disable: false
+    };
+  }
+
+  handleScroll = () => {
+    const scrollTop = window.pageYOffset;
+    if (scrollTop < 50 && !this.state.disable) {
+      this.setState({ disable: true });
+    } else if (this.state.disable) {
+      this.setState({ disable: false });
+    }
+  };
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  render() {
+    return (
+      <HeadRoom downTolerance={15} disable={this.state.disable}>
+        <Header {...this.props} />
+      </HeadRoom>
+    );
+  }
+}

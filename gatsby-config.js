@@ -4,6 +4,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-react-next',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-styled-components',
     {
@@ -32,12 +33,12 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-relative-images`
+            resolve: 'gatsby-remark-relative-images'
           },
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 1280,
+              maxWidth: 2000,
               sizeByPixelDensity: true,
               linkImagesToOriginal: false,
               backgroundColor: 'transparent'

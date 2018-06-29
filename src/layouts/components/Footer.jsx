@@ -15,7 +15,7 @@ const FooterWrapper = Flex.extend`
 `;
 
 const InfoBox = Flex.extend`
-  height: ${props => props.theme.height.footer * 0.7}px;
+  height: 70%;
   background-color: ${props => props.theme.color.white};
   border-radius: 25px;
   flex-direction: column;
@@ -53,7 +53,7 @@ const Text = styled.p`
 `;
 
 const Footer = () => {
-  const responsiveWidth = [0.8, 0.6, 240];
+  const responsiveWidth = [0.7, 0.6, 240];
   const responsiveMarginTop = [3, 3, 0];
 
   return (
@@ -61,6 +61,7 @@ const Footer = () => {
       is="footer"
       px={[0, 1, 3, 4]}
       py={[3, 3, 0]}
+      mt={[3, 0]}
       flexDirection={['column', 'column', 'row']}
     >
       <InfoBox width={responsiveWidth} mt={responsiveMarginTop}>
