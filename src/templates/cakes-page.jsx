@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import uuid from 'uuid/v4';
 
 import { Box } from 'rebass';
 
@@ -161,7 +162,7 @@ export class CakesPageTemplate extends Component {
               <Card
                 dimensions={dimensions}
                 data={card}
-                key={`card${i}`}
+                key={uuid()}
                 isPreview={isPreview}
               />
             ))}
