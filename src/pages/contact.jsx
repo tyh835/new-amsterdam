@@ -6,23 +6,22 @@ export default class Contact extends Component {
     this.state = { name: "", email: "", message: "" };
   }
 
+  handleSubmit = e => {
+    
+  }
+
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+
   render() {
+    const {name, email, message} = this.state;
     return (
-      <form name="contact" method="POST" data-netlify="true">
+      <form name="contact" method="POST" data-netlify="true" onSubmit={this.handleSubmit}>
         <input type="hidden" name="form-name" value="contact" /> 
-        <p>
-          <label>Name: <input type="text" name="name" value={name} onChange={this.handleChange} /></label>
-        </p> 
-        <p>
-          <label>Email: <input type="text" name="name" value={email} onChange={this.handleChange} /></label>
-        </p>
-        <p>
-          <label>Message: <textarea name="message" value={message} onChange={this.handleChange}></textarea></label>
-        </p>
+        <label>Name: </label><input type="text" name="name" value={name} onChange={this.handleChange} />
+        <label>Email: </label><input type="text" name="name" value={email} onChange={this.handleChange} />
+        <label>Message: </label><textarea name="message" value={message} onChange={this.handleChange}></textarea>
         <div data-netlify-recaptcha></div>
-        <p>
-          <button type='submit'>Send</button>
-        </p>
+        <button type='submit'>Send</button>
       </form>);
   }
 }
