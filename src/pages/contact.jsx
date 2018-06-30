@@ -20,7 +20,6 @@ export default class Contact extends Component {
   };
 
   handleSubmit = e => {
-    e.preventDefault();
     const form = e.target;
     fetch("/", {
       method: "POST",
@@ -32,6 +31,7 @@ export default class Contact extends Component {
     })
       .then(() => navigateTo(form.getAttribute("action")))
       .catch(error => alert(error));
+    e.preventDefault();
   };
 
   render() {
@@ -41,7 +41,7 @@ export default class Contact extends Component {
         <form
           name="contact"
           method="post"
-          action="/contact"
+          action="/contact/"
           data-netlify="true"
           data-netlify-recaptcha="true"
           onSubmit={this.handleSubmit}
@@ -49,6 +49,7 @@ export default class Contact extends Component {
           <noscript>
             <p>This form won’t work with Javascript disabled</p>
           </noscript>
+          <input type="hidden" name="form-name" value="contact" />
           <p>
             <label>
               Your name:<br />
@@ -73,7 +74,7 @@ export default class Contact extends Component {
             onChange={this.handleRecaptcha}
           />
           <p>
-            <button type="submit">Send</button>
+            <button className="g-recaptcha" type="submit">Send</button>
           </p>
         </form>
       </div>
