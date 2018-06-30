@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import { navigateTo } from "gatsby-link";
 import Recaptcha from "react-google-recaptcha";
 
@@ -6,13 +6,7 @@ import {encode} from '../utils/utils.js';
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 
-function encode(data) {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-}
-
-export default class Contact extends React.Component {
+export default class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -48,7 +42,7 @@ export default class Contact extends React.Component {
         <form
           name="contact"
           method="post"
-          action="/contact?success"
+          action="/contact"
           data-netlify="true"
           data-netlify-recaptcha="true"
           onSubmit={this.handleSubmit}
