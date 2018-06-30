@@ -1,56 +1,24 @@
-import React, {Component} from 'react';
-
-
-import {encode} from '../utils/utils.js';
+import React, { Component } from 'react';
+import styled from 'styled-components';
 
 export default class Contact extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { name: "", email: "", message: "" };
-  }
-
-  /* Here’s the juicy bit for posting the form submission */
-
-  handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
-    })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));
-
-    e.preventDefault();
-  };
-
-  handleChange = e => this.setState({ [e.target.name]: e.target.value });
-
   render() {
-    const { name, email, message } = this.state;
     return (
-      <form name="contact" data-netlify="true" onSubmit={this.handleSubmit}>
-        <input type="hidden" name="form-name" value="contact" />
+      <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" /> 
         <p>
-          <label>
-            Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
-          </label>
+          <label>Name: <input type="text" name="name" /></label>
+        </p> 
+        <p>
+          <label>Email: <input type="text" name="email" /></label>
         </p>
         <p>
-          <label>
-            Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} />
-          </label>
+          <label>Message: <textarea name="message"></textarea></label>
         </p>
+        <div data-netlify-recaptcha></div>
         <p>
-          <label>
-            Message: <textarea name="message" value={message} onChange={this.handleChange} />
-          </label>
+          <button type='submit'>Send</button>
         </p>
-        <div data-netlify-recaptcha="true"></div>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
-    );
+      </form>);
   }
 }
-
