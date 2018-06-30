@@ -28,9 +28,9 @@ export default class Contact extends Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <form name="contact" data-netlify="true" onSubmit={this.handleSubmit}>
+      <form name="contact" method="POST" data-netlify="true" onSubmit={this.handleSubmit}>
         <input type="hidden" name="form-name" value="contact" />
-        <div data-netlify-recaptcha></div>
+        
         <p>
           <label>
             Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
@@ -46,6 +46,7 @@ export default class Contact extends Component {
             Message: <textarea name="message" value={message} onChange={this.handleChange} />
           </label>
         </p>
+        <div data-netlify-recaptcha></div>
         <p>
           <button type="submit">Send</button>
         </p>
