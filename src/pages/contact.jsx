@@ -34,15 +34,17 @@ export default class Contact extends Component {
         ...this.state
       })
     })
-      .then(() => navigateTo('/'))
+      .then(alert('success'))
       .catch(error => alert(error));
   };
 
   render() {
     return (
       <div>
-        <h1>reCAPTCHA 2</h1>
+        <h1>Contact Us</h1>
         <form
+          name="contact"
+          method="post"
           data-netlify="true"
           data-netlify-recaptcha="true"
           onSubmit={this.handleSubmit}
