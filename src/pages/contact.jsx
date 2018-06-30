@@ -8,7 +8,7 @@ const RECAPTCHA_KEY = "6Le6lGEUAAAAAPitKLCGmirC8TIDmylpuux0u9F3";
 export default class Contact extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {name: '', email: '', message: '', 'g-recaptcha-response': ''};
   }
 
   handleChange = e => {
@@ -20,18 +20,22 @@ export default class Contact extends Component {
   };
 
   handleSubmit = e => {
-    const form = e.target;
+    console.log('submit');
+    console.log(encode({
+      "form-name": 'contact',
+      ...this.state
+    }));
+    e.preventDefault();
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": form.getAttribute("name"),
+        "form-name": 'contact',
         ...this.state
       })
     })
-      .then(() => navigateTo(form.getAttribute("action")))
+      .then(() => navigateTo('/'))
       .catch(error => alert(error));
-    e.preventDefault();
   };
 
   render() {
@@ -39,9 +43,6 @@ export default class Contact extends Component {
       <div>
         <h1>reCAPTCHA 2</h1>
         <form
-          name="contact"
-          method="post"
-          action="/contact/"
           data-netlify="true"
           data-netlify-recaptcha="true"
           onSubmit={this.handleSubmit}
