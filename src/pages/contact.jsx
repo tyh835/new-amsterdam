@@ -4,8 +4,7 @@ import Recaptcha from "react-google-recaptcha";
 
 import {encode} from '../utils/utils.js';
 
-const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
-console.log(process.env.SITE_RECAPTCHA_KEY);
+const RECAPTCHA_KEY = "6Le6lGEUAAAAAPitKLCGmirC8TIDmylpuux0u9F3";
 export default class Contact extends Component {
   constructor(props) {
     super(props);
