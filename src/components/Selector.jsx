@@ -40,7 +40,8 @@ const InnerWrapper = styled.div`
 `;
 
 const Button = styled.a`
-  width: 120px;
+  min-width: 120px;
+  max-width: 180px;
   height: 90%;
   font-family: ${props => props.theme.fonts.header};
   font-size: 1.2rem;

@@ -12,20 +12,20 @@ categories:
       description:
         Blog mixtape bespoke poke, pickled cray cornhole four loko. Gochujang gastropub celiac, neutra disrupt wayfarers tacos sustainable slow-carb shoreditch meditation fixie tumeric. 
     cards: 
-      - image: /img/birthday_1.jpg
+      - image: /img/flower2.jpg
         label: Flowery 30
         alt: something
-      - image: /img/birthday_2.png
+      - image: /img/men8.png
         label: Double the fun at 60
         alt: something
-      - image: /img/birthday_3.png
+      - image: /img/wedding10.png
         label: Back to 30 again
         alt: something
-      - image: /img/birthday_4.jpg
+      - image: /img/flower3.jpg
         label: Forever 21
         alt: something
       - image: /img/card_cakes.jpg
-        label: Dapper As Fuck
+        label: Dapper cake
         alt: something
   - name: Wedding
     about: 
@@ -35,13 +35,13 @@ categories:
       description:
         Viral waistcoat adaptogen, ugh authentic iceland shoreditch poutine vexillologist hexagon pok pok craft beer banjo enamel pin quinoa. Cray cardigan craft beer plaid hashtag jianbing raclette fixie.  
     cards: 
-      - image: /img/wedding_1.jpg
+      - image: /img/wedding5.jpg
         label: We So Dope
         alt: something
-      - image: /img/wedding_2.jpg
+      - image: /img/wedding7.jpg
         label: We So Dope
         alt: something
-      - image: /img/wedding_3.png
+      - image: /img/wedding8.png
         label: We So Dope
         alt: something
 ---

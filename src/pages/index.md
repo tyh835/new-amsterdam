@@ -19,7 +19,7 @@ cards:
     - image: /img/card_cakes.jpg
       label: Check out our cakes...
       link: /cakes
-    - image: /img/card_pastries.jpg
+    - image: /img/pastries_1.jpg
       label: ... and pastries!
       link: /pastries
 ---
