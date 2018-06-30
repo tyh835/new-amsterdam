@@ -11,7 +11,7 @@ images:
     text: A New Amsterdam
 about: 
     image: /img/about.jpg
-    alt: about us
+    alt: New Amsterdam Bakery
     heading: About Us
     description:
       Aesthetic sustainable humblebrag letterpress freegan enamel pin succulents, cardigan lumbersexual drinking vinegar 3 wolf moon. VHS meh hoodie hammock vexillologist, fixie live-edge raclette chambray four loko leggings.

@@ -7,7 +7,7 @@ categories:
   - name: Birthday
     about: 
       image: /img/about_birthday.jpg
-      alt: birthday cake
+      alt: Birthday Cake
       heading: Birthday Cakes
       description:
         Blog mixtape bespoke poke, pickled cray cornhole four loko. Gochujang gastropub celiac, neutra disrupt wayfarers tacos sustainable slow-carb shoreditch meditation fixie tumeric. 
@@ -30,7 +30,7 @@ categories:
   - name: Wedding
     about: 
       image: /img/about_wedding.jpg
-      alt: wedding cakes
+      alt: Wedding Cakes
       heading: Wedding Cakes
       description:
         Viral waistcoat adaptogen, ugh authentic iceland shoreditch poutine vexillologist hexagon pok pok craft beer banjo enamel pin quinoa. Cray cardigan craft beer plaid hashtag jianbing raclette fixie.  
