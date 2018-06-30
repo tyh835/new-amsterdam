@@ -1,24 +1,89 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React from "react";
+import { navigateTo } from "gatsby-link";
+import Recaptcha from "react-google-recaptcha";
 
-export default class Contact extends Component {
+import {encode} from '../utils/utils.js';
+
+const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
+
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
+export default class Contact extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  handleRecaptcha = value => {
+    this.setState({ "g-recaptcha-response": value });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...this.state
+      })
+    })
+      .then(() => navigateTo(form.getAttribute("action")))
+      .catch(error => alert(error));
+  };
+
   render() {
     return (
-      <form name="contact" method="POST" data-netlify="true">
-        <input type="hidden" name="form-name" value="contact" /> 
-        <p>
-          <label>Name: <input type="text" name="name" /></label>
-        </p> 
-        <p>
-          <label>Email: <input type="text" name="email" /></label>
-        </p>
-        <p>
-          <label>Message: <textarea name="message"></textarea></label>
-        </p>
-        <div data-netlify-recaptcha></div>
-        <p>
-          <button type='submit'>Send</button>
-        </p>
-      </form>);
+      <div>
+        <h1>reCAPTCHA 2</h1>
+        <form
+          name="contact"
+          method="post"
+          action="/contact?success"
+          data-netlify="true"
+          data-netlify-recaptcha="true"
+          onSubmit={this.handleSubmit}
+        >
+          <noscript>
+            <p>This form won’t work with Javascript disabled</p>
+          </noscript>
+          <p>
+            <label>
+              Your name:<br />
+              <input type="text" name="name" onChange={this.handleChange} />
+            </label>
+          </p>
+          <p>
+            <label>
+              Your email:<br />
+              <input type="email" name="email" onChange={this.handleChange} />
+            </label>
+          </p>
+          <p>
+            <label>
+              Message:<br />
+              <textarea name="message" onChange={this.handleChange} />
+            </label>
+          </p>
+          <Recaptcha
+            ref="recaptcha"
+            sitekey={RECAPTCHA_KEY}
+            onChange={this.handleRecaptcha}
+          />
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
+      </div>
+    );
   }
 }
