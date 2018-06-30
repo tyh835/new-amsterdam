@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-export class Contact extends Component {
+export default class Contact extends Component {
   render() {
     return (
       <form name="contact" method="POST" data-netlify="true">
