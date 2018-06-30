@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import { navigateTo } from 'gatsby-link';
-import Recaptcha from 'react-google-recaptcha';
+import React, {Component} from "react";
+import { navigateTo } from "gatsby-link";
+import Recaptcha from "react-google-recaptcha";
 
-import { encode } from '../utils/utils.js';
+import {encode} from '../utils/utils.js';
 
-const RECAPTCHA_KEY = '6Le6lGEUAAAAAPitKLCGmirC8TIDmylpuux0u9F3';
+const RECAPTCHA_KEY = "6Le6lGEUAAAAAPitKLCGmirC8TIDmylpuux0u9F3";
 export default class Contact extends Component {
   constructor(props) {
     super(props);
-    this.state = {name: '', email: ''. message: '', 'g-recaptcha-response': ''};
+    this.state = {};
   }
 
   handleChange = e => {
@@ -16,30 +16,32 @@ export default class Contact extends Component {
   };
 
   handleRecaptcha = value => {
-    this.setState({ 'g-recaptcha-response': value });
+    this.setState({ "g-recaptcha-response": value });
   };
 
   handleSubmit = e => {
-    e.preventDefault();
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        'form-name': 'contact',
+        "form-name": form.getAttribute("name"),
         ...this.state
       })
     })
-      .then(() => navigateTo('/'))
-      .catch(err => alert(err));
-    
+      .then(() => navigateTo(form.getAttribute("action")))
+      .catch(error => alert(error));
+    e.preventDefault();
   };
 
   render() {
-    const { name, email, message } = this.state;
     return (
       <div>
-        <h1>Contact Us</h1>
+        <h1>reCAPTCHA 2</h1>
         <form
+          name="contact"
+          method="post"
+          action="/contact/"
           data-netlify="true"
           data-netlify-recaptcha="true"
           onSubmit={this.handleSubmit}
@@ -51,33 +53,19 @@ export default class Contact extends Component {
           <p>
             <label>
               Your name:<br />
-              <input
-                type="text"
-                name="name"
-                value={name}
-                onChange={this.handleChange}
-              />
+              <input type="text" name="name" onChange={this.handleChange} />
             </label>
           </p>
           <p>
             <label>
               Your email:<br />
-              <input
-                type="email"
-                name="email"
-                value={email}
-                onChange={this.handleChange}
-              />
+              <input type="email" name="email" onChange={this.handleChange} />
             </label>
           </p>
           <p>
             <label>
               Message:<br />
-              <textarea
-                name="message"
-                message={message}
-                onChange={this.handleChange}
-              />
+              <textarea name="message" onChange={this.handleChange} />
             </label>
           </p>
           <Recaptcha
@@ -86,9 +74,7 @@ export default class Contact extends Component {
             onChange={this.handleRecaptcha}
           />
           <p>
-            <button className="g-recaptcha" type="submit">
-              Send
-            </button>
+            <button className="g-recaptcha" type="submit">Send</button>
           </p>
         </form>
       </div>
