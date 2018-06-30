@@ -2,7 +2,7 @@
 templateKey: 'cakes-page'
 path: /cakes
 title: We Love Making Cakes
-jumbotron: /img/jumbotron_cakes.jpg
+jumbotron: /img/jumbotron_cake.jpg
 categories:
   - name: Birthday
     about: 
