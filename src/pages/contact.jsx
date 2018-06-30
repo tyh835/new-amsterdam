@@ -18,7 +18,7 @@ export default class Contact extends Component {
       <form name="contact" method="POST" data-netlify="true" onSubmit={this.handleSubmit}>
         <input type="hidden" name="form-name" value="contact" /> 
         <label>Name: </label><input type="text" name="name" value={name} onChange={this.handleChange} />
-        <label>Email: </label><input type="text" name="name" value={email} onChange={this.handleChange} />
+        <label>Email: </label><input type="text" name="email" value={email} onChange={this.handleChange} />
         <label>Message: </label><textarea name="message" value={message} onChange={this.handleChange}></textarea>
         <div data-netlify-recaptcha></div>
         <button type='submit'>Send</button>
