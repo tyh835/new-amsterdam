@@ -1,15 +1,14 @@
-import React, {Component} from "react";
-import { navigateTo } from "gatsby-link";
-import Recaptcha from "react-google-recaptcha";
+import React, { Component } from 'react';
+import { navigateTo } from 'gatsby-link';
+import Recaptcha from 'react-google-recaptcha';
 
-import {encode} from '../utils/utils.js';
+import { encode } from '../utils/utils.js';
 
-const RECAPTCHA_KEY = "6Le6lGEUAAAAAPitKLCGmirC8TIDmylpuux0u9F3";
-
-export class ContactForm extends Component {
+const RECAPTCHA_KEY = '6Le6lGEUAAAAAPitKLCGmirC8TIDmylpuux0u9F3';
+export default class Contact extends Component {
   constructor(props) {
     super(props);
-    this.state = {name: "", email: "", message: "", "g-recaptcha-response": ""};
+    this.state = {name: '', email: ''. message: '', 'g-recaptcha-response': ''};
   }
 
   handleChange = e => {
@@ -17,22 +16,22 @@ export class ContactForm extends Component {
   };
 
   handleRecaptcha = value => {
-    this.setState({ "g-recaptcha-response": value });
+    this.setState({ 'g-recaptcha-response': value });
   };
 
   handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    e.preventDefault();
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        "form-name": 'contact',
+        'form-name': 'contact',
         ...this.state
       })
     })
       .then(() => navigateTo('/'))
-      .catch(error => alert(error));
-
-    e.preventDefault();
+      .catch(err => alert(err));
+    
   };
 
   render() {
@@ -48,22 +47,37 @@ export class ContactForm extends Component {
           <noscript>
             <p>This form won’t work with Javascript disabled</p>
           </noscript>
+          <input type="hidden" name="form-name" value="contact" />
           <p>
             <label>
               Your name:<br />
-              <input type="text" name="name" value={name} onChange={this.handleChange} />
+              <input
+                type="text"
+                name="name"
+                value={name}
+                onChange={this.handleChange}
+              />
             </label>
           </p>
           <p>
             <label>
               Your email:<br />
-              <input type="email" name="email" value={email} onChange={this.handleChange} />
+              <input
+                type="email"
+                name="email"
+                value={email}
+                onChange={this.handleChange}
+              />
             </label>
           </p>
           <p>
             <label>
               Message:<br />
-              <textarea name="message" value={message} onChange={this.handleChange} />
+              <textarea
+                name="message"
+                message={message}
+                onChange={this.handleChange}
+              />
             </label>
           </p>
           <Recaptcha
@@ -72,7 +86,9 @@ export class ContactForm extends Component {
             onChange={this.handleRecaptcha}
           />
           <p>
-            <button type="submit">Send</button>
+            <button className="g-recaptcha" type="submit">
+              Send
+            </button>
           </p>
         </form>
       </div>
