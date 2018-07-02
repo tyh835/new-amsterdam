@@ -31,12 +31,12 @@ const Label = styled.label`
   justify-self: end;
   align-self: center;
   grid-column: span 1;
-  color: white;
+  color: ${props => props.theme.color.white};
 `;
 
 const Input = styled.input`
   width: 60%;
-  height: 30px;
+  height: 25px;
   border: 2px solid ${props => props.theme.color.teal};
   grid-column: span 1;
   margin-left: 1rem;
@@ -52,7 +52,8 @@ const TextInput = styled.input`
   width: 60%;
   height: 100%;
   border: 2px solid ${props => props.theme.color.teal};
-  grid-column: span 1;
+  grid-column: 2 / 3;
+  padding-bottom: 130px;
   margin-left: 1rem;
   resize: none;
 
@@ -138,7 +139,7 @@ export default class Contact extends Component {
           />
           <Label>Message: </Label>
           <TextInput type="text" name="message" value={message} onChange={this.handleChange} />
-          <div data-netlify-recaptcha></div>
+          <div data-netlify-recaptcha="true"></div>
           <Button type="submit">Send</Button>
         </Form>
       </Wrapper>
