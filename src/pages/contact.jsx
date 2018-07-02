@@ -38,6 +38,7 @@ const Input = styled.input`
   width: 60%;
   height: 25px;
   border: 2px solid ${props => props.theme.color.teal};
+  border-radius: 5px;
   grid-column: span 1;
   margin-left: 1rem;
   align-self: center;
@@ -52,6 +53,7 @@ const TextInput = styled.textarea`
   width: 60%;
   height: 100%;
   border: 2px solid ${props => props.theme.color.teal};
+  border-radius: 5px;
   grid-area: 4 / 2 / 5 / 3;
   margin-left: 1rem;
   resize: none;
@@ -86,10 +88,6 @@ const Button = styled.button`
   &:focus {
     outline: none;
   }
-`;
-
-const Hidden = styled.div`
-  visibility: hidden;
 `;
 
 export default class Contact extends Component {
@@ -142,7 +140,7 @@ export default class Contact extends Component {
           />
           <Label>Message: </Label>
           <TextInput type="text" name="message" value={message} onChange={this.handleChange} />
-          <Hidden dangerouslySetInnerHTML={{__html: '<div data-netlify-recaptcha></div>'}} />
+          <div data-netlify-recaptcha=''></div>
           <Button type="submit">Send</Button>
         </Form>
       </Wrapper>
