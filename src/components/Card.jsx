@@ -8,6 +8,7 @@ import Image from './Image.jsx';
 const Wrapper = styled.div`
   width: ${props => props.dimensions.card.width || props.dimensions.card};
   height: ${props => props.dimensions.card.height || props.dimensions.card};
+  background-color: ${props => props.theme.color.white};
   border-radius: 25px;
   display: flex;
   flex-direction: column;
@@ -56,14 +57,12 @@ class Card extends Component {
     return (
       <Fade bottom duration={1000} distance="120px">
         <Wrapper dimensions={dimensions} onClick={this.onClick}>
-          {data.image ? (
+          {data.image && (
             <ImageBox dimensions={dimensions}>
               <Image image={data.image} alt={data.alt} isPreview={isPreview} />
             </ImageBox>
-          ) : (
-            ''
           )}
-          {data.label ? <TextBox link={link}>{data.label}</TextBox> : ''}
+          {data.label && <TextBox link={link}>{data.label}</TextBox>}
         </Wrapper>
       </Fade>
     );

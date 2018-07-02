@@ -160,7 +160,7 @@ export class CakesPageTemplate extends Component {
       <Fragment>
         <JumbotronWrapper>
           <Image image={jumbotron} isPreview={isPreview} />
-          <Banner teal small>
+          <Banner small>
             {title}
           </Banner>
         </JumbotronWrapper>
@@ -169,32 +169,30 @@ export class CakesPageTemplate extends Component {
           activeCategory={this.state.currentCategory}
           handleChange={this.changeCategory}
         />
-        <CardsGrid px={[0, 10, 40]} my={[0, 50, 80]}>
-          <Fragment>
-            <AboutWrapper>
-              <About
-                flat
-                data={this.state.currentData.about}
-                isPreview={isPreview}
-              />
-            </AboutWrapper>
-            {this.state.currentData.cards.map(card => (
-              <Card
-                dimensions={dimensions}
-                data={card}
-                key={card.key}
-                isPreview={isPreview}
-                handleClick={this.toggleModal}
-              />
-            ))}
-            {this.state.showModal && (
-              <Modal
-                data={this.state.modalData}
-                exitModal={this.exitModal}
-                isPreview={isPreview}
-              />
-            )}
-          </Fragment>
+        <CardsGrid px={[0, 10, 40]} my={[0, 50]}>
+          <AboutWrapper>
+            <About
+              flat
+              data={this.state.currentData.about}
+              isPreview={isPreview}
+            />
+          </AboutWrapper>
+          {this.state.currentData.cards.map(card => (
+            <Card
+              dimensions={dimensions}
+              data={card}
+              key={card.key}
+              isPreview={isPreview}
+              handleClick={this.toggleModal}
+            />
+          ))}
+          {this.state.showModal && (
+            <Modal
+              data={this.state.modalData}
+              exitModal={this.exitModal}
+              isPreview={isPreview}
+            />
+          )}
         </CardsGrid>
       </Fragment>
     );
@@ -242,7 +240,7 @@ export const cakesPageQuery = graphql`
               maxWidth: 2000
               maxHeight: 500
               quality: 85
-              traceSVG: { color: "#A7DBD8" }
+              traceSVG: { color: "#69D2E7" }
             ) {
               ...GatsbyImageSharpSizes_withWebp_tracedSVG
             }
@@ -257,7 +255,7 @@ export const cakesPageQuery = graphql`
                   maxWidth: 300
                   maxHeight: 300
                   quality: 85
-                  traceSVG: { color: "#A7DBD8" }
+                  traceSVG: { color: "#69D2E7" }
                 ) {
                   ...GatsbyImageSharpSizes_withWebp_tracedSVG
                 }
@@ -274,7 +272,7 @@ export const cakesPageQuery = graphql`
                   maxWidth: 600
                   maxHeight: 600
                   quality: 85
-                  traceSVG: { color: "#A7DBD8" }
+                  traceSVG: { color: "#69D2E7" }
                 ) {
                   ...GatsbyImageSharpSizes_withWebp_tracedSVG
                 }

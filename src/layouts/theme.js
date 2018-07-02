@@ -16,6 +16,7 @@ export default {
     black: '#363636',
     blue: '#69D2E7',
     orange: 'orange',
+    darkorange: '#FA6900',
     teal: '#A7DBD8',
     white: '#FFFFFF'
   },

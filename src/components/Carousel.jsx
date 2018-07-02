@@ -108,7 +108,7 @@ export default class Carousel extends React.Component {
                 alt={image.text}
                 isPreview={isPreview}
               />
-              <Banner position={i} orange={i % 3 === 1} teal={i % 3 === 2}>
+              <Banner position={i} orange={i % 3 === 1} teal={i % 3 === 0}>
                 {image.text}
               </Banner>
             </JumbotronWrapper>

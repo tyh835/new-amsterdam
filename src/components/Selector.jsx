@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const OuterWrapper = styled.div`
+const Wrapper = styled.div`
   margin-top: 2rem;
   width: 100%;
-  height: 70px;
+  height: 100px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: visible;
 
   @media (max-width: ${props => props.theme.breakpoints[2]}) {
     margin-top: 1rem;
@@ -15,37 +18,18 @@ const OuterWrapper = styled.div`
 
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
     margin-top: 0rem;
-  }
-`;
-
-const InnerWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  height: 100%;
-  border-radius: 15px;
-  overflow-x: scroll;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-
-  @media (max-width: ${props => props.theme.breakpoints[2]}) {
-    width: 100%;
-    border-radius: 0px;
-  }
-
-  @media (max-width: ${props => props.theme.breakpoints[0]}) {
     padding-bottom: 15px;
-    box-shadow: none;
   }
 `;
 
 const Button = styled.a`
+  margin: 0 8px;
   min-width: 120px;
   max-width: 180px;
-  height: 90%;
+  height: 50%;
   font-family: ${props => props.theme.fonts.header};
   font-size: 1.2rem;
-  border-radius: 10px;
+  border-radius: 7px;
   transition: ${props => props.theme.hover.transition};
   color: ${props => props.theme.color.black};
   background-color: ${props => props.theme.color.white};
@@ -53,15 +37,17 @@ const Button = styled.a`
   justify-content: center;
   align-items: center;
   user-select: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
   &:hover {
-    color: ${props => props.theme.color.teal};
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    color: ${props => props.theme.color.darkorange};
     cursor: pointer;
     opacity: 0.9;
   }
 
   &:active {
-    background-color: ${props => props.theme.color.teal};
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   }
 `;
 
@@ -74,24 +60,22 @@ export default class Selector extends Component {
   render() {
     const { categories } = this.props;
     return (
-      <OuterWrapper>
-        <InnerWrapper>
-          {categories.map(category => {
-            return (
-              <Button
-                key={category}
-                value={category}
-                className={
-                  category === this.props.activeCategory ? 'active-button' : ''
-                }
-                onClick={this.onClick}
-              >
-                {category}
-              </Button>
-            );
-          })}
-        </InnerWrapper>
-      </OuterWrapper>
+      <Wrapper>
+        {categories.map(category => {
+          return (
+            <Button
+              key={category}
+              value={category}
+              className={
+                category === this.props.activeCategory ? 'active-button' : ''
+              }
+              onClick={this.onClick}
+            >
+              {category}
+            </Button>
+          );
+        })}
+      </Wrapper>
     );
   }
 }
