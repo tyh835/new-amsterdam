@@ -88,6 +88,10 @@ const Button = styled.button`
   }
 `;
 
+const Hidden = styled.div`
+  visibility: hidden;
+`;
+
 export default class Contact extends Component {
   constructor(props) {
     super(props);
@@ -138,7 +142,7 @@ export default class Contact extends Component {
           />
           <Label>Message: </Label>
           <TextInput type="text" name="message" value={message} onChange={this.handleChange} />
-          <div dangerouslySetInnerHTML={{__html: '<div data-netlify-recaptcha></div>'}}/>
+          <Hidden dangerouslySetInnerHTML={{__html: '<div data-netlify-recaptcha></div>'}} />
           <Button type="submit">Send</Button>
         </Form>
       </Wrapper>
