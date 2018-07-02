@@ -1,21 +1,37 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+
+const Form = styled.form`
+
+`;
+
+const Input = styled.input`
+
+`;
+
+const Textarea = styled.textarea`
+
+`;
+
+const Button = styled.button`
+
+`;
 
 export default class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = { name: '', email: '', message: '' };
-    this.validate = false;
+    this.validated = false;
   }
 
   validateInput = () => {
     // add actual validation
-    this.validate = true;
+    this.validated = true;
   }
 
   handleSubmit = e => {
     this.validateInput();
-    // allow default behaviour if fields have been validated
-    if (!this.validate) {
+    if (!this.validated) {
       e.preventDefault();
     }
   };
@@ -25,7 +41,7 @@ export default class Contact extends Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <form
+      <Form
         name="contact"
         method="POST"
         data-netlify="true"
@@ -34,24 +50,24 @@ export default class Contact extends Component {
       >
         <input type="hidden" name="form-name" value="contact" />
         <label>Name: </label>
-        <input
+        <Input
           type="text"
           name="name"
           value={name}
           onChange={this.handleChange}
         />
         <label>Email: </label>
-        <input
+        <Input
           type="text"
           name="email"
           value={email}
           onChange={this.handleChange}
         />
         <label>Message: </label>
-        <textarea name="message" value={message} onChange={this.handleChange} />
+        <Textarea name="message" value={message} onChange={this.handleChange} />
         <div data-netlify-recaptcha />
-        <button type="submit">Send</button>
-      </form>
+        <Button type="submit">Send</Button>
+      </Form>
     );
   }
 }
