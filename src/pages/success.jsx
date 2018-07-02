@@ -108,9 +108,8 @@ const Cloud5 = Cloud.extend`
   animation: ${moveclouds} 20s linear infinite;
 `;
 
-const NotFoundPage = ({ className }) => (
+const NotFoundPage = () => (
   <Wrapper
-    className={className}
     py="250px"
     flexDirection="column"
     alignItems="center"

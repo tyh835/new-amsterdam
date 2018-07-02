@@ -7,11 +7,7 @@ html, body {overflow-x: hidden}
 }
 
 .active-button {
-  background-color:#FA6900;
-  color: white;
+  background-color:#FA6900 !important;
+  color: white !important;
   border: 1px solid white;
-}
-
-.active-button:hover {
-  color: white;
 }

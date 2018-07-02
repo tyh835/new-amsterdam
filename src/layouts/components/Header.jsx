@@ -73,7 +73,7 @@ const Header = () => {
         <NavLink exact to="/pastries">
           Bread and Pastries
         </NavLink>
-        <NavLink exact to="/404">
+        <NavLink exact to="/contact">
           Contact Us
         </NavLink>
       </Nav>

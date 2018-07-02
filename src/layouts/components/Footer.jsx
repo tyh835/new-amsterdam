@@ -61,7 +61,7 @@ const Footer = () => {
       is="footer"
       px={[0, 1, 3, 4]}
       py={[3, 3, 0]}
-      mt={[3, 0]}
+      pt={[6, 0]}
       flexDirection={['column', 'column', 'row']}
     >
       <InfoBox width={responsiveWidth} mt={responsiveMarginTop}>
