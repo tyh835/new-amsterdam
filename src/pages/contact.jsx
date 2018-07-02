@@ -114,37 +114,21 @@ export default class Contact extends Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <Wrapper py={50} px={[3, 50, 100, 200]}>
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          action="/success"
-          onSubmit={this.handleSubmit}
-        >
-          <input type="hidden" name="form-name" value="contact" />
-          <Header>Contact Us</Header>
-          <label>Name: </label>
-          <input
-            type="text"
-            name="name"
-            value={name}
-            onChange={this.handleChange}
-          />
-          <label>Email: </label>
-          <input
-            type="text"
-            name="email"
-            value={email}
-            onChange={this.handleChange}
-          />
-          <label>Message: </label>
-          <textarea name="message" value={message} onChange={this.handleChange} />
-          <div data-netlify-recaptcha></div>
-          <button type="submit">Send</button>
-        </form>
-      </Wrapper>
-      
+      <form name="contact" method="POST" netlify>
+        <p>
+          <label>Email: <input type="text" name="name" onChange={this.handleChange} value={name} /></label>
+        </p>
+        <p>
+          <label>Email: <input type="text" name="email" onChange={this.handleChange} value={email} /></label>
+        </p>
+        <p>
+          <label>Message: <textarea name="message" onChange={this.handleChange} value={message}></textarea></label>
+        </p>
+        <div data-netlify-recaptcha></div>
+        <p>
+          <button type='submit'>Send</button>
+        </p>
+      </form>
     );
   }
 }
