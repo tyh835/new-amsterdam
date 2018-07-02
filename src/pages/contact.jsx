@@ -48,12 +48,11 @@ const Input = styled.input`
   }
 `;
 
-const TextInput = styled.input`
+const TextInput = styled.textarea`
   width: 60%;
   height: 100%;
   border: 2px solid ${props => props.theme.color.teal};
-  grid-column: 2 / 3;
-  padding-bottom: 130px;
+  grid-area: 4 / 2 / 5 / 3;
   margin-left: 1rem;
   resize: none;
 
@@ -66,7 +65,7 @@ const TextInput = styled.input`
 const Button = styled.button`
   height: 40px;
   width: 120px;
-  grid-column: span 1;
+  ggrid-area: 5 / 2 / 6 / 3;
   justify-self: center;
   align-self: center;
   font-family: ${props => props.theme.fonts.header};
@@ -139,7 +138,7 @@ export default class Contact extends Component {
           />
           <Label>Message: </Label>
           <TextInput type="text" name="message" value={message} onChange={this.handleChange} />
-          <div data-netlify-recaptcha="true"></div>
+          <div dangerouslySetInnerHTML={{__html: '<div data-netlify-recaptcha></div>'}}/>
           <Button type="submit">Send</Button>
         </Form>
       </Wrapper>
