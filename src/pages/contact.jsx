@@ -114,7 +114,7 @@ export default class Contact extends Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <form name="contact" method="POST" netlify>
+      <form name="contact" method="POST" data-netlify="true">
         <p>
           <label>Email: <input type="text" name="name" onChange={this.handleChange} value={name} /></label>
         </p>
