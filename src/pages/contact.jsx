@@ -10,7 +10,7 @@ const Input = styled.input`
 `;
 
 const Textarea = styled.textarea`
-
+  resize: none;
 `;
 
 const Button = styled.button`
@@ -65,7 +65,7 @@ export default class Contact extends Component {
         />
         <label>Message: </label>
         <Textarea name="message" value={message} onChange={this.handleChange} />
-        <div data-netlify-recaptcha />
+        <div data-netlify-recaptcha></div>
         <Button type="submit">Send</Button>
       </Form>
     );
