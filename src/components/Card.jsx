@@ -22,11 +22,21 @@ const Wrapper = styled.div`
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     cursor: pointer;
   }
+
+  @media (max-width: ${props => props.theme.breakpoints[1]}) {
+    width: ${props => props.dimensions.mobile.width || props.dimensions.mobile};
+    height: ${props => props.dimensions.mobile.height || props.dimensions.mobile};
+  }
 `;
 
 const ImageBox = styled.div`
-  width: ${props => props.dimensions.image.width || props.dimensions.image};
-  height: ${props => props.dimensions.image.height || props.dimensions.image};
+  width: ${props => props.dimensions.image};
+  height: ${props => props.dimensions.image};
+
+  @media (max-width: ${props => props.theme.breakpoints[1]}) {
+    width: ${props => props.dimensions.mobile.image};
+    height: ${props => props.dimensions.mobile.image};
+  }
 `;
 
 const TextBox = styled.div`

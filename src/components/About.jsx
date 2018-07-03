@@ -15,10 +15,7 @@ const Wrapper = Box.extend`
   border-radius: 25px;
   background-color: white;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  box-shadow: ${props =>
-    props.flat
-      ? '0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)'
-      : ''};
+  box-shadow: ${props => props.flat && '0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)'};
   grid-template: 20% 80% / repeat(3, 1fr);
   grid-template-areas:
     'image title .'
@@ -28,6 +25,7 @@ const Wrapper = Box.extend`
     grid-template-areas:
       'title title title'
       'text text text';
+    border-radius: ${props => props.flat || '0px'};
   }
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);

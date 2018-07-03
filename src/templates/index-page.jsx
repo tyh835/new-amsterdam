@@ -8,6 +8,7 @@ import GatsbyLink from 'gatsby-link';
 import Carousel from '../components/Carousel.jsx';
 import About from '../components/About.jsx';
 import Card from '../components/Card.jsx';
+import NavLink from '../components/NavLink.jsx';
 
 const CardsWrapper = Flex.extend`
   height: 540px;
@@ -57,13 +58,28 @@ const Link = styled(GatsbyLink)`
   }
 `;
 
+const Mobile = styled.div`
+  width: 100%;
+  display: none;
+
+  @media (max-width: ${props => props.theme.breakpoints[1]}) {
+    display: flex;
+    justify-content: center;
+  }
+`;
+
 export const IndexPageTemplate = ({ images, about, cards, isPreview }) => {
   const dimensions = {
     card: {
       width: '300px',
       height: '340px'
     },
-    image: '240px'
+    image: '240px',
+    mobile: {
+      width: '250px',
+      height: '280px',
+      image: '200px'
+    }
   };
 
   return (
@@ -86,6 +102,9 @@ export const IndexPageTemplate = ({ images, about, cards, isPreview }) => {
           );
         })}
       </CardsWrapper>
+      <Mobile>
+        <NavLink exact to="/contact" style={{fontSize: '2rem'}}>Have Questions? Let Us Know &rarr;</NavLink>
+      </Mobile>
     </Fragment>
   );
 };

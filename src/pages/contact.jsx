@@ -166,7 +166,7 @@ export default class Contact extends Component {
           <input type="hidden" name="_format" value="plain" />
           <input type="hidden" name="_subject" value="New Amsterdam Bakery" />
           <input type="text" name="_gotcha" style={{display:'none'}} />
-          <Header>Shoot Us A Message</Header>
+          <Header>Contact Us</Header>
           <Label>Your Name: </Label>
           <Input
             type="text"
