@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import EmailValidator from 'email-validator';
 
-import {Flex} from 'rebass';
+import { Flex } from 'rebass';
 
 import Modal from '../components/Modal.jsx';
 
@@ -35,7 +35,7 @@ const Header = styled.h1`
   border-radius: 15px;
   color: ${props => props.theme.color.orange};
   background-color: ${props => props.theme.color.white};
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
 `;
 
 const Label = styled.p`
@@ -109,7 +109,14 @@ const Button = styled.button`
 export default class Contact extends Component {
   constructor(props) {
     super(props);
-    this.state = { name: '', email: '', message: '', sendTo: 'itony9401@live.com', showModal: false, modalMessage: '' };
+    this.state = {
+      name: '',
+      email: '',
+      message: '',
+      sendTo: 'itony9401@live.com',
+      showModal: false,
+      modalMessage: ''
+    };
     this.validated = false;
   }
 
