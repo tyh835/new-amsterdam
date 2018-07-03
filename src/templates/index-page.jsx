@@ -72,9 +72,9 @@ export const IndexPageTemplate = ({ images, about, cards, isPreview }) => {
   const dimensions = {
     card: {
       width: '300px',
-      height: '340px'
+      height: '340px',
+      image: '240px'
     },
-    image: '240px',
     mobile: {
       width: '240px',
       height: '270px',

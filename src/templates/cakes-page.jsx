@@ -152,9 +152,9 @@ export class CakesPageTemplate extends Component {
     const dimensions = {
       card: {
         width: '240px',
-        height: '270px'
+        height: '270px',
+        image: '200px'
       },
-      image: '200px',
       mobile: {
         width: '240px',
         height: '270px',
@@ -174,7 +174,7 @@ export class CakesPageTemplate extends Component {
           activeCategory={this.state.currentCategory}
           handleChange={this.changeCategory}
         />
-        <CardsGrid px={[0, 10, 40]} my={[0, 50]}>
+        <CardsGrid px={[0, 10, 40]} my={[20, 50]}>
           <AboutWrapper>
             <About
               flat

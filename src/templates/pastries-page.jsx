@@ -106,9 +106,9 @@ export class PastriesPageTemplate extends Component {
     const dimensions = {
       card: {
         width: '240px',
-        height: '270px'
+        height: '270px',
+        image: '200px'
       },
-      image: '200px',
       mobile: {
         width: '240px',
         height: '270px',
@@ -126,7 +126,7 @@ export class PastriesPageTemplate extends Component {
             {title}
           </Banner>
         </JumbotronWrapper>
-        <CardsGrid px={[0, 10, 40]} my={[0, 50]}>
+        <CardsGrid px={[0, 10, 40]} my={[20, 50]}>
           <Title>Bread and Pastries</Title>
           {pastries.map((card, i) => (
             <Card

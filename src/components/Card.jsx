@@ -30,8 +30,8 @@ const Wrapper = styled.div`
 `;
 
 const ImageBox = styled.div`
-  width: ${props => props.dimensions.image};
-  height: ${props => props.dimensions.image};
+  width: ${props => props.dimensions.card.image};
+  height: ${props => props.dimensions.card.image};
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     width: ${props => props.dimensions.mobile.image};
@@ -46,6 +46,10 @@ const TextBox = styled.div`
   width: 100%;
   margin-top: 1rem;
   text-align: center;
+
+  @media (max-width: ${props => props.theme.breakpoints[1]}) {
+    font-size: 1rem;
+  }
 `;
 
 class Card extends Component {
