@@ -76,8 +76,8 @@ export const IndexPageTemplate = ({ images, about, cards, isPreview }) => {
     },
     image: '240px',
     mobile: {
-      width: '250px',
-      height: '280px',
+      width: '240px',
+      height: '270px',
       image: '200px'
     }
   };
@@ -85,7 +85,7 @@ export const IndexPageTemplate = ({ images, about, cards, isPreview }) => {
   return (
     <Fragment>
       <Carousel images={images} isPreview={isPreview} />
-      <AboutWrapper is="section" mt={[0, 10, 100]}>
+      <AboutWrapper is="section" mt={[0, 10, 100]} mb={[20, 20, 0]}>
         <About data={about} isPreview={isPreview} />
       </AboutWrapper>
       <CardsWrapper flexDirection={['column', 'column', 'row']}>
