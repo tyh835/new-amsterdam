@@ -9,7 +9,11 @@ import Modal from '../components/Modal.jsx';
 const Wrapper = Flex.extend`
   width: 100%;
   height: 550px;
-  background-color: ${props => props.theme.color.blue};
+  background: linear-gradient(
+    to bottom,
+    ${props => props.theme.color.teal},
+    ${props => props.theme.color.blue}
+  );
   justify-content: center;
   align-items: center;
 `;
