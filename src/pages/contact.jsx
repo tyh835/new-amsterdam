@@ -27,7 +27,10 @@ const Header = styled.h1`
   grid-column: span 2;
   justify-self: center;
   align-self: center;
-  color: ${props => props.theme.color.white};
+  padding: 0.5rem 3rem;
+  border-radius: 15px;
+  color: ${props => props.theme.color.orange};
+  background-color: ${props => props.theme.color.white};
 `;
 
 const Label = styled.p`
@@ -81,7 +84,7 @@ const Button = styled.button`
   font-family: ${props => props.theme.fonts.header};
   font-size: 1.2rem;
   border-radius: 10px;
-  border: 2px solid ${props => props.theme.color.teal};
+  border: 1px solid ${props => props.theme.color.teal};
   transition: ${props => props.theme.hover.transition};
   color: ${props => props.theme.color.teal};
   background-color: ${props => props.theme.color.white};
@@ -146,7 +149,7 @@ export default class Contact extends Component {
           <input type="hidden" name="_format" value="plain" />
           <input type="hidden" name="_subject" value="New Amsterdam Bakery" />
           <input type="text" name="_gotcha" style={{display:'none'}} />
-          <Header>Contact Us</Header>
+          <Header>Shoot Us A Message</Header>
           <Label>Your Name: </Label>
           <Input
             type="text"
