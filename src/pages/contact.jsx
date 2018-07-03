@@ -36,6 +36,11 @@ const Header = styled.h1`
   color: ${props => props.theme.color.orange};
   background-color: ${props => props.theme.color.white};
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+
+  @media (max-width: ${props => props.theme.breakpoints[0]}) {
+    font-size: 1.2rem;
+    padding: 0.5rem 1.5rem;
+  }
 `;
 
 const Label = styled.p`
