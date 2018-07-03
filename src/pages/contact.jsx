@@ -27,14 +27,14 @@ const Header = styled.h1`
   grid-column: span 2;
   justify-self: center;
   align-self: center;
-  color: ${props => props.theme.color.black};
+  color: ${props => props.theme.color.white};
 `;
 
 const Label = styled.p`
   justify-self: end;
   align-self: center;
   grid-column: span 1;
-  color: ${props => props.theme.color.black};
+  color: ${props => props.theme.color.white};
 `;
 
 const Input = styled.input`
