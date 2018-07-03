@@ -1,13 +1,16 @@
 ---
-templateKey: 'pastries-page'
-path: /pastries
+templateKey: pastries-page
 title: Quality Ingredients
 jumbotron: /img/jumbotron_pastries.jpg
 pastries:
-  - image: /img/pastries_1.jpg
+  - alt: ''
+    image: /img/pastries_1.jpg
     label: Cinnamon Buns
-    alt: something
-  - image: /img/pastries_2.jpg
+  - alt: something
+    image: /img/pastries_2.jpg
     label: Carrot Cakes
-    alt: something
+  - alt: it becomes plain cheescake without the jam
+    image: /img/pastries4.jpg
+    label: Strawberry Cheese Cake
 ---
+
