@@ -114,9 +114,9 @@ export default class Contact extends Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <form name="contact" method="POST" action="/success" data-netlify="true">
+      <form name="contact" method="POST" data-netlify="true" action="/success" onSubmit={this.handleSubmit}>
         <p>
-          <label>Email: <input type="text" name="name" onChange={this.handleChange} value={name} /></label>
+          <label>Name: <input type="text" name="name" onChange={this.handleChange} value={name} /></label>
         </p>
         <p>
           <label>Email: <input type="text" name="email" onChange={this.handleChange} value={email} /></label>
@@ -126,7 +126,7 @@ export default class Contact extends Component {
         </p>
         <div data-netlify-recaptcha></div>
         <p>
-          <button type='submit'>Send</button>
+          <Button type='submit'>Send</Button>
         </p>
       </form>
     );
