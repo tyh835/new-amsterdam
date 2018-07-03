@@ -29,9 +29,9 @@ const Modal = ({ data, exitModal, isPreview }) => {
         onClick={exitModal}
       />
       <ModalWrapper width={[300, 400]}>
-        <Image image={data.image} isPreview={isPreview} />
-        <ModalHeading>{data.label}</ModalHeading>
-        <p>{data.alt}</p>
+        {data.image && <Image image={data.image} isPreview={isPreview} />}
+        {data.label && <ModalHeading>{data.label}</ModalHeading>}
+        {data.alt && <p>{data.alt}</p>}
       </ModalWrapper>
     </Fragment>
   );
