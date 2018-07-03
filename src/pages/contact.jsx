@@ -27,14 +27,14 @@ const Header = styled.h1`
   grid-column: span 2;
   justify-self: center;
   align-self: center;
-  color: white;
+  color: ${props => props.theme.color.black};
 `;
 
 const Label = styled.p`
   justify-self: end;
   align-self: center;
   grid-column: span 1;
-  color: ${props => props.theme.color.white};
+  color: ${props => props.theme.color.black};
 `;
 
 const Input = styled.input`
@@ -163,7 +163,7 @@ export default class Contact extends Component {
           />
           <Label>Message: </Label>
           <TextInput name="message" value={message} onChange={this.handleChange} />
-          <Button type="submit">Send</Button>
+          <Button type="submit">Submit</Button>
         </Form>
         {this.state.showModal && <Modal exitModal={this.exitModal} data={{alt: this.state.modalMessage}}/>}
       </Wrapper>
