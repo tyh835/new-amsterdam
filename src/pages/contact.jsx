@@ -31,6 +31,7 @@ const Header = styled.h1`
   border-radius: 15px;
   color: ${props => props.theme.color.orange};
   background-color: ${props => props.theme.color.white};
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 `;
 
 const Label = styled.p`
