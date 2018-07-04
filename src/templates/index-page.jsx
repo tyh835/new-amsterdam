@@ -22,11 +22,7 @@ const CardsWrapper = Flex.extend`
 `;
 
 const AboutWrapper = Flex.extend`
-  background: linear-gradient(
-    to bottom right,
-    ${props => props.theme.color.teal},
-    ${props => props.theme.color.beige}
-  );
+  background: linear-gradient(to bottom right,${props => props.theme.color.teal},${props => props.theme.color.beige});
   color: ${props => props.theme.color.black};
   width: 90%;
   height: 50vw;

@@ -14,7 +14,7 @@ about:
     alt: New Amsterdam Bakery
     heading: About Us
     description:
-      Aesthetic sustainable humblebrag letterpress freegan enamel pin succulents, cardigan lumbersexual drinking vinegar 3 wolf moon. VHS meh hoodie hammock vexillologist, fixie live-edge raclette chambray four loko leggings.
+      We are a local bakery located at 12892 96 Ave in Surrey. We make very good cakes, bread, and pastries.
 cards:
     - image: /img/card_cakes.jpg
       label: Check out our cakes...

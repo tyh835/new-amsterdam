@@ -10,7 +10,7 @@ categories:
       alt: Birthday Cake
       heading: Birthday Cakes
       description:
-        Blog mixtape bespoke poke, pickled cray cornhole four loko. Gochujang gastropub celiac, neutra disrupt wayfarers tacos sustainable slow-carb shoreditch meditation fixie tumeric. 
+        We design cakes in a variety of shapes and sizes, from round to square or rectangle, or your custom shape of choice. We will customize your cake to your liking. 
     cards: 
       - image: /img/flower2.jpg
         label: Flowery 30
@@ -33,15 +33,15 @@ categories:
       alt: Wedding Cakes
       heading: Wedding Cakes
       description:
-        Viral waistcoat adaptogen, ugh authentic iceland shoreditch poutine vexillologist hexagon pok pok craft beer banjo enamel pin quinoa. Cray cardigan craft beer plaid hashtag jianbing raclette fixie.  
+        We design cakes in a variety of shapes and sizes, from round to square or rectangle, or your custom shape of choice. We will customize your cake to your liking. 
     cards: 
       - image: /img/wedding5.jpg
-        label: We So Dope
+        label: Wedding cake
         alt: something
       - image: /img/wedding7.jpg
-        label: We So Dope
+        label: Wedding cake
         alt: something
       - image: /img/wedding8.png
-        label: We So Dope
+        label: Wedding cake
         alt: something
 ---
