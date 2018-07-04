@@ -148,7 +148,7 @@ export const indexPageQuery = graphql`
                 maxWidth: 2000
                 maxHeight: 1000
                 quality: 85
-                traceSVG: { color: "#A7DBD8" }
+                traceSVG: { color: "papayawhip" }
               ) {
                 ...GatsbyImageSharpSizes_withWebp_tracedSVG
               }
@@ -163,7 +163,7 @@ export const indexPageQuery = graphql`
                 maxWidth: 300
                 maxHeight: 300
                 quality: 85
-                traceSVG: { color: "#A7DBD8" }
+                traceSVG: { color: "papayawhip" }
               ) {
                 ...GatsbyImageSharpSizes_withWebp_tracedSVG
               }
@@ -180,7 +180,7 @@ export const indexPageQuery = graphql`
                 maxWidth: 500
                 maxHeight: 500
                 quality: 85
-                traceSVG: { color: "#A7DBD8" }
+                traceSVG: { color: "papayawhip" }
               ) {
                 ...GatsbyImageSharpSizes_withWebp_tracedSVG
               }

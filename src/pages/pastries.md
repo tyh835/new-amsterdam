@@ -18,5 +18,4 @@ pastries:
   - alt: ''
     image: /img/creamhorn.jpg
     label: Cream Horn
-  - {}
 ---
