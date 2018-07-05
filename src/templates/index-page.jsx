@@ -38,7 +38,7 @@ const AboutWrapper = Flex.extend`
   }
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     height: 400px;
-    background-color: ${props => props.theme.color.white};
+    background: white;
     text-align: center;
   }
 `;

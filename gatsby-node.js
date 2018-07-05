@@ -44,8 +44,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 };
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  fmImagesToRelative(node);
   const { createNodeField } = boundActionCreators;
+  fmImagesToRelative(node);
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode });
