@@ -191,7 +191,7 @@ export const pastriesPageQuery = graphql`
               maxWidth: 2000
               maxHeight: 500
               quality: 85
-              traceSVG: { color: "orange" }
+              traceSVG: { color: "papayawhip" }
             ) {
               ...GatsbyImageSharpSizes_withWebp_tracedSVG
             }
@@ -204,7 +204,7 @@ export const pastriesPageQuery = graphql`
                 maxWidth: 600
                 maxHeight: 600
                 quality: 85
-                traceSVG: { color: "orange" }
+                traceSVG: { color: "papayawhip" }
               ) {
                 ...GatsbyImageSharpSizes_withWebp_tracedSVG
               }
