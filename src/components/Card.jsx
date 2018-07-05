@@ -22,26 +22,16 @@ const Wrapper = styled.div`
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     cursor: pointer;
   }
-
-  @media (max-width: ${props => props.theme.breakpoints[1]}) {
-    width: ${props => props.dimensions.mobile.width || props.dimensions.mobile};
-    height: ${props => props.dimensions.mobile.height || props.dimensions.mobile};
-  }
 `;
 
 const ImageBox = styled.div`
   width: ${props => props.dimensions.card.image};
   height: ${props => props.dimensions.card.image};
-
-  @media (max-width: ${props => props.theme.breakpoints[1]}) {
-    width: ${props => props.dimensions.mobile.image};
-    height: ${props => props.dimensions.mobile.image};
-  }
 `;
 
 const TextBox = styled.div`
   font-family: ${props => props.theme.fonts.header};
-  font-size: ${props => (props.link ? '1.2rem' : '1rem')};
+  font-size: 1rem;
   color: ${props => props.theme.color.black};
   width: 100%;
   margin-top: 1rem;
@@ -76,7 +66,7 @@ class Card extends Component {
               <Image image={data.image} alt={data.alt} isPreview={isPreview} />
             </ImageBox>
           )}
-          {data.label && <TextBox link={link}>{data.label}</TextBox>}
+          {data.label && <TextBox>{data.label}</TextBox>}
         </Wrapper>
       </Fade>
     );

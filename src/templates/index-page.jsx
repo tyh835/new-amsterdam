@@ -67,11 +67,6 @@ const Mobile = styled.div`
 export const IndexPageTemplate = ({ images, about, cards, isPreview }) => {
   const dimensions = {
     card: {
-      width: '300px',
-      height: '340px',
-      image: '240px'
-    },
-    mobile: {
       width: '240px',
       height: '270px',
       image: '200px'
@@ -92,7 +87,6 @@ export const IndexPageTemplate = ({ images, about, cards, isPreview }) => {
                 dimensions={dimensions}
                 data={card}
                 isPreview={isPreview}
-                link
               />
             </Link>
           );

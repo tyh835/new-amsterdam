@@ -154,11 +154,6 @@ export class CakesPageTemplate extends Component {
         width: '240px',
         height: '270px',
         image: '200px'
-      },
-      mobile: {
-        width: '240px',
-        height: '270px',
-        image: '200px'
       }
     };
     return (
