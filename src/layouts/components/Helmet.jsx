@@ -22,6 +22,10 @@ export default () => (
       {
         name: 'theme-color',
         content: '#ffffff'
+      },
+      {
+        name: 'description',
+        content: 'Display Page for New Amsterdam Bakery: Cakes, Bread, and Pastries'
       }
     ]}
     link={[
@@ -48,5 +52,7 @@ export default () => (
         color: '#5bbad5'
       }
     ]}
-  />
+  >
+    <html lang="en" />
+  </Helmet>
 );
