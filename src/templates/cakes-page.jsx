@@ -245,7 +245,7 @@ export const cakesPageQuery = graphql`
               maxWidth: 2000
               maxHeight: 500
               quality: 85
-              traceSVG: { color: "#A7DBD8" }
+              traceSVG: { color: "#69D2E7" }
             ) {
               ...GatsbyImageSharpSizes_withWebp_tracedSVG
             }
@@ -260,7 +260,7 @@ export const cakesPageQuery = graphql`
                   maxWidth: 300
                   maxHeight: 300
                   quality: 85
-                  traceSVG: { color: "#A7DBD8" }
+                  traceSVG: { color: "#69D2E7" }
                 ) {
                   ...GatsbyImageSharpSizes_withWebp_tracedSVG
                 }
@@ -277,7 +277,7 @@ export const cakesPageQuery = graphql`
                   maxWidth: 600
                   maxHeight: 600
                   quality: 85
-                  traceSVG: { color: "#A7DBD8" }
+                  traceSVG: { color: "#69D2E7" }
                 ) {
                   ...GatsbyImageSharpSizes_withWebp_tracedSVG
                 }
