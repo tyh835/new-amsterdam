@@ -80,7 +80,6 @@ Card.propTypes = {
   }),
   isPreview: PropTypes.bool,
   dimenstions: PropTypes.object,
-  link: PropTypes.bool
 };
 
 export default Card;

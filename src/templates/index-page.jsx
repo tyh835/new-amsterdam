@@ -11,7 +11,7 @@ import Card from '../components/Card.jsx';
 import NavLink from '../components/NavLink.jsx';
 
 const CardsWrapper = Flex.extend`
-  height: 540px;
+  height: 400px;
   background-color: white;
   justify-content: center;
   align-items: center;
