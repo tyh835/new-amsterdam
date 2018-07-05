@@ -21,11 +21,16 @@ export default () => {
       <a
         href="https://www.flaticon.com/authors/zlatko-najdenovski"
         title="Zlatko Najdenovski"
+        rel="noreferrer"
       >
         Zlatko Najdenovski
       </a>{' '}
       from{' '}
-      <a href="https://www.flaticon.com/" title="Flaticon">
+      <a 
+        href="https://www.flaticon.com/" 
+        title="Flaticon" 
+        rel="noreferrer"
+      >
         www.flaticon.com
       </a>{' '}
       is licensed by{' '}
@@ -33,6 +38,7 @@ export default () => {
         href="http://creativecommons.org/licenses/by/3.0/"
         title="Creative Commons BY 3.0"
         target="_blank"
+        rel="noreferrer"
       >
         CC 3.0 BY
       </a>
