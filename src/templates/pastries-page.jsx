@@ -89,7 +89,14 @@ export class PastriesPageTemplate extends Component {
     super(props);
     this.state = {
       showModal: false,
-      modalData: {}
+      modalData: {},
+      dimensions: {
+        card: {
+          width: '240px',
+          height: '270px',
+          image: '200px'
+        }
+      }
     };
   }
 
@@ -103,16 +110,7 @@ export class PastriesPageTemplate extends Component {
   };
 
   render() {
-    const dimensions = {
-      card: {
-        width: '240px',
-        height: '270px',
-        image: '200px'
-      }
-    };
-
     const { jumbotron, title, pastries, isPreview } = this.props;
-
     return (
       <Fragment>
         <JumbotronWrapper>
@@ -125,7 +123,7 @@ export class PastriesPageTemplate extends Component {
           <Title>Bread and Pastries</Title>
           {pastries.map((card, i) => (
             <Card
-              dimensions={dimensions}
+              dimensions={this.state.dimensions}
               data={card}
               key={`card${i}`}
               isPreview={isPreview}

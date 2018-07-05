@@ -101,7 +101,14 @@ export class CakesPageTemplate extends Component {
       currentData: data[0],
       currentCategory: data[0].name,
       showModal: false,
-      modalData: {}
+      modalData: {},
+      dimensions: {
+        card: {
+          width: '240px',
+          height: '270px',
+          image: '200px'
+        }
+      }
     };
   }
 
@@ -148,14 +155,6 @@ export class CakesPageTemplate extends Component {
 
   render() {
     const { jumbotron, title, categories, isPreview } = this.props;
-
-    const dimensions = {
-      card: {
-        width: '240px',
-        height: '270px',
-        image: '200px'
-      }
-    };
     return (
       <Fragment>
         <JumbotronWrapper>
@@ -179,7 +178,7 @@ export class CakesPageTemplate extends Component {
           </AboutWrapper>
           {this.state.currentData.cards.map(card => (
             <Card
-              dimensions={dimensions}
+              dimensions={this.state.dimensions}
               data={card}
               key={card.key}
               isPreview={isPreview}
