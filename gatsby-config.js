@@ -3,6 +3,15 @@ module.exports = {
     title: 'New Amsterdam Bakery'
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-121847457-1',
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+      }
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-react-next',
     'gatsby-plugin-catch-links',
