@@ -16,10 +16,10 @@ about:
     description:
       We are a local bakery located at 12892 96 Ave in Surrey. We make very good cakes, bread, and pastries.
 cards:
-    - image: /img/card_cakes.jpg
+    - image: /img/birthday5.jpg
       label: Check out our cakes...
       link: /cakes
-    - image: /img/pastries_1.jpg
+    - image: /img/pastries4.jpg
       label: ... and pastries!
       link: /pastries
 ---

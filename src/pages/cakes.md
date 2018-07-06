@@ -12,19 +12,19 @@ categories:
       description:
         We design cakes in a variety of shapes and sizes, from round to square or rectangle, or your custom shape of choice. We will customize your cake to your liking. 
     cards: 
-      - image: /img/flower2.jpg
+      - image: /img/birthday1.jpg
         label: Flowery 30
         alt: something
-      - image: /img/men8.png
+      - image: /img/birthday2.png
         label: Double the fun at 60
         alt: something
-      - image: /img/wedding10.png
+      - image: /img/birthday3.png
         label: Back to 30 again
         alt: something
-      - image: /img/flower3.jpg
+      - image: /img/birthday4.jpg
         label: Forever 21
         alt: something
-      - image: /img/card_cakes.jpg
+      - image: /img/birthday5.jpg
         label: Dapper cake
         alt: something
   - name: Wedding
@@ -35,13 +35,13 @@ categories:
       description:
         We design cakes in a variety of shapes and sizes, from round to square or rectangle, or your custom shape of choice. We will customize your cake to your liking. 
     cards: 
-      - image: /img/wedding5.jpg
+      - image: /img/wedding1.jpg
         label: Wedding cake
         alt: something
-      - image: /img/wedding7.jpg
+      - image: /img/wedding2.jpg
         label: Wedding cake
         alt: something
-      - image: /img/wedding8.png
+      - image: /img/wedding3.png
         label: Wedding cake
         alt: something
 ---
