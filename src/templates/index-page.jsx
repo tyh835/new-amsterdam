@@ -15,10 +15,13 @@ const CardsWrapper = Flex.extend`
   background-color: white;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, white, hsl(25, 80%, 50%, 0.05));
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     height: auto;
+  }
+
+   @media (max-width: ${props => props.theme.breakpoints[0]}) {
+    background: linear-gradient(to bottom, white, hsl(25, 80%, 50%, 0.05));
   }
 `;
 
@@ -68,7 +71,7 @@ const Mobile = styled.div`
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     display: flex;
     justify-content: center;
-    background-color: hsl(25, 80%, 50%, 0.03);
+    background-color: hsl(25, 80%, 50%, 0.05);
   }
 `;
 
