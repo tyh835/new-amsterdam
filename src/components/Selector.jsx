@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  margin-top: 2rem;
   width: 100%;
   height: 100px;
   display: flex;
@@ -22,6 +21,16 @@ const Wrapper = styled.div`
   }
 `;
 
+const Heading = styled.h2`
+  margin-top: 2rem;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-family: ${props => props.theme.fonts.header};
+  font-weight: 400;
+  color: ${props => props.theme.color.black};
+`;
+
 const Button = styled.a`
   margin: 0 8px;
   min-width: 120px;
@@ -34,6 +43,7 @@ const Button = styled.a`
   color: ${props => props.theme.color.black};
   background-color: ${props => props.theme.color.white};
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   user-select: none;
@@ -59,22 +69,26 @@ export default class Selector extends Component {
   render() {
     const { categories } = this.props;
     return (
-      <Wrapper>
-        {categories.map(category => {
-          return (
-            <Button
-              key={category}
-              value={category}
-              className={
-                category === this.props.activeCategory ? 'active-button' : ''
-              }
-              onClick={this.onClick}
-            >
-              {category}
-            </Button>
-          );
-        })}
-      </Wrapper>
+      <Fragment>
+        <Heading>Choose a category of cakes below: </Heading>
+        <Wrapper>
+          {categories.map(category => {
+            return (
+              <Button
+                key={category}
+                value={category}
+                className={
+                  category === this.props.activeCategory ? 'active-button' : ''
+                }
+                onClick={this.onClick}
+              >
+                {category}
+              </Button>
+            );
+          })}
+        </Wrapper>
+      </Fragment>
+      
     );
   }
 }

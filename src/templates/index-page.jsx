@@ -15,9 +15,11 @@ const CardsWrapper = Flex.extend`
   background-color: white;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(to bottom, white, hsl(177, 42%, 76%, 0.05));
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     height: auto;
+    background: linear-gradient(to bottom, white, hsl(177, 42%, 76%, 0.1));
   }
 `;
 
@@ -31,6 +33,8 @@ const AboutWrapper = Flex.extend`
   justify-content: center;
   align-items: center;
 
+  
+
   @media (max-width: ${props => props.theme.breakpoints[2]}) {
     width: 100%;
     height: 60vw;
@@ -40,6 +44,10 @@ const AboutWrapper = Flex.extend`
     height: 400px;
     background: white;
     text-align: center;
+
+    > div > div {
+    width: 100%;
+    }
   }
 `;
 
@@ -61,6 +69,7 @@ const Mobile = styled.div`
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     display: flex;
     justify-content: center;
+    background-color: hsl(177, 42%, 76%, 0.1);
   }
 `;
 

@@ -72,7 +72,7 @@ const Title = styled.h2`
 const About = ({ flat, data, isPreview }) => {
   return (
     <Fade bottom duration={1000} distance="120px" key={data.heading}>
-      <Wrapper flat={flat} width={[1, 1, 800, 800]}>
+      <Wrapper flat={flat} width={[1, 525, 800, 800]}>
         <Title>{data.heading}</Title>
         <ImageWrap>
           <ImageCircle>

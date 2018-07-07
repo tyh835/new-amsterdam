@@ -25,7 +25,7 @@ const Link = styled(GatsbyLink)`
     }
   }
   > button:hover {
-    background-color: ${props => props.theme.color.white};
+    background-color: transparent;
     opacity: 0.9;
   }
 

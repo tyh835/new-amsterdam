@@ -27,6 +27,7 @@ const Wrapper = styled.div`
 const ImageBox = styled.div`
   width: ${props => props.dimensions.card.image};
   height: ${props => props.dimensions.card.image};
+  overflow-y: hidden;
 `;
 
 const TextBox = styled.div`

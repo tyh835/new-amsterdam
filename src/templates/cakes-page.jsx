@@ -41,6 +41,7 @@ const CardsGrid = Box.extend`
   grid-auto-rows: 300px;
   grid-auto-columns: 280px;
   grid-gap: 2rem;
+  background: linear-gradient(to bottom, white, hsl(177, 42%, 76%, 0.05));
 
   > div {
     justify-self: center;
@@ -54,6 +55,7 @@ const CardsGrid = Box.extend`
   @media (max-width: ${props => props.theme.gridBreakpoints[0]}) {
     grid-template: 400px / repeat(2, 1fr);
     grid-gap: 1rem;
+    background: linear-gradient(to bottom, white, hsl(177, 42%, 76%, 0.1));
   }
 
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
@@ -168,7 +170,7 @@ export class CakesPageTemplate extends Component {
           activeCategory={this.state.currentCategory}
           handleChange={this.changeCategory}
         />
-        <CardsGrid px={[0, 10, 40]} my={[20, 50]}>
+        <CardsGrid px={[0, 10, 40]} py={[15, 50]}>
           <AboutWrapper>
             <About
               flat

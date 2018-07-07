@@ -53,7 +53,7 @@ const Text = styled.p`
 `;
 
 const Footer = () => {
-  const responsiveWidth = [0.7, 0.6, 240];
+  const responsiveWidth = [240, 300, 240];
   const responsiveMarginTop = [3, 3, 0];
 
   return (
