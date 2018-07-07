@@ -41,7 +41,7 @@ const CardsGrid = Box.extend`
   grid-auto-rows: 300px;
   grid-auto-columns: 280px;
   grid-gap: 2rem;
-  background: linear-gradient(to bottom, white, hsl(25, 80%, 50%, 0.05));
+  background: linear-gradient(to bottom, white, hsl(25, 80%, 50%, 0.03));
 
   > div {
     justify-self: center;
