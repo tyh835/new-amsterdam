@@ -57,7 +57,7 @@ const CardsGrid = Box.extend`
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
     grid-template: 80px / 1fr;
     grid-gap: 0rem; 
-    background: linear-gradient(to bottom, white, hsl(25, 80%, 50%, 0.05));
+    background-color: hsl(25, 80%, 50%, 0.05);
   }
 `;
 
