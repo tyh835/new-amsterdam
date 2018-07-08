@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Flex } from 'rebass';
 
 const FooterWrapper = Flex.extend`
+  width: 100%;
   height: ${props => props.theme.height.footer}px;
   background-color: ${props => props.theme.color.blue};
   justify-content: space-around;

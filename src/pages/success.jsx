@@ -15,12 +15,14 @@ const Wrapper = Flex.extend`
 `;
 
 const Title = styled.h1`
+  text-align: center;
   font-size: 3rem;
   margin-bottom: 1rem;
   z-index: 5;
 `;
 
 const Text = styled.p`
+  text-align: center;
   z-index: 5;
 `;
 

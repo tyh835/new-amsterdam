@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Flex } from 'rebass';
+import { Box } from 'rebass';
 
 import theme from '../styles/theme.js';
 import { moveclouds } from '../utils/animations.js';
 
-const Wrapper = Flex.extend`
+const Wrapper = Box.extend`
+  display: block;
   float: left;
   width: 100%;
   font-family: ${theme.fonts.header};
@@ -15,12 +16,14 @@ const Wrapper = Flex.extend`
 `;
 
 const Title = styled.h1`
+  text-align: center;
   font-size: 3rem;
   margin-bottom: 1rem;
   z-index: 5;
 `;
 
 const Text = styled.p`
+  text-align: center;
   z-index: 5;
 `;
 
