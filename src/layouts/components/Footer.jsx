@@ -7,7 +7,7 @@ const FooterWrapper = Flex.extend`
   width: 100%;
   height: ${props => props.theme.height.footer}px;
   background-color: ${props => props.theme.color.blue};
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
@@ -56,6 +56,7 @@ const Text = styled.p`
 const Footer = () => {
   const responsiveWidth = [240, 300, 240];
   const responsiveMarginTop = [3, 3, 0];
+  const responsiveMarginX = [0, 0, 4, 5];
 
   return (
     <FooterWrapper
@@ -73,7 +74,7 @@ const Footer = () => {
         <Text bold>Email:</Text>
         <Text>nabakerycakes@gmail.com</Text>
       </InfoBox>
-      <InfoBox width={responsiveWidth} mt={responsiveMarginTop}>
+      <InfoBox width={responsiveWidth} mt={responsiveMarginTop} mx={responsiveMarginX}>
         <SubHeader>Location</SubHeader>
         <Divider />
         <Text bold>12892 96 Ave</Text>

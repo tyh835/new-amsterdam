@@ -31,7 +31,6 @@ const JumbotronWrapper = BaseWrapper.extend`
 const CardsGrid = Box.extend`
   width: 100%;
   height: auto;
-  background-color: white;
   display: grid;
   justify-content: space-evenly;
   align-items: center;
@@ -39,6 +38,7 @@ const CardsGrid = Box.extend`
   grid-auto-rows: 300px;
   grid-auto-columns: 280px;
   grid-gap: 2rem;
+  background: linear-gradient(to bottom, white, hsl(25, 80%, 50%, 0.05));
 
   > div {
     justify-self: center;

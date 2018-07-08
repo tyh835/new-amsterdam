@@ -12,9 +12,9 @@ import NavLink from '../components/NavLink.jsx';
 
 const CardsWrapper = Flex.extend`
   height: 400px;
-  background-color: white;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(to bottom, white, hsl(25, 80%, 50%, 0.05));
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     height: auto;
