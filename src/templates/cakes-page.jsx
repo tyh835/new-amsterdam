@@ -135,16 +135,6 @@ export class CakesPageTemplate extends Component {
     this.setState({ showModal: newShowModal, modalData: data });
   };
 
-  shouldComponentUpdate = (nextProps, nextState) => {
-    if (nextState.showModal !== this.state.showModal) {
-      return true;
-    }
-    return (
-      nextState.currentData !== undefined &&
-      nextState.currentCategory !== this.state.currentCategory
-    );
-  };
-
   componentDidUpdate(prevProps) {
     if (this.props.categories !== prevProps.categories) {
       const nextCategoryNames = this.props.categories.map(
