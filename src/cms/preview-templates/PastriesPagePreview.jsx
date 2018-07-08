@@ -4,7 +4,7 @@ import { Provider } from 'rebass';
 import { StyleSheetManager } from 'styled-components';
 
 import { PastriesPageTemplate } from '../../templates/pastries-page.jsx';
-import theme from '../../layouts/theme.js';
+import theme from '../../styles/theme.js';
 
 const PastriesPagePreview = ({ entry }) => {
   const iframe = document.querySelector('.nc-previewPane-frame');

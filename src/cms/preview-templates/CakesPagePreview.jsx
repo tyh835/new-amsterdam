@@ -4,7 +4,7 @@ import { Provider } from 'rebass';
 import { StyleSheetManager } from 'styled-components';
 
 import { CakesPageTemplate } from '../../templates/cakes-page.jsx';
-import theme from '../../layouts/theme.js';
+import theme from '../../styles/theme.js';
 
 const CakesPagePreview = ({ entry }) => {
   const iframe = document.querySelector('.nc-previewPane-frame');

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Flex } from 'rebass';
 
-import theme from '../layouts/theme.js';
+import theme from '../styles/theme.js';
 import { moveclouds } from '../utils/animations.js';
 
 const Wrapper = Flex.extend`
