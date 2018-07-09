@@ -19,8 +19,8 @@ export default {
     darkorange: '#FA6900',
     teal: '#A7DBD8',
     white: '#FEFEFE',
-    lightgreen: 'hsl(145, 80%, 60%, 0.03)',
-    lightyellow: 'hsl(45, 80%, 60%, 0.03)'
+    lightgreen: 'hsl(145, 80%, 60%, 0.04)',
+    lightyellow: 'hsl(45, 80%, 60%, 0.06)'
   },
 
   hover: {
