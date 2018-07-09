@@ -5,12 +5,13 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   width: 100%;
   height: 100px;
+  background-color: ${props => props.theme.color.lightyellow};
   display: flex;
   justify-content: center;
   align-items: center;
   overflow-x: scroll;
   overflow-y: visible;
-
+  
   @media (max-width: ${props => props.theme.breakpoints[2]}) {
     margin-top: 1rem;
   }
@@ -22,9 +23,10 @@ const Wrapper = styled.div`
 `;
 
 const Heading = styled.h2`
-  margin-top: 2rem;
+  padding-top: 2rem;
   width: 100%;
   height: auto;
+  background-color: ${props => props.theme.color.lightyellow};
   text-align: center;
   font-family: ${props => props.theme.fonts.header};
   font-weight: 400;
