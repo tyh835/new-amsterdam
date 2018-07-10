@@ -65,7 +65,7 @@ const Mobile = styled.div`
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     display: flex;
     justify-content: center;
-    background-color: hsl(25, 80%, 50%, 0.05);
+    background-color: ${props => props.theme.color.lightgreen};
   }
 `;
 
