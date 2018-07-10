@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Box } from 'rebass';
+import { Flex } from 'rebass';
 
 import theme from '../styles/theme.js';
 import { moveclouds } from '../utils/animations.js';
 
-const Wrapper = Box.extend`
-  display: block;
+const Wrapper = Flex.extend`
   float: left;
   width: 100%;
   font-family: ${theme.fonts.header};
@@ -111,21 +110,35 @@ const Cloud5 = Cloud.extend`
   animation: ${moveclouds} 20s linear infinite;
 `;
 
-const NotFoundPage = () => (
-  <Wrapper
-    py="250px"
-    flexDirection="column"
-    alignItems="center"
-  >
-    <Cloud1a />
-    <Cloud1b />
-    <Cloud2 />
-    <Cloud3 />
-    <Cloud4 />
-    <Cloud5 />
-    <Title>404 NOT FOUND</Title>
-    <Text>You just hit a route that doesn&#39;t exist... the sadness.</Text>
-  </Wrapper>
-);
+const MessagePageTemplate = ({data}) => {
+  const {frontmatter} = data.markdownRemark;
 
-export default NotFoundPage;
+  return (
+    <Wrapper
+      py="250px"
+      flexDirection="column"
+      alignItems="center"
+    >
+      <Cloud1a />
+      <Cloud1b />
+      <Cloud2 />
+      <Cloud3 />
+      <Cloud4 />
+      <Cloud5 />
+      <Title>{frontmatter.heading}</Title>
+      <Text>{frontmatter.description}</Text>
+    </Wrapper>
+)};
+
+export default MessagePageTemplate;
+
+export const messagePageQuery = graphql`
+  query messagePage($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      frontmatter {
+        heading
+        description
+      }
+    }
+  }
+`;
