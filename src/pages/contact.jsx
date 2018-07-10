@@ -158,7 +158,7 @@ export default class Contact extends Component {
           action={`https://formspree.io/${sendTo}`}
           onSubmit={this.handleSubmit}
         >
-          <input type="hidden" name="_next" value="https://awesome-kirch-5b3c5f.netlify.com/success" />
+          <input type="hidden" name="_next" value="https://newamsterdambakery.com/success" />
           <input type="hidden" name="_format" value="plain" />
           <input type="hidden" name="_subject" value="New Amsterdam Bakery" />
           <input type="text" name="_gotcha" style={{display:'none'}} />
