@@ -14,7 +14,7 @@ const CardsWrapper = Flex.extend`
   height: 400px;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, ${props => props.theme.color.lightyellow},${props => props.theme.color.lightgreen});
+  background: linear-gradient(to bottom, white, ${props => props.theme.color.lightyellow},${props => props.theme.color.lightgreen});
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     height: auto;
@@ -22,7 +22,7 @@ const CardsWrapper = Flex.extend`
 `;
 
 const AboutWrapper = Flex.extend`
-  background: linear-gradient(to bottom right, white, ${props => props.theme.color.teal}, ${props => props.theme.color.beige});
+  background: linear-gradient(to bottom right, ${props => props.theme.color.teal}, ${props => props.theme.color.beige});
   color: ${props => props.theme.color.black};
   width: 90%;
   height: 50vw;
