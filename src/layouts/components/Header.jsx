@@ -21,6 +21,7 @@ const HeaderWrapper = Flex.extend`
 const Nav = Flex.extend`
   justify-content: center;
   align-items: center;
+  margin-left: auto;
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     display: none;
@@ -66,7 +67,7 @@ const Header = () => {
         <Logo src={logo} alt="New Amsterdam Bakery" />
         <Title>New Amsterdam Bakery</Title>
       </NavLink>
-      <Nav is="nav" width={[0, 1 / 2, 1 / 2, 'auto']}>
+      <Nav is="nav">
         <NavLink exact to="/cakes">
           Our Cakes
         </NavLink>
