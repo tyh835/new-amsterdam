@@ -3,21 +3,17 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  width: 100%;
-  height: 100px;
+  width: auto;
+  min-height: 100px;
+  box-sizing: content-box;
   background-color: ${props => props.theme.color.lightyellow};
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  overflow-x: scroll;
-  overflow-y: visible;
-  
-  @media (max-width: ${props => props.theme.breakpoints[2]}) {
-    margin-top: 1rem;
-  }
+  overflow: scroll;
 
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
-    margin-top: 0rem;
     padding-bottom: 15px;
   }
 `;
@@ -34,10 +30,10 @@ const Heading = styled.h2`
 `;
 
 const Button = styled.a`
-  margin: 0 8px;
+  margin: 10px 8px;
   min-width: 120px;
-  max-width: 180px;
-  height: 50%;
+  height: 50px;
+  flex-shrink: 0;
   font-family: ${props => props.theme.fonts.header};
   font-size: 1.2rem;
   border-radius: 7px;

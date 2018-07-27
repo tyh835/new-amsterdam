@@ -179,7 +179,7 @@ categories:
       - image: /img/men4.jpg
         label: D
         alt: ''
-      - image: /img/men5.png
+      - image: /img/men5.jpg
         label: E
         alt: ''
       - image: /img/men6.jpg
@@ -191,7 +191,7 @@ categories:
       - image: /img/men8.png
         label: H
         alt: ''
-  - name: Bridal/Baby Showers
+  - name: Bridal/Baby
     about: 
       image: /img/about_baby.jpg
       alt: Bridal/Baby Showers Cakes
