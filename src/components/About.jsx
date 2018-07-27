@@ -66,6 +66,7 @@ const Title = styled.h2`
   justify-content: center;
   align-items: flex-end;
   text-decoration: underline;
+  text-align: center;
   grid-area: title;
 
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
