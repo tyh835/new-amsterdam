@@ -67,6 +67,10 @@ const Title = styled.h2`
   align-items: flex-end;
   text-decoration: underline;
   grid-area: title;
+
+  @media (max-width: ${props => props.theme.breakpoints[0]}) {
+    margin-top: 1rem;
+  }
 `;
 
 const About = ({ flat, data, isPreview }) => {
