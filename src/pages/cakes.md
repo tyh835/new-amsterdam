@@ -56,7 +56,7 @@ categories:
       - image: /img/wedding2.jpg
         label: B
         alt: ''
-      - image: /img/wedding3.jpg
+      - image: /img/wedding3.png
         label: C
         alt: ''
       - image: /img/wedding4.jpg
@@ -85,12 +85,6 @@ categories:
         alt: ''
       - image: /img/wedding12.png
         label: L
-        alt: ''
-      - image: /img/wedding13.png
-        label: M
-        alt: ''
-      - image: /img/wedding14.png
-        label: "N"
         alt: ''
   - name: Anniversary
     about: 
