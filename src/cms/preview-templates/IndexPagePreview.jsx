@@ -10,6 +10,9 @@ const IndexPagePreview = ({ entry }) => {
   const iframe = document.querySelector('.nc-previewPane-frame');
   const iframeHeadElement = iframe.contentDocument.head;
 
+  const aboutPre = entry.getIn(['data', 'about']);
+  const about = aboutPre ? aboutPre.toJS() : [];
+
   const imagesPre = entry.getIn(['data', 'images']);
   const images = imagesPre ? imagesPre.toJS() : [];
 
@@ -22,11 +25,7 @@ const IndexPagePreview = ({ entry }) => {
         <IndexPageTemplate
           title={entry.getIn(['data', 'title'])}
           images={images}
-          about={{
-            image: entry.getIn(['data', 'about', 'image']),
-            heading: entry.getIn(['data', 'about', 'heading']),
-            description: entry.getIn(['data', 'about', 'description'])
-          }}
+          about={about}
           cards={cards}
           isPreview={true}
         />

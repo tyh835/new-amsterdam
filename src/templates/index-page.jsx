@@ -77,13 +77,14 @@ export const IndexPageTemplate = ({ images, about, cards, isPreview }) => {
       image: '200px'
     }
   };
-
   return (
     <Fragment>
       <Carousel images={images} isPreview={isPreview} />
-      <AboutWrapper is="section" mt={[0, 10, 100]} mb={[20, 20, 0]}>
-        <About data={about} isPreview={isPreview} />
-      </AboutWrapper>
+      {about.map(data => (
+        <AboutWrapper is="section" mt={[0, 10, 100]} mb={[20, 20, 0]}>
+          <About data={data} isPreview={isPreview} />
+        </AboutWrapper>
+      ))}
       <CardsWrapper flexDirection={['column', 'column', 'row']}>
         {cards.map(card => {
           return (

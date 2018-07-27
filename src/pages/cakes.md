@@ -44,4 +44,32 @@ categories:
       - image: /img/wedding3.png
         label: Wedding cake
         alt: something
+  - name: Flower
+    about: 
+      image: /img/about_flower.jpg
+      alt: Flower Cake
+      heading: Flower Cake
+      description:
+        We design cakes in a variety of shapes and sizes, from round to square or rectangle, or your custom shape of choice. We will customize your cake to your liking. 
+    cards: 
+      - image: /img/flower1.jpg
+        alt: something
+      - image: /img/flower2.jpg
+        alt: something
+      - image: /img/flower3.jpg
+        alt: something
+      - image: /img/flower4.jpg
+        alt: something
+      - image: /img/flower5.png
+        alt: something
+      - image: /img/flower6.jpg
+        alt: something
+      - image: /img/flower7.jpg
+        alt: something
+      - image: /img/flower8.jpg
+        alt: something
+      - image: /img/flower9.jpg
+        alt: something
+      - image: /img/flower10.jpg
+        alt: something
 ---

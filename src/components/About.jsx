@@ -9,7 +9,7 @@ import { Flex, Box } from 'rebass';
 import Image from './Image.jsx';
 
 const Wrapper = Box.extend`
-  height: 400px;
+  min-height: 400px;
   display: grid;
   margin: 0;
   border-radius: 25px;
