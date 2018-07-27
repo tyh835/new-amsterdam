@@ -22,7 +22,7 @@ const CardsWrapper = Flex.extend`
 `;
 
 const AboutWrapper = Flex.extend`
-  background: linear-gradient(to bottom right, ${props => props.theme.color.teal}, ${props => props.theme.color.beige});
+  background: linear-gradient(to bottom right, ${props => props.theme.color.blue}, ${props => props.theme.color.teal});
   color: ${props => props.theme.color.black};
   width: 90%;
   height: 50vw;
@@ -44,6 +44,10 @@ const AboutWrapper = Flex.extend`
     > div > div {
     width: 100%;
     }
+  }
+
+  &:nth-of-type(2) {
+    background: linear-gradient(160deg, ${props => props.theme.color.teal}, ${props => props.theme.color.beige});  
   }
 `;
 
