@@ -243,7 +243,7 @@ export const cakesPageQuery = graphql`
                 sizes(
                   maxWidth: 200
                   maxHeight: 200
-                  quality: 70
+                  quality: 85
                   traceSVG: { color: "papayawhip" }
                 ) {
                   ...GatsbyImageSharpSizes_withWebp_tracedSVG
@@ -260,7 +260,7 @@ export const cakesPageQuery = graphql`
                 sizes(
                   maxWidth: 400
                   maxHeight: 400
-                  quality: 70
+                  quality: 85
                   traceSVG: { color: "papayawhip" }
                 ) {
                   ...GatsbyImageSharpSizes_withWebp_tracedSVG
