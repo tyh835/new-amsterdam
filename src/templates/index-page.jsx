@@ -149,9 +149,9 @@ export const indexPageQuery = graphql`
           path {
             childImageSharp {
               sizes(
-                maxWidth: 2000
-                maxHeight: 1000
-                quality: 85
+                maxWidth: 1000
+                maxHeight: 500
+                quality: 70
                 traceSVG: { color: "papayawhip" }
               ) {
                 ...GatsbyImageSharpSizes_withWebp_tracedSVG
@@ -166,7 +166,7 @@ export const indexPageQuery = graphql`
               sizes(
                 maxWidth: 300
                 maxHeight: 300
-                quality: 85
+                quality: 70
                 traceSVG: { color: "papayawhip" }
               ) {
                 ...GatsbyImageSharpSizes_withWebp_tracedSVG
@@ -181,9 +181,9 @@ export const indexPageQuery = graphql`
           image {
             childImageSharp {
               sizes(
-                maxWidth: 500
-                maxHeight: 500
-                quality: 85
+                maxWidth: 300
+                maxHeight: 300
+                quality: 70
                 traceSVG: { color: "papayawhip" }
               ) {
                 ...GatsbyImageSharpSizes_withWebp_tracedSVG

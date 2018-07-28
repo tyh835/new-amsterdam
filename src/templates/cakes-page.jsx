@@ -226,8 +226,8 @@ export const cakesPageQuery = graphql`
         jumbotron {
           childImageSharp {
             sizes(
-              maxWidth: 2000
-              maxHeight: 500
+              maxWidth: 1000
+              maxHeight: 250
               quality: 85
               traceSVG: { color: "papayawhip" }
             ) {
@@ -241,9 +241,9 @@ export const cakesPageQuery = graphql`
             image {
               childImageSharp {
                 sizes(
-                  maxWidth: 300
-                  maxHeight: 300
-                  quality: 85
+                  maxWidth: 200
+                  maxHeight: 200
+                  quality: 70
                   traceSVG: { color: "papayawhip" }
                 ) {
                   ...GatsbyImageSharpSizes_withWebp_tracedSVG
@@ -258,9 +258,9 @@ export const cakesPageQuery = graphql`
             image {
               childImageSharp {
                 sizes(
-                  maxWidth: 600
-                  maxHeight: 600
-                  quality: 85
+                  maxWidth: 400
+                  maxHeight: 400
+                  quality: 70
                   traceSVG: { color: "papayawhip" }
                 ) {
                   ...GatsbyImageSharpSizes_withWebp_tracedSVG

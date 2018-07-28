@@ -181,9 +181,9 @@ export const pastriesPageQuery = graphql`
         jumbotron {
           childImageSharp {
             sizes(
-              maxWidth: 2000
-              maxHeight: 500
-              quality: 85
+              maxWidth: 1000
+              maxHeight: 250
+              quality: 70
               traceSVG: { color: "papayawhip" }
             ) {
               ...GatsbyImageSharpSizes_withWebp_tracedSVG
@@ -194,9 +194,9 @@ export const pastriesPageQuery = graphql`
           image {
             childImageSharp {
               sizes(
-                maxWidth: 600
-                maxHeight: 600
-                quality: 85
+                maxWidth: 400
+                maxHeight: 400
+                quality: 70
                 traceSVG: { color: "papayawhip" }
               ) {
                 ...GatsbyImageSharpSizes_withWebp_tracedSVG
