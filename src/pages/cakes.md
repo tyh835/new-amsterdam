@@ -72,6 +72,8 @@ categories:
         label: I
       - image: /img/wedding11.png
         label: J
+      - image: /img/wedding12.png
+        label: K
     name: Wedding
   - about:
       alt: Anniversary Cakes
