@@ -50,44 +50,30 @@ categories:
         or rectangle, or your custom shape of choice. We will customize your
         cake to your liking.
       heading: Wedding Cakes
-      image: /img/about_wedding.jpg
+      image: /img/wedding0.jpg
     cards:
-      - alt: ''
-        image: /img/wedding1.jpg
+      - image: /img/wedding1.png
         label: A
-      - alt: ''
-        image: /img/wedding2.jpg
+      - image: /img/wedding2.jpg
         label: B
-      - alt: ''
-        image: /img/wedding3.png
+      - image: /img/wedding3.png
         label: C
-      - alt: ''
-        image: /img/wedding4.jpg
+      - image: /img/wedding4.jpg
         label: D
-      - alt: ''
-        image: /img/wedding5.jpg
+      - image: /img/wedding5.jpg
         label: E
-      - alt: ''
-        image: /img/wedding6.jpg
+      - image: /img/wedding6.jpg
         label: F
-      - alt: ''
-        image: /img/wedding7.jpg
+      - image: /img/wedding7.jpg
         label: G
-      - alt: ''
-        image: /img/wedding8.png
+      - image: /img/wedding8.png
         label: H
-      - alt: ''
-        image: /img/wedding9.png
+      - image: /img/wedding9.png
         label: I
-      - alt: ''
-        image: /img/wedding10.png
+      - image: /img/wedding11.png
         label: J
-      - alt: ''
-        image: /img/wedding11.png
+      - image: /img/wedding12.png
         label: K
-      - alt: ''
-        image: /img/wedding12.png
-        label: L
     name: Wedding
   - about:
       alt: Anniversary Cakes
