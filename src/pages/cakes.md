@@ -239,7 +239,7 @@ categories:
         or rectangle, or your custom shape of choice. We will customize your
         cake to your liking.
       heading: Custom Cakes
-      image: /img/about_custom.jpg
+      image: /img/custom8.jpg
     cards:
       - alt: ''
         image: /img/custom1.jpg
