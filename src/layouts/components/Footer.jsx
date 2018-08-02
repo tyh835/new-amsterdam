@@ -74,7 +74,11 @@ const Footer = () => {
         <Text bold>Email:</Text>
         <Text>nabakerycakes@gmail.com</Text>
       </InfoBox>
-      <InfoBox width={responsiveWidth} mt={responsiveMarginTop} mx={responsiveMarginX}>
+      <InfoBox
+        width={responsiveWidth}
+        mt={responsiveMarginTop}
+        mx={responsiveMarginX}
+      >
         <SubHeader>Location</SubHeader>
         <Divider />
         <Text bold>12892 96 Ave</Text>

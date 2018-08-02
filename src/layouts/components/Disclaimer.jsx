@@ -26,11 +26,7 @@ export default () => {
         Zlatko Najdenovski
       </a>{' '}
       from{' '}
-      <a 
-        href="https://www.flaticon.com/" 
-        title="Flaticon" 
-        rel="noreferrer"
-      >
+      <a href="https://www.flaticon.com/" title="Flaticon" rel="noreferrer">
         www.flaticon.com
       </a>{' '}
       is licensed by{' '}

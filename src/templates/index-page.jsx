@@ -14,7 +14,12 @@ const CardsWrapper = Flex.extend`
   height: 400px;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, white, ${props => props.theme.color.lightyellow},${props => props.theme.color.lightgreen});
+  background: linear-gradient(
+    to bottom,
+    white,
+    ${props => props.theme.color.lightyellow},
+    ${props => props.theme.color.lightgreen}
+  );
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     height: auto;
@@ -41,16 +46,24 @@ const AboutWrapper = Flex.extend`
     text-align: center;
 
     > div > div {
-    width: 100%;
+      width: 100%;
     }
   }
 
   &:nth-of-type(1) {
-    background: linear-gradient(to bottom right, ${props => props.theme.color.blue}, ${props => props.theme.color.teal});
+    background: linear-gradient(
+      to bottom right,
+      ${props => props.theme.color.blue},
+      ${props => props.theme.color.teal}
+    );
   }
 
   &:nth-of-type(2) {
-    background: linear-gradient(to bottom, ${props => props.theme.color.teal}, ${props => props.theme.color.beige});  
+    background: linear-gradient(
+      to bottom,
+      ${props => props.theme.color.teal},
+      ${props => props.theme.color.beige}
+    );
   }
 `;
 
@@ -96,17 +109,15 @@ export const IndexPageTemplate = ({ images, about, cards, isPreview }) => {
         {cards.map(card => {
           return (
             <Link exact to={card.link} key={card.link}>
-              <Card
-                dimensions={dimensions}
-                data={card}
-                isPreview={isPreview}
-              />
+              <Card dimensions={dimensions} data={card} isPreview={isPreview} />
             </Link>
           );
         })}
       </CardsWrapper>
       <Mobile>
-        <NavLink exact to="/contact" style={{fontSize: '2rem'}}>Have Questions? Let Us Know &rarr;</NavLink>
+        <NavLink exact to="/contact" style={{ fontSize: '2rem' }}>
+          Have Questions? Let Us Know &rarr;
+        </NavLink>
       </Mobile>
     </Fragment>
   );

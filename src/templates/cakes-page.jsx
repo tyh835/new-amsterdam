@@ -36,47 +36,31 @@ const CardsGrid = Box.extend`
   display: grid;
   justify-content: space-evenly;
   align-items: center;
-  grid-template: 400px / repeat(4, 1fr);
+  grid-template: 400px / repeat(auto-fill, 240px);
   grid-auto-rows: 300px;
-  grid-auto-columns: 280px;
   grid-gap: 2rem;
-  background: linear-gradient(to bottom, ${props => props.theme.color.lightyellow}, ${props => props.theme.color.lightgreen});
-  
+  background: linear-gradient(
+    to bottom,
+    ${props => props.theme.color.lightyellow},
+    ${props => props.theme.color.lightgreen}
+  );
+
   > div {
     justify-self: center;
     align-self: center;
-  }
-
-  @media (max-width: ${props => props.theme.gridBreakpoints[1]}) {
-    grid-template: 400px / repeat(3, 1fr);
-  }
-
-  @media (max-width: ${props => props.theme.gridBreakpoints[0]}) {
-    grid-template: 400px / repeat(2, 1fr);
-    grid-gap: 1rem;
-  }
-
-  @media (max-width: ${props => props.theme.breakpoints[0]}) {
-    grid-template: 400px / 1fr;
-    grid-gap: 0rem;
   }
 `;
 
 const AboutWrapper = Box.extend`
   width: 100%;
   display: flex;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
   justify-content: center;
   grid-row: span 1;
-  grid-column: span 4;
-  @media (max-width: ${props => props.theme.gridBreakpoints[1]}) {
-    grid-column: span 3;
-  }
-  @media (max-width: ${props => props.theme.gridBreakpoints[0]}) {
-    grid-column: span 2;
-  }
+  grid-column: 1 / -1;
+
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
-    grid-column: span 1;
+    width: 100vw;
   }
 `;
 
@@ -149,16 +133,14 @@ export class CakesPageTemplate extends Component {
       <Fragment>
         <JumbotronWrapper>
           <Image image={jumbotron} isPreview={isPreview} />
-          <Banner small>
-            {title}
-          </Banner>
+          <Banner small>{title}</Banner>
         </JumbotronWrapper>
         <Selector
           categories={this.state.categoryNames}
           activeCategory={this.state.currentCategory}
           handleChange={this.changeCategory}
         />
-        <CardsGrid px={[0, 10, 40]} py={[15, 50]}>
+        <CardsGrid px={[0, 40]} py={[15, 50]}>
           <AboutWrapper>
             <About
               flat
@@ -166,6 +148,7 @@ export class CakesPageTemplate extends Component {
               isPreview={isPreview}
             />
           </AboutWrapper>
+
           {this.state.currentData.cards.map(card => (
             <Card
               dimensions={this.state.dimensions}

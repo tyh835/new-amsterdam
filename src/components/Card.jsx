@@ -80,7 +80,7 @@ Card.propTypes = {
     label: PropTypes.string
   }),
   isPreview: PropTypes.bool,
-  dimenstions: PropTypes.object,
+  dimenstions: PropTypes.object
 };
 
 export default Card;

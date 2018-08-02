@@ -21,7 +21,7 @@ about:
     description:
       We design cakes in a variety of shapes and sizes, from round to square or rectangle, or your custom shape of choice. We will customize your cake to your liking. Egg-free Vegetarian, and vegan cakes options are available. We make delicious Fruitcakes, and Blackforest cakes as well.
 cards:
-  - image: /img/birthday5.jpg
+  - image: /img/men4.jpg
     label: Check out our cakes...
     link: /cakes
   - image: /img/pastries4.jpg

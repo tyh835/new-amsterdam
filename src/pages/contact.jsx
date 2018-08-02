@@ -9,7 +9,11 @@ import Modal from '../components/Modal.jsx';
 const Wrapper = Flex.extend`
   width: 100%;
   height: 550px;
-  background: linear-gradient(to bottom,${props => props.theme.color.teal},${props => props.theme.color.blue});
+  background: linear-gradient(
+    to bottom,
+    ${props => props.theme.color.teal},
+    ${props => props.theme.color.blue}
+  );
   justify-content: center;
   align-items: center;
 `;
@@ -122,22 +126,28 @@ export default class Contact extends Component {
   }
 
   exitModal = () => {
-    this.setState({showModal: false});
-  }
+    this.setState({ showModal: false });
+  };
 
   validateInput = () => {
-    const {name, email, message} = this.state;
+    const { name, email, message } = this.state;
     const validEmail = EmailValidator.validate(email);
     if (!name || !email || !message) {
-      this.setState({showModal: true, modalMessage: 'Please fill out all fields, thank you.'});
+      this.setState({
+        showModal: true,
+        modalMessage: 'Please fill out all fields, thank you.'
+      });
       return false;
     } else if (!validEmail) {
-      this.setState({showModal: true, modalMessage: 'Please enter a valid email address.'});
+      this.setState({
+        showModal: true,
+        modalMessage: 'Please enter a valid email address.'
+      });
       return false;
     } else {
       return true;
     }
-  }
+  };
 
   handleSubmit = e => {
     const validated = this.validateInput();
@@ -158,10 +168,14 @@ export default class Contact extends Component {
           action={`https://formspree.io/${sendTo}`}
           onSubmit={this.handleSubmit}
         >
-          <input type="hidden" name="_next" value="https://newamsterdambakery.com/success" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://newamsterdambakery.com/success"
+          />
           <input type="hidden" name="_format" value="plain" />
           <input type="hidden" name="_subject" value="New Amsterdam Bakery" />
-          <input type="text" name="_gotcha" style={{display:'none'}} />
+          <input type="text" name="_gotcha" style={{ display: 'none' }} />
           <Header>Contact Us</Header>
           <Label>Your Name: </Label>
           <Input
@@ -178,10 +192,19 @@ export default class Contact extends Component {
             onChange={this.handleChange}
           />
           <Label>Message: </Label>
-          <TextInput name="message" value={message} onChange={this.handleChange} />
+          <TextInput
+            name="message"
+            value={message}
+            onChange={this.handleChange}
+          />
           <Button type="submit">Submit</Button>
         </Form>
-        {this.state.showModal && <Modal exitModal={this.exitModal} data={{alt: this.state.modalMessage}}/>}
+        {this.state.showModal && (
+          <Modal
+            exitModal={this.exitModal}
+            data={{ alt: this.state.modalMessage }}
+          />
+        )}
       </Wrapper>
     );
   }

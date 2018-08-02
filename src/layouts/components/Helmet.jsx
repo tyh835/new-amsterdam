@@ -25,7 +25,8 @@ export default () => (
       },
       {
         name: 'description',
-        content: 'Display Page for New Amsterdam Bakery: Cakes, Bread, and Pastries'
+        content:
+          'Display Page for New Amsterdam Bakery: Cakes, Bread, and Pastries'
       }
     ]}
     link={[

@@ -34,29 +34,18 @@ const CardsGrid = Box.extend`
   display: grid;
   justify-content: space-evenly;
   align-items: center;
-  grid-template: 50px / repeat(4, 1fr);
+  grid-template: 50px / repeat(auto-fill, 240px);
   grid-auto-rows: 300px;
-  grid-auto-columns: 280px;
   grid-gap: 2rem;
-  background: linear-gradient(to bottom, ${props => props.theme.color.lightyellow}, ${props => props.theme.color.lightgreen});
+  background: linear-gradient(
+    to bottom,
+    ${props => props.theme.color.lightyellow},
+    ${props => props.theme.color.lightgreen}
+  );
 
   > div {
     justify-self: center;
     align-self: center;
-  }
-
-  @media (max-width: ${props => props.theme.gridBreakpoints[1]}) {
-    grid-template: 50px / repeat(3, 1fr);
-  }
-
-  @media (max-width: ${props => props.theme.gridBreakpoints[0]}) {
-    grid-template: 50px / repeat(2, 1fr);
-    grid-gap: 1rem;
-  }
-
-  @media (max-width: ${props => props.theme.breakpoints[0]}) {
-    grid-template: 80px / 1fr;
-    grid-gap: 0rem; 
   }
 `;
 
@@ -69,19 +58,7 @@ const Title = styled.h2`
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-column: span 4;
-
-  @media (max-width: ${props => props.theme.gridBreakpoints[1]}) {
-    grid-column: span 3;
-  }
-
-  @media (max-width: ${props => props.theme.gridBreakpoints[0]}) {
-    grid-column: span 2;
-  }
-
-  @media (max-width: ${props => props.theme.breakpoints[0]}) {
-    grid-column: span 1;
-  }
+  grid-column: 1 / -1;
 `;
 
 export class PastriesPageTemplate extends Component {
@@ -119,7 +96,7 @@ export class PastriesPageTemplate extends Component {
             {title}
           </Banner>
         </JumbotronWrapper>
-        <CardsGrid px={[0, 10, 40]} py={[20, 50]}>
+        <CardsGrid px={[0, 40]} py={[20, 50]}>
           <Title>Bread and Pastries</Title>
           {pastries.map((card, i) => (
             <Card

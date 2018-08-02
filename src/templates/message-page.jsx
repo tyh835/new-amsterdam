@@ -110,15 +110,11 @@ const Cloud5 = Cloud.extend`
   animation: ${moveclouds} 20s linear infinite;
 `;
 
-const MessagePageTemplate = ({data}) => {
-  const {frontmatter} = data.markdownRemark;
+const MessagePageTemplate = ({ data }) => {
+  const { frontmatter } = data.markdownRemark;
 
   return (
-    <Wrapper
-      py="250px"
-      flexDirection="column"
-      alignItems="center"
-    >
+    <Wrapper py="250px" flexDirection="column" alignItems="center">
       <Cloud1a />
       <Cloud1b />
       <Cloud2 />
@@ -128,7 +124,8 @@ const MessagePageTemplate = ({data}) => {
       <Title>{frontmatter.heading}</Title>
       <Text>{frontmatter.description}</Text>
     </Wrapper>
-)};
+  );
+};
 
 export default MessagePageTemplate;
 

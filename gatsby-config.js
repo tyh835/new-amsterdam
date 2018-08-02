@@ -10,7 +10,7 @@ module.exports = {
         head: true,
         anonymize: true,
         respectDNT: true,
-        exclude: ["/success/", "/404/"],
+        exclude: ['/success/', '/404/']
       }
     },
     'gatsby-plugin-react-helmet',

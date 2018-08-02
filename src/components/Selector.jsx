@@ -86,7 +86,6 @@ export default class Selector extends Component {
           })}
         </Wrapper>
       </Fragment>
-      
     );
   }
 }
