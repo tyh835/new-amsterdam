@@ -268,15 +268,6 @@ categories:
       - alt: ''
         image: /img/custom9.jpg
         label: I
-      - alt: ''
-        image: /img/custom10.png
-        label: J
-      - alt: ''
-        image: /img/custom11.png
-        label: K
-      - alt: ''
-        image: /img/custom12.png
-        label: L
     name: Custom
 ---
 
