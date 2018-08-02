@@ -110,7 +110,7 @@ categories:
         or rectangle, or your custom shape of choice. We will customize your
         cake to your liking.
       heading: Fancy Cakes
-      image: /img/about_fancy.jpg
+      image: /img/about_fancy.png
     cards:
       - alt: ''
         image: /img/fancy1.png
@@ -239,7 +239,7 @@ categories:
         or rectangle, or your custom shape of choice. We will customize your
         cake to your liking.
       heading: Custom Cakes
-      image: /img/custom8.jpg
+      image: /img/about_custom.jpg
     cards:
       - alt: ''
         image: /img/custom1.jpg
