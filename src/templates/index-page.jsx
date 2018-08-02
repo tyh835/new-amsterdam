@@ -15,10 +15,7 @@ const CardsWrapper = Flex.extend`
   justify-content: center;
   align-items: center;
   background: linear-gradient(
-    to bottom,
-    white,
-    ${props => props.theme.color.lightyellow},
-    ${props => props.theme.color.lightgreen}
+    to bottom, white, ${props => props.theme.color.lightyellow}, ${props => props.theme.color.lightgreen}
   );
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
