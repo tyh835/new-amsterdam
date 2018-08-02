@@ -82,7 +82,7 @@ categories:
         or rectangle, or your custom shape of choice. We will customize your
         cake to your liking.
       heading: Anniversary Cakes
-      image: /img/about_love.png
+      image: /img/love5.jpg
     cards:
       - alt: ''
         image: /img/love1.jpg
@@ -97,7 +97,7 @@ categories:
         image: /img/love4.jpg
         label: D
       - alt: ''
-        image: /img/love5.jpg
+        image: /img/about_love.png
         label: E
       - alt: ''
         image: /img/love6.png
