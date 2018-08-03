@@ -1,6 +1,5 @@
 export default {
   breakpoints: ['32rem', '48rem', '64rem', '80rem'],
-  gridBreakpoints: ['880px', '1160px'],
 
   fonts: {
     // Make sure to remove unused fonts in <link /> once site is finished!
