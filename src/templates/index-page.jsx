@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import uuid from 'uuid/v4';
 
 import { Flex } from 'rebass';
 import GatsbyLink from 'gatsby-link';
@@ -98,7 +99,12 @@ export const IndexPageTemplate = ({ images, about, cards, isPreview }) => {
     <Fragment>
       <Carousel images={images} isPreview={isPreview} />
       {about.map(data => (
-        <AboutWrapper is="section" mt={[0, 10, 100]} mb={[20, 20, 0]}>
+        <AboutWrapper
+          key={uuid()}
+          is="section"
+          mt={[0, 10, 100]}
+          mb={[20, 20, 0]}
+        >
           <About data={data} isPreview={isPreview} />
         </AboutWrapper>
       ))}
@@ -123,7 +129,7 @@ export const IndexPageTemplate = ({ images, about, cards, isPreview }) => {
 IndexPageTemplate.propTypes = {
   images: PropTypes.array,
   title: PropTypes.string,
-  about: PropTypes.object,
+  about: PropTypes.array,
   cards: PropTypes.array,
   isPreview: PropTypes.bool
 };

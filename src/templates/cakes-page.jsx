@@ -4,31 +4,11 @@ import uuid from 'uuid/v4';
 
 import { Box } from 'rebass';
 
-import {
-  Banner as Base,
-  JumbotronWrapper as BaseWrapper
-} from '../components/Carousel.jsx';
-import Image from '../components/Image.jsx';
+import HeroImage from '../components/HeroImage.jsx';
 import Selector from '../components/Selector.jsx';
 import About from '../components/About.jsx';
 import Card from '../components/Card.jsx';
 import Modal from '../components/Modal.jsx';
-
-const Banner = Base.extend`
-  top: 15vw;
-
-  @media (max-width: ${props => props.theme.breakpoints[2]}) {
-    top: 17vw;
-  }
-  @media (max-width: ${props => props.theme.breakpoints[1]}) {
-    display: none;
-  }
-`;
-
-const JumbotronWrapper = BaseWrapper.extend`
-  height: 25vw;
-  overflow-y: hidden;
-`;
 
 const CardsGrid = Box.extend`
   width: 100%;
@@ -131,10 +111,7 @@ export class CakesPageTemplate extends Component {
     const { jumbotron, title, categories, isPreview } = this.props;
     return (
       <Fragment>
-        <JumbotronWrapper>
-          <Image image={jumbotron} isPreview={isPreview} />
-          <Banner small>{title}</Banner>
-        </JumbotronWrapper>
+        <HeroImage image={jumbotron} isPreview={isPreview} title={title} />
         <Selector
           categories={this.state.categoryNames}
           activeCategory={this.state.currentCategory}

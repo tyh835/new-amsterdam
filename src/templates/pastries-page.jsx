@@ -5,28 +5,8 @@ import styled from 'styled-components';
 import { Box } from 'rebass';
 
 import Card from '../components/Card.jsx';
-import Image from '../components/Image.jsx';
-import {
-  Banner as Base,
-  JumbotronWrapper as BaseWrapper
-} from '../components/Carousel.jsx';
+import HeroImage from '../components/HeroImage.jsx';
 import Modal from '../components/Modal.jsx';
-
-const Banner = Base.extend`
-  top: 15vw;
-
-  @media (max-width: ${props => props.theme.breakpoints[2]}) {
-    top: 17vw;
-  }
-  @media (max-width: ${props => props.theme.breakpoints[1]}) {
-    display: none;
-  }
-`;
-
-const JumbotronWrapper = BaseWrapper.extend`
-  height: 25vw;
-  overflow-y: hidden;
-`;
 
 const CardsGrid = Box.extend`
   width: 100%;
@@ -90,12 +70,7 @@ export class PastriesPageTemplate extends Component {
     const { jumbotron, title, pastries, isPreview } = this.props;
     return (
       <Fragment>
-        <JumbotronWrapper>
-          <Image image={jumbotron} isPreview={isPreview} />
-          <Banner orange small>
-            {title}
-          </Banner>
-        </JumbotronWrapper>
+        <HeroImage image={jumbotron} isPreview={isPreview} title={title} />
         <CardsGrid px={[0, 40]} py={[20, 50]}>
           <Title>Bread and Pastries</Title>
           {pastries.map((card, i) => (
