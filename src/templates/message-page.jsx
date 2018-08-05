@@ -6,7 +6,7 @@ import { Flex } from 'rebass';
 import theme from '../styles/theme.js';
 import { moveclouds } from '../utils/animations.js';
 
-const Wrapper = Flex.extend`
+const Wrap = Flex.extend`
   float: left;
   width: 100%;
   font-family: ${theme.fonts.header};
@@ -114,7 +114,7 @@ const MessagePageTemplate = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <Wrapper py="250px" flexDirection="column" alignItems="center">
+    <Wrap py="250px" flexDirection="column" alignItems="center">
       <Cloud1a />
       <Cloud1b />
       <Cloud2 />
@@ -123,7 +123,7 @@ const MessagePageTemplate = ({ data }) => {
       <Cloud5 />
       <Title>{frontmatter.heading}</Title>
       <Text>{frontmatter.description}</Text>
-    </Wrapper>
+    </Wrap>
   );
 };
 

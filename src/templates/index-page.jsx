@@ -11,7 +11,7 @@ import About from '../components/About.jsx';
 import Card from '../components/Card.jsx';
 import NavLink from '../components/NavLink.jsx';
 
-const CardsWrapper = Flex.extend`
+const CardsWrap = Flex.extend`
   height: 400px;
   justify-content: center;
   align-items: center;
@@ -24,7 +24,7 @@ const CardsWrapper = Flex.extend`
   }
 `;
 
-const AboutWrapper = Flex.extend`
+const AboutWrap = Flex.extend`
   color: ${props => props.theme.color.black};
   width: 90%;
   height: 50vw;
@@ -99,16 +99,16 @@ export const IndexPageTemplate = ({ images, about, cards, isPreview }) => {
     <Fragment>
       <Carousel images={images} isPreview={isPreview} />
       {about.map(data => (
-        <AboutWrapper
+        <AboutWrap
           key={uuid()}
           is="section"
           mt={[0, 10, 100]}
           mb={[20, 20, 0]}
         >
           <About data={data} isPreview={isPreview} />
-        </AboutWrapper>
+        </AboutWrap>
       ))}
-      <CardsWrapper flexDirection={['column', 'column', 'row']}>
+      <CardsWrap flexDirection={['column', 'column', 'row']}>
         {cards.map(card => {
           return (
             <Link exact to={card.link} key={card.link}>
@@ -116,7 +116,7 @@ export const IndexPageTemplate = ({ images, about, cards, isPreview }) => {
             </Link>
           );
         })}
-      </CardsWrapper>
+      </CardsWrap>
       <Mobile>
         <NavLink exact to="/contact" style={{ fontSize: '2rem' }}>
           Have Questions? Let Us Know &rarr;

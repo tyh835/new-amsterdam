@@ -37,12 +37,12 @@ export const Banner = styled.p`
   }
 `;
 
-export const JumbotronWrapper = styled.div`
+export const JumbotronWrap = styled.div`
   width: 100vw;
   height: 50vw;
 `;
 
-const CarouselWrapper = styled.div`
+const CarouselWrap = styled.div`
   width: ${props => props.totalSlides * 100}vw;
   height: 50vw;
   display: block;
@@ -96,13 +96,13 @@ export default class Carousel extends React.Component {
   render() {
     const { images, isPreview } = this.props;
     return (
-      <CarouselWrapper
+      <CarouselWrap
         totalSlides={this.state.totalSlides}
         currentSlide={this.state.currentSlide}
       >
         {images.map((image, i) => {
           return (
-            <JumbotronWrapper key={uuid()}>
+            <JumbotronWrap key={uuid()}>
               <Image
                 image={image.path}
                 alt={image.text}
@@ -111,10 +111,10 @@ export default class Carousel extends React.Component {
               <Banner position={i} orange={i % 3 === 1} teal={i % 3 === 0}>
                 {image.text}
               </Banner>
-            </JumbotronWrapper>
+            </JumbotronWrap>
           );
         })}
-      </CarouselWrapper>
+      </CarouselWrap>
     );
   }
 }

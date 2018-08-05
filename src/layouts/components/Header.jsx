@@ -9,7 +9,7 @@ import { shake } from '../../utils/animations.js';
 import logo from '../../img/windmill.svg';
 
 // Styled Library Components
-const HeaderWrapper = Flex.extend`
+const HeaderWrap = Flex.extend`
   height: ${props => props.theme.height.header}px;
   background-color: ${props => props.theme.color.white};
   justify-content: space-between;
@@ -62,7 +62,7 @@ const Title = styled.span`
 // Main Header Component
 const Header = () => {
   return (
-    <HeaderWrapper is="header" width="100%" pr={[0, 0, 0, 3]} py={3}>
+    <HeaderWrap is="header" width="100%" pr={[0, 0, 0, 3]} py={3}>
       <NavLink exact to="/">
         <Logo src={logo} alt="New Amsterdam Bakery" />
         <Title>New Amsterdam Bakery</Title>
@@ -78,7 +78,7 @@ const Header = () => {
           Contact Us
         </NavLink>
       </Nav>
-    </HeaderWrapper>
+    </HeaderWrap>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+const Wrap = styled.div`
   width: 100%;
   font-size: 8px;
   text-align: right;
@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 
 export default () => {
   return (
-    <Wrapper>
+    <Wrap>
       Windmill Icon made by{' '}
       <a
         href="https://www.flaticon.com/authors/zlatko-najdenovski"
@@ -38,6 +38,6 @@ export default () => {
       >
         CC 3.0 BY
       </a>
-    </Wrapper>
+    </Wrap>
   );
 };

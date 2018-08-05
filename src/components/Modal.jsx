@@ -5,7 +5,7 @@ import { Fixed, Modal as BaseModal, Heading } from 'rebass';
 
 import Image from './Image.jsx';
 
-const ModalWrapper = BaseModal.extend`
+const ModalWrap = BaseModal.extend`
   text-align: center;
   border-radius: 15px;
 `;
@@ -28,11 +28,11 @@ const Modal = ({ data, exitModal, isPreview }) => {
         style={{ zIndex: '999' }}
         onClick={exitModal}
       />
-      <ModalWrapper width={[300, 400]}>
+      <ModalWrap width={[300, 400]}>
         {data.image && <Image image={data.image} isPreview={isPreview} />}
         {data.label && <ModalHeading>{data.label}</ModalHeading>}
         {data.alt && <p>{data.alt}</p>}
-      </ModalWrapper>
+      </ModalWrap>
     </Fragment>
   );
 };

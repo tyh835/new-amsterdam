@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+const Wrap = styled.div`
   width: auto;
   min-height: 100px;
   box-sizing: content-box;
@@ -69,7 +69,7 @@ export default class Selector extends Component {
     return (
       <Fragment>
         <Heading>Choose a category of cakes below: </Heading>
-        <Wrapper>
+        <Wrap>
           {categories.map(category => {
             return (
               <Button
@@ -84,7 +84,7 @@ export default class Selector extends Component {
               </Button>
             );
           })}
-        </Wrapper>
+        </Wrap>
       </Fragment>
     );
   }

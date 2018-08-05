@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Flex } from 'rebass';
 
-const FooterWrapper = Flex.extend`
+const FooterWrap = Flex.extend`
   width: 100%;
   height: ${props => props.theme.height.footer}px;
   background-color: ${props => props.theme.color.blue};
@@ -59,7 +59,7 @@ const Footer = () => {
   const responsiveMarginX = [0, 0, 4, 5];
 
   return (
-    <FooterWrapper
+    <FooterWrap
       is="footer"
       px={[0, 1, 3, 4]}
       py={[3, 3, 0]}
@@ -94,7 +94,7 @@ const Footer = () => {
         <Text bold>9 am - 6 pm </Text>
         <Text>on Sat and Sun</Text>
       </InfoBox>
-    </FooterWrapper>
+    </FooterWrap>
   );
 };
 

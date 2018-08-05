@@ -31,7 +31,7 @@ const CardsGrid = Box.extend`
   }
 `;
 
-const AboutWrapper = Box.extend`
+const AboutWrap = Box.extend`
   width: 100%;
   display: flex;
   padding-bottom: 2rem;
@@ -118,13 +118,13 @@ export class CakesPageTemplate extends Component {
           handleChange={this.changeCategory}
         />
         <CardsGrid px={[0, 40]} py={[15, 50]}>
-          <AboutWrapper>
+          <AboutWrap>
             <About
               flat
               data={this.state.currentData.about}
               isPreview={isPreview}
             />
-          </AboutWrapper>
+          </AboutWrap>
 
           {this.state.currentData.cards.map(card => (
             <Card
