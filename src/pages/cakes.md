@@ -9,13 +9,13 @@ categories:
         or rectangle, or your custom shape of choice. We will customize your
         cake to your liking.
       heading: Trending cakes
-      image: /img/pop3.jpg
+      image: /img/about_pop.jpg
     cards:
       - image: /img/pop1.jpg
         label: ''
       - image: /img/pop2.jpg
         label: ''
-      - image: /img/about_pop.jpg
+      - image: /img/pop3.jpg
         label: ''
       - alt: ''
         image: /img/pop4.jpg
