@@ -4,25 +4,32 @@ title: We Love Making Cakes
 jumbotron: /img/jumbotron_cakes.jpg
 categories:
   - about:
+      alt: Trending Cakes
       description: >-
         We design cakes in a variety of shapes and sizes, from round to square
         or rectangle, or your custom shape of choice. We will customize your
         cake to your liking.
-      heading: Trending cakes
+      heading: Trending Cakes
       image: /img/about_pop.jpg
     cards:
       - image: /img/pop1.jpg
-        label: ''
+        description: ''
+        label: 'A'
       - image: /img/pop2.jpg
-        label: ''
+        description: ''
+        label: 'B'
       - image: /img/pop3.jpg
-        label: ''
-      - alt: ''
-        image: /img/pop4.jpg
+        description: ''
+        label: 'C'
+      - image: /img/pop4.jpg
+        description: ''
+        label: 'D'
       - image: /img/pop5.jpg
-        label: ''
+        description: ''
+        label: 'E'
       - image: /img/pop6.jpg
-        label: ''
+        description: ''
+        label: 'F'
     name: Trending
   - about:
       alt: Flower Cakes
@@ -33,34 +40,34 @@ categories:
       heading: Flower Cakes
       image: /img/about_flower.jpg
     cards:
-      - alt: ''
+      - description: ''
         image: /img/flower1.jpg
         label: A
-      - alt: ''
+      - description: ''
         image: /img/flower2.jpg
         label: B
-      - alt: ''
+      - description: ''
         image: /img/flower3.jpg
         label: C
-      - alt: ''
+      - description: ''
         image: /img/flower4.jpg
         label: D
-      - alt: ''
+      - description: ''
         image: /img/flower5.png
         label: E
-      - alt: ''
+      - description: ''
         image: /img/flower6.jpg
         label: F
-      - alt: ''
+      - description: ''
         image: /img/flower7.jpg
         label: G
-      - alt: ''
+      - description: ''
         image: /img/flower8.jpg
         label: H
-      - alt: ''
+      - description: ''
         image: /img/flower9.jpg
         label: I
-      - alt: ''
+      - description: ''
         image: /img/flower10.jpg
         label: J
     name: Flower
@@ -95,11 +102,11 @@ categories:
         label: J
       - image: /img/wedding12.png
         label: K
-      - alt: L
+      - description: L
         image: /img/wedding15.jpg
-      - alt: M
+      - description: M
         image: /img/wedding17.jpg
-      - alt: 'N'
+      - description: 'N'
         image: /img/wedding16.jpg
     name: Wedding
   - about:
@@ -111,22 +118,22 @@ categories:
       heading: Anniversary Cakes
       image: /img/love5.jpg
     cards:
-      - alt: ''
+      - description: ''
         image: /img/love1.jpg
         label: A
-      - alt: ''
+      - description: ''
         image: /img/love2.jpg
         label: B
-      - alt: ''
+      - description: ''
         image: /img/love3.jpg
         label: C
-      - alt: ''
+      - description: ''
         image: /img/love4.jpg
         label: D
-      - alt: ''
+      - description: ''
         image: /img/about_love.png
         label: E
-      - alt: ''
+      - description: ''
         image: /img/love6.png
         label: F
     name: Anniversary
@@ -139,37 +146,37 @@ categories:
       heading: Fancy Cakes
       image: /img/about_fancy.png
     cards:
-      - alt: ''
+      - description: ''
         image: /img/fancy1.png
         label: A
-      - alt: ''
+      - description: ''
         image: /img/fancy2.jpg
         label: B
-      - alt: ''
+      - description: ''
         image: /img/fancy3.jpg
         label: C
-      - alt: ''
+      - description: ''
         image: /img/fancy4.png
         label: D
-      - alt: ''
+      - description: ''
         image: /img/fancy5.jpg
         label: E
-      - alt: ''
+      - description: ''
         image: /img/fancy6.jpg
         label: F
-      - alt: ''
+      - description: ''
         image: /img/fancy7.png
         label: G
-      - alt: ''
+      - description: ''
         image: /img/fancy8.jpg
         label: H
-      - alt: ''
+      - description: ''
         image: /img/fancy9.png
         label: I
-      - alt: ''
+      - description: ''
         image: /img/fancy10.png
         label: J
-      - alt: ''
+      - description: ''
         image: /img/fancy11.png
         label: K
     name: Fancy
@@ -182,28 +189,28 @@ categories:
       heading: Men Cakes
       image: /img/about_men.jpg
     cards:
-      - alt: ''
+      - description: ''
         image: /img/men1.jpg
         label: A
-      - alt: ''
+      - description: ''
         image: /img/men2.jpg
         label: B
-      - alt: ''
+      - description: ''
         image: /img/men3.jpg
         label: C
-      - alt: ''
+      - description: ''
         image: /img/men4.jpg
         label: D
-      - alt: ''
+      - description: ''
         image: /img/men5.jpg
         label: E
-      - alt: ''
+      - description: ''
         image: /img/men6.jpg
         label: F
-      - alt: ''
+      - description: ''
         image: /img/men7.png
         label: G
-      - alt: ''
+      - description: ''
         image: /img/men8.png
         label: H
     name: Men
@@ -216,46 +223,46 @@ categories:
       heading: Bridal/Baby Showers Cakes
       image: /img/about_baby.jpg
     cards:
-      - alt: ''
+      - description: ''
         image: /img/baby1.jpg
         label: A
-      - alt: ''
+      - description: ''
         image: /img/baby2.jpg
         label: B
-      - alt: ''
+      - description: ''
         image: /img/baby3.jpg
         label: C
-      - alt: ''
+      - description: ''
         image: /img/baby4.jpg
         label: D
-      - alt: ''
+      - description: ''
         image: /img/baby5.jpg
         label: E
-      - alt: ''
+      - description: ''
         image: /img/baby6.jpg
         label: F
-      - alt: ''
+      - description: ''
         image: /img/baby7.jpg
         label: G
-      - alt: ''
+      - description: ''
         image: /img/baby8.png
         label: H
-      - alt: ''
+      - description: ''
         image: /img/baby9.png
         label: I
-      - alt: ''
+      - description: ''
         image: /img/baby10.png
         label: J
-      - alt: ''
+      - description: ''
         image: /img/boob.jpg
         label: K
-      - alt: ''
+      - description: ''
         image: /img/boob1.jpg
         label: L
-      - alt: ''
+      - description: ''
         image: /img/boob2.png
         label: M
-      - alt: ''
+      - description: ''
         image: /img/boob3.png
         label: 'N'
     name: Bridal/Baby
@@ -268,33 +275,32 @@ categories:
       heading: Custom Cakes
       image: /img/about_custom.jpg
     cards:
-      - alt: ''
+      - description: ''
         image: /img/custom1.jpg
         label: A
-      - alt: ''
+      - description: ''
         image: /img/custom2.jpg
         label: B
-      - alt: ''
+      - description: ''
         image: /img/custom3.jpg
         label: C
-      - alt: ''
+      - description: ''
         image: /img/custom4.jpg
         label: D
-      - alt: ''
+      - description: ''
         image: /img/custom5.jpg
         label: E
-      - alt: ''
+      - description: ''
         image: /img/custom6.jpg
         label: F
-      - alt: ''
+      - description: ''
         image: /img/custom7.jpg
         label: G
-      - alt: ''
+      - description: ''
         image: /img/custom8.jpg
         label: H
-      - alt: ''
+      - description: ''
         image: /img/custom9.jpg
         label: I
     name: Custom
 ---
-

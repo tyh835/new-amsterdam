@@ -228,7 +228,7 @@ export const cakesPageQuery = graphql`
               }
             }
             label
-            alt
+            description
           }
         }
       }

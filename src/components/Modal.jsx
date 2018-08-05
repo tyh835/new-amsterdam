@@ -31,7 +31,7 @@ const Modal = ({ data, exitModal, isPreview }) => {
       <ModalWrap width={[300, 400]}>
         {data.image && <Image image={data.image} isPreview={isPreview} />}
         {data.label && <ModalHeading>{data.label}</ModalHeading>}
-        {data.alt && <p>{data.alt}</p>}
+        {data.description && <p>{data.description}</p>}
       </ModalWrap>
     </Fragment>
   );

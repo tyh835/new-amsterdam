@@ -155,8 +155,8 @@ export const pastriesPageQuery = graphql`
               }
             }
           }
+          description
           label
-          alt
         }
       }
     }
