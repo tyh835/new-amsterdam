@@ -4,6 +4,27 @@ title: We Love Making Cakes
 jumbotron: /img/jumbotron_cakes.jpg
 categories:
   - about:
+      description: >-
+        We design cakes in a variety of shapes and sizes, from round to square
+        or rectangle, or your custom shape of choice. We will customize your
+        cake to your liking.
+      heading: Trending cakes
+      image: /img/pop3.jpg
+    cards:
+      - image: /img/pop1.jpg
+        label: A
+      - image: /img/pop2.jpg
+        label: B
+      - image: /img/about_pop.jpg
+        label: C
+      - alt: F
+        image: /img/pop4.jpg
+      - image: /img/pop5.jpg
+        label: D
+      - image: /img/pop6.jpg
+        label: E
+    name: Trending
+  - about:
       alt: Flower Cakes
       description: >-
         We design cakes in a variety of shapes and sizes, from round to square
@@ -74,6 +95,12 @@ categories:
         label: J
       - image: /img/wedding12.png
         label: K
+      - alt: L
+        image: /img/wedding15.jpg
+      - alt: M
+        image: /img/wedding17.jpg
+      - alt: 'N'
+        image: /img/wedding16.jpg
     name: Wedding
   - about:
       alt: Anniversary Cakes
