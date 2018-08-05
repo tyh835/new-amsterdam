@@ -12,17 +12,17 @@ categories:
       image: /img/pop3.jpg
     cards:
       - image: /img/pop1.jpg
-        label: A
+        label: ''
       - image: /img/pop2.jpg
-        label: B
+        label: ''
       - image: /img/about_pop.jpg
-        label: C
-      - alt: F
+        label: ''
+      - alt: ''
         image: /img/pop4.jpg
       - image: /img/pop5.jpg
-        label: D
+        label: ''
       - image: /img/pop6.jpg
-        label: E
+        label: ''
     name: Trending
   - about:
       alt: Flower Cakes
