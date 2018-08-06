@@ -8,7 +8,7 @@ import { Flex, Box } from 'rebass';
 
 import Image from './Image.jsx';
 
-const Wrapper = Box.extend`
+const Wrap = Box.extend`
   min-height: 400px;
   display: grid;
   margin: 0;
@@ -79,7 +79,7 @@ const Title = styled.h2`
 const About = ({ flat, data, isPreview }) => {
   return (
     <Fade bottom duration={1000} distance="120px" key={data.heading}>
-      <Wrapper flat={flat} width={[1, 525, 800, 800]}>
+      <Wrap flat={flat} width={[1, 525, 800, 800]}>
         <Title>{data.heading}</Title>
         <ImageWrap>
           <ImageCircle>
@@ -89,7 +89,7 @@ const About = ({ flat, data, isPreview }) => {
         <TextBox px={5} py={4} mb={4}>
           {data.description}
         </TextBox>
-      </Wrapper>
+      </Wrap>
     </Fade>
   );
 };
@@ -98,7 +98,8 @@ About.propTypes = {
   data: PropTypes.shape({
     heading: PropTypes.string,
     image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-    description: PropTypes.string
+    description: PropTypes.string,
+    alt: PropTyes.string
   }),
   isPreview: PropTypes.bool
 };

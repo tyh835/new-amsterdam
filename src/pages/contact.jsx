@@ -6,14 +6,10 @@ import { Flex } from 'rebass';
 
 import Modal from '../components/Modal.jsx';
 
-const Wrapper = Flex.extend`
+const Wrap = Flex.extend`
   width: 100%;
   height: 550px;
-  background: linear-gradient(
-    to bottom,
-    ${props => props.theme.color.teal},
-    ${props => props.theme.color.blue}
-  );
+  background: linear-gradient(to bottom, ${props => props.theme.color.teal}, ${props => props.theme.color.blue});
   justify-content: center;
   align-items: center;
 `;
@@ -161,7 +157,7 @@ export default class Contact extends Component {
   render() {
     const { name, email, message, sendTo } = this.state;
     return (
-      <Wrapper py={40} px={[3, 50, 100, 200]}>
+      <Wrap py={40} px={[3, 50, 100, 200]}>
         <Form
           name="contact"
           method="POST"
@@ -205,7 +201,7 @@ export default class Contact extends Component {
             data={{ alt: this.state.modalMessage }}
           />
         )}
-      </Wrapper>
+      </Wrap>
     );
   }
 }
