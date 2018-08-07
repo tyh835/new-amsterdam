@@ -9,6 +9,7 @@ import Image from './Image.jsx';
 
 const Banner = Base.extend`
   top: 15vw;
+  color: ${props => props.orange ? props.theme.color.orange : 'initial'};
 
   @media (max-width: ${props => props.theme.breakpoints[2]}) {
     top: 17vw;
@@ -23,11 +24,11 @@ const HeroWrap = BaseWrap.extend`
   overflow-y: hidden;
 `;
 
-const HeroImage = ({ image, isPreview, title }) => {
+const HeroImage = ({ image, isPreview, title, orange }) => {
   return (
     <HeroWrap>
       <Image image={image} isPreview={isPreview} />
-      <Banner small>{title}</Banner>
+      <Banner orange={orange}>{title}</Banner>
     </HeroWrap>
   );
 };
@@ -35,7 +36,8 @@ const HeroImage = ({ image, isPreview, title }) => {
 HeroImage.propTypes = {
   image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   title: PropTypes.string,
-  isPreview: PropTypes.bool.isRequired
+  isPreview: PropTypes.bool.isRequired,
+  orange: PropTypes.bool
 };
 
 export default HeroImage;
