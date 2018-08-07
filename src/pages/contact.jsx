@@ -198,7 +198,7 @@ export default class Contact extends Component {
         {this.state.showModal && (
           <Modal
             exitModal={this.exitModal}
-            data={{ alt: this.state.modalMessage }}
+            data={{ description: this.state.modalMessage }}
           />
         )}
       </Wrap>
