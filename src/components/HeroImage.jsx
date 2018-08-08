@@ -28,7 +28,7 @@ const HeroImage = ({ image, isPreview, title, orange }) => {
   return (
     <HeroWrap>
       <Image image={image} isPreview={isPreview} />
-      <Banner orange={orange}>{title}</Banner>
+      <Banner orange={orange} small>{title}</Banner>
     </HeroWrap>
   );
 };
