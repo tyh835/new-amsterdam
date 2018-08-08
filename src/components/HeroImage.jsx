@@ -9,7 +9,7 @@ import Image from './Image.jsx';
 
 const Banner = Base.extend`
   top: 15vw;
-  color: ${props => props.orange ? props.theme.color.orange : 'initial'};
+  color: ${props => props.orange ? props.theme.color.orange : 'inherit'};
 
   @media (max-width: ${props => props.theme.breakpoints[2]}) {
     top: 17vw;
