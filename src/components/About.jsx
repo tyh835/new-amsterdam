@@ -99,7 +99,7 @@ About.propTypes = {
     heading: PropTypes.string,
     image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     description: PropTypes.string,
-    alt: PropTyes.string
+    alt: PropTypes.string
   }),
   isPreview: PropTypes.bool
 };
