@@ -62,8 +62,7 @@ export class PastriesPageTemplate extends Component {
   };
 
   toggleModal = data => {
-    const newShowModal = !this.state.showModal;
-    this.setState({ showModal: newShowModal, modalData: data });
+    this.setState(prevState => ({ ...prevState, showModal: !prevState.showModal, modalData: data }));
   };
 
   render() {
