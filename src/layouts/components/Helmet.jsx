@@ -26,7 +26,7 @@ export default () => (
       {
         name: 'description',
         content:
-          'We are a local bakery making handmade specialty bread, cakes, and cookies for over 25 years. Our baked good has no chemical or perspectives and baked fresh every day. We also carry many vegetarian selections (egg-free) , and healthy bread (sugar free, salt-free).'
+          'We are a local bakery making handmade specialty bread, cakes, and cookies for over 25 years. Our baked good has no chemical or perspectives and baked fresh every day. We also carry many vegetarian selections (egg-free), and healthy bread (sugar free, salt-free).'
       }
     ]}
     link={[
