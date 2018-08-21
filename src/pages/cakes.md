@@ -12,24 +12,26 @@ categories:
       heading: Trending Cakes
       image: /img/about_pop.jpg
     cards:
-      - image: /img/pop1.jpg
-        description: ''
-        label: 'A'
-      - image: /img/pop2.jpg
-        description: ''
-        label: 'B'
-      - image: /img/pop3.jpg
-        description: ''
-        label: 'C'
-      - image: /img/pop4.jpg
-        description: ''
-        label: 'D'
-      - image: /img/pop5.jpg
-        description: ''
-        label: 'E'
-      - image: /img/pop6.jpg
-        description: ''
-        label: 'F'
+      - description: ''
+        image: /img/pop1.jpg
+        label: A
+      - description: ''
+        image: /img/pop2.jpg
+        label: B
+      - description: ''
+        image: /img/pop3.jpg
+        label: C
+      - description: ''
+        image: /img/pop4.jpg
+        label: D
+      - description: ''
+        image: /img/pop5.jpg
+        label: E
+      - description: ''
+        image: /img/pop6.jpg
+        label: F
+      - image: /img/pop7.jpg
+        label: G
     name: Trending
   - about:
       alt: Flower Cakes
@@ -70,6 +72,8 @@ categories:
       - description: ''
         image: /img/flower10.jpg
         label: J
+      - image: /img/flower11.jpg
+        label: K
     name: Flower
   - about:
       alt: Wedding Cakes
@@ -102,12 +106,17 @@ categories:
         label: J
       - image: /img/wedding12.png
         label: K
-      - description: L
+      - image: /img/wedding13.jpg
+        label: L
+      - description: ''
         image: /img/wedding15.jpg
-      - description: M
-        image: /img/wedding17.jpg
-      - description: 'N'
+        label: M
+      - description: ''
         image: /img/wedding16.jpg
+        label: 'N'
+      - description: ''
+        image: /img/wedding17.jpg
+        label: O
     name: Wedding
   - about:
       alt: Anniversary Cakes
@@ -213,6 +222,8 @@ categories:
       - description: ''
         image: /img/men8.png
         label: H
+      - image: /img/men9.jpg
+        label: I
     name: Men
   - about:
       alt: Bridal/Baby Showers Cakes
@@ -265,6 +276,10 @@ categories:
       - description: ''
         image: /img/boob3.png
         label: 'N'
+      - image: /img/baby11.jpg
+        label: O
+      - image: /img/baby12.jpg
+        label: P
     name: Bridal/Baby
   - about:
       alt: Custom Cakes
@@ -302,5 +317,8 @@ categories:
       - description: ''
         image: /img/custom9.jpg
         label: I
+      - image: /img/custom10.jpg
+        label: J
     name: Custom
 ---
+
