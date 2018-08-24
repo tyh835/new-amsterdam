@@ -40,22 +40,18 @@ const HamburgerIcon = styled(Menu)`
   color: ${props => props.theme.color.black};
   transform: scale(1.2);
 
-  @media (min-width: ${props => props.theme.breakpoints[0]}) {
-    &:hover {
-      color: ${props => props.theme.color.orange};
-    }
-  }  
+  &:active {
+    color: ${props => props.theme.color.orange};
+  }
 `;
 
 const CloseIcon = styled(Close)`
   color: ${props => props.theme.color.black};
   transform: scale(1.2);
 
-  @media (min-width: ${props => props.theme.breakpoints[0]}) {
-    &:hover {
-      color: ${props => props.theme.color.orange};
-    }
-  } 
+  &:active {
+    color: ${props => props.theme.color.orange};
+  }
 `;
 
 export default class MenuIcon extends Component {
