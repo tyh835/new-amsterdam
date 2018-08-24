@@ -32,7 +32,7 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
-    margin-right: 1rem;
+    margin-right: 0.8rem;
   }
 `;
 
