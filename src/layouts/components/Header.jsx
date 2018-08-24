@@ -3,7 +3,9 @@ import styled from 'styled-components';
 
 import { Flex } from 'rebass';
 import HeadRoom from 'react-headroom';
+import Collapse from '@material-ui/core/Collapse';
 
+import MenuIcon from './MenuIcon.jsx';
 import NavLink from '../../components/NavLink.jsx';
 import { shake } from '../../utils/animations.js';
 import logo from '../../img/windmill.svg';
@@ -18,13 +20,35 @@ const HeaderWrap = Flex.extend`
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 `;
 
-const Nav = Flex.extend`
+const DesktopNav = Flex.extend`
   justify-content: center;
   align-items: center;
   margin-left: auto;
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     display: none;
+  }
+`;
+
+const MobileNav = styled(Collapse)`
+  display: none;
+  background-color: ${props => props.theme.color.white};
+  position: absolute;
+  top: ${props => props.theme.height.header}px;
+  right: 0;
+  width: 300px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.16), 0 4px 4px rgba(0, 0, 0, 0.23);
+
+  * {
+    width: 100%;
+  }
+
+  @media (max-width: ${props => props.theme.breakpoints[1]}) {
+    display: block;
+  }
+
+  @media (max-width: ${props => props.theme.breakpoints[0]}) {
+    width: 100%;
   }
 `;
 
@@ -60,27 +84,52 @@ const Title = styled.span`
 `;
 
 // Main Header Component
-const Header = () => {
-  return (
-    <HeaderWrap is="header" width="100%" pr={[0, 0, 0, 3]} py={3}>
-      <NavLink exact to="/">
-        <Logo src={logo} alt="New Amsterdam Bakery" />
-        <Title>New Amsterdam Bakery</Title>
-      </NavLink>
-      <Nav is="nav">
-        <NavLink exact to="/cakes">
-          Our Cakes
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: false
+    }
+  };
+
+  toggleOpen = () => {
+    this.setState(state => ({isOpen: !state.isOpen}));
+  }
+
+  render() {
+    return (
+      <HeaderWrap is="header" width="100%" pr={[0, 0, 0, 3]} py={3}>
+        <NavLink exact to="/">
+          <Logo src={logo} alt="New Amsterdam Bakery" />
+          <Title>New Amsterdam Bakery</Title>
         </NavLink>
-        <NavLink exact to="/pastries">
-          Bread and Pastries
-        </NavLink>
-        <NavLink exact to="/contact">
-          Contact Us
-        </NavLink>
-      </Nav>
-    </HeaderWrap>
-  );
-};
+        <MenuIcon isOpen={this.state.isOpen} toggleOpen={this.toggleOpen} />
+        <DesktopNav is="nav" isOpen={this.state.isOpen}>
+          <NavLink exact to="/cakes">
+            Our Cakes
+          </NavLink>
+          <NavLink exact to="/pastries">
+            Bread and Pastries
+          </NavLink>
+          <NavLink exact to="/contact">
+            Contact Us
+          </NavLink>
+        </DesktopNav>
+        <MobileNav in={this.state.isOpen} timeout={350}>
+          <NavLink exact to="/cakes">
+            Our Cakes
+          </NavLink>
+          <NavLink exact to="/pastries">
+            Bread and Pastries
+          </NavLink>
+          <NavLink exact to="/contact">
+            Contact Us
+          </NavLink>
+        </MobileNav>
+      </HeaderWrap>
+    );
+  }
+}
 
 export default class ReactiveHeader extends React.Component {
   constructor(props) {

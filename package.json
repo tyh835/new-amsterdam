@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "@material-ui/core": "^1.2.3",
+    "@material-ui/icons": "^2.0.3",
     "email-validator": "^2.0.4",
     "gatsby": "^1.9.270",
     "gatsby-image": "^1.0.54",

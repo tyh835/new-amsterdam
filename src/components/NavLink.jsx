@@ -38,17 +38,17 @@ class NavLink extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loaded: false
+      isLoaded: false
     };
   }
 
   componentDidMount() {
-    this.setState({ loaded: true });
+    this.setState({ isLoaded: true });
   }
 
   render() {
     return (
-      <Link activeClassName="active" loaded={this.state.loaded} {...this.props}>
+      <Link activeClassName="active" loaded={this.state.isLoaded} {...this.props}>
         <Button>{this.props.children}</Button>
       </Link>
     );
@@ -56,7 +56,6 @@ class NavLink extends Component {
 }
 
 NavLink.propTypes = {
-  classes: PropTypes.object,
   to: PropTypes.string.isRequired
 };
 
