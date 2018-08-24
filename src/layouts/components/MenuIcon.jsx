@@ -40,7 +40,7 @@ const HamburgerIcon = styled(Menu)`
   color: ${props => props.theme.color.black};
   transform: scale(1.2);
 
-  @media (max-width: ${props => props.theme.breakpoints[1]}) {
+  @media (min-width: ${props => props.theme.breakpoints[0]}) {
     &:hover {
       color: ${props => props.theme.color.orange};
     }
@@ -51,7 +51,7 @@ const CloseIcon = styled(Close)`
   color: ${props => props.theme.color.black};
   transform: scale(1.2);
 
-  @media (max-width: ${props => props.theme.breakpoints[1]}) {
+  @media (min-width: ${props => props.theme.breakpoints[0]}) {
     &:hover {
       color: ${props => props.theme.color.orange};
     }
