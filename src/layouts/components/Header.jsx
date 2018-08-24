@@ -7,9 +7,7 @@ import Collapse from '@material-ui/core/Collapse';
 
 import MenuIcon from './MenuIcon.jsx';
 import HeaderLinks from './HeaderLinks.jsx';
-import NavLink from '../../components/NavLink.jsx';
-import { shake } from '../../utils/animations.js';
-import logo from '../../img/windmill.svg';
+import HeaderTitle from './HeaderTitle.jsx';
 
 // Styled Library Components
 const HeaderWrap = Flex.extend`
@@ -53,37 +51,6 @@ const MobileNav = styled(Collapse)`
   }
 `;
 
-// Styled Native DOM Elements
-const Logo = styled.img`
-  height: 55px;
-
-  @media (max-width: ${props => props.theme.breakpoints[0]}) {
-    display: none;
-  }
-`;
-
-const Title = styled.span`
-  font-family: ${props => props.theme.fonts.title};
-  font-weight: bold;
-  font-size: 2.3rem;
-  margin-left: 20px;
-  color: #363636;
-
-  &:hover,
-  &:focus {
-    animation: ${shake} 0.5s linear 1;
-  }
-
-  @media (max-width: ${props => props.theme.breakpoints[2]}) {
-    font-size: 1.6rem;
-  }
-
-  @media (max-width: ${props => props.theme.breakpoints[0]}) {
-    font-size: 1.4rem;
-    margin-left: 0px;
-  }
-`;
-
 // Main Header Component
 export default class Header extends Component {
   constructor(props) {
@@ -124,10 +91,7 @@ export default class Header extends Component {
     return (
       <HeadRoom downTolerance={15} disable={this.state.disable}>
         <HeaderWrap is="header" width="100%" pr={[0, 0, 0, 3]} py={3}>
-          <NavLink exact to="/">
-            <Logo src={logo} alt="New Amsterdam Bakery" />
-            <Title>New Amsterdam Bakery</Title>
-          </NavLink>
+          <HeaderTitle />
           <MenuIcon isOpen={this.state.isOpen} toggleOpen={this.toggleOpen} />
           <DesktopNav is="nav">
             <HeaderLinks />
