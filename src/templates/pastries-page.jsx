@@ -62,14 +62,23 @@ export class PastriesPageTemplate extends Component {
   };
 
   toggleModal = data => {
-    this.setState(prevState => ({ ...prevState, showModal: !prevState.showModal, modalData: data }));
+    this.setState(prevState => ({
+      ...prevState,
+      showModal: !prevState.showModal,
+      modalData: data
+    }));
   };
 
   render() {
     const { jumbotron, title, pastries, isPreview } = this.props;
     return (
       <Fragment>
-        <HeroImage image={jumbotron} isPreview={isPreview} title={title} orange />
+        <HeroImage
+          image={jumbotron}
+          isPreview={isPreview}
+          title={title}
+          orange
+        />
         <CardsGrid px={[0, 40]} py={[20, 50]}>
           <Title>Bread and Pastries</Title>
           {pastries.map((card, i) => (

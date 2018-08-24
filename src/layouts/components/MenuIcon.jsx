@@ -54,26 +54,25 @@ const CloseIcon = styled(Close)`
   }
 `;
 
-
 export default class MenuIcon extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isLoaded: false
-    }
+    };
   }
 
   componentDidMount() {
-    this.setState({isLoaded: true})
+    this.setState({ isLoaded: true });
   }
 
   render() {
     return (
       <Wrapper loaded={this.state.isLoaded}>
         <IconButton aria-label="Menu" onClick={this.props.toggleOpen}>
-          {this.props.isOpen? <CloseIcon /> : <HamburgerIcon />}
+          {this.props.isOpen ? <CloseIcon /> : <HamburgerIcon />}
         </IconButton>
       </Wrapper>
-    )
+    );
   }
 }

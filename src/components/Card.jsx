@@ -64,7 +64,11 @@ class Card extends Component {
         <Wrap dimensions={dimensions} onClick={this.onClick}>
           {data.image && (
             <ImageBox dimensions={dimensions}>
-              <Image image={data.image} alt={data.description} isPreview={isPreview} />
+              <Image
+                image={data.image}
+                alt={data.description}
+                isPreview={isPreview}
+              />
             </ImageBox>
           )}
           {data.label && <TextBox>{data.label}</TextBox>}

@@ -1,15 +1,13 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import {
-  Banner as Base,
-  JumbotronWrap as BaseWrap
-} from './Carousel.jsx';
+import { Banner as Base, JumbotronWrap as BaseWrap } from './Carousel.jsx';
 import Image from './Image.jsx';
 
 const Banner = Base.extend`
   top: 15vw;
-  color: ${props => props.orange ? props.theme.color.orange : props.theme.color.blue};
+  color: ${props =>
+    props.orange ? props.theme.color.orange : props.theme.color.blue};
 
   @media (max-width: ${props => props.theme.breakpoints[2]}) {
     top: 17vw;
@@ -28,7 +26,9 @@ const HeroImage = ({ image, isPreview, title, orange }) => {
   return (
     <HeroWrap>
       <Image image={image} isPreview={isPreview} />
-      <Banner orange={orange} small>{title}</Banner>
+      <Banner orange={orange} small>
+        {title}
+      </Banner>
     </HeroWrap>
   );
 };

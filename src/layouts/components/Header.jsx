@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import { Flex } from 'rebass';
@@ -92,7 +92,7 @@ export default class Header extends Component {
     this.state = {
       isOpen: false,
       disableHeadroom: false
-    }
+    };
   }
 
   handleScroll = () => {
@@ -103,14 +103,14 @@ export default class Header extends Component {
       this.setState({ disableHeadroom: false });
     }
     if (this.state.isOpen && Math.abs(scrollTop - this.currentYOffset) > 200) {
-      this.toggleOpen()
+      this.toggleOpen();
     }
-  }
+  };
 
   toggleOpen = () => {
     this.currentYOffset = window.pageYOffset;
-    this.setState(state => ({isOpen: !state.isOpen}));
-  }
+    this.setState(state => ({ isOpen: !state.isOpen }));
+  };
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);

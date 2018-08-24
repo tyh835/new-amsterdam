@@ -16,7 +16,10 @@ const CardsWrap = Flex.extend`
   justify-content: center;
   align-items: center;
   background: linear-gradient(
-    to bottom, white, ${props => props.theme.color.lightyellow}, ${props => props.theme.color.lightgreen}
+    to bottom,
+    white,
+    ${props => props.theme.color.lightyellow},
+    ${props => props.theme.color.lightgreen}
   );
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
@@ -99,12 +102,7 @@ export const IndexPageTemplate = ({ images, about, cards, isPreview }) => {
     <Fragment>
       <Carousel images={images} isPreview={isPreview} />
       {about.map(data => (
-        <AboutWrap
-          key={uuid()}
-          is="section"
-          mt={[0, 10, 100]}
-          mb={[20, 20, 0]}
-        >
+        <AboutWrap key={uuid()} is="section" mt={[0, 10, 100]} mb={[20, 20, 0]}>
           <About data={data} isPreview={isPreview} />
         </AboutWrap>
       ))}

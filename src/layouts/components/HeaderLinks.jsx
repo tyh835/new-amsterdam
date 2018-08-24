@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 import NavLink from '../../components/NavLink.jsx';
 
 export default () => {
@@ -14,5 +14,5 @@ export default () => {
         Contact Us
       </NavLink>
     </Fragment>
-  )
-}
+  );
+};

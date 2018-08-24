@@ -48,7 +48,11 @@ class NavLink extends Component {
 
   render() {
     return (
-      <Link activeClassName="active" loaded={this.state.isLoaded} {...this.props}>
+      <Link
+        activeClassName="active"
+        loaded={this.state.isLoaded}
+        {...this.props}
+      >
         <Button>{this.props.children}</Button>
       </Link>
     );
