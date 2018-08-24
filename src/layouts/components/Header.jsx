@@ -102,7 +102,7 @@ export default class Header extends Component {
     } else if (this.state.disableHeadroom) {
       this.setState({ disableHeadroom: false });
     }
-    if (this.state.isOpen && Math.abs(scrollTop - this.currentYOffset) > 200) {
+    if (this.state.isOpen && Math.abs(scrollTop - this.currentYOffset) > 95) {
       this.toggleOpen();
     }
   };
