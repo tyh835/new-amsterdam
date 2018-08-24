@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import NavLink from '../../components/NavLink.jsx';
+import NavLink from '../../../components/NavLink.jsx';
 
 export default () => {
   return (

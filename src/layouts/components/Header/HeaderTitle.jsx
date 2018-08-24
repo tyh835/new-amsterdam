@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import NavLink from '../../components/NavLink.jsx';
-import logo from '../../img/windmill.svg';
-import { shake } from '../../utils/animations.js';
+import NavLink from '../../../components/NavLink.jsx';
+import logo from '../../../img/windmill.svg';
+import { shake } from '../../../utils/animations.js';
 
 const Logo = styled.img`
   height: 55px;
