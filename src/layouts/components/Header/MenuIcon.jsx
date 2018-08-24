@@ -5,7 +5,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/icons/Menu';
 import Close from '@material-ui/icons/Close';
 
-const Wrapper = styled.div`
+const Wrap = styled.div`
   display: none;
   height: 100%;
 
@@ -68,11 +68,11 @@ export default class MenuIcon extends Component {
 
   render() {
     return (
-      <Wrapper loaded={this.state.isLoaded}>
+      <Wrap loaded={this.state.isLoaded}>
         <IconButton aria-label="Menu" onClick={this.props.toggleOpen}>
           {this.props.isOpen ? <CloseIcon /> : <HamburgerIcon />}
         </IconButton>
-      </Wrapper>
+      </Wrap>
     );
   }
 }
