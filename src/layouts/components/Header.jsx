@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
 
 import { Flex } from 'rebass';
@@ -6,6 +6,7 @@ import HeadRoom from 'react-headroom';
 import Collapse from '@material-ui/core/Collapse';
 
 import MenuIcon from './MenuIcon.jsx';
+import HeaderLinks from './HeaderLinks.jsx';
 import NavLink from '../../components/NavLink.jsx';
 import { shake } from '../../utils/animations.js';
 import logo from '../../img/windmill.svg';
@@ -84,69 +85,32 @@ const Title = styled.span`
 `;
 
 // Main Header Component
-class Header extends React.Component {
+export default class Header extends Component {
   constructor(props) {
     super(props);
+    this.currentYOffset = 0;
     this.state = {
-      isOpen: false
+      isOpen: false,
+      disableHeadroom: false
     }
-  };
-
-  toggleOpen = () => {
-    this.setState(state => ({isOpen: !state.isOpen}));
-  }
-
-  render() {
-    return (
-      <HeaderWrap is="header" width="100%" pr={[0, 0, 0, 3]} py={3}>
-        <NavLink exact to="/">
-          <Logo src={logo} alt="New Amsterdam Bakery" />
-          <Title>New Amsterdam Bakery</Title>
-        </NavLink>
-        <MenuIcon isOpen={this.state.isOpen} toggleOpen={this.toggleOpen} />
-        <DesktopNav is="nav" isOpen={this.state.isOpen}>
-          <NavLink exact to="/cakes">
-            Our Cakes
-          </NavLink>
-          <NavLink exact to="/pastries">
-            Bread and Pastries
-          </NavLink>
-          <NavLink exact to="/contact">
-            Contact Us
-          </NavLink>
-        </DesktopNav>
-        <MobileNav in={this.state.isOpen} timeout={350}>
-          <NavLink exact to="/cakes">
-            Our Cakes
-          </NavLink>
-          <NavLink exact to="/pastries">
-            Bread and Pastries
-          </NavLink>
-          <NavLink exact to="/contact">
-            Contact Us
-          </NavLink>
-        </MobileNav>
-      </HeaderWrap>
-    );
-  }
-}
-
-export default class ReactiveHeader extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      disable: false
-    };
   }
 
   handleScroll = () => {
     const scrollTop = window.pageYOffset;
-    if (scrollTop < 50 && !this.state.disable) {
-      this.setState({ disable: true });
-    } else if (this.state.disable) {
-      this.setState({ disable: false });
+    if (scrollTop < 50 && !this.state.disableHeadroom) {
+      this.setState({ disableHeadroom: true });
+    } else if (this.state.disableHeadroom) {
+      this.setState({ disableHeadroom: false });
     }
-  };
+    if (this.state.isOpen && Math.abs(scrollTop - this.currentYOffset) > 200) {
+      this.toggleOpen()
+    }
+  }
+
+  toggleOpen = () => {
+    this.currentYOffset = window.pageYOffset;
+    this.setState(state => ({isOpen: !state.isOpen}));
+  }
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
@@ -159,7 +123,19 @@ export default class ReactiveHeader extends React.Component {
   render() {
     return (
       <HeadRoom downTolerance={15} disable={this.state.disable}>
-        <Header {...this.props} />
+        <HeaderWrap is="header" width="100%" pr={[0, 0, 0, 3]} py={3}>
+          <NavLink exact to="/">
+            <Logo src={logo} alt="New Amsterdam Bakery" />
+            <Title>New Amsterdam Bakery</Title>
+          </NavLink>
+          <MenuIcon isOpen={this.state.isOpen} toggleOpen={this.toggleOpen} />
+          <DesktopNav is="nav">
+            <HeaderLinks />
+          </DesktopNav>
+          <MobileNav in={this.state.isOpen} timeout={300}>
+            <HeaderLinks />
+          </MobileNav>
+        </HeaderWrap>
       </HeadRoom>
     );
   }
