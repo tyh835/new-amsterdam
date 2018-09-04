@@ -9,11 +9,7 @@ import Modal from '../components/Modal.jsx';
 const Wrap = Flex.extend`
   width: 100%;
   height: 550px;
-  background: linear-gradient(
-    to bottom,
-    ${props => props.theme.color.teal},
-    ${props => props.theme.color.blue}
-  );
+  background: linear-gradient(to bottom,${props => props.theme.color.teal},${props => props.theme.color.blue});
   justify-content: center;
   align-items: center;
 `;
@@ -23,7 +19,7 @@ const Form = styled.form`
   height: 100%;
   font-family: ${props => props.theme.fonts.header};
   display: grid;
-  grid-template: 1fr 1fr 1fr 3fr 1fr / 25% 75%;
+  grid-template: 1fr 1fr 1fr 1fr 3fr 1fr / 25% 75%;
   grid-gap: 1.5rem;
 `;
 
@@ -75,7 +71,6 @@ const TextInput = styled.textarea`
   font-family: ${props => props.theme.fonts.sans};
   border: 2px solid ${props => props.theme.color.teal};
   border-radius: 5px;
-  grid-area: 4 / 2 / 5 / 3;
   margin-left: 1rem;
   resize: none;
 
@@ -88,7 +83,7 @@ const TextInput = styled.textarea`
 const Button = styled.button`
   height: 40px;
   width: 120px;
-  grid-area: 5 / 2 / 6 / 3;
+  grid-area: 6 / 2 / 7 / 3;
   justify-self: center;
   align-self: center;
   font-family: ${props => props.theme.fonts.header};
@@ -118,6 +113,7 @@ export default class Contact extends Component {
       name: '',
       email: '',
       message: '',
+      phone: '',
       sendTo: 'nabakerycakes@gmail.com',
       showModal: false,
       modalMessage: ''
@@ -130,9 +126,11 @@ export default class Contact extends Component {
   };
 
   validateInput = () => {
-    const { name, email, message } = this.state;
+    const { name, email, message, phone } = this.state;
+    const phoneRegex = /^[1]?-?\(?[0-9]{3}\)?-?[0-9]{3}-?[0-9]{4}/;
+    const validPhone = phoneRegex.test(phone)
     const validEmail = EmailValidator.validate(email);
-    if (!name || !email || !message) {
+    if (!name || !email || !message || !phone ) {
       this.setState({
         showModal: true,
         modalMessage: 'Please fill out all fields, thank you.'
@@ -142,6 +140,12 @@ export default class Contact extends Component {
       this.setState({
         showModal: true,
         modalMessage: 'Please enter a valid email address.'
+      });
+      return false;
+    } else if (!validPhone) {
+      this.setState({
+        showModal: true,
+        modalMessage: 'Please enter a valid phone number.'
       });
       return false;
     } else {
@@ -159,7 +163,7 @@ export default class Contact extends Component {
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { name, email, message, sendTo } = this.state;
+    const { name, email, message, phone, sendTo } = this.state;
     return (
       <Wrap py={40} px={[3, 50, 100, 200]}>
         <Form
@@ -189,6 +193,13 @@ export default class Contact extends Component {
             type="text"
             name="email"
             value={email}
+            onChange={this.handleChange}
+          />
+          <Label>Your Phone: </Label>
+          <Input
+            type="text"
+            name="phone"
+            value={phone}
             onChange={this.handleChange}
           />
           <Label>Message: </Label>
