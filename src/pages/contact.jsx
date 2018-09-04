@@ -127,7 +127,7 @@ export default class Contact extends Component {
 
   validateInput = () => {
     const { name, email, message, phone } = this.state;
-    const phoneRegex = /^[1]?-?\(?[0-9]{3}\)?-?[0-9]{3}-?[0-9]{4}/;
+    const phoneRegex = /^[1]?-?\(?[0-9]{3}\)?-?\s?[0-9]{3}-?\s?[0-9]{4}/;
     const validPhone = phoneRegex.test(phone)
     const validEmail = EmailValidator.validate(email);
     if (!name || !email || !message || !phone ) {
