@@ -63,9 +63,8 @@ module.exports = {
       resolve: 'gatsby-plugin-nprogress',
       options: {
         color: 'orange',
-        minimum: 0.4,
-        showSpinner: false,
-        trickle: false
+        minimum: 0.3,
+        showSpinner: true,
       }
     },
     {

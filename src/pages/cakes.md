@@ -72,7 +72,8 @@ categories:
       - description: ''
         image: /img/flower10.jpg
         label: J
-      - image: /img/flower11.jpg
+      - description: ''
+        image: /img/flower11.jpg
         label: K
     name: Flower
   - about:
@@ -84,29 +85,41 @@ categories:
       heading: Wedding Cakes
       image: /img/wedding0.jpg
     cards:
-      - image: /img/wedding1.png
+      - description: ''
+        image: /img/wedding1.png
         label: A
-      - image: /img/wedding2.jpg
+      - description: ''
+        image: /img/wedding2.jpg
         label: B
-      - image: /img/wedding3.png
+      - description: ''
+        image: /img/wedding3.png
         label: C
-      - image: /img/wedding4.jpg
+      - description: ''
+        image: /img/wedding4.jpg
         label: D
-      - image: /img/wedding5.jpg
+      - description: ''
+        image: /img/wedding5.jpg
         label: E
-      - image: /img/wedding6.jpg
+      - description: ''
+        image: /img/wedding6.jpg
         label: F
-      - image: /img/wedding7.jpg
+      - description: ''
+        image: /img/wedding7.jpg
         label: G
-      - image: /img/wedding8.png
+      - description: ''
+        image: /img/wedding8.png
         label: H
-      - image: /img/wedding9.png
+      - description: ''
+        image: /img/wedding9.png
         label: I
-      - image: /img/wedding11.png
+      - description: ''
+        image: /img/wedding11.png
         label: J
-      - image: /img/wedding12.png
+      - description: ''
+        image: /img/wedding12.png
         label: K
-      - image: /img/wedding13.jpg
+      - description: ''
+        image: /img/wedding13.jpg
         label: L
       - description: ''
         image: /img/wedding15.jpg
@@ -276,9 +289,11 @@ categories:
       - description: ''
         image: /img/boob3.png
         label: 'N'
-      - image: /img/baby11.jpg
+      - description: ''
+        image: /img/baby11.jpg
         label: O
-      - image: /img/baby12.jpg
+      - description: ''
+        image: /img/baby12.jpg
         label: P
     name: Bridal/Baby
   - about:
@@ -317,7 +332,8 @@ categories:
       - description: ''
         image: /img/custom9.jpg
         label: I
-      - image: /img/custom10.jpg
+      - description: ''
+        image: /img/custom10.jpg
         label: J
     name: Custom
 ---

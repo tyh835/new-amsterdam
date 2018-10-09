@@ -1,7 +1,7 @@
 {
   "name": "new-amsterdam-bakery",
-  "author": "tyh835",
-  "version": "0.0.2",
+  "author": "Tony Han",
+  "version": "1.0.0",
   "license": "CC BY-NC 4.0",
   "dependencies": {
     "@material-ui/core": "^1.2.3",
