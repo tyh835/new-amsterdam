@@ -35,12 +35,9 @@ const Link = styled(GatsbyLink)`
 `;
 
 class NavLink extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isLoaded: false
-    };
-  }
+  state = {
+    isLoaded: false
+  };
 
   componentDidMount() {
     this.setState({ isLoaded: true });

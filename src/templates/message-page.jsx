@@ -5,7 +5,14 @@ import styled from 'styled-components';
 import { Flex } from 'rebass';
 
 import theme from '../styles/theme.js';
-import { Cloud1a, Cloud1b, Cloud2, Cloud3, Cloud4, Cloud5 } from '../components/Clouds.jsx';
+import {
+  Cloud1a,
+  Cloud1b,
+  Cloud2,
+  Cloud3,
+  Cloud4,
+  Cloud5
+} from '../components/Clouds.jsx';
 
 const Wrap = styled(Flex)`
   float: left;

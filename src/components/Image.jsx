@@ -7,7 +7,7 @@ const Image = ({ image, alt }) => <Img fluid={image.childImageSharp.fluid} alt={
 
 Image.propTypes = {
   image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
-  alt: PropTypes.string,
+  alt: PropTypes.string
 };
 
 export default Image;

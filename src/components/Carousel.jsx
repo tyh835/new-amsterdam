@@ -57,14 +57,10 @@ const CarouselWrap = styled.div`
 `;
 
 export default class Carousel extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      totalSlides: this.props.images.length,
-      currentSlide: 0
-    };
-    this.changeSlide = this.changeSlide.bind(this);
-  }
+  state = {
+    totalSlides: this.props.images.length,
+    currentSlide: 0
+  };
 
   changeSlide() {
     let nextSlide = this.state.currentSlide + 1;
@@ -98,10 +94,7 @@ export default class Carousel extends React.Component {
         {images.map((image, i) => {
           return (
             <JumbotronWrap key={uuid()}>
-              <Image
-                image={image.path}
-                alt={image.text}
-              />
+              <Image image={image.path} alt={image.text} />
               <Banner position={i} orange={i % 3 === 1} teal={i % 3 === 0}>
                 {image.text}
               </Banner>

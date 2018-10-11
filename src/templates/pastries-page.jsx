@@ -43,24 +43,21 @@ const Title = styled.h2`
 `;
 
 export class PastriesPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showModal: false,
-      modalData: {},
-      dimensions: {
-        card: {
-          width: '240px',
-          height: '270px',
-          image: '200px'
-        }
+  state = {
+    showModal: false,
+    modalData: {},
+    dimensions: {
+      card: {
+        width: '240px',
+        height: '270px',
+        image: '200px'
       }
-    };
-  }
+    }
+  };
 
   exitModal = () => {
     this.toggleModal({});
-  };
+  }
 
   toggleModal = data => {
     this.setState(prevState => ({
@@ -68,17 +65,17 @@ export class PastriesPage extends Component {
       showModal: !prevState.showModal,
       modalData: data
     }));
-  };
+  }
 
   render() {
-    const { jumbotron, title, pastries } = this.props.data.markdownRemark.frontmatter;
+    const {
+      jumbotron,
+      title,
+      pastries
+    } = this.props.data.markdownRemark.frontmatter;
     return (
       <>
-        <HeroImage
-          image={jumbotron}
-          title={title}
-          orange
-        />
+        <HeroImage image={jumbotron} title={title} orange />
         <CardsGrid px={[0, 40]} py={[20, 50]}>
           <Title>Bread and Pastries</Title>
           {pastries.map((card, i) => (
@@ -91,10 +88,7 @@ export class PastriesPage extends Component {
           ))}
         </CardsGrid>
         {this.state.showModal && (
-          <Modal
-            data={this.state.modalData}
-            exitModal={this.exitModal}
-          />
+          <Modal data={this.state.modalData} exitModal={this.exitModal} />
         )}
       </>
     );

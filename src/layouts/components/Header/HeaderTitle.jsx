@@ -35,14 +35,13 @@ const Title = styled.span`
   }
 `;
 
-
 const HeaderTitle = () => {
   return (
     <NavLink to="/">
       <Logo src={logo} alt="New Amsterdam Bakery" />
       <Title>New Amsterdam Bakery</Title>
     </NavLink>
-  )
-}
+  );
+};
 
-export default HeaderTitle
+export default HeaderTitle;

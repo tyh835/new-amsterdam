@@ -9,7 +9,7 @@ import Modal from '../components/Modal.jsx';
 const Wrap = styled(Flex)`
   width: 100%;
   height: 550px;
-  background: linear-gradient(to bottom,${props => props.theme.color.teal},${props => props.theme.color.blue});
+  background: linear-gradient(to bottom, ${props => props.theme.color.teal}, ${props => props.theme.color.blue});
   justify-content: center;
   align-items: center;
 `;
@@ -94,7 +94,7 @@ const Button = styled.button`
   color: ${props => props.theme.color.teal};
   background-color: ${props => props.theme.color.white};
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
-  
+
   &:hover {
     border: 2px solid ${props => props.theme.color.orange};
     color: ${props => props.theme.color.orange};
@@ -107,19 +107,17 @@ const Button = styled.button`
 `;
 
 export default class Contact extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: '',
-      email: '',
-      message: '',
-      phone: '',
-      sendTo: 'nabakerycakes@gmail.com',
-      showModal: false,
-      modalMessage: ''
-    };
-    this.validated = false;
-  }
+  state = {
+    name: '',
+    email: '',
+    message: '',
+    phone: '',
+    sendTo: 'nabakerycakes@gmail.com',
+    showModal: false,
+    modalMessage: ''
+  };
+
+  validated = false;
 
   exitModal = () => {
     this.setState({ showModal: false });
@@ -128,9 +126,9 @@ export default class Contact extends Component {
   validateInput = () => {
     const { name, email, message, phone } = this.state;
     const phoneRegex = /^[1]?-?\(?[0-9]{3}\)?-?\s?[0-9]{3}-?\s?[0-9]{4}/;
-    const validPhone = phoneRegex.test(phone)
+    const validPhone = phoneRegex.test(phone);
     const validEmail = EmailValidator.validate(email);
-    if (!name || !email || !message || !phone ) {
+    if (!name || !email || !message || !phone) {
       this.setState({
         showModal: true,
         modalMessage: 'Please fill out all fields, thank you.'

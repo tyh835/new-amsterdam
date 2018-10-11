@@ -49,18 +49,20 @@ const AboutWrap = styled(Box)`
 export class CakesPage extends Component {
   constructor(props) {
     super(props);
-    const data = this.props.data.markdownRemark.frontmatter.categories.map(category => {
-      const { cards, ...rest } = category;
-      return {
-        cards: cards.map(card => {
-          return {
-            key: uuid(),
-            ...card
-          };
-        }),
-        ...rest
-      };
-    });
+    const data = this.props.data.markdownRemark.frontmatter.categories.map(
+      category => {
+        const { cards, ...rest } = category;
+        return {
+          cards: cards.map(card => {
+            return {
+              key: uuid(),
+              ...card
+            };
+          }),
+          ...rest
+        };
+      }
+    );
 
     this.state = {
       categoryNames: data.map(category => category.name),
@@ -124,10 +126,7 @@ export class CakesPage extends Component {
             />
           ))}
           {this.state.showModal && (
-            <Modal
-              data={this.state.modalData}
-              exitModal={this.exitModal}
-            />
+            <Modal data={this.state.modalData} exitModal={this.exitModal} />
           )}
         </CardsGrid>
       </>

@@ -19,7 +19,7 @@ const Wrap = styled.div`
   grid-column: span 1;
 
   &:hover {
-    box-shadow: 0 4px 7px rgba(0,0,0,0.16), 0 4px 7px rgba(0,0,0,0.23);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.16), 0 4px 7px rgba(0, 0, 0, 0.23);
     cursor: pointer;
   }
 `;
@@ -44,18 +44,15 @@ const TextBox = styled.div`
 `;
 
 class Card extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showModal: false
-    };
-  }
+  state = {
+    showModal: false
+  };
 
   onClick = () => {
     if (this.props.handleClick) {
       this.props.handleClick(this.props.data);
     }
-  };
+  }
 
   render() {
     const { data, dimensions } = this.props;
@@ -64,10 +61,7 @@ class Card extends Component {
         <Wrap dimensions={dimensions} onClick={this.onClick}>
           {data.image && (
             <ImageBox dimensions={dimensions}>
-              <Image
-                image={data.image}
-                alt={data.description}
-              />
+              <Image image={data.image} alt={data.description} />
             </ImageBox>
           )}
           {data.label && <TextBox>{data.label}</TextBox>}

@@ -68,7 +68,7 @@ module.exports = {
       options: {
         color: 'orange',
         minimum: 0.3,
-        showSpinner: true,
+        showSpinner: true
       }
     },
     {
