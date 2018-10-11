@@ -15,10 +15,13 @@ class BlankPreview extends Component {
     if (!this.state.visible) return <div />
 
     return (
-      <div class="alert alert-warning" role="alert">
-        <h4 class="alert-heading">Sorry, there is no preview.</h4>
-        <p>Please toggle the preview with the icon to the right.</p> 
+      <div className="container mt-3">
+        <div className="alert alert-warning" role="alert">
+          <h4 className="alert-heading">Sorry, there is no preview.</h4>
+          <p>Please toggle the preview with the icon to the right.</p> 
+        </div>
       </div>
+      
     );
   }
 }
