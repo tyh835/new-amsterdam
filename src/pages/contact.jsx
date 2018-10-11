@@ -19,7 +19,7 @@ const Form = styled.form`
   height: 100%;
   font-family: ${props => props.theme.fonts.header};
   display: grid;
-  grid-template: 1fr 1fr 1fr 1fr 3fr 1fr / 25% 75%;
+  grid-template: 1fr 1fr 1fr 1fr 3fr 1fr / 1fr 3fr;
   grid-gap: 1.5rem;
 `;
 
