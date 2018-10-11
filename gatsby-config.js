@@ -71,6 +71,19 @@ module.exports = {
         showSpinner: true
       }
     },
+    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'New Amsterdam Bakery',
+        short_name: 'newamsterdam',
+        start_url: '/',
+        background_color: '#FEFEFE',
+        theme_color: 'papayawhip',
+        display: `minimal-ui`,
+        icon: `${__dirname}/src/img/android-chrome-512x512.png`, // This path is relative to the root of the site.
+      },
+    },
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
