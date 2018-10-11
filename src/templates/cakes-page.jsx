@@ -46,10 +46,10 @@ const AboutWrap = styled(Box)`
   }
 `;
 
-export class CakesPageTemplate extends Component {
+export class CakesPage extends Component {
   constructor(props) {
     super(props);
-    const data = this.props.categories.map(category => {
+    const data = this.props.data.markdownRemark.frontmatter.categories.map(category => {
       const { cards, ...rest } = category;
       return {
         cards: cards.map(card => {
@@ -61,6 +61,7 @@ export class CakesPageTemplate extends Component {
         ...rest
       };
     });
+
     this.state = {
       categoryNames: data.map(category => category.name),
       data: data,
@@ -99,18 +100,8 @@ export class CakesPageTemplate extends Component {
     this.setState({ showModal: newShowModal, modalData: data });
   };
 
-  componentDidUpdate(prevProps) {
-    if (this.props.categories !== prevProps.categories) {
-      const nextCategoryNames = this.props.categories.map(
-        category => category.name
-      );
-      const nextData = this.props.categories;
-      this.setState({ categoryNames: nextCategoryNames, data: nextData });
-    }
-  }
-
   render() {
-    const { jumbotron, title } = this.props;
+    const { jumbotron, title } = this.props.data.markdownRemark.frontmatter;
     return (
       <>
         <HeroImage image={jumbotron} title={title} />
@@ -144,28 +135,14 @@ export class CakesPageTemplate extends Component {
   }
 }
 
-CakesPageTemplate.propTypes = {
-  jumbotron: PropTypes.object,
-  title: PropTypes.string,
-  categories: PropTypes.array,
-};
-
-const CakesPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
-
-  return (
-    <CakesPageTemplate
-      jumbotron={frontmatter.jumbotron}
-      title={frontmatter.title}
-      categories={frontmatter.categories}
-    />
-  );
-};
-
 CakesPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object
+      frontmatter: PropTypes.shape({
+        jumbotron: PropTypes.object,
+        title: PropTypes.string,
+        categories: PropTypes.array
+      })
     })
   })
 };
