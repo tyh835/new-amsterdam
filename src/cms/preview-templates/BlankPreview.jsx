@@ -8,7 +8,7 @@ class BlankPreview extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({ visible: true });
-    }, 1000)
+    }, 700)
   }
 
   render() {
