@@ -20,7 +20,7 @@ const CardsGrid = styled(Box)`
   align-items: center;
   grid-template: 400px / repeat(auto-fill, 240px);
   grid-auto-rows: 300px;
-  grid-gap: 2rem;
+  grid-gap: 32px;
   background: linear-gradient(
     to bottom,
     ${props => props.theme.color.lightyellow},
