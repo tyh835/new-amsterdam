@@ -58,7 +58,7 @@ class Card extends Component {
   };
 
   render() {
-    const { data, isPreview, dimensions } = this.props;
+    const { data, dimensions } = this.props;
     return (
       <Fade bottom duration={1000} distance="120px">
         <Wrap dimensions={dimensions} onClick={this.onClick}>
@@ -67,7 +67,6 @@ class Card extends Component {
               <Image
                 image={data.image}
                 alt={data.description}
-                isPreview={isPreview}
               />
             </ImageBox>
           )}
@@ -83,7 +82,6 @@ Card.propTypes = {
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     label: PropTypes.string
   }),
-  isPreview: PropTypes.bool,
   dimenstions: PropTypes.object
 };
 

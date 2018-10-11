@@ -89,7 +89,7 @@ export default class Carousel extends React.Component {
   }
 
   render() {
-    const { images, isPreview } = this.props;
+    const { images } = this.props;
     return (
       <CarouselWrap
         totalSlides={this.state.totalSlides}
@@ -101,7 +101,6 @@ export default class Carousel extends React.Component {
               <Image
                 image={image.path}
                 alt={image.text}
-                isPreview={isPreview}
               />
               <Banner position={i} orange={i % 3 === 1} teal={i % 3 === 0}>
                 {image.text}
@@ -115,6 +114,5 @@ export default class Carousel extends React.Component {
 }
 
 Carousel.propTypes = {
-  images: PropTypes.array,
-  isPreview: PropTypes.bool
+  images: PropTypes.array
 };

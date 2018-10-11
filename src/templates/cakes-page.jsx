@@ -110,10 +110,10 @@ export class CakesPageTemplate extends Component {
   }
 
   render() {
-    const { jumbotron, title, isPreview } = this.props;
+    const { jumbotron, title } = this.props;
     return (
       <>
-        <HeroImage image={jumbotron} isPreview={isPreview} title={title} />
+        <HeroImage image={jumbotron} title={title} />
         <Selector
           categories={this.state.categoryNames}
           activeCategory={this.state.currentCategory}
@@ -121,11 +121,7 @@ export class CakesPageTemplate extends Component {
         />
         <CardsGrid px={[0, 40]} py={[15, 50]}>
           <AboutWrap>
-            <About
-              flat
-              data={this.state.currentData.about}
-              isPreview={isPreview}
-            />
+            <About flat data={this.state.currentData.about} />
           </AboutWrap>
 
           {this.state.currentData.cards.map(card => (
@@ -133,7 +129,6 @@ export class CakesPageTemplate extends Component {
               dimensions={this.state.dimensions}
               data={card}
               key={card.key}
-              isPreview={isPreview}
               handleClick={this.toggleModal}
             />
           ))}
@@ -141,7 +136,6 @@ export class CakesPageTemplate extends Component {
             <Modal
               data={this.state.modalData}
               exitModal={this.exitModal}
-              isPreview={isPreview}
             />
           )}
         </CardsGrid>
@@ -154,7 +148,6 @@ CakesPageTemplate.propTypes = {
   jumbotron: PropTypes.object,
   title: PropTypes.string,
   categories: PropTypes.array,
-  isPreview: PropTypes.bool
 };
 
 const CakesPage = ({ data }) => {
@@ -165,7 +158,6 @@ const CakesPage = ({ data }) => {
       jumbotron={frontmatter.jumbotron}
       title={frontmatter.title}
       categories={frontmatter.categories}
-      isPreview={false}
     />
   );
 };

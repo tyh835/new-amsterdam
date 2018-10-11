@@ -85,7 +85,7 @@ const Mobile = styled.div`
   }
 `;
 
-export const IndexPageTemplate = ({ images, about, cards, isPreview }) => {
+export const IndexPageTemplate = ({ images, about, cards }) => {
   const dimensions = {
     card: {
       width: '240px',
@@ -95,17 +95,17 @@ export const IndexPageTemplate = ({ images, about, cards, isPreview }) => {
   };
   return (
     <>
-      <Carousel images={images} isPreview={isPreview} />
+      <Carousel images={images} />
       {about.map(data => (
         <AboutWrap key={uuid()} is="section" mt={[0, 10, 100]} mb={[20, 20, 0]}>
-          <About data={data} isPreview={isPreview} />
+          <About data={data} />
         </AboutWrap>
       ))}
       <CardsWrap flexDirection={['column', 'column', 'row']}>
         {cards.map(card => {
           return (
             <Link exact to={card.link} key={card.link}>
-              <Card dimensions={dimensions} data={card} isPreview={isPreview} />
+              <Card dimensions={dimensions} data={card} />
             </Link>
           );
         })}
@@ -124,7 +124,6 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   about: PropTypes.array,
   cards: PropTypes.array,
-  isPreview: PropTypes.bool
 };
 
 const IndexPage = ({ data }) => {
@@ -136,7 +135,6 @@ const IndexPage = ({ data }) => {
       title={frontmatter.title}
       about={frontmatter.about}
       cards={frontmatter.cards}
-      isPreview={false}
     />
   );
 };

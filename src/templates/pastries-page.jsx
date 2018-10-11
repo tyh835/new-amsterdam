@@ -71,12 +71,11 @@ export class PastriesPageTemplate extends Component {
   };
 
   render() {
-    const { jumbotron, title, pastries, isPreview } = this.props;
+    const { jumbotron, title, pastries } = this.props;
     return (
       <>
         <HeroImage
           image={jumbotron}
-          isPreview={isPreview}
           title={title}
           orange
         />
@@ -87,7 +86,6 @@ export class PastriesPageTemplate extends Component {
               dimensions={this.state.dimensions}
               data={card}
               key={`card${i}`}
-              isPreview={isPreview}
               handleClick={this.toggleModal}
             />
           ))}
@@ -96,7 +94,6 @@ export class PastriesPageTemplate extends Component {
           <Modal
             data={this.state.modalData}
             exitModal={this.exitModal}
-            isPreview={isPreview}
           />
         )}
       </>
@@ -108,7 +105,6 @@ PastriesPageTemplate.propTypes = {
   jumbotron: PropTypes.object,
   title: PropTypes.string,
   pastries: PropTypes.array,
-  isPreview: PropTypes.bool
 };
 
 const PastriesPage = ({ data }) => {
@@ -119,7 +115,6 @@ const PastriesPage = ({ data }) => {
       jumbotron={frontmatter.jumbotron}
       title={frontmatter.title}
       pastries={frontmatter.pastries}
-      isPreview={false}
     />
   );
 };

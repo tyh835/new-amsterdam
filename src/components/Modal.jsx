@@ -18,7 +18,7 @@ const ModalHeading = styled(Heading)`
   font-weight: 400;
 `;
 
-const Modal = ({ data, exitModal, isPreview }) => {
+const Modal = ({ data, exitModal }) => {
   return (
     <>
       <Fixed
@@ -30,7 +30,7 @@ const Modal = ({ data, exitModal, isPreview }) => {
         onClick={exitModal}
       />
       <ModalWrap width={[300, 400]}>
-        {data.image && <Image image={data.image} isPreview={isPreview} />}
+        {data.image && <Image image={data.image} />}
         {data.label && <ModalHeading>{data.label}</ModalHeading>}
         {data.description && <p>{data.description}</p>}
       </ModalWrap>

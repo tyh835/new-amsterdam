@@ -72,14 +72,14 @@ const Title = styled.h2`
   }
 `;
 
-const About = ({ flat, data, isPreview }) => {
+const About = ({ flat, data }) => {
   return (
     <Fade bottom duration={1000} distance="120px" key={data.heading}>
       <Wrap flat={flat} width={[1, 525, 800, 800]}>
         <Title>{data.heading}</Title>
         <ImageWrap>
           <ImageCircle>
-            <Image image={data.image} alt={data.alt} isPreview={isPreview} />
+            <Image image={data.image} alt={data.alt} />
           </ImageCircle>
         </ImageWrap>
         <TextBox px={5} py={4} mb={4}>
@@ -96,8 +96,7 @@ About.propTypes = {
     image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
     description: PropTypes.string,
     alt: PropTypes.string
-  }),
-  isPreview: PropTypes.bool
+  })
 };
 
 export default About;

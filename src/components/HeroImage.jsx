@@ -23,10 +23,10 @@ const HeroWrap = styled(BaseWrap)`
   overflow-y: hidden;
 `;
 
-const HeroImage = ({ image, isPreview, title, orange }) => {
+const HeroImage = ({ image, title, orange }) => {
   return (
     <HeroWrap>
-      <Image image={image} isPreview={isPreview} />
+      <Image image={image} />
       <Banner orange={orange} small>
         {title}
       </Banner>
@@ -37,7 +37,6 @@ const HeroImage = ({ image, isPreview, title, orange }) => {
 HeroImage.propTypes = {
   image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   title: PropTypes.string,
-  isPreview: PropTypes.bool.isRequired,
   orange: PropTypes.bool
 };
 
