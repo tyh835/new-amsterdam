@@ -34,7 +34,7 @@ const Text = styled.p`
   z-index: 5;
 `;
 
-const MessagePageTemplate = ({ data }) => {
+const MessagePage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
@@ -51,7 +51,7 @@ const MessagePageTemplate = ({ data }) => {
   );
 };
 
-export default MessagePageTemplate;
+export default MessagePage;
 
 export const messagePageQuery = graphql`
   query messagePage($id: String!) {
