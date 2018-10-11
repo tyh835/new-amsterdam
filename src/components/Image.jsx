@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Image from 'gatsby-image';
+import Img from 'gatsby-image';
 
-const Image = ({ image, alt }) => <Image fluid={image.childImageSharp.fluid} alt={alt} />
+const Image = ({ image, alt }) => <Img fluid={image.childImageSharp.fluid} alt={alt} />
 
 Image.propTypes = {
   image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
