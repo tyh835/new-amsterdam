@@ -7,7 +7,7 @@ import { PastriesPageTemplate } from '../../templates/pastries-page.jsx';
 import theme from '../../styles/theme.js';
 
 const PastriesPagePreview = ({ entry }) => {
-  const iframe = document.querySelector('iframe');
+  const iframe = document.getElementsByTagName('iframe')[0]
   const iframeHeadElement = iframe.contentDocument.head;
 
   const pastriesPre = entry.getIn(['data', 'pastries']);
