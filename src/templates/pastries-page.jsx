@@ -42,7 +42,7 @@ const Title = styled.h2`
   grid-column: 1 / -1;
 `;
 
-export class PastriesPageTemplate extends Component {
+export class PastriesPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -71,7 +71,7 @@ export class PastriesPageTemplate extends Component {
   };
 
   render() {
-    const { jumbotron, title, pastries } = this.props;
+    const { jumbotron, title, pastries } = this.props.data.markdownRemark.frontmatter;
     return (
       <>
         <HeroImage
@@ -101,28 +101,14 @@ export class PastriesPageTemplate extends Component {
   }
 }
 
-PastriesPageTemplate.propTypes = {
-  jumbotron: PropTypes.object,
-  title: PropTypes.string,
-  pastries: PropTypes.array,
-};
-
-const PastriesPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
-
-  return (
-    <PastriesPageTemplate
-      jumbotron={frontmatter.jumbotron}
-      title={frontmatter.title}
-      pastries={frontmatter.pastries}
-    />
-  );
-};
-
 PastriesPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object
+      frontmatter: PropTypes.shape({
+        jumbotron: PropTypes.object,
+        title: PropTypes.string,
+        pastries: PropTypes.array
+      })
     })
   })
 };

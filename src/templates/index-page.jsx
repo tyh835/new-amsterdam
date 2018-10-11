@@ -85,14 +85,17 @@ const Mobile = styled.div`
   }
 `;
 
-export const IndexPageTemplate = ({ images, about, cards }) => {
-  const dimensions = {
-    card: {
-      width: '240px',
-      height: '270px',
-      image: '200px'
-    }
-  };
+const dimensions = {
+  card: {
+    width: '240px',
+    height: '270px',
+    image: '200px'
+  }
+};
+
+export const IndexPage = ({ data }) => {
+  const { images, about, cards } = data.markdownRemark.frontmatter;
+
   return (
     <>
       <Carousel images={images} />
@@ -104,14 +107,14 @@ export const IndexPageTemplate = ({ images, about, cards }) => {
       <CardsWrap flexDirection={['column', 'column', 'row']}>
         {cards.map(card => {
           return (
-            <Link exact to={card.link} key={card.link}>
+            <Link to={card.link} key={card.link}>
               <Card dimensions={dimensions} data={card} />
             </Link>
           );
         })}
       </CardsWrap>
       <Mobile>
-        <NavLink exact to="/contact" style={{ fontSize: '2rem' }}>
+        <NavLink to="/contact" style={{ fontSize: '2rem' }}>
           Have Questions? Let Us Know &rarr;
         </NavLink>
       </Mobile>
@@ -119,30 +122,15 @@ export const IndexPageTemplate = ({ images, about, cards }) => {
   );
 };
 
-IndexPageTemplate.propTypes = {
-  images: PropTypes.array,
-  title: PropTypes.string,
-  about: PropTypes.array,
-  cards: PropTypes.array,
-};
-
-const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
-
-  return (
-    <IndexPageTemplate
-      images={frontmatter.images}
-      title={frontmatter.title}
-      about={frontmatter.about}
-      cards={frontmatter.cards}
-    />
-  );
-};
-
 IndexPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object
+      frontmatter: PropTypes.shape({
+        images: PropTypes.array,
+        title: PropTypes.string,
+        about: PropTypes.array,
+        cards: PropTypes.array
+      })
     })
   })
 };

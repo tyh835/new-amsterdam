@@ -30,7 +30,7 @@ const BlankPreview = props => {
   );
 }
 
-PaperSheet.propTypes = {
+BlankPreview.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 

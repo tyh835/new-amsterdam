@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { Provider } from 'rebass';
 import theme from '../styles/theme.js';
@@ -23,20 +22,12 @@ const LayoutTemplate = ({ children }) => {
   );
 };
 
-LayoutTemplate.propTypes = {
-  children: PropTypes.func
-};
-
 const ThemedLayoutTemplate = props => {
   return (
     <Provider theme={theme}>
       <LayoutTemplate {...props} />
     </Provider>
   );
-};
-
-ThemedLayoutTemplate.propTypes = {
-  children: PropTypes.func
 };
 
 export default ThemedLayoutTemplate;

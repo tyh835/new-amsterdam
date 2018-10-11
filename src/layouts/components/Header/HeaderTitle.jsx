@@ -38,7 +38,7 @@ const Title = styled.span`
 
 const HeaderTitle = () => {
   return (
-    <NavLink exact to="/">
+    <NavLink to="/">
       <Logo src={logo} alt="New Amsterdam Bakery" />
       <Title>New Amsterdam Bakery</Title>
     </NavLink>
