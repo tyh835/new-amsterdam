@@ -7,7 +7,7 @@ import { IndexPageTemplate } from '../../templates/index-page.jsx';
 import theme from '../../styles/theme.js';
 
 const IndexPagePreview = ({ entry }) => {
-  const iframe = document.querySelector('.nc-previewPane-frame');
+  const iframe = document.querySelector('iframe');
   const iframeHeadElement = iframe.contentDocument.head;
 
   const aboutPre = entry.getIn(['data', 'about']);

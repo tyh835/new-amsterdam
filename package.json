@@ -39,7 +39,6 @@
   "keywords": [
     "gatsby"
   ],
-  "main": "n/a",
   "scripts": {
     "clean": "rm -r public && rm -r .cache",
     "start": "gatsby develop",
