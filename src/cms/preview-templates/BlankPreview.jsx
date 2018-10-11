@@ -21,7 +21,6 @@ class BlankPreview extends Component {
           <p>Please toggle the preview with the icon to the right.</p> 
         </div>
       </div>
-      
     );
   }
 }
