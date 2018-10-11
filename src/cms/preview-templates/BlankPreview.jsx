@@ -34,6 +34,4 @@ PaperSheet.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(PaperSheet);
-
-export default BlankPreview;
+export default withStyles(styles)(BlankPreview);
