@@ -10,7 +10,7 @@ import Header from './components/Header';
 import Footer from './components/Footer.jsx';
 import Disclaimer from './components/Disclaimer.jsx';
 
-const LayoutTemplate = ({ children }) => {
+const Layout = ({ children }) => {
   return (
     <>
       <Helmet />
@@ -22,12 +22,12 @@ const LayoutTemplate = ({ children }) => {
   );
 };
 
-const ThemedLayoutTemplate = props => {
+const ThemedLayout = props => {
   return (
     <Provider theme={theme}>
-      <LayoutTemplate {...props} />
+      <Layout {...props} />
     </Provider>
   );
 };
 
-export default ThemedLayoutTemplate;
+export default ThemedLayout;
