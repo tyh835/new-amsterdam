@@ -7,7 +7,7 @@ import { CakesPageTemplate } from '../../templates/cakes-page.jsx';
 import theme from '../../styles/theme.js';
 
 const CakesPagePreview = ({ entry }) => {
-  const iframe = document.querySelector('iframe');
+  const iframe = document.getElementsByTagName('iframe')[0]
   const iframeHeadElement = iframe.contentDocument.head;
 
   const categoriesPre = entry.getIn(['data', 'categories']);
