@@ -58,7 +58,7 @@ class Card extends Component {
   };
 
   render() {
-    const { data, isPreview, dimensions, link } = this.props;
+    const { data, isPreview, dimensions } = this.props;
     return (
       <Fade bottom duration={1000} distance="120px">
         <Wrap dimensions={dimensions} onClick={this.onClick}>

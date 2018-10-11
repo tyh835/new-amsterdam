@@ -66,11 +66,6 @@ export default class Carousel extends React.Component {
     this.changeSlide = this.changeSlide.bind(this);
   }
 
-  static propTypes() {
-    images = PropTypes.array;
-    isPreview = PropTypes.bool;
-  }
-
   changeSlide() {
     let nextSlide = this.state.currentSlide + 1;
     nextSlide = nextSlide >= this.state.totalSlides ? 0 : nextSlide;
@@ -118,3 +113,8 @@ export default class Carousel extends React.Component {
     );
   }
 }
+
+Carousel.propTypes = {
+  images: PropTypes.array,
+  isPreview: PropTypes.bool
+};

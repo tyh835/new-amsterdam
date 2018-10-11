@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
 import { Flex } from 'rebass';
@@ -6,7 +7,7 @@ import { Flex } from 'rebass';
 import theme from '../styles/theme.js';
 import { moveclouds } from '../utils/animations.js';
 
-const Wrap = Flex.extend`
+const Wrap = styled(Flex)`
   float: left;
   width: 100%;
   font-family: ${theme.fonts.header};
@@ -63,7 +64,7 @@ const Cloud = styled.div`
   }
 `;
 
-const Cloud1a = Cloud.extend`
+const Cloud1a = styled(Cloud)`
   top: 30px;
   left: 100px;
   transform: scale(0.3);
@@ -71,14 +72,14 @@ const Cloud1a = Cloud.extend`
   animation: ${moveclouds} 15s linear infinite;
 `;
 
-const Cloud1b = Cloud.extend`
+const Cloud1b = styled(Cloud)`
   top: 0px;
   left: 250px;
   transform: scale(0.3);
   animation: ${moveclouds} 15s linear infinite;
 `;
 
-const Cloud2 = Cloud.extend`
+const Cloud2 = styled(Cloud)`
   left: 250px;
   top: 100px;
   transform: scale(0.6);
@@ -86,7 +87,7 @@ const Cloud2 = Cloud.extend`
   animation: ${moveclouds} 25s linear infinite;
 `;
 
-const Cloud3 = Cloud.extend`
+const Cloud3 = styled(Cloud)`
   left: 250px;
   bottom: -70px;
   transform: scale(0.6);
@@ -94,7 +95,7 @@ const Cloud3 = Cloud.extend`
   animation: ${moveclouds} 25s linear infinite;
 `;
 
-const Cloud4 = Cloud.extend`
+const Cloud4 = styled(Cloud)`
   left: 470px;
   bottom: 50px;
   transform: scale(0.75);
@@ -102,7 +103,7 @@ const Cloud4 = Cloud.extend`
   animation: ${moveclouds} 18s linear infinite;
 `;
 
-const Cloud5 = Cloud.extend`
+const Cloud5 = styled(Cloud)`
   left: 200px;
   top: 300px;
   transform: scale(0.5);

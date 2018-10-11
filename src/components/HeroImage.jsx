@@ -1,10 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import { Banner as Base, JumbotronWrap as BaseWrap } from './Carousel.jsx';
 import Image from './Image.jsx';
 
-const Banner = Base.extend`
+const Banner = styled(Base)`
   top: 15vw;
   color: ${props =>
     props.orange ? props.theme.color.orange : props.theme.color.blue};
@@ -17,7 +18,7 @@ const Banner = Base.extend`
   }
 `;
 
-const HeroWrap = BaseWrap.extend`
+const HeroWrap = styled(BaseWrap)`
   height: 25vw;
   overflow-y: hidden;
 `;

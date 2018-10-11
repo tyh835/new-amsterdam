@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { Flex } from 'rebass';
 
-const FooterWrap = Flex.extend`
+const FooterWrap = styled(Flex)`
   width: 100%;
   height: ${props => props.theme.height.footer}px;
   background-color: ${props => props.theme.color.blue};
@@ -15,7 +15,7 @@ const FooterWrap = Flex.extend`
   }
 `;
 
-const InfoBox = Flex.extend`
+const InfoBox = styled(Flex)`
   height: 70%;
   background-color: ${props => props.theme.color.white};
   border-radius: 25px;

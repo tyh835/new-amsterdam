@@ -2,13 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
-import uuid from 'uuid/v4';
 
 import { Flex, Box } from 'rebass';
 
 import Image from './Image.jsx';
 
-const Wrap = Box.extend`
+const Wrap = styled(Box)`
   min-height: 400px;
   display: grid;
   margin: 0;
@@ -32,7 +31,7 @@ const Wrap = Box.extend`
   }
 `;
 
-const ImageWrap = Flex.extend`
+const ImageWrap = styled(Flex)`
   justify-content: flex-end;
   align-items: center;
   grid-area: image;
@@ -42,7 +41,7 @@ const ImageWrap = Flex.extend`
   }
 `;
 
-const TextBox = Flex.extend`
+const TextBox = styled(Flex)`
   font-family: ${props => props.theme.fonts.serif};
   font-size: 1rem;
   width: 100%;

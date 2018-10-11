@@ -13,7 +13,7 @@ const Image = ({ image, alt, isPreview }) => {
   return isPreview ? (
     <PreviewImg src={image} alt={alt} />
   ) : (
-    <GatsbyImg sizes={image.childImageSharp.sizes} alt={alt} />
+    <GatsbyImg fluid={image.childImageSharp.fluid} alt={alt} />
   );
 };
 

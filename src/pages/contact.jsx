@@ -6,7 +6,7 @@ import { Flex } from 'rebass';
 
 import Modal from '../components/Modal.jsx';
 
-const Wrap = Flex.extend`
+const Wrap = styled(Flex)`
   width: 100%;
   height: 550px;
   background: linear-gradient(to bottom,${props => props.theme.color.teal},${props => props.theme.color.blue});

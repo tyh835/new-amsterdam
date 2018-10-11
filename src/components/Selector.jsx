@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -68,7 +68,7 @@ export default class Selector extends Component {
   render() {
     const { categories } = this.props;
     return (
-      <Fragment>
+      <>
         <Heading>Choose a category of cakes below: </Heading>
         <Wrap>
           {categories.map(category => {
@@ -86,7 +86,7 @@ export default class Selector extends Component {
             );
           })}
         </Wrap>
-      </Fragment>
+      </>
     );
   }
 }

@@ -14,8 +14,12 @@ module.exports = {
       }
     },
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-react-next',
-    'gatsby-plugin-catch-links',
+    {
+      resolve: 'gatsby-plugin-layout',
+      options: {
+        component: `${__dirname}/src/layouts/index.jsx`
+      }
+    },
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-filesystem',

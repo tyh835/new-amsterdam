@@ -1,17 +1,17 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import { Link as GatsbyLink, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import uuid from 'uuid/v4';
 
 import { Flex } from 'rebass';
-import GatsbyLink from 'gatsby-link';
 
 import Carousel from '../components/Carousel.jsx';
 import About from '../components/About.jsx';
 import Card from '../components/Card.jsx';
 import NavLink from '../components/NavLink.jsx';
 
-const CardsWrap = Flex.extend`
+const CardsWrap = styled(Flex)`
   height: 400px;
   justify-content: center;
   align-items: center;
@@ -22,7 +22,7 @@ const CardsWrap = Flex.extend`
   }
 `;
 
-const AboutWrap = Flex.extend`
+const AboutWrap = styled(Flex)`
   color: ${props => props.theme.color.black};
   width: 90%;
   height: 50vw;
@@ -94,7 +94,7 @@ export const IndexPageTemplate = ({ images, about, cards, isPreview }) => {
     }
   };
   return (
-    <Fragment>
+    <>
       <Carousel images={images} isPreview={isPreview} />
       {about.map(data => (
         <AboutWrap key={uuid()} is="section" mt={[0, 10, 100]} mb={[20, 20, 0]}>
@@ -115,7 +115,7 @@ export const IndexPageTemplate = ({ images, about, cards, isPreview }) => {
           Have Questions? Let Us Know &rarr;
         </NavLink>
       </Mobile>
-    </Fragment>
+    </>
   );
 };
 
@@ -158,13 +158,13 @@ export const indexPageQuery = graphql`
         images {
           path {
             childImageSharp {
-              sizes(
+              fluid(
                 maxWidth: 1200
                 maxHeight: 600
                 quality: 85
                 traceSVG: { color: "papayawhip" }
               ) {
-                ...GatsbyImageSharpSizes_withWebp_tracedSVG
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
           }
@@ -173,13 +173,13 @@ export const indexPageQuery = graphql`
         about {
           image {
             childImageSharp {
-              sizes(
+              fluid(
                 maxWidth: 300
                 maxHeight: 300
                 quality: 85
                 traceSVG: { color: "papayawhip" }
               ) {
-                ...GatsbyImageSharpSizes_withWebp_tracedSVG
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
           }
@@ -190,13 +190,13 @@ export const indexPageQuery = graphql`
         cards {
           image {
             childImageSharp {
-              sizes(
+              fluid(
                 maxWidth: 300
                 maxHeight: 300
                 quality: 85
                 traceSVG: { color: "papayawhip" }
               ) {
-                ...GatsbyImageSharpSizes_withWebp_tracedSVG
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
           }

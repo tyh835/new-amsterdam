@@ -1,4 +1,5 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
+import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -8,7 +9,7 @@ import Card from '../components/Card.jsx';
 import HeroImage from '../components/HeroImage.jsx';
 import Modal from '../components/Modal.jsx';
 
-const CardsGrid = Box.extend`
+const CardsGrid = styled(Box)`
   width: 100%;
   height: auto;
   display: grid;
@@ -72,7 +73,7 @@ export class PastriesPageTemplate extends Component {
   render() {
     const { jumbotron, title, pastries, isPreview } = this.props;
     return (
-      <Fragment>
+      <>
         <HeroImage
           image={jumbotron}
           isPreview={isPreview}
@@ -98,7 +99,7 @@ export class PastriesPageTemplate extends Component {
             isPreview={isPreview}
           />
         )}
-      </Fragment>
+      </>
     );
   }
 }
@@ -140,26 +141,26 @@ export const pastriesPageQuery = graphql`
         title
         jumbotron {
           childImageSharp {
-            sizes(
+            fluid(
               maxWidth: 1200
               maxHeight: 300
               quality: 85
               traceSVG: { color: "papayawhip" }
             ) {
-              ...GatsbyImageSharpSizes_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
         pastries {
           image {
             childImageSharp {
-              sizes(
+              fluid(
                 maxWidth: 400
                 maxHeight: 400
                 quality: 85
                 traceSVG: { color: "papayawhip" }
               ) {
-                ...GatsbyImageSharpSizes_withWebp_tracedSVG
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
           }

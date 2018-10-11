@@ -10,7 +10,7 @@ import HeaderLinks from './HeaderLinks.jsx';
 import HeaderTitle from './HeaderTitle.jsx';
 
 // Styled Library Components
-const HeaderWrap = Flex.extend`
+const HeaderWrap = styled(Flex)`
   height: ${props => props.theme.height.header}px;
   background-color: ${props => props.theme.color.white};
   justify-content: space-between;
@@ -19,7 +19,7 @@ const HeaderWrap = Flex.extend`
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 `;
 
-const DesktopNav = Flex.extend`
+const DesktopNav = styled(Flex)`
   justify-content: center;
   align-items: center;
   margin-left: auto;

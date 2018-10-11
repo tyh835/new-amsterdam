@@ -1,5 +1,7 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
+import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import uuid from 'uuid/v4';
 
 import { Box } from 'rebass';
@@ -10,7 +12,7 @@ import About from '../components/About.jsx';
 import Card from '../components/Card.jsx';
 import Modal from '../components/Modal.jsx';
 
-const CardsGrid = Box.extend`
+const CardsGrid = styled(Box)`
   width: 100%;
   height: auto;
   display: grid;
@@ -31,7 +33,7 @@ const CardsGrid = Box.extend`
   }
 `;
 
-const AboutWrap = Box.extend`
+const AboutWrap = styled(Box)`
   width: 100%;
   display: flex;
   padding-bottom: 2rem;
@@ -108,9 +110,9 @@ export class CakesPageTemplate extends Component {
   }
 
   render() {
-    const { jumbotron, title, categories, isPreview } = this.props;
+    const { jumbotron, title, isPreview } = this.props;
     return (
-      <Fragment>
+      <>
         <HeroImage image={jumbotron} isPreview={isPreview} title={title} />
         <Selector
           categories={this.state.categoryNames}
@@ -143,7 +145,7 @@ export class CakesPageTemplate extends Component {
             />
           )}
         </CardsGrid>
-      </Fragment>
+      </>
     );
   }
 }
@@ -185,13 +187,13 @@ export const cakesPageQuery = graphql`
         title
         jumbotron {
           childImageSharp {
-            sizes(
+            fluid(
               maxWidth: 1000
               maxHeight: 250
               quality: 85
               traceSVG: { color: "papayawhip" }
             ) {
-              ...GatsbyImageSharpSizes_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
@@ -200,13 +202,13 @@ export const cakesPageQuery = graphql`
           about {
             image {
               childImageSharp {
-                sizes(
+                fluid(
                   maxWidth: 200
                   maxHeight: 200
                   quality: 85
                   traceSVG: { color: "papayawhip" }
                 ) {
-                  ...GatsbyImageSharpSizes_withWebp_tracedSVG
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
             }
@@ -217,13 +219,13 @@ export const cakesPageQuery = graphql`
           cards {
             image {
               childImageSharp {
-                sizes(
+                fluid(
                   maxWidth: 400
                   maxHeight: 400
                   quality: 85
                   traceSVG: { color: "papayawhip" }
                 ) {
-                  ...GatsbyImageSharpSizes_withWebp_tracedSVG
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
             }

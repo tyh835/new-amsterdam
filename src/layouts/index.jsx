@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Provider } from 'rebass';
@@ -13,13 +13,13 @@ import Disclaimer from './components/Disclaimer.jsx';
 
 const LayoutTemplate = ({ children }) => {
   return (
-    <Fragment>
+    <>
       <Helmet />
       <Header />
-      {children()}
+      {children}
       <Footer />
       <Disclaimer />
-    </Fragment>
+    </>
   );
 };
 

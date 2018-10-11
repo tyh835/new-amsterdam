@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import NavLink from '../../../components/NavLink.jsx';
 
 export default () => {
   return (
-    <Fragment>
+    <>
       <NavLink exact to="/cakes">
         Our Cakes
       </NavLink>
@@ -13,6 +13,6 @@ export default () => {
       <NavLink exact to="/contact">
         Contact Us
       </NavLink>
-    </Fragment>
+    </>
   );
 };

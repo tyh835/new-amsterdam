@@ -1,16 +1,17 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import { Fixed, Modal as BaseModal, Heading } from 'rebass';
 
 import Image from './Image.jsx';
 
-const ModalWrap = BaseModal.extend`
+const ModalWrap = styled(BaseModal)`
   text-align: center;
   border-radius: 15px;
 `;
 
-const ModalHeading = Heading.extend`
+const ModalHeading = styled(Heading)`
   margin-top: 0.8rem;
   font-family: ${props => props.theme.fonts.header};
   font-size: 1.5rem;
@@ -19,7 +20,7 @@ const ModalHeading = Heading.extend`
 
 const Modal = ({ data, exitModal, isPreview }) => {
   return (
-    <Fragment>
+    <>
       <Fixed
         top={0}
         right={0}
@@ -33,7 +34,7 @@ const Modal = ({ data, exitModal, isPreview }) => {
         {data.label && <ModalHeading>{data.label}</ModalHeading>}
         {data.description && <p>{data.description}</p>}
       </ModalWrap>
-    </Fragment>
+    </>
   );
 };
 
