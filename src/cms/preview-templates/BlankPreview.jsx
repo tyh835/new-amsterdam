@@ -1,37 +1,26 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
+import React, { Component } from 'react';
 
-const styles = theme => ({
-  root: {
-    ...theme.mixins.gutters(),
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
-    color: '#E6E7EA'
-  },
-});
+class BlankPreview extends Component {
+  state = {
+    visible: false
+  }
 
-const BlankPreview = props => {
-  const { classes } = props;
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ visible: true });
+    }, 1000)
+  }
 
-  return (
-    <div>
-      <Paper className={classes.root} elevation={1}>
-        <Typography variant="h5" component="h3">
-          There is no preview.
-        </Typography>
-        <Typography component="p">
-          Please toggle the preview with the icon to the right.
-        </Typography>
-      </Paper>
-    </div>
-  );
+  render() {
+    if (!this.state.visible) return <div />
+
+    return (
+      <div class="alert alert-warning" role="alert">
+        <h4 class="alert-heading">Sorry, there is no preview.</h4>
+        <p>Please toggle the preview with the icon to the right.</p> 
+      </div>
+    );
+  }
 }
 
-BlankPreview.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(BlankPreview);
+export default BlankPreview;
