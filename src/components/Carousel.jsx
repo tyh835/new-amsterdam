@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import uuid from 'uuid/v4';
@@ -56,7 +56,7 @@ const CarouselWrap = styled.div`
   }
 `;
 
-export default class Carousel extends React.Component {
+export default class Carousel extends Component {
   state = {
     totalSlides: this.props.images.length,
     currentSlide: 0
