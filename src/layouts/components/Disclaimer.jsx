@@ -10,6 +10,7 @@ const Wrap = styled.div`
 
   > a,
   > a:visited {
+    font-family: ${props => props.theme.fonts.sans};
     color: #fff;
   }
 `;
