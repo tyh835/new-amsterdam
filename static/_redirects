@@ -1,2 +1,2 @@
 # Redirect default Netlify subdomain to primary domain
-https://awesome-kirch-5b3c5f.netlify.com/* https://www.newamsterdambakery.com/:splat 301!
+https://new-amsterdam.netlify.com/* https://www.newamsterdambakery.com/:splat 301!
