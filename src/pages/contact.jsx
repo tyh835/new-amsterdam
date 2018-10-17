@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import EmailValidator from 'email-validator';
 
 import { Flex } from 'rebass';
-
 import Modal from '../components/Modal.jsx';
 
 const Wrap = styled(Flex)`
