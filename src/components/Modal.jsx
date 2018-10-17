@@ -20,7 +20,7 @@ const ModalBackground = styled.div`
 
 const ModalWrap = styled(Box)`
   position: fixed;
-  background: white;
+  background: ${props => props.theme.color.white};
   padding: 1.2rem;
   top: 50%;
   left: 50%;
