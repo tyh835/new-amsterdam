@@ -100,7 +100,7 @@ export const IndexPage = ({ data }) => {
     <>
       <Carousel images={images} />
       {about.map(data => (
-        <AboutWrap key={uuid()} is="section" mt={[0, 10, 100]} mb={[20, 20, 0]}>
+        <AboutWrap key={uuid()} as="section" mt={[0, 10, 100]} mb={[20, 20, 0]}>
           <About data={data} />
         </AboutWrap>
       ))}

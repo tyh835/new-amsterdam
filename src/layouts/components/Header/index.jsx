@@ -90,10 +90,10 @@ export default class Header extends Component {
   render() {
     return (
       <HeadRoom downTolerance={15} disable={this.state.disable}>
-        <HeaderWrap is="header" width="100%" pr={[0, 0, 0, 3]} py={3}>
+        <HeaderWrap as="header" width="100%" pr={[0, 0, 0, 3]} py={3}>
           <HeaderTitle />
           <MenuIcon isOpen={this.state.isOpen} toggleOpen={this.toggleOpen} />
-          <DesktopNav is="nav">
+          <DesktopNav as="nav">
             <HeaderLinks />
           </DesktopNav>
           <MobileNav in={this.state.isOpen} timeout={300}>

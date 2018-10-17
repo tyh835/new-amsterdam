@@ -917,20 +917,6 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@rebass/components@4.0.0-1", "@rebass/components@^4.0.0-1":
-  version "4.0.0-1"
-  resolved "https://registry.yarnpkg.com/@rebass/components/-/components-4.0.0-1.tgz#00f08f99a3e9db565b685ab23283852fe5f7573f"
-  integrity sha512-A8Gm8zb+8wY26tAuZmZiRSeOqCBCqIiBrmON5f2kOHWVfj7AOFr4m1giyAkY7geHoSK5SUeTHCNuIVTjPrHZAw==
-  dependencies:
-    styled-system "^3.0.1"
-
-"@rebass/grid@6.0.0-0":
-  version "6.0.0-0"
-  resolved "https://registry.yarnpkg.com/@rebass/grid/-/grid-6.0.0-0.tgz#0bafd24503196f564a75287a9cafa55c0e2ae2d4"
-  integrity sha512-sYoM3FSvrz23WjbZs5ZwjcjRAD04q1Si02R1PUHjH/TgrNeZRTgeMVC6xExFfG+DFEjhT3we0/gUx3/Jj/0sVw==
-  dependencies:
-    "@rebass/components" "^4.0.0-1"
-
 "@types/configstore@^2.1.1":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@types/configstore/-/configstore-2.1.1.tgz#cd1e8553633ad3185c3f2f239ecff5d2643e92b6"
@@ -10261,7 +10247,7 @@ pngquant-bin@^5.0.0:
     execa "^0.10.0"
     logalot "^2.0.0"
 
-polished@1.9.3, polished@^1.9.2:
+polished@^1.9.2:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/polished/-/polished-1.9.3.tgz#d61b8a0c4624efe31e2583ff24a358932b6b75e1"
   integrity sha512-4NmSD7fMFlM8roNxs7YXPv7UFRbYzb0gufR5zBxJLRzY54+zFsavxBo6zsQzP9ep6Hh3pC2pTyrpSTBEaB6IkQ==
@@ -11425,16 +11411,12 @@ readdirp@^2.0.0:
     micromatch "^3.1.10"
     readable-stream "^2.0.2"
 
-rebass@^2.3.3:
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/rebass/-/rebass-2.3.4.tgz#f98070730ab6a527bb663f1a63dac6cd4a754a7d"
-  integrity sha512-HWzR0OTTquc1GAu15czuzIF/AySFmhM3e+pJd5/ljQ8QuOWp+ZkgyITCbzt7shGOPp30Bn3Wjkd5jccffrw67w==
+rebass@^3.0.0-9:
+  version "3.0.0-9"
+  resolved "https://registry.yarnpkg.com/rebass/-/rebass-3.0.0-9.tgz#86da0b51c4c509270a57746464a4aac0c5a168ac"
+  integrity sha512-nvcCWdq1XbVtvbVBUbKYqh+Y4pnJ9pA4Kvt21/cQdsqmfobkWigfmHFGLE9xnuC+zxkezRDGA+KbSV34Pk3kVw==
   dependencies:
-    "@rebass/components" "4.0.0-1"
-    "@rebass/grid" "6.0.0-0"
-    polished "1.9.3"
-    prop-types "^15.6.0"
-    styled-system "3.0.3"
+    styled-system "^3.1.4"
 
 recompose@^0.28.0:
   version "0.28.2"
@@ -13057,14 +13039,7 @@ styled-components@^4.0.0:
     stylis "^3.5.0"
     stylis-rule-sheet "^0.0.10"
 
-styled-system@3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-3.0.3.tgz#8ca3938fa382564e059f181d37d563b753cc9f41"
-  integrity sha512-+tW500CMIJAGJInkzF5cgUPYaCnz8PcPxdV5okfyU8EQAH4JHkmZL0ycPNsMxAXNzYxAk4TQD8zr8RKk4Qwtfg==
-  dependencies:
-    prop-types "^15.6.2"
-
-styled-system@^3.0.1:
+styled-system@^3.1.4:
   version "3.1.11"
   resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-3.1.11.tgz#a91a38cf7a0f0e625b897a04fdd506a359a3629f"
   integrity sha512-d0p32F7Y55uRWNDb1P0JcIiGVi13ZxiSCvn8zNS68exAKW9Q5jp+IGTXUIavQOD/J8r3tydtE3vRk8Ii2i39HA==

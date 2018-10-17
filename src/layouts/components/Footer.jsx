@@ -53,14 +53,14 @@ const Text = styled.p`
   line-height: 1.5;
 `;
 
-const Footer = () => {
+const Footer = ({className}) => {
   const responsiveWidth = [240, 300, 240];
   const responsiveMarginTop = [3, 3, 0];
   const responsiveMarginX = [0, 0, 4, 5];
 
   return (
     <FooterWrap
-      is="footer"
+      as="footer"
       px={[0, 1, 3, 4]}
       py={[3, 3, 0]}
       pt={[6, 0]}
@@ -74,11 +74,7 @@ const Footer = () => {
         <Text bold>Email:</Text>
         <Text>nabakerycakes@gmail.com</Text>
       </InfoBox>
-      <InfoBox
-        width={responsiveWidth}
-        mt={responsiveMarginTop}
-        mx={responsiveMarginX}
-      >
+      <InfoBox width={responsiveWidth} mt={responsiveMarginTop} mx={responsiveMarginX}>
         <SubHeader>Location</SubHeader>
         <Divider />
         <Text bold>12892 96 Ave</Text>

@@ -33,7 +33,7 @@
     "react-headroom": "^2.2.2",
     "react-helmet": "^5.2.0",
     "react-reveal": "^1.2.2",
-    "rebass": "^2.3.3",
+    "rebass": "^3.0.0-9",
     "sharp": "^0.21.0",
     "styled-components": "^4.0.0",
     "uuid": "^3.2.1"
