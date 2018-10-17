@@ -1,5 +1,5 @@
 ---
-templateKey: 'index-page'
+templateKey: IndexPage
 path: /
 title: New Amsterdam Bakery
 images: 

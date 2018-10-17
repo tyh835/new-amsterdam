@@ -1,5 +1,5 @@
 ---
-templateKey: cakes-page
+templateKey: CakesPage
 title: We Love Making Cakes
 jumbotron: /img/jumbotron_cakes.jpg
 categories:

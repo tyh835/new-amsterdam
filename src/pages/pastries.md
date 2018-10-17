@@ -1,5 +1,5 @@
 ---
-templateKey: pastries-page
+templateKey: PastriesPage
 title: Quality Ingredients
 jumbotron: /img/jumbotron_pastries.jpg
 pastries:
