@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 import { Flex } from 'rebass';
 
-import theme from '../styles/theme.js';
 import {
   Cloud1a,
   Cloud1b,
@@ -18,9 +17,9 @@ const Wrap = styled(Flex)`
   float: left;
   width: 100%;
   padding: 240px 0;
-  font-family: ${theme.fonts.header};
-  background-color: ${theme.color.blue};
-  color: ${theme.color.white};
+  font-family: ${props => props.theme.fonts.header};
+  background-color: ${props => props.theme.color.blue};
+  color: ${props => props.theme.color.white};
 `;
 
 const Title = styled.h1`
