@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrap = styled.div`
+  font-family: ${props => props.theme.fonts.sans};
   width: 100%;
   font-size: 8px;
   text-align: right;
