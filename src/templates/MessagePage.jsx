@@ -17,9 +17,10 @@ import {
 const Wrap = styled(Flex)`
   float: left;
   width: 100%;
+  padding: 250px 0;
   font-family: ${theme.fonts.header};
   background-color: ${theme.color.blue};
-  color: white;
+  color: ${theme.color.white};
 `;
 
 const Title = styled.h1`
@@ -38,7 +39,7 @@ const MessagePage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <Wrap py="250px" flexDirection="column" alignItems="center">
+    <Wrap as="main" flexDirection="column" alignItems="center">
       <Cloud1a />
       <Cloud1b />
       <Cloud2 />
