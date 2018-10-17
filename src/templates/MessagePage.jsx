@@ -17,7 +17,7 @@ import {
 const Wrap = styled(Flex)`
   float: left;
   width: 100%;
-  padding: 250px 0;
+  padding: 240px 0;
   font-family: ${theme.fonts.header};
   background-color: ${theme.color.blue};
   color: ${theme.color.white};
