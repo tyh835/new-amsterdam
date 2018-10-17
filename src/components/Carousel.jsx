@@ -74,12 +74,6 @@ export default class Carousel extends Component {
     }, 5000);
   }
 
-  componentDidUpdate(prevProps) {
-    if (this.props.images.length !== prevProps.images.length) {
-      this.setState({ totalSlides: this.props.images.length });
-    }
-  }
-
   componentWillUnmount() {
     clearInterval(this.slideInterval);
   }

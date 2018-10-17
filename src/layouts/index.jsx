@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Provider } from 'rebass';
+import { ThemeProvider } from 'styled-components';
 import theme from '../styles/theme.js';
 import '../styles/fonts.css';
 import '../styles/global.css';
@@ -24,9 +24,9 @@ const Layout = ({ children }) => {
 
 const ThemedLayout = props => {
   return (
-    <Provider theme={theme}>
+    <ThemeProvider theme={theme}>
       <Layout {...props} />
-    </Provider>
+    </ThemeProvider>
   );
 };
 
