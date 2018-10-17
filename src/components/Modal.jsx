@@ -15,7 +15,7 @@ const ModalBackground = styled.div`
   width: 100vw;
   height: 100vh;
   z-index: 999;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.55);
 `;
 
 const ModalWrap = styled(Box)`
