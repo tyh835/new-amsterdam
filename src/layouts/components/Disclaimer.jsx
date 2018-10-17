@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Wrap = styled.div`
+const Disclaimer = styled.div`
   font-family: ${props => props.theme.fonts.sans};
   width: 100%;
   font-size: 8px;
@@ -18,7 +18,7 @@ const Wrap = styled.div`
 
 export default () => {
   return (
-    <Wrap>
+    <Disclaimer>
       Windmill Icon made by{' '}
       <a
         href="https://www.flaticon.com/authors/zlatko-najdenovski"
@@ -44,6 +44,6 @@ export default () => {
       >
         CC 3.0 BY
       </a>
-    </Wrap>
+    </Disclaimer>
   );
 };

@@ -13,7 +13,7 @@ import {
   Cloud5
 } from '../components/Clouds.jsx';
 
-const Wrap = styled(Flex)`
+const MessageWrap = styled(Flex)`
   float: left;
   width: 100%;
   padding: 240px 0;
@@ -38,7 +38,7 @@ const MessagePage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
 
   return (
-    <Wrap as="main" flexDirection="column" alignItems="center">
+    <MessageWrap as="main" flexDirection="column" alignItems="center">
       <Cloud1a />
       <Cloud1b />
       <Cloud2 />
@@ -47,7 +47,7 @@ const MessagePage = ({ data }) => {
       <Cloud5 />
       <Title>{frontmatter.heading}</Title>
       <Text>{frontmatter.description}</Text>
-    </Wrap>
+    </MessageWrap>
   );
 };
 

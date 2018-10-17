@@ -5,7 +5,7 @@ import EmailValidator from 'email-validator';
 import { Flex } from 'rebass';
 import Modal from '../components/Modal.jsx';
 
-const Wrap = styled(Flex)`
+const FormWrap = styled(Flex)`
   width: 100%;
   height: 550px;
   background: linear-gradient(to bottom, ${props => props.theme.color.teal}, ${props => props.theme.color.blue});
@@ -162,7 +162,7 @@ export default class Contact extends Component {
   render() {
     const { name, email, message, phone, sendTo } = this.state;
     return (
-      <Wrap py={40} px={[3, 50, 100, 200]}>
+      <FormWrap py={40} px={[3, 50, 100, 200]}>
         <Form
           name="contact"
           method="POST"
@@ -213,7 +213,7 @@ export default class Contact extends Component {
             data={{ description: this.state.modalMessage }}
           />
         )}
-      </Wrap>
+      </FormWrap>
     );
   }
 }
