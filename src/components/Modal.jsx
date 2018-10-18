@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import { Box, Heading } from 'rebass';
+import { Box } from '@rebass/grid';
 
 import Image from './Image.jsx';
 
@@ -29,7 +29,7 @@ const ModalWrap = styled(Box)`
   border-radius: 15px;
 `;
 
-const ModalHeading = styled(Heading)`
+const ModalHeading = styled.h2`
   margin-top: 0.8rem;
   font-family: ${props => props.theme.fonts.header};
   font-size: 1.5rem;

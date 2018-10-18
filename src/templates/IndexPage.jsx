@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import uuid from 'uuid/v4';
 
-import { Flex } from 'rebass';
+import { Flex } from '@rebass/grid';
 
 import Carousel from '../components/Carousel.jsx';
 import About from '../components/About.jsx';

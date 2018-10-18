@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import EmailValidator from 'email-validator';
 
-import { Flex } from 'rebass';
+import { Flex } from '@rebass/grid';
 import Modal from '../components/Modal.jsx';
 
 const FormWrap = styled(Flex)`

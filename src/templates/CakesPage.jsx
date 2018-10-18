@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import uuid from 'uuid/v4';
 
-import { Box } from 'rebass';
+import { Box } from '@rebass/grid';
 
 import HeroImage from '../components/HeroImage.jsx';
 import Selector from '../components/Selector.jsx';

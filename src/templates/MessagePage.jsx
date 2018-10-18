@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
-import { Flex } from 'rebass';
+import { Flex } from '@rebass/grid';
 
 import {
   Cloud1a,
