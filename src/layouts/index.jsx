@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 
 import theme from '../styles/theme.js';
 import '../styles/fonts.css';
@@ -10,14 +10,18 @@ import Header from './components/Header';
 import Footer from './components/Footer.jsx';
 import Disclaimer from './components/Disclaimer.jsx';
 
+const GatsbyRoot = styled.div`
+  min-height: 75vh;
+`;
+
 const Layout = ({ children }) => {
   return (
     <>
       <Helmet />
       <Header />
-      <div id="___gatsby_root">
-      {children}
-      </div>
+      <GatsbyRoot>
+        {children}
+      </GatsbyRoot>
       <Footer />
       <Disclaimer />
     </>
