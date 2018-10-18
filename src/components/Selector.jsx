@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const Wrap = styled.div`
+const SelectorWrap = styled.div`
   width: auto;
   min-height: 100px;
   box-sizing: content-box;
@@ -70,7 +70,7 @@ export default class Selector extends Component {
     return (
       <>
         <Heading>Choose a category of cakes below: </Heading>
-        <Wrap>
+        <SelectorWrap>
           {categories.map(category => {
             return (
               <Button
@@ -85,7 +85,7 @@ export default class Selector extends Component {
               </Button>
             );
           })}
-        </Wrap>
+        </SelectorWrap>
       </>
     );
   }

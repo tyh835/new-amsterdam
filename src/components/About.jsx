@@ -6,7 +6,7 @@ import { Flex, Box } from '@rebass/grid';
 
 import Image from './Image.jsx';
 
-const Wrap = styled(Box)`
+const AboutWrap = styled(Box)`
   min-height: 400px;
   display: grid;
   margin: 0;
@@ -74,7 +74,7 @@ const Title = styled.h2`
 const About = ({ flat, data }) => {
   return (
     <Fade bottom duration={1000} distance="120px" key={data.heading}>
-      <Wrap flat={flat} width={[1, 525, 800, 800]}>
+      <AboutWrap flat={flat} width={[1, 525, 800, 800]}>
         <Title>{data.heading}</Title>
         <ImageWrap>
           <ImageCircle>
@@ -84,7 +84,7 @@ const About = ({ flat, data }) => {
         <TextBox px={5} py={4} mb={4}>
           {data.description}
         </TextBox>
-      </Wrap>
+      </AboutWrap>
     </Fade>
   );
 };

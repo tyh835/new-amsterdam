@@ -5,7 +5,7 @@ import Fade from 'react-reveal/Fade';
 
 import Image from './Image.jsx';
 
-const Wrap = styled.div`
+const CardWrap = styled.div`
   width: ${props => props.dimensions.card.width || props.dimensions.card};
   height: ${props => props.dimensions.card.height || props.dimensions.card};
   background-color: ${props => props.theme.color.white};
@@ -58,14 +58,14 @@ class Card extends Component {
     const { data, dimensions } = this.props;
     return (
       <Fade bottom duration={1000} distance="120px">
-        <Wrap dimensions={dimensions} onClick={this.onClick}>
+        <CardWrap dimensions={dimensions} onClick={this.onClick}>
           {data.image && (
             <ImageBox dimensions={dimensions}>
               <Image image={data.image} alt={data.description} />
             </ImageBox>
           )}
           {data.label && <TextBox>{data.label}</TextBox>}
-        </Wrap>
+        </CardWrap>
       </Fade>
     );
   }
