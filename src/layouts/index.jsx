@@ -15,7 +15,9 @@ const Layout = ({ children }) => {
     <>
       <Helmet />
       <Header />
+      <div id="___gatsby_root">
       {children}
+      </div>
       <Footer />
       <Disclaimer />
     </>
