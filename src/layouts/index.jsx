@@ -12,7 +12,7 @@ import Disclaimer from './components/Disclaimer.jsx';
 
 const GatsbyRoot = styled.div`
   background: ${theme.color.white};
-  min-height: 500px;
+  min-height: 540px;
 `;
 
 const Layout = ({ children }) => {
