@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-
-import { Flex } from '@rebass/grid';
 import HeadRoom from 'react-headroom';
+import { Flex } from '@rebass/grid';
 import Collapse from '@material-ui/core/Collapse';
 
 import MenuIcon from './MenuIcon.jsx';

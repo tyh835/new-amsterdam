@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link as GatsbyLink } from 'gatsby';
 import styled from 'styled-components';
-
+import { Link as GatsbyLink } from 'gatsby';
 import Button from '@material-ui/core/Button';
 
 const Link = styled(GatsbyLink)`

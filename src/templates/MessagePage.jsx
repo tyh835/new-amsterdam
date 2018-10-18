@@ -1,7 +1,6 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import styled from 'styled-components';
-
+import { graphql } from 'gatsby';
 import { Flex } from '@rebass/grid';
 
 import {

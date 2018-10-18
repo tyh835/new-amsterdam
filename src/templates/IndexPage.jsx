@@ -1,10 +1,9 @@
 import React from 'react';
-import { Link as GatsbyLink, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import uuid from 'uuid/v4';
-
+import { Link as GatsbyLink, graphql } from 'gatsby';
 import { Flex } from '@rebass/grid';
+import uuid from 'uuid/v4';
 
 import Carousel from '../components/Carousel.jsx';
 import About from '../components/About.jsx';

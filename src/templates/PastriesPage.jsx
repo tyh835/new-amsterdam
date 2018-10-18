@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
+import { graphql } from 'gatsby';
 import { Box } from '@rebass/grid';
 
 import Card from '../components/Card.jsx';
