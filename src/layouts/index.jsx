@@ -11,7 +11,8 @@ import Footer from './components/Footer.jsx';
 import Disclaimer from './components/Disclaimer.jsx';
 
 const GatsbyRoot = styled.div`
-  min-height: 75vh;
+  background: papayawhip;
+  min-height: 90vh;
 `;
 
 const Layout = ({ children }) => {
