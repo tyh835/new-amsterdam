@@ -4,40 +4,9 @@ import styled from 'styled-components';
 import uuid from 'uuid/v4';
 
 import Image from './Image.jsx';
+import Banner from './Banner.jsx';
 
-export const Banner = styled.p`
-  font-family: ${props => props.theme.fonts.banner};
-  font-size: ${props => (props.small ? '2.5rem' : '3.5rem')};
-  color: ${props => props.theme.color.blue};
-  color: ${props => props.orange && props.theme.color.orange};
-  color: ${props => props.teal && props.theme.color.teal};
-  background-color: white;
-  opacity: 0.95;
-  border-radius: 15px;
-
-  position: absolute;
-  width: 60vw;
-  padding: 1rem;
-  top: 35%;
-  left: ${props => Number(props.position) * 100 + 20 || 20}vw;
-  text-align: center;
-  user-select: none;
-
-  @media (max-width: ${props => props.theme.breakpoints[2]}) {
-    font-size: 2.5rem;
-  }
-  @media (max-width: ${props => props.theme.breakpoints[1]}) {
-    font-size: 2rem;
-    left: ${props => Number(props.position) * 100 || 0}vw;
-    width: 100vw;
-    border-radius: 0px;
-  }
-  @media (max-width: ${props => props.theme.breakpoints[0]}) {
-    font-size: 1.5rem;
-  }
-`;
-
-export const JumbotronWrap = styled.div`
+const JumbotronWrap = styled.div`
   width: 100vw;
   height: 50vw;
 `;
