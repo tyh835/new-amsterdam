@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
+import BaseTab from '@material-ui/core/Tab';
 
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import theme from '../styles/theme.js';
@@ -87,6 +87,16 @@ const SelectorTabs = styled(Tabs)`
   }
 `;
 
+const Tab = styled(BaseTab)`
+  span {
+    color: ${props => props.label === props.current ? props.theme.teal : props.theme.color.black};
+  }
+  
+  &:hover span {
+    color: ${props => props.theme.color.teal};
+  }
+`;
+
 class Selector extends Component {
   state = {
     isLoaded: false
@@ -120,6 +130,7 @@ class Selector extends Component {
                 <Tab
                   key={category}
                   label={category}
+                  current={categories[currentCategoryIndex]}
                 />
               );
             })}
