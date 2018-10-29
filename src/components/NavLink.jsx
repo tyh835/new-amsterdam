@@ -23,6 +23,7 @@ const Link = styled(GatsbyLink)`
       font-size: 1.1rem;
     }
   }
+  
   > button:hover {
     background-color: transparent;
     opacity: 0.9;
