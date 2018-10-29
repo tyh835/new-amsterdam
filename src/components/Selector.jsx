@@ -52,7 +52,6 @@ const SelectorBar = styled(AppBar)`
     width: 80vw;
     margin: 0 auto 0 auto;
     border-radius: 7px;
-    visibility: ${props => props.isLoaded ? 'visible' :'hidden'};
   }
 
   * {
@@ -97,16 +96,8 @@ const Tab = styled(BaseTab)`
 `;
 
 class Selector extends Component {
-  state = {
-    isLoaded: false
-  }
-
   handleChange = (_, selectedIndex) => {
     this.props.changeCategory(selectedIndex);
-  }
-
-  componentDidMount() {
-    this.setState({isLoaded: true});
   }
 
   render() {
@@ -115,7 +106,7 @@ class Selector extends Component {
     return (
       <SelectorWrap>
         <Heading>Choose a category of cakes below: </Heading>
-        <SelectorBar position="static" color="secondary" isLoaded={this.state.isLoaded}>
+        <SelectorBar position="static" color="secondary">
           <SelectorTabs
             value={currentCategoryIndex}
             onChange={this.handleChange}
