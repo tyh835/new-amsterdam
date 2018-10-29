@@ -26,7 +26,6 @@ const Heading = styled.h2`
   padding: 2rem 0;
   width: 100%;
   height: auto;
-  background-color: ${props => props.theme.color.lightyellow};
   text-align: center;
   font-size: 1.8rem;
   font-family: ${props => props.theme.fonts.header};
