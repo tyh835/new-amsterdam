@@ -1,91 +1,114 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import AppBar from '@material-ui/core/AppBar';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import theme from '../styles/theme.js';
 
-const SelectorWrap = styled.div`
-  width: auto;
-  min-height: 100px;
-  box-sizing: content-box;
-  background-color: ${props => props.theme.color.lightyellow};
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  overflow: scroll;
-
-  @media (max-width: ${props => props.theme.breakpoints[0]}) {
-    padding-bottom: 15px;
+const MUItheme = createMuiTheme({
+  typography: {
+    useNextVariants: true,
+  },
+  palette: {
+    primary: {
+      main: theme.color.teal
+    },
+    secondary: {
+      main: theme.color.white
+    }
   }
-`;
+})
 
 const Heading = styled.h2`
-  padding-top: 2rem;
+  padding: 2rem 0;
   width: 100%;
   height: auto;
   background-color: ${props => props.theme.color.lightyellow};
   text-align: center;
+  font-size: 1.8rem;
   font-family: ${props => props.theme.fonts.header};
   font-weight: 400;
   color: ${props => props.theme.color.black};
 `;
 
-const Button = styled.a`
-  margin: 10px 8px;
-  min-width: 120px;
-  height: 50px;
-  flex-shrink: 0;
-  font-family: ${props => props.theme.fonts.header};
-  font-size: 1.2rem;
-  border-radius: 7px;
-  transition: ${props => props.theme.hover.transition};
-  color: ${props => props.theme.color.black};
-  background-color: ${props => props.theme.color.white};
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+const SelectorWrap = styled.div`
+  width: 100%;
+  background-color: ${props => props.theme.color.lightyellow} !important;
+`;
 
-  &:hover {
-    color: ${props => props.theme.color.orange};
-    cursor: pointer;
-    opacity: 0.9;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+const SelectorBar = styled(AppBar)`
+  &&& {
+    display: flex;
+    width: 80vw;
+    margin: 0 auto 0 auto;
+    border-radius: 7px;
+    visibility: ${props => props.isLoaded ? 'visible' :'hidden'};
   }
 
-  &:active {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  * {
+    -ms-overflow-style: none;
+    font-size: 1.2rem;
+    font-family: "Roboto Condensed", Lato, sans-serif;
+    text-transform: capitalize;
+  }
+
+  *::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    background: transparent;
   }
 `;
 
-export default class Selector extends Component {
-  onClick = e => {
-    e.preventDefault();
-    this.props.handleChange(e.target.innerText);
-  };
+const SelectorTabs = styled(Tabs)`
+  &&& {
+    padding: 0.25rem 0;
+    height: 100%;
+  }
+`;
+
+class Selector extends Component {
+  state = {
+    isLoaded: false
+  }
+
+  handleChange = (e, index) => {
+    this.props.changeCategory(index);
+  }
+
+  componentDidMount() {
+    this.setState({isLoaded: true});
+  }
 
   render() {
-    const { categories } = this.props;
+    const { categories, activeCategory } = this.props;
+
     return (
       <>
         <Heading>Choose a category of cakes below: </Heading>
         <SelectorWrap>
-          {categories.map(category => {
-            return (
-              <Button
-                key={category}
-                value={category}
-                className={
-                  category === this.props.activeCategory ? 'active-button' : ''
-                }
-                onClick={this.onClick}
-              >
-                {category}
-              </Button>
-            );
-          })}
+          <SelectorBar position="static" color="secondary" isLoaded={this.state.isLoaded}>
+            <SelectorTabs
+              value={activeCategory}
+              onChange={this.handleChange}
+              indicatorColor="primary"
+              textColor="primary"
+              scrollable
+              scrollButtons="auto"
+            >
+              {categories.map(category => {
+                return (
+                  <Tab
+                    key={category}
+                    label={category}
+                  />
+                );
+              })}
+            </SelectorTabs>
+          </SelectorBar>
         </SelectorWrap>
+        
       </>
     );
   }
@@ -93,6 +116,15 @@ export default class Selector extends Component {
 
 Selector.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.string),
-  activeCategory: PropTypes.string,
+  activeCategory: PropTypes.number,
   handleChange: PropTypes.func
 };
+
+
+export default props => {
+  return (
+    <MuiThemeProvider theme={MUItheme}>
+      <Selector {...props} />
+    </MuiThemeProvider>
+  )
+}

@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 
 const Link = styled(GatsbyLink)`
   height: ${props => props.theme.height.header}px;
-  display: ${props => (props.loaded ? 'flex' : 'none')};
+  display: ${props => props.isLoaded ? 'flex' : 'none'};
   text-decoration: none;
   align-items: center;
 
@@ -46,7 +46,7 @@ class NavLink extends Component {
     return (
       <Link
         activeClassName="active"
-        loaded={this.state.isLoaded}
+        isLoaded={this.state.isLoaded}
         {...this.props}
       >
         <Button>{this.props.children}</Button>

@@ -67,7 +67,7 @@ export class CakesPage extends Component {
       categoryNames: data.map(category => category.name),
       data: data,
       currentData: data[0],
-      currentCategory: data[0].name,
+      currentCategory: 0,
       showModal: false,
       modalData: {},
       dimensions: {
@@ -86,12 +86,10 @@ export class CakesPage extends Component {
 
   changeCategory = newCategory => {
     if (newCategory !== undefined) {
-      const [currentData] = this.state.data.filter(
-        category => category.name === newCategory
-      );
+      const currentData = this.state.data[newCategory]
       this.setState({
         currentCategory: newCategory,
-        currentData: currentData
+        currentData
       });
     }
   };
@@ -109,7 +107,7 @@ export class CakesPage extends Component {
         <Selector
           categories={this.state.categoryNames}
           activeCategory={this.state.currentCategory}
-          handleChange={this.changeCategory}
+          changeCategory={this.changeCategory}
         />
         <CardsGrid px={[0, 40]} py={[15, 50]}>
           <AboutWrap>
