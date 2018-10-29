@@ -5,8 +5,9 @@ import { Link as GatsbyLink } from 'gatsby';
 import Button from '@material-ui/core/Button';
 
 const Link = styled(GatsbyLink)`
+  display: flex;
   height: ${props => props.theme.height.header}px;
-  display: ${props => props.isLoaded ? 'flex' : 'none'};
+  visibility: ${props => props.isLoaded ? 'visible' : 'none'};
   text-decoration: none;
   align-items: center;
 
