@@ -81,6 +81,12 @@ const SelectorBar = styled(AppBar)`
   }
 `;
 
+const SelectorTabs = styled(Tabs)`
+  &&& {
+    padding: 0.2rem 0;
+  }
+`;
+
 class Selector extends Component {
   state = {
     isLoaded: false
@@ -101,7 +107,7 @@ class Selector extends Component {
       <SelectorWrap>
         <Heading>Choose a category of cakes below: </Heading>
         <SelectorBar position="static" color="secondary" isLoaded={this.state.isLoaded}>
-          <Tabs
+          <SelectorTabs
             value={currentCategoryIndex}
             onChange={this.handleChange}
             indicatorColor="primary"
@@ -117,7 +123,7 @@ class Selector extends Component {
                 />
               );
             })}
-          </Tabs>
+          </SelectorTabs>
         </SelectorBar>
       </SelectorWrap>
     );
