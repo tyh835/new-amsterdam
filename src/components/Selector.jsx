@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import theme from '../styles/theme.js';
 
@@ -31,11 +32,19 @@ const Heading = styled.h2`
   font-family: ${props => props.theme.fonts.header};
   font-weight: 400;
   color: ${props => props.theme.color.black};
+
+  @media (max-width: ${props => props.theme.breakpoints[0]}) {
+    font-size: 1.5rem;
+  }
 `;
 
 const SelectorWrap = styled.div`
   width: 100%;
   background-color: ${props => props.theme.color.lightyellow} !important;
+
+  @media (max-width: ${props => props.theme.breakpoints[0]}) {
+    padding-bottom: 2rem;
+  }
 `;
 
 const SelectorBar = styled(AppBar)`
@@ -59,12 +68,16 @@ const SelectorBar = styled(AppBar)`
     width: 0px;
     background: transparent;
   }
-`;
 
-const SelectorTabs = styled(Tabs)`
-  &&& {
-    padding: 0.25rem 0;
-    height: 100%;
+  @media (max-width: ${props => props.theme.breakpoints[1]}) {
+    &&&{
+      width: 100vw;
+      border-radius: 0px;
+    }
+
+    * {
+      font-size: 1.1rem;
+    }
   }
 `;
 
@@ -73,8 +86,8 @@ class Selector extends Component {
     isLoaded: false
   }
 
-  handleChange = (e, index) => {
-    this.props.changeCategory(index);
+  handleChange = (_, selectedIndex) => {
+    this.props.changeCategory(selectedIndex);
   }
 
   componentDidMount() {
@@ -82,41 +95,38 @@ class Selector extends Component {
   }
 
   render() {
-    const { categories, activeCategory } = this.props;
+    const { categories, currentCategoryIndex } = this.props;
 
     return (
-      <>
+      <SelectorWrap>
         <Heading>Choose a category of cakes below: </Heading>
-        <SelectorWrap>
-          <SelectorBar position="static" color="secondary" isLoaded={this.state.isLoaded}>
-            <SelectorTabs
-              value={activeCategory}
-              onChange={this.handleChange}
-              indicatorColor="primary"
-              textColor="primary"
-              scrollable
-              scrollButtons="auto"
-            >
-              {categories.map(category => {
-                return (
-                  <Tab
-                    key={category}
-                    label={category}
-                  />
-                );
-              })}
-            </SelectorTabs>
-          </SelectorBar>
-        </SelectorWrap>
-        
-      </>
+        <SelectorBar position="static" color="secondary" isLoaded={this.state.isLoaded}>
+          <Tabs
+            value={currentCategoryIndex}
+            onChange={this.handleChange}
+            indicatorColor="primary"
+            textColor="primary"
+            scrollable
+            scrollButtons="auto"
+          >
+            {categories.map(category => {
+              return (
+                <Tab
+                  key={category}
+                  label={category}
+                />
+              );
+            })}
+          </Tabs>
+        </SelectorBar>
+      </SelectorWrap>
     );
   }
 }
 
 Selector.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.string),
-  activeCategory: PropTypes.number,
+  currentCategoryIndex: PropTypes.number,
   handleChange: PropTypes.func
 };
 

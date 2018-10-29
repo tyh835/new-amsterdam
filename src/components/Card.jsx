@@ -48,9 +48,9 @@ class Card extends Component {
     showModal: false
   };
 
-  onClick = () => {
-    if (this.props.handleClick) {
-      this.props.handleClick(this.props.data);
+  handleClick = () => {
+    if (this.props.toggleModal) {
+      this.props.toggleModal(this.props.data);
     }
   }
 
@@ -58,7 +58,7 @@ class Card extends Component {
     const { data, dimensions } = this.props;
     return (
       <Fade bottom duration={1000} distance="120px">
-        <CardWrap dimensions={dimensions} onClick={this.onClick}>
+        <CardWrap dimensions={dimensions} onClick={this.handleClick}>
           {data.image && (
             <ImageBox dimensions={dimensions}>
               <Image image={data.image} alt={data.description} />

@@ -82,7 +82,7 @@ export class PastriesPage extends Component {
               dimensions={this.state.dimensions}
               data={card}
               key={`card${i}`}
-              handleClick={this.toggleModal}
+              toggleModal={this.toggleModal}
             />
           ))}
         </CardsGrid>

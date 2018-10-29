@@ -67,7 +67,7 @@ export class CakesPage extends Component {
       categoryNames: data.map(category => category.name),
       data: data,
       currentData: data[0],
-      currentCategory: 0,
+      currentCategoryIndex: 0,
       showModal: false,
       modalData: {},
       dimensions: {
@@ -84,11 +84,11 @@ export class CakesPage extends Component {
     this.toggleModal({});
   };
 
-  changeCategory = newCategory => {
-    if (newCategory !== undefined) {
-      const currentData = this.state.data[newCategory]
+  changeCategory = newCategoryIndex => {
+    if (newCategoryIndex !== undefined) {
+      const currentData = this.state.data[newCategoryIndex]
       this.setState({
-        currentCategory: newCategory,
+        currentCategoryIndex: newCategoryIndex,
         currentData
       });
     }
@@ -106,7 +106,7 @@ export class CakesPage extends Component {
         <HeroImage image={jumbotron} title={title} />
         <Selector
           categories={this.state.categoryNames}
-          activeCategory={this.state.currentCategory}
+          currentCategoryIndex={this.state.currentCategoryIndex}
           changeCategory={this.changeCategory}
         />
         <CardsGrid px={[0, 40]} py={[15, 50]}>
@@ -119,7 +119,7 @@ export class CakesPage extends Component {
               dimensions={this.state.dimensions}
               data={card}
               key={card.key}
-              handleClick={this.toggleModal}
+              toggleModal={this.toggleModal}
             />
           ))}
           {this.state.showModal && (
