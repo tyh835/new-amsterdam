@@ -8,7 +8,7 @@ import BaseTab from '@material-ui/core/Tab';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import theme from '../styles/theme.js';
 
-const MUItheme = createMuiTheme({
+const MuiTheme = createMuiTheme({
   typography: {
     useNextVariants: true,
   },
@@ -140,7 +140,7 @@ Selector.propTypes = {
 
 export default props => {
   return (
-    <MuiThemeProvider theme={MUItheme}>
+    <MuiThemeProvider theme={MuiTheme}>
       <Selector {...props} />
     </MuiThemeProvider>
   )
