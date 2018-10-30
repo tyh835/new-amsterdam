@@ -53,7 +53,7 @@ const Modal = ({ data, exitModal }) => {
 
 Modal.propTypes = {
   data: PropTypes.shape({
-    image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    image: PropTypes.PropTypes.object,
     label: PropTypes.string,
     alt: PropTypes.string
   }).isRequired,

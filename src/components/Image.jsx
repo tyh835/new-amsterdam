@@ -5,7 +5,7 @@ import Img from 'gatsby-image';
 const Image = ({ image, alt }) => <Img fluid={image.childImageSharp.fluid} alt={alt} />
 
 Image.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
+  image: PropTypes.object.isRequired,
   alt: PropTypes.string
 };
 

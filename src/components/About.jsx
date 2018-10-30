@@ -92,7 +92,7 @@ const About = ({ flat, data }) => {
 About.propTypes = {
   data: PropTypes.shape({
     heading: PropTypes.string,
-    image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    image: PropTypes.object,
     description: PropTypes.string,
     alt: PropTypes.string
   })

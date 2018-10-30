@@ -36,7 +36,7 @@ const HeroImage = ({ image, title, orange }) => {
 };
 
 HeroImage.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+  image: PropTypes.object,
   title: PropTypes.string,
   orange: PropTypes.bool
 };

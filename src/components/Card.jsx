@@ -73,7 +73,7 @@ class Card extends Component {
 
 Card.propTypes = {
   data: PropTypes.shape({
-    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    image: PropTypes.object,
     label: PropTypes.string
   }),
   dimenstions: PropTypes.object
