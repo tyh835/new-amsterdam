@@ -115,15 +115,17 @@ class Selector extends Component {
             scrollable
             scrollButtons="auto"
           >
-            {categories.map(category => {
-              return (
-                <Tab
-                  key={category}
-                  label={category}
-                  current={categories[currentCategoryIndex]}
-                />
-              );
-            })}
+            {
+              categories.map(category => {
+                return (
+                  <Tab
+                    key={category}
+                    label={category}
+                    current={categories[currentCategoryIndex]}
+                  />
+                );
+              })
+            }
           </SelectorTabs>
         </SelectorBar>
       </SelectorWrap>
