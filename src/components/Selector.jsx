@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import AppBar from '@material-ui/core/AppBar';
@@ -95,43 +95,45 @@ const Tab = styled(BaseTab)`
   }
 `;
 
-class Selector extends Component {
-  handleChange = (_, selectedIndex) => {
-    this.props.changeCategory(selectedIndex);
+const Selector = ({
+  changeCategory,
+  categories,
+  currentCategoryIndex
+}) => {
+
+  const handleChange = (_, selectedIndex) => {
+    changeCategory(selectedIndex);
   }
 
-  render() {
-    const { categories, currentCategoryIndex } = this.props;
-
-    return (
-      <SelectorWrap>
-        <Heading>Choose a category of cakes below: </Heading>
-        <SelectorBar position="static" color="secondary">
-          <SelectorTabs
-            value={currentCategoryIndex}
-            onChange={this.handleChange}
-            indicatorColor="primary"
-            textColor="primary"
-            scrollable
-            scrollButtons="auto"
-          >
-            {
-              categories.map(category => {
-                return (
-                  <Tab
-                    key={category}
-                    label={category}
-                    current={categories[currentCategoryIndex]}
-                  />
-                );
-              })
-            }
-          </SelectorTabs>
-        </SelectorBar>
-      </SelectorWrap>
-    );
-  }
+  return (
+    <SelectorWrap>
+      <Heading>Choose a category of cakes below: </Heading>
+      <SelectorBar position="static" color="secondary">
+        <SelectorTabs
+          value={currentCategoryIndex}
+          onChange={handleChange}
+          indicatorColor="primary"
+          textColor="primary"
+          scrollable
+          scrollButtons="auto"
+        >
+          {
+            categories.map(category => {
+              return (
+                <Tab
+                  key={category}
+                  label={category}
+                  current={categories[currentCategoryIndex]}
+                />
+              );
+            })
+          }
+        </SelectorTabs>
+      </SelectorBar>
+    </SelectorWrap>
+  );
 }
+
 
 Selector.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.string),
