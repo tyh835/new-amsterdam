@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import AppBar from '@material-ui/core/AppBar';
@@ -52,6 +52,7 @@ const SelectorBar = styled(AppBar)`
     width: 80vw;
     margin: 0 auto 0 auto;
     border-radius: 7px;
+    visibility: ${props => props.isLoaded ? 'visible' : 'hidden'};
   }
 
   * {
@@ -95,43 +96,54 @@ const Tab = styled(BaseTab)`
   }
 `;
 
-const Selector = ({
-  changeCategory,
-  categories,
-  currentCategoryIndex
-}) => {
-
-  const handleChange = (_, selectedIndex) => {
-    changeCategory(selectedIndex);
+class Selector extends Component {
+  state = {
+    isLoaded: false
   }
 
-  return (
-    <SelectorWrap>
-      <Heading>Choose a category of cakes below: </Heading>
-      <SelectorBar position="static" color="secondary">
-        <SelectorTabs
-          value={currentCategoryIndex}
-          onChange={handleChange}
-          indicatorColor="primary"
-          textColor="primary"
-          scrollable
-          scrollButtons="auto"
-        >
-          {
-            categories.map(category => {
-              return (
-                <Tab
-                  key={category}
-                  label={category}
-                  current={categories[currentCategoryIndex]}
-                />
-              );
-            })
-          }
-        </SelectorTabs>
-      </SelectorBar>
-    </SelectorWrap>
-  );
+
+  handleChange = (_, selectedIndex) => {
+    this.props.changeCategory(selectedIndex);
+  }
+
+  componentDidMount() {
+    this.setState({ isLoaded: true });
+  }
+
+  render() {
+    const {
+      currentCategoryIndex,
+      categories
+    } = this.props;
+
+    return (
+      <SelectorWrap>
+        <Heading>Choose a category of cakes below: </Heading>
+        <SelectorBar position="static" color="secondary" isLoaded={this.state.isLoaded}>
+          <SelectorTabs
+            value={currentCategoryIndex}
+            onChange={this.handleChange}
+            indicatorColor="primary"
+            textColor="primary"
+            scrollable
+            scrollButtons="auto"
+          >
+            {
+              categories.map(category => {
+                return (
+                  <Tab
+                    key={category}
+                    label={category}
+                    current={categories[currentCategoryIndex]}
+                  />
+                );
+              })
+            }
+          </SelectorTabs>
+        </SelectorBar>
+      </SelectorWrap>
+    );
+  }
 }
 
 
