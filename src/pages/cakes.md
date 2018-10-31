@@ -14,68 +14,84 @@ categories:
     cards:
       - description: ''
         image: /img/pop1.jpg
-        label: A
+        label: T1
       - description: ''
         image: /img/pop2.jpg
-        label: B
+        label: T2
       - description: ''
         image: /img/pop3.jpg
-        label: C
+        label: T3
       - description: ''
         image: /img/pop4.jpg
-        label: D
+        label: T4
       - description: ''
         image: /img/pop5.jpg
-        label: E
+        label: T5
       - description: ''
         image: /img/pop6.jpg
-        label: F
+        label: T6
+      - image: /img/pop7.1.jpg
+        label: T7
       - image: /img/pop7.jpg
-        label: G
+        label: T8
     name: Trending
   - about:
-      alt: Flower Cakes
+      alt: Anniversary Cakes
       description: >-
         We design cakes in a variety of shapes and sizes, from round to square
         or rectangle, or your custom shape of choice. We will customize your
         cake to your liking.
-      heading: Flower Cakes
+      heading: Anniversary Cakes
       image: /img/about_flower.jpg
     cards:
       - description: ''
         image: /img/flower1.jpg
-        label: A
+        label: A1
       - description: ''
         image: /img/flower2.jpg
-        label: B
+        label: A2
       - description: ''
         image: /img/flower3.jpg
-        label: C
+        label: A3
       - description: ''
         image: /img/flower4.jpg
-        label: D
+        label: A4
       - description: ''
         image: /img/flower5.png
-        label: E
+        label: A5
       - description: ''
         image: /img/flower6.jpg
-        label: F
+        label: A6
       - description: ''
         image: /img/flower7.jpg
-        label: G
+        label: A7
       - description: ''
         image: /img/flower8.jpg
-        label: H
+        label: A8
       - description: ''
         image: /img/flower9.jpg
-        label: I
+        label: A9
       - description: ''
         image: /img/flower10.jpg
-        label: J
+        label: A10
       - description: ''
         image: /img/flower11.jpg
-        label: K
-    name: Flower
+        label: A11
+      - image: /img/love1.jpg
+        label: A12
+      - image: /img/about_love.png
+        label: A13
+      - image: /img/love2.jpg
+        label: A14
+      - image: /img/love3.jpg
+        label: A15
+      - image: /img/love4.jpg
+        label: A16
+      - image: /img/love5.jpg
+        label: A17
+      - image: /img/love6.png
+        label: A18
+    name: Anniversary
   - about:
       alt: Wedding Cakes
       description: >-
@@ -87,78 +103,50 @@ categories:
     cards:
       - description: ''
         image: /img/wedding1.png
-        label: A
+        label: W1
       - description: ''
         image: /img/wedding2.jpg
-        label: B
+        label: W2
       - description: ''
         image: /img/wedding3.png
-        label: C
+        label: W3
       - description: ''
         image: /img/wedding4.jpg
-        label: D
+        label: W4
       - description: ''
         image: /img/wedding5.jpg
-        label: E
+        label: W5
       - description: ''
         image: /img/wedding6.jpg
-        label: F
+        label: W6
       - description: ''
         image: /img/wedding7.jpg
-        label: G
+        label: W7
       - description: ''
         image: /img/wedding8.png
-        label: H
+        label: W8
       - description: ''
         image: /img/wedding9.png
-        label: I
+        label: W9
       - description: ''
         image: /img/wedding11.png
-        label: J
+        label: W10
       - description: ''
         image: /img/wedding12.png
-        label: K
+        label: W11
       - description: ''
         image: /img/wedding13.jpg
-        label: L
+        label: W12
       - description: ''
         image: /img/wedding15.jpg
-        label: M
+        label: W13
       - description: ''
         image: /img/wedding16.jpg
-        label: 'N'
+        label: W14
       - description: ''
         image: /img/wedding17.jpg
-        label: O
+        label: W15
     name: Wedding
-  - about:
-      alt: Anniversary Cakes
-      description: >-
-        We design cakes in a variety of shapes and sizes, from round to square
-        or rectangle, or your custom shape of choice. We will customize your
-        cake to your liking.
-      heading: Anniversary Cakes
-      image: /img/love5.jpg
-    cards:
-      - description: ''
-        image: /img/love1.jpg
-        label: A
-      - description: ''
-        image: /img/love2.jpg
-        label: B
-      - description: ''
-        image: /img/love3.jpg
-        label: C
-      - description: ''
-        image: /img/love4.jpg
-        label: D
-      - description: ''
-        image: /img/about_love.png
-        label: E
-      - description: ''
-        image: /img/love6.png
-        label: F
-    name: Anniversary
   - about:
       alt: Fancy Cakes
       description: >-
@@ -170,37 +158,37 @@ categories:
     cards:
       - description: ''
         image: /img/fancy1.png
-        label: A
+        label: F1
       - description: ''
         image: /img/fancy2.jpg
-        label: B
+        label: F2
       - description: ''
         image: /img/fancy3.jpg
-        label: C
+        label: F3
       - description: ''
         image: /img/fancy4.png
-        label: D
+        label: F4
       - description: ''
         image: /img/fancy5.jpg
-        label: E
+        label: F5
       - description: ''
         image: /img/fancy6.jpg
-        label: F
+        label: F6
       - description: ''
         image: /img/fancy7.png
-        label: G
+        label: F7
       - description: ''
         image: /img/fancy8.jpg
-        label: H
+        label: F8
       - description: ''
         image: /img/fancy9.png
-        label: I
+        label: F9
       - description: ''
         image: /img/fancy10.png
-        label: J
+        label: F10
       - description: ''
         image: /img/fancy11.png
-        label: K
+        label: F11
     name: Fancy
   - about:
       alt: Men Cakes
@@ -213,127 +201,76 @@ categories:
     cards:
       - description: ''
         image: /img/men1.jpg
-        label: A
+        label: M1
       - description: ''
         image: /img/men2.jpg
-        label: B
+        label: M2
       - description: ''
         image: /img/men3.jpg
-        label: C
+        label: M3
       - description: ''
         image: /img/men4.jpg
-        label: D
+        label: M4
       - description: ''
         image: /img/men5.jpg
-        label: E
+        label: M5
       - description: ''
         image: /img/men6.jpg
-        label: F
+        label: M6
       - description: ''
         image: /img/men7.png
-        label: G
+        label: M7
       - description: ''
         image: /img/men8.png
-        label: H
+        label: M8
       - image: /img/men9.jpg
-        label: I
+        label: M9
     name: Men
   - about:
-      alt: Bridal/Baby Showers Cakes
+      alt: Baby Showers Cakes
       description: >-
         We design cakes in a variety of shapes and sizes, from round to square
         or rectangle, or your custom shape of choice. We will customize your
         cake to your liking.
-      heading: Bridal/Baby Showers Cakes
+      heading: Baby Showers Cakes
       image: /img/about_baby.jpg
     cards:
       - description: ''
         image: /img/baby1.jpg
-        label: A
+        label: B1
       - description: ''
         image: /img/baby2.jpg
-        label: B
+        label: B2
       - description: ''
         image: /img/baby3.jpg
-        label: C
+        label: B3
       - description: ''
         image: /img/baby4.jpg
-        label: D
+        label: B4
       - description: ''
         image: /img/baby5.jpg
-        label: E
+        label: B5
       - description: ''
         image: /img/baby6.jpg
-        label: F
+        label: B6
       - description: ''
         image: /img/baby7.jpg
-        label: G
+        label: B7
       - description: ''
         image: /img/baby8.png
-        label: H
+        label: B8
       - description: ''
         image: /img/baby9.png
-        label: I
+        label: B9
       - description: ''
         image: /img/baby10.png
-        label: J
-      - description: ''
-        image: /img/boob.jpg
-        label: K
-      - description: ''
-        image: /img/boob1.jpg
-        label: L
-      - description: ''
-        image: /img/boob2.png
-        label: M
-      - description: ''
-        image: /img/boob3.png
-        label: 'N'
+        label: B10
       - description: ''
         image: /img/baby11.jpg
-        label: O
+        label: B11
       - description: ''
         image: /img/baby12.jpg
-        label: P
-    name: Bridal/Baby
-  - about:
-      alt: Custom Cakes
-      description: >-
-        We design cakes in a variety of shapes and sizes, from round to square
-        or rectangle, or your custom shape of choice. We will customize your
-        cake to your liking.
-      heading: Custom Cakes
-      image: /img/about_custom.jpg
-    cards:
-      - description: ''
-        image: /img/custom1.jpg
-        label: A
-      - description: ''
-        image: /img/custom2.jpg
-        label: B
-      - description: ''
-        image: /img/custom3.jpg
-        label: C
-      - description: ''
-        image: /img/custom4.jpg
-        label: D
-      - description: ''
-        image: /img/custom5.jpg
-        label: E
-      - description: ''
-        image: /img/custom6.jpg
-        label: F
-      - description: ''
-        image: /img/custom7.jpg
-        label: G
-      - description: ''
-        image: /img/custom8.jpg
-        label: H
-      - description: ''
-        image: /img/custom9.jpg
-        label: I
-      - description: ''
-        image: /img/custom10.jpg
-        label: J
-    name: Custom
+        label: B12
+    name: Baby Shower
 ---
+
