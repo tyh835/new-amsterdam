@@ -99,9 +99,10 @@ categories:
         label: T39
       - image: /img/fancy8.jpg
         label: T40
-    name: 'Birthday '
+    name: 'Birthday'
   - about:
-      alt: Anniversary Cakes
+      alt: Flower Cakes
+      name: 'Flower'
       description: >-
         We design cakes in a variety of shapes and sizes, from round to square
         or rectangle, or your custom shape of choice. We will customize your
@@ -142,6 +143,15 @@ categories:
       - description: ''
         image: /img/flower11.jpg
         label: A11
+  - about:
+      alt: Anniversary Cakes
+      description: >-
+        We design cakes in a variety of shapes and sizes, from round to square
+        or rectangle, or your custom shape of choice. We will customize your
+        cake to your liking.
+      heading: Anniversary Cakes
+      image: /img/about_flower.jpg
+    cards:
       - image: /img/love1.jpg
         label: A12
       - image: /img/about_love.png
