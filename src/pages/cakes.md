@@ -112,37 +112,37 @@ categories:
     cards:
       - description: ''
         image: /img/flower1.jpg
-        label: A1
+        label: F1
       - description: ''
         image: /img/flower2.jpg
-        label: A2
+        label: F2
       - description: ''
         image: /img/flower3.jpg
-        label: A3
+        label: F3
       - description: ''
         image: /img/flower4.jpg
-        label: A4
+        label: F4
       - description: ''
         image: /img/flower5.png
-        label: A5
+        label: F5
       - description: ''
         image: /img/flower6.jpg
-        label: A6
+        label: F6
       - description: ''
         image: /img/flower7.jpg
-        label: A7
+        label: F7
       - description: ''
         image: /img/flower8.jpg
-        label: A8
+        label: F8
       - description: ''
         image: /img/flower9.jpg
-        label: A9
+        label: F9
       - description: ''
         image: /img/flower10.jpg
-        label: A10
+        label: F10
       - description: ''
         image: /img/flower11.jpg
-        label: A11
+        label: F11
   - about:
       alt: Anniversary Cakes
       description: >-
@@ -153,31 +153,31 @@ categories:
       image: /img/about_flower.jpg
     cards:
       - image: /img/love1.jpg
-        label: A12
+        label: A1
       - image: /img/about_love.png
-        label: A13
+        label: A2
       - image: /img/love2.jpg
-        label: A14
+        label: A3
       - image: /img/love3.jpg
-        label: A15
+        label: A4
       - image: /img/love4.jpg
-        label: A16
+        label: A5
       - image: /img/love5.jpg
-        label: A17
+        label: A6
       - image: /img/love6.png
-        label: A18
+        label: A7
       - image: /img/love7.jpg
-        label: A19
+        label: A8
       - image: /img/love8.jpg
-        label: A20
+        label: A9
       - image: /img/love9.jpg
-        label: A22
+        label: A10
       - image: /img/love10.jpg
-        label: A23
+        label: A11
       - image: /img/love11.jpg
-        label: A24
+        label: A12
       - image: /img/love12.jpg
-        label: A25
+        label: A13
     name: Anniversary
   - about:
       alt: Wedding Cakes
