@@ -102,12 +102,11 @@ categories:
     name: 'Birthday'
   - about:
       alt: Flower Cakes
-      name: 'Flower'
       description: >-
         We design cakes in a variety of shapes and sizes, from round to square
         or rectangle, or your custom shape of choice. We will customize your
         cake to your liking.
-      heading: Anniversary Cakes
+      heading: Flower Cakes
       image: /img/about_flower.jpg
     cards:
       - description: ''
@@ -143,6 +142,7 @@ categories:
       - description: ''
         image: /img/flower11.jpg
         label: F11
+      name: 'Flower'
   - about:
       alt: Anniversary Cakes
       description: >-
@@ -150,7 +150,7 @@ categories:
         or rectangle, or your custom shape of choice. We will customize your
         cake to your liking.
       heading: Anniversary Cakes
-      image: /img/about_flower.jpg
+      image: /img/about_love.jpg
     cards:
       - image: /img/love1.jpg
         label: A1
