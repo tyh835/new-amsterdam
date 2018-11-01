@@ -154,30 +154,28 @@ categories:
     cards:
       - image: /img/love1.jpg
         label: A1
-      - image: /img/about_love.png
-        label: A2
       - image: /img/love2.jpg
-        label: A3
+        label: A2
       - image: /img/love3.jpg
-        label: A4
+        label: A3
       - image: /img/love4.jpg
-        label: A5
+        label: A4
       - image: /img/love5.jpg
-        label: A6
+        label: A5
       - image: /img/love6.png
-        label: A7
+        label: A6
       - image: /img/love7.jpg
-        label: A8
+        label: A7
       - image: /img/love8.jpg
-        label: A9
+        label: A8
       - image: /img/love9.jpg
-        label: A10
+        label: A9
       - image: /img/love10.jpg
-        label: A11
+        label: A10
       - image: /img/love11.jpg
-        label: A12
+        label: A11
       - image: /img/love12.jpg
-        label: A13
+        label: A12
     name: Anniversary
   - about:
       alt: Wedding Cakes
