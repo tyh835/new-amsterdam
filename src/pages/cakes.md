@@ -4,12 +4,12 @@ title: We Love Making Cakes
 jumbotron: /img/jumbotron_cakes.jpg
 categories:
   - about:
-      alt: Trending Cakes
+      alt: Birthday Cakes
       description: >-
         We design cakes in a variety of shapes and sizes, from round to square
         or rectangle, or your custom shape of choice. We will customize your
         cake to your liking.
-      heading: Trending Cakes
+      heading: Birthday Cakes
       image: /img/about_pop.jpg
     cards:
       - description: ''
@@ -32,9 +32,74 @@ categories:
         label: T6
       - image: /img/pop7.1.jpg
         label: T7
+      - description: (Alcohol not included)
+        image: /img/pop8.jpg
+        label: 'T8 '
+      - image: /img/pop9.jpg
+        label: T9
+      - image: /img/pop10.jpg
+        label: T10
+      - image: /img/pop11.jpg
+        label: T11
+      - image: /img/pop12.jpg
+        label: T12
+      - image: /img/pop13.jpg
+        label: T13
+      - image: /img/pop14.jpg
+        label: T14
+      - image: /img/pop15.jpg
+        label: T15
+      - image: /img/pop16.jpg
+        label: T16
+      - image: /img/pop17.jpg
+        label: T17
+      - image: /img/pop18.jpg
+        label: T18
+      - image: /img/pop19.jpg
+        label: T19
+      - image: /img/pop20.jpg
+        label: T20
+      - image: /img/pop21.jpg
+        label: T21
+      - image: /img/pop22.jpg
+        label: T22
       - image: /img/pop7.jpg
-        label: T8
-    name: Trending
+        label: T23
+      - image: /img/about_custom.jpg
+        label: T24
+      - image: /img/custom1.jpg
+        label: T25
+      - image: /img/custom2.jpg
+        label: T26
+      - image: /img/custom10.jpg
+        label: T27
+      - image: /img/custom3.jpg
+        label: T28
+      - image: /img/custom4.jpg
+        label: T29
+      - image: /img/custom5.jpg
+        label: T30
+      - image: /img/custom6.jpg
+        label: T31
+      - image: /img/custom9.jpg
+        label: T32
+      - image: /img/fancy1.png
+        label: T33
+      - image: /img/fancy10.png
+        label: T34
+      - image: /img/fancy7.png
+        label: T35
+      - image: /img/fancy2.jpg
+        label: T36
+      - image: /img/fancy3.jpg
+        label: T37
+      - image: /img/fancy4.png
+        label: T38
+      - image: /img/fancy5.jpg
+        label: T39
+      - image: /img/fancy8.jpg
+        label: T40
+    name: 'Birthday '
   - about:
       alt: Anniversary Cakes
       description: >-
@@ -91,6 +156,18 @@ categories:
         label: A17
       - image: /img/love6.png
         label: A18
+      - image: /img/love7.jpg
+        label: A19
+      - image: /img/love8.jpg
+        label: A20
+      - image: /img/love9.jpg
+        label: A22
+      - image: /img/love10.jpg
+        label: A23
+      - image: /img/love11.jpg
+        label: A24
+      - image: /img/love12.jpg
+        label: A25
     name: Anniversary
   - about:
       alt: Wedding Cakes
@@ -146,50 +223,23 @@ categories:
       - description: ''
         image: /img/wedding17.jpg
         label: W15
+      - image: /img/wedding18.jpg
+        label: W16
+      - image: /img/wedding19.jpg
+        label: W17
+      - image: /img/wedding20.jpg
+        label: W18
+      - image: /img/wedding21.jpg
+        label: W19
+      - image: /img/wedding22.jpg
+        label: W20
+      - image: /img/wedding23.jpg
+        label: W21
+      - image: /img/wedding24.jpg
+        label: W22
+      - image: /img/wedding25.jpg
+        label: W23
     name: Wedding
-  - about:
-      alt: Fancy Cakes
-      description: >-
-        We design cakes in a variety of shapes and sizes, from round to square
-        or rectangle, or your custom shape of choice. We will customize your
-        cake to your liking.
-      heading: Fancy Cakes
-      image: /img/about_fancy.png
-    cards:
-      - description: ''
-        image: /img/fancy1.png
-        label: F1
-      - description: ''
-        image: /img/fancy2.jpg
-        label: F2
-      - description: ''
-        image: /img/fancy3.jpg
-        label: F3
-      - description: ''
-        image: /img/fancy4.png
-        label: F4
-      - description: ''
-        image: /img/fancy5.jpg
-        label: F5
-      - description: ''
-        image: /img/fancy6.jpg
-        label: F6
-      - description: ''
-        image: /img/fancy7.png
-        label: F7
-      - description: ''
-        image: /img/fancy8.jpg
-        label: F8
-      - description: ''
-        image: /img/fancy9.png
-        label: F9
-      - description: ''
-        image: /img/fancy10.png
-        label: F10
-      - description: ''
-        image: /img/fancy11.png
-        label: F11
-    name: Fancy
   - about:
       alt: Men Cakes
       description: >-
@@ -225,6 +275,10 @@ categories:
         label: M8
       - image: /img/men9.jpg
         label: M9
+      - image: /img/boob1.jpg
+        label: M10
+      - image: /img/boob.jpg
+        label: M11
     name: Men
   - about:
       alt: Baby Showers Cakes
@@ -271,6 +325,12 @@ categories:
       - description: ''
         image: /img/baby12.jpg
         label: B12
+      - image: /img/baby13.jpg
+        label: B13
+      - image: /img/baby14.jpg
+        label: B14
+      - image: /img/baby15.jpg
+        label: B15
     name: Baby Shower
 ---
 
