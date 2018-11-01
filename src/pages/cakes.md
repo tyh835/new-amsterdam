@@ -142,7 +142,7 @@ categories:
       - description: ''
         image: /img/flower11.jpg
         label: F11
-      name: Flower
+    name: Flower
   - about:
       alt: Anniversary Cakes
       description: >-
