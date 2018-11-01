@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Box } from '@rebass/grid';
 
 import NavLink from '../../../components/NavLink.jsx';
 import logo from '../../../img/windmill.svg';
@@ -13,7 +14,7 @@ const Logo = styled.img`
   }
 `;
 
-const Title = styled.span`
+const Title = styled(Box)`
   font-family: ${props => props.theme.fonts.title};
   font-weight: bold;
   font-size: 2.3rem;
@@ -39,7 +40,7 @@ const HeaderTitle = () => {
   return (
     <NavLink to="/">
       <Logo src={logo} alt="New Amsterdam Bakery" />
-      <Title>New Amsterdam Bakery</Title>
+      <Title as="span">New Amsterdam Bakery</Title>
     </NavLink>
   );
 };

@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Box } from '@rebass/grid';
 import uuid from 'uuid/v4';
 
 import Image from './Image.jsx';
 import Banner from './Banner.jsx';
 
-const JumbotronWrap = styled.div`
+const JumbotronWrap = styled(Box)`
   width: 100vw;
   height: 50vw;
 `;
 
-const CarouselWrap = styled.div`
+const CarouselWrap = styled(Box)`
   width: ${props => props.totalSlides * 100}vw;
   height: 50vw;
   display: block;
@@ -58,7 +59,7 @@ export default class Carousel extends Component {
           return (
             <JumbotronWrap key={uuid()}>
               <Image image={image.path} alt={image.text} />
-              <Banner position={i} orange={i % 3 === 1} teal={i % 3 === 0}>
+              <Banner as="h1" position={i} orange={i % 3 === 1} teal={i % 3 === 0}>
                 {image.text}
               </Banner>
             </JumbotronWrap>

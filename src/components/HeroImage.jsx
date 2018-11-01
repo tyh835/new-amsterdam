@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Box } from '@rebass/grid';
 
 import BaseBanner from './Banner.jsx';
 import Image from './Image.jsx';
@@ -18,7 +19,7 @@ const Banner = styled(BaseBanner)`
   }
 `;
 
-const HeroWrap = styled.div`
+const HeroWrap = styled(Box)`
   width: 100vw;
   height: 25vw;
   overflow-y: hidden;
@@ -28,7 +29,7 @@ const HeroImage = ({ image, title, orange }) => {
   return (
     <HeroWrap>
       <Image image={image} />
-      <Banner orange={orange} small>
+      <Banner as="h1" orange={orange} small>
         {title}
       </Banner>
     </HeroWrap>

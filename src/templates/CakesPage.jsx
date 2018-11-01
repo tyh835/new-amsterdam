@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
-import { Box } from '@rebass/grid';
+import { Box, Flex } from '@rebass/grid';
 import uuid from 'uuid/v4';
 
 import HeroImage from '../components/HeroImage.jsx';
@@ -32,9 +32,8 @@ const CardsGrid = styled(Box)`
   }
 `;
 
-const AboutWrap = styled(Box)`
+const AboutWrap = styled(Flex)`
   width: 100%;
-  display: flex;
   padding-bottom: 2rem;
   justify-content: center;
   grid-row: span 1;

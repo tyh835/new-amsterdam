@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { Box } from '@rebass/grid';
 
 import { moveclouds } from '../utils/animations.js';
 
 // Floating Clouds LOL
-const Cloud = styled.div`
+const Cloud = styled(Box)`
   width: 350px;
   height: 120px;
   background-color: #fff;

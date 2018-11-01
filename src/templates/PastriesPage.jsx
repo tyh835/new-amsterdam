@@ -29,7 +29,7 @@ const CardsGrid = styled(Box)`
   }
 `;
 
-const Title = styled.h2`
+const Title = styled(Box)`
   font-family: ${props => props.theme.fonts.header};
   font-weight: 400;
   text-decoration: underline;
@@ -76,7 +76,7 @@ export class PastriesPage extends Component {
       <>
         <HeroImage image={jumbotron} title={title} orange />
         <CardsGrid px={[0, 40]} py={[20, 50]}>
-          <Title>Bread and Pastries</Title>
+          <Title as="h2">Bread and Pastries</Title>
           {pastries.map((card, i) => (
             <Card
               dimensions={this.state.dimensions}

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Box } from '@rebass/grid';
 
-const Banner = styled.p`
+const Banner = styled(Box)`
   font-family: ${props => props.theme.fonts.banner};
   font-size: ${props => (props.small ? '2.5rem' : '3.5rem')};
   color: ${props => props.theme.color.blue};
@@ -19,7 +20,7 @@ const Banner = styled.p`
   user-select: none;
 
   @media (max-width: ${props => props.theme.breakpoints[2]}) {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     font-size: 2rem;

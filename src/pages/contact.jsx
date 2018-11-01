@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Flex } from '@rebass/grid';
+import { Box, Flex } from '@rebass/grid';
 import EmailValidator from 'email-validator';
 
 import Modal from '../components/Modal.jsx';
@@ -22,7 +22,7 @@ const Form = styled.form`
   grid-gap: 1.5rem;
 `;
 
-const Header = styled.h1`
+const Heading = styled(Box)`
   grid-column: span 2;
   justify-self: center;
   align-self: center;
@@ -38,7 +38,7 @@ const Header = styled.h1`
   }
 `;
 
-const Label = styled.p`
+const Label = styled(Box)`
   justify-self: end;
   align-self: center;
   grid-column: span 1;
@@ -177,7 +177,7 @@ export default class Contact extends Component {
           <input type="hidden" name="_format" value="plain" />
           <input type="hidden" name="_subject" value="New Amsterdam Bakery" />
           <input type="text" name="_gotcha" style={{ display: 'none' }} />
-          <Header>Contact Us</Header>
+          <Heading as="h1">Contact Us</Heading>
           <Label>Your Name: </Label>
           <Input
             type="text"

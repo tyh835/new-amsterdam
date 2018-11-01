@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Box } from '@rebass/grid';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import BaseTab from '@material-ui/core/Tab';
@@ -22,7 +23,7 @@ const MuiTheme = createMuiTheme({
   }
 })
 
-const Heading = styled.h2`
+const Heading = styled(Box)`
   padding: 2rem 0;
   width: 100%;
   height: auto;
@@ -37,7 +38,7 @@ const Heading = styled.h2`
   }
 `;
 
-const SelectorWrap = styled.div`
+const SelectorWrap = styled(Box)`
   width: 100%;
   background: linear-gradient(
     to bottom,
@@ -122,7 +123,7 @@ class Selector extends Component {
 
     return (
       <SelectorWrap>
-        <Heading>Choose a category of cakes below: </Heading>
+        <Heading as="h2">Choose a category of cakes below: </Heading>
         <SelectorBar position="static" color="secondary" isLoaded={this.state.isLoaded}>
           <SelectorTabs
             value={currentCategoryIndex}

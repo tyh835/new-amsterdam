@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link as GatsbyLink, graphql } from 'gatsby';
-import { Flex } from '@rebass/grid';
+import { Box, Flex } from '@rebass/grid';
 import uuid from 'uuid/v4';
 
 import Carousel from '../components/Carousel.jsx';
@@ -73,7 +73,7 @@ const Link = styled(GatsbyLink)`
   }
 `;
 
-const Mobile = styled.div`
+const Mobile = styled(Box)`
   width: 100%;
   display: none;
 
