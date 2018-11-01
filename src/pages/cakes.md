@@ -99,7 +99,7 @@ categories:
         label: T39
       - image: /img/fancy8.jpg
         label: T40
-    name: 'Birthday'
+    name: Birthday
   - about:
       alt: Flower Cakes
       description: >-
@@ -142,7 +142,7 @@ categories:
       - description: ''
         image: /img/flower11.jpg
         label: F11
-      name: 'Flower'
+      name: Flower
   - about:
       alt: Anniversary Cakes
       description: >-
