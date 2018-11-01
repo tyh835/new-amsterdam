@@ -152,7 +152,7 @@ categories:
       heading: Anniversary Cakes
       image: /img/about_love.jpg
     cards:
-      - image: /img/love1.png
+      - image: /img/love1.jpg
         label: A1
       - image: /img/love2.jpg
         label: A2
@@ -164,7 +164,7 @@ categories:
         label: A5
       - image: /img/love6.png
         label: A6
-      - image: /img/love7.jpg
+      - image: /img/love7.png
         label: A7
       - image: /img/love8.jpg
         label: A8
