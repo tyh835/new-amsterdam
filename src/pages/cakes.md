@@ -1,7 +1,7 @@
 ---
 templateKey: CakesPage
 title: We Love Making Cakes
-jumbotron: /img/pop6.jpg
+jumbotron: /img/about_birthday.jpg
 categories:
   - about:
       alt: Birthday Cakes
