@@ -39,7 +39,11 @@ const Heading = styled.h2`
 
 const SelectorWrap = styled.div`
   width: 100%;
-  background-color: ${props => props.theme.color.lightyellow} !important;
+  background: linear-gradient(
+    to bottom,
+    ${props => props.theme.color.white},
+    ${props => props.theme.color.lightyellow}
+  );
 
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
     padding-bottom: 2rem;
