@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Box } from '@rebass/grid';
 import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/icons/Menu';
 import Close from '@material-ui/icons/Close';
 
-const IconWrap = styled(Box)`
+const IconWrap = styled.div`
   display: none;
   height: 100%;
 

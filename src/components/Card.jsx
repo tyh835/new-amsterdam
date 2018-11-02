@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Box, Flex } from '@rebass/grid';
 import Fade from 'react-reveal/Fade';
 
 import Image from './Image.jsx';
 
-const CardWrap = styled(Flex)`
+const CardWrap = styled.div`
   width: ${props => props.dimensions.card.width || props.dimensions.card};
   height: ${props => props.dimensions.card.height || props.dimensions.card};
   background-color: ${props => props.theme.color.white};
   border-radius: 18px;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -24,13 +24,13 @@ const CardWrap = styled(Flex)`
   }
 `;
 
-const ImageBox = styled(Box)`
+const ImageBox = styled.div`
   width: ${props => props.dimensions.card.image};
   height: ${props => props.dimensions.card.image};
   overflow-y: hidden;
 `;
 
-const TextBox = styled(Box)`
+const TextBox = styled.div`
   font-family: ${props => props.theme.fonts.header};
   font-size: 1rem;
   color: ${props => props.theme.color.black};

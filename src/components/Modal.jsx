@@ -5,7 +5,7 @@ import { Box } from '@rebass/grid';
 
 import Image from './Image.jsx';
 
-const ModalBackground = styled(Box)`
+const ModalBackground = styled.div`
   position: fixed;
   top: 0;
   right: 0;
@@ -28,14 +28,14 @@ const ModalWrap = styled(Box)`
   border-radius: 15px;
 `;
 
-const ModalHeading = styled(Box)`
+const ModalHeading = styled.h2`
   margin-top: 0.8rem;
   font-family: ${props => props.theme.fonts.header};
   font-size: 1.5rem;
   font-weight: 400;
 `;
 
-const ModalDescription = styled(Box)`
+const ModalDescription = styled.p`
   font-family: ${props => props.theme.fonts.sans};
 `;
 
@@ -44,8 +44,8 @@ const Modal = ({ data, exitModal }) => {
       <ModalBackground onClick={exitModal}>
         <ModalWrap width={[300, 400]}>
           {data.image && <Image image={data.image} />}
-          {data.label && <ModalHeading as="h2">{data.label}</ModalHeading>}
-          {data.description && <ModalDescription as="p">{data.description}</ModalDescription>}
+          {data.label && <ModalHeading>{data.label}</ModalHeading>}
+          {data.description && <ModalDescription>{data.description}</ModalDescription>}
         </ModalWrap>
       </ModalBackground>  
   );

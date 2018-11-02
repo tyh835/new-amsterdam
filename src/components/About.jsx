@@ -49,7 +49,7 @@ const TextBox = styled(Flex)`
   grid-area: text;
 `;
 
-const ImageCircle = styled(Box)`
+const ImageCircle = styled.div`
   overflow-x: hidden;
   width: 200px;
   height: 200px;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
-import { Box, Flex } from '@rebass/grid';
+import { Flex } from '@rebass/grid';
 
 import {
   Cloud1a,
@@ -21,14 +21,14 @@ const MessageWrap = styled(Flex)`
   color: ${props => props.theme.color.white};
 `;
 
-const Title = styled(Box)`
+const Title = styled.h1`
   text-align: center;
   font-size: 3rem;
   margin-bottom: 1rem;
   z-index: 5;
 `;
 
-const Text = styled(Box)`
+const Text = styled.p`
   text-align: center;
   z-index: 5;
 `;
@@ -44,8 +44,8 @@ const MessagePage = ({ data }) => {
       <Cloud3 />
       <Cloud4 />
       <Cloud5 />
-      <Title as="h1">{frontmatter.heading}</Title>
-      <Text as="p">{frontmatter.description}</Text>
+      <Title>{frontmatter.heading}</Title>
+      <Text>{frontmatter.description}</Text>
     </MessageWrap>
   );
 };
