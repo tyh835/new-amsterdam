@@ -1,5 +1,4 @@
 import CMS from 'netlify-cms';
-
 import BlankPreview from './preview-templates/BlankPreview.jsx';
 
 CMS.registerPreviewStyle(
