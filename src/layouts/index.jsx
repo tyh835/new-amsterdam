@@ -29,12 +29,10 @@ const Layout = ({ children }) => {
   );
 };
 
-const ThemedLayout = props => {
+export default props => {
   return (
     <ThemeProvider theme={theme}>
       <Layout {...props} />
     </ThemeProvider>
   );
 };
-
-export default ThemedLayout;
