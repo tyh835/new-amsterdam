@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Fade from 'react-reveal/Fade';
 
 import Image from './Image.jsx';
 
@@ -57,16 +56,14 @@ class Card extends Component {
   render() {
     const { data, dimensions } = this.props;
     return (
-      <Fade bottom duration={1000} distance="120px">
-        <CardWrap dimensions={dimensions} onClick={this.handleClick}>
-          {data.image && (
-            <ImageBox dimensions={dimensions}>
-              <Image image={data.image} alt={data.description} />
-            </ImageBox>
-          )}
-          {data.label && <TextBox>{data.label}</TextBox>}
-        </CardWrap>
-      </Fade>
+      <CardWrap dimensions={dimensions} onClick={this.handleClick}>
+        {data.image && (
+          <ImageBox dimensions={dimensions}>
+            <Image image={data.image} alt={data.description} />
+          </ImageBox>
+        )}
+        {data.label && <TextBox>{data.label}</TextBox>}
+      </CardWrap>
     );
   }
 }
