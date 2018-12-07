@@ -30,7 +30,7 @@ const Title = styled.span`
   }
 
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     margin-left: 0px;
   }
 `;
