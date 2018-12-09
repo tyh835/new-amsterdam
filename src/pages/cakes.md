@@ -74,15 +74,15 @@ categories:
       - image: /img/custom10.jpg
         label: T27
       - image: /img/custom5.jpg
-        label: T30
+        label: T28
       - image: /img/custom9.jpg
-        label: T32
-      - image: /img/fancy7.png
-        label: T35
+        label: T29
+      - image: /img/fancy1.png
+        label: T30
       - image: /img/fancy2.jpg
-        label: T36
-      - image: /img/fancy5.jpg
-        label: T39
+        label: T31
+      - image: /img/fancy3.jpg
+        label: T32
     name: Birthday
   - about:
       alt: Flower Cakes
