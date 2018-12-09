@@ -73,32 +73,16 @@ categories:
         label: T26
       - image: /img/custom10.jpg
         label: T27
-      - image: /img/custom3.jpg
-        label: T28
-      - image: /img/custom4.jpg
-        label: T29
       - image: /img/custom5.jpg
         label: T30
-      - image: /img/custom6.jpg
-        label: T31
       - image: /img/custom9.jpg
         label: T32
-      - image: /img/fancy1.png
-        label: T33
-      - image: /img/fancy10.png
-        label: T34
       - image: /img/fancy7.png
         label: T35
       - image: /img/fancy2.jpg
         label: T36
-      - image: /img/fancy3.jpg
-        label: T37
-      - image: /img/fancy4.png
-        label: T38
       - image: /img/fancy5.jpg
         label: T39
-      - image: /img/fancy8.jpg
-        label: T40
     name: Birthday
   - about:
       alt: Flower Cakes
@@ -341,4 +325,3 @@ categories:
         label: B15
     name: Baby Shower
 ---
-
