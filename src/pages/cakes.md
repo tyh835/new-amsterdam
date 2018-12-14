@@ -83,12 +83,6 @@ categories:
         label: T31
       - image: /img/fancy3.jpg
         label: T32
-      - image: /img/img_20181207_161528_591.jpg
-        label: T33
-      - description: T34
-        image: /img/img_20181123_185923_267.jpg
-      - image: /img/img_20181210_150848_600.jpg
-        label: T35
     name: Birthday
   - about:
       alt: Flower Cakes
