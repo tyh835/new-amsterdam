@@ -1,5 +1,5 @@
 import React from 'react';
-import Slider from 'react-slick';
+import Carousel from 'react-slick';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
@@ -23,18 +23,22 @@ const Carousel = ({ images }) => {
   };
 
   return (
-      <Slider {...settings}>
-        {images.map((image, i) => {
-          return (
-            <CarouselBlock key={image.path}>
-              <Image image={image.path} alt={image.text} />
-              <CarouselBanner position={i + 1} orange={i % 3 === 1} teal={i % 3 === 0}>
-                {image.text}
-              </CarouselBanner>
-            </CarouselBlock>
-          );
-        })}
-      </Slider>
+    <Carousel {...settings}>
+      {images.map((image, i) => {
+        return (
+          <CarouselBlock key={image.path}>
+            <Image image={image.path} alt={image.text} />
+            <CarouselBanner
+              position={i + 1}
+              orange={i % 3 === 1}
+              teal={i % 3 === 0}
+            >
+              {image.text}
+            </CarouselBanner>
+          </CarouselBlock>
+        );
+      })}
+    </Carousel>
   );
 };
 

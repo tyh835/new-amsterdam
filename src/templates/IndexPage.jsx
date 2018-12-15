@@ -10,14 +10,19 @@ import About from '../components/About.jsx';
 import Card from '../components/Card.jsx';
 import NavLink from '../components/NavLink.jsx';
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const CardsWrap = styled(Flex)`
   height: 400px;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, white, ${props => props.theme.color.lightyellow}, ${props => props.theme.color.lightgreen});
+  background: linear-gradient(
+    to bottom,
+    white,
+    ${props => props.theme.color.lightyellow},
+    ${props => props.theme.color.lightgreen}
+  );
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     height: auto;

@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 
 const Link = styled(GatsbyLink)`
   height: ${props => props.theme.height.header}px;
-  display: ${props => props.isLoaded ? 'flex' : 'none'};
+  display: ${props => (props.isLoaded ? 'flex' : 'none')};
   text-decoration: none;
   align-items: center;
 
@@ -23,7 +23,7 @@ const Link = styled(GatsbyLink)`
       font-size: 1.1rem;
     }
   }
-  
+
   > button:hover {
     background-color: transparent;
     opacity: 0.9;

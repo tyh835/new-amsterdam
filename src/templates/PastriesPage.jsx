@@ -56,7 +56,7 @@ export class PastriesPage extends Component {
 
   exitModal = () => {
     this.toggleModal({});
-  }
+  };
 
   toggleModal = data => {
     this.setState(prevState => ({
@@ -64,7 +64,7 @@ export class PastriesPage extends Component {
       showModal: !prevState.showModal,
       modalData: data
     }));
-  }
+  };
 
   render() {
     const {

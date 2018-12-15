@@ -10,7 +10,7 @@ import theme from '../styles/theme.js';
 
 const MuiTheme = createMuiTheme({
   typography: {
-    useNextVariants: true,
+    useNextVariants: true
   },
   palette: {
     primary: {
@@ -20,7 +20,7 @@ const MuiTheme = createMuiTheme({
       main: theme.color.white
     }
   }
-})
+});
 
 const Heading = styled.h2`
   padding: 2rem 0;
@@ -56,13 +56,13 @@ const SelectorBar = styled(AppBar)`
     width: 80vw;
     margin: 0 auto 0 auto;
     border-radius: 7px;
-    visibility: ${props => props.isLoaded ? 'visible' : 'hidden'};
+    visibility: ${props => (props.isLoaded ? 'visible' : 'hidden')};
   }
 
   * {
     -ms-overflow-style: none;
     font-size: 1.2rem;
-    font-family: "Roboto Condensed", Lato, sans-serif;
+    font-family: 'Roboto Condensed', Lato, sans-serif;
     text-transform: capitalize;
   }
 
@@ -73,7 +73,7 @@ const SelectorBar = styled(AppBar)`
   }
 
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
-    &&&{
+    &&& {
       width: 100vw;
       border-radius: 0px;
     }
@@ -92,9 +92,12 @@ const SelectorTabs = styled(Tabs)`
 
 const Tab = styled(BaseTab)`
   span {
-    color: ${props => props.label === props.current ? props.theme.teal : props.theme.color.black};
+    color: ${props =>
+      props.label === props.current
+        ? props.theme.teal
+        : props.theme.color.black};
   }
-  
+
   &:hover span {
     color: ${props => props.theme.color.teal};
   }
@@ -103,27 +106,27 @@ const Tab = styled(BaseTab)`
 class Selector extends Component {
   state = {
     isLoaded: false
-  }
-
+  };
 
   handleChange = (_, selectedIndex) => {
     this.props.changeCategory(selectedIndex);
-  }
+  };
 
   componentDidMount() {
     this.setState({ isLoaded: true });
   }
 
   render() {
-    const {
-      currentCategoryIndex,
-      categories
-    } = this.props;
+    const { currentCategoryIndex, categories } = this.props;
 
     return (
       <SelectorWrap>
         <Heading>Choose a category of cakes below: </Heading>
-        <SelectorBar position="static" color="secondary" isLoaded={this.state.isLoaded}>
+        <SelectorBar
+          position="static"
+          color="secondary"
+          isLoaded={this.state.isLoaded}
+        >
           <SelectorTabs
             value={currentCategoryIndex}
             onChange={this.handleChange}
@@ -132,17 +135,15 @@ class Selector extends Component {
             scrollable
             scrollButtons="auto"
           >
-            {
-              categories.map(category => {
-                return (
-                  <Tab
-                    key={category}
-                    label={category}
-                    current={categories[currentCategoryIndex]}
-                  />
-                );
-              })
-            }
+            {categories.map(category => {
+              return (
+                <Tab
+                  key={category}
+                  label={category}
+                  current={categories[currentCategoryIndex]}
+                />
+              );
+            })}
           </SelectorTabs>
         </SelectorBar>
       </SelectorWrap>
@@ -150,18 +151,16 @@ class Selector extends Component {
   }
 }
 
-
 Selector.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.string),
   currentCategoryIndex: PropTypes.number,
   handleChange: PropTypes.func
 };
 
-
 export default props => {
   return (
     <MuiThemeProvider theme={MuiTheme}>
       <Selector {...props} />
     </MuiThemeProvider>
-  )
-}
+  );
+};

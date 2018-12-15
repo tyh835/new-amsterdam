@@ -86,7 +86,7 @@ export class CakesPage extends Component {
 
   changeCategory = newCategoryIndex => {
     if (newCategoryIndex !== undefined) {
-      const currentData = this.state.data[newCategoryIndex]
+      const currentData = this.state.data[newCategoryIndex];
       this.setState({
         currentCategoryIndex: newCategoryIndex,
         currentData

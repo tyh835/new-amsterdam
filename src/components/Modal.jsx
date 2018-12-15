@@ -23,7 +23,7 @@ const ModalWrap = styled(Box)`
   padding: 1.2rem;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   text-align: center;
   border-radius: 15px;
 `;
@@ -41,13 +41,15 @@ const ModalDescription = styled.p`
 
 const Modal = ({ data, exitModal }) => {
   return (
-      <ModalBackground onClick={exitModal}>
-        <ModalWrap width={[300, 400]}>
-          {data.image && <Image image={data.image} />}
-          {data.label && <ModalHeading>{data.label}</ModalHeading>}
-          {data.description && <ModalDescription>{data.description}</ModalDescription>}
-        </ModalWrap>
-      </ModalBackground>  
+    <ModalBackground onClick={exitModal}>
+      <ModalWrap width={[300, 400]}>
+        {data.image && <Image image={data.image} />}
+        {data.label && <ModalHeading>{data.label}</ModalHeading>}
+        {data.description && (
+          <ModalDescription>{data.description}</ModalDescription>
+        )}
+      </ModalWrap>
+    </ModalBackground>
   );
 };
 

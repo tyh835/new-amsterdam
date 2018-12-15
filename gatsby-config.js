@@ -78,8 +78,8 @@ module.exports = {
         background_color: '#FEFEFE',
         theme_color: '#FFEFD5',
         display: 'minimal-ui',
-        icon: `${__dirname}/src/img/android-chrome-512x512.png`, // This path is relative to the root of the site.
-      },
+        icon: `${__dirname}/src/img/android-chrome-512x512.png` // This path is relative to the root of the site.
+      }
     },
     'gatsby-plugin-offline',
     {

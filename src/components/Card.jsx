@@ -51,7 +51,7 @@ class Card extends Component {
     if (this.props.toggleModal) {
       this.props.toggleModal(this.props.data);
     }
-  }
+  };
 
   render() {
     const { data, dimensions } = this.props;

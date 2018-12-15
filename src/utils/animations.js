@@ -18,7 +18,6 @@ export const shake = keyframes`
   }
 `;
 
-
 export const moveclouds = keyframes`
   0% {
     margin-left: 1000px;
