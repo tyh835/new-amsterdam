@@ -1,74 +1,45 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Slider from 'react-slick';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import uuid from 'uuid/v4';
 
 import Image from './Image.jsx';
-import Banner from './Banner.jsx';
+import CarouselBanner from './Banner.jsx';
 
-const JumbotronWrap = styled.div`
-  width: 100vw;
+const CarouselBlock = styled.div`
   height: 50vw;
 `;
 
-const CarouselWrap = styled.div`
-  width: ${props => props.totalSlides * 100}vw;
-  height: 50vw;
-  display: block;
-  overflow: hidden;
-  transition: transform 0.4s ease-out;
-  transform: ${props => `translateX(-${props.currentSlide * 100}vw)`};
-
-  > div,
-  > img {
-    display: inline-block;
-  }
-`;
-
-export default class Carousel extends Component {
-  state = {
-    totalSlides: this.props.images.length,
-    currentSlide: 0
+const Carousel = ({ images }) => {
+  const settings = {
+    autoplaySpeed: 3000,
+    autoplay: true,
+    dots: false,
+    pauseOnHover: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
   };
 
-  changeSlide() {
-    let nextSlide = this.state.currentSlide + 1;
-    nextSlide = nextSlide >= this.state.totalSlides ? 0 : nextSlide;
-    this.setState({ currentSlide: nextSlide });
-  }
-
-  componentDidMount() {
-    this.slideInterval = setInterval(() => {
-      this.changeSlide();
-    }, 5000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.slideInterval);
-  }
-
-  render() {
-    const { images } = this.props;
-    return (
-      <CarouselWrap
-        totalSlides={this.state.totalSlides}
-        currentSlide={this.state.currentSlide}
-      >
+  return (
+      <Slider {...settings}>
         {images.map((image, i) => {
           return (
-            <JumbotronWrap key={uuid()}>
+            <CarouselBlock key={image.path}>
               <Image image={image.path} alt={image.text} />
-              <Banner position={i} orange={i % 3 === 1} teal={i % 3 === 0}>
+              <CarouselBanner position={i + 1} orange={i % 3 === 1} teal={i % 3 === 0}>
                 {image.text}
-              </Banner>
-            </JumbotronWrap>
+              </CarouselBanner>
+            </CarouselBlock>
           );
         })}
-      </CarouselWrap>
-    );
-  }
-}
+      </Slider>
+  );
+};
 
 Carousel.propTypes = {
   images: PropTypes.array
 };
+
+export default Carousel;

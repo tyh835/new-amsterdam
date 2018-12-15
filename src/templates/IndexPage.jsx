@@ -10,6 +10,9 @@ import About from '../components/About.jsx';
 import Card from '../components/Card.jsx';
 import NavLink from '../components/NavLink.jsx';
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const CardsWrap = styled(Flex)`
   height: 400px;
   justify-content: center;
