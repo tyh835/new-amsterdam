@@ -1,7 +1,8 @@
 import React from 'react';
-import Carousel from 'react-slick';
+import Slider from 'react-slick';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import uuid from 'uuid/v4'
 
 import Image from './Image.jsx';
 import CarouselBanner from './Banner.jsx';
@@ -23,10 +24,10 @@ const Carousel = ({ images }) => {
   };
 
   return (
-    <Carousel {...settings}>
+    <Slider {...settings}>
       {images.map((image, i) => {
         return (
-          <CarouselBlock key={image.path}>
+          <CarouselBlock key={uuid()}>
             <Image image={image.path} alt={image.text} />
             <CarouselBanner
               position={i + 1}
@@ -38,7 +39,7 @@ const Carousel = ({ images }) => {
           </CarouselBlock>
         );
       })}
-    </Carousel>
+    </Slider>
   );
 };
 
