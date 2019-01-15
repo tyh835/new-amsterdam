@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link as GatsbyLink } from 'gatsby';
@@ -22,7 +22,7 @@ const Link = styled(GatsbyLink)`
 
   &:active,
   &:active span {
-    background: ${props => props.theme.color.orangegrey};
+    color: ${props => props.theme.color.orangegrey};
   }
 
   @media (max-width: ${props => props.theme.breakpoints[2]}) {
@@ -30,15 +30,13 @@ const Link = styled(GatsbyLink)`
   }
 `;
 
-class NavLink extends Component {
-  render() {
-    return (
-      <Link activeClassName="active" {...this.props}>
-        {this.props.children}
-      </Link>
-    );
-  }
-}
+const NavLink = props => {
+  return (
+    <Link activeClassName="active" {...props}>
+      {props.children}
+    </Link>
+  );
+};
 
 NavLink.propTypes = {
   to: PropTypes.string.isRequired

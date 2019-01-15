@@ -74,8 +74,8 @@ const Title = styled.h2`
 
 const About = ({ cake, data }) => {
   return (
-    <Bounce duration={cake ? 0 : 1000} wait={200} key={data.heading}>
-      <Fade bottom={cake} duration={cake ? 1000 : 1200} distance="125px">
+    <Bounce duration={cake ? 0 : 1000} key={data.heading}>
+      <Fade bottom={cake} duration={1000} distance="125px">
         <AboutWrap flat={cake} width={[1, 525, 800, 800]}>
           <Title>{data.heading}</Title>
           <ImageWrap>
