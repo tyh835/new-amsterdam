@@ -22,6 +22,7 @@ const Title = styled.span`
 
   &:hover,
   &:focus {
+    color: ${props => props.theme.color.orange};
     animation: ${shake} 0.5s linear 1;
   }
 

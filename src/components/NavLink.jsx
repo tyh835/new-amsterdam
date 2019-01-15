@@ -2,55 +2,34 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link as GatsbyLink } from 'gatsby';
-import Button from '@material-ui/core/Button';
 
 const Link = styled(GatsbyLink)`
   height: ${props => props.theme.height.header}px;
-  display: ${props => (props.isLoaded ? 'flex' : 'none')};
-  text-decoration: none;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  padding: 0 1rem;
+  background-color: ${props => props.theme.color.white};
+  color: ${props => props.theme.color.black};
+  text-decoration: none;
+  font-family: ${props => props.theme.fonts.header};
+  font-size: 1.25rem;
 
-  > button {
-    height: 100%;
-    border-radius: 0;
-    font-family: ${props => props.theme.fonts.header};
-    font-size: 1.25rem;
-    color: ${props => props.theme.color.black};
-    text-transform: none;
-    transition: ${props => props.theme.hover.transition};
-
-    @media (max-width: ${props => props.theme.breakpoints[2]}) {
-      font-size: 1.1rem;
-    }
-  }
-
-  > button:hover {
-    background-color: transparent;
+  &:hover {
+    color: ${props => props.theme.color.orange};
     opacity: 0.9;
   }
 
-  > button:hover span {
-    color: ${props => props.theme.color.orange};
+  @media (max-width: ${props => props.theme.breakpoints[2]}) {
+    font-size: 1.1rem;
   }
 `;
 
 class NavLink extends Component {
-  state = {
-    isLoaded: false
-  };
-
-  componentDidMount() {
-    this.setState({ isLoaded: true });
-  }
-
   render() {
     return (
-      <Link
-        activeClassName="active"
-        isLoaded={this.state.isLoaded}
-        {...this.props}
-      >
-        <Button>{this.props.children}</Button>
+      <Link activeClassName="active" {...this.props}>
+        {this.props.children}
       </Link>
     );
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
 import { Flex, Box } from '@rebass/grid';
 
@@ -71,21 +72,23 @@ const Title = styled.h2`
   }
 `;
 
-const About = ({ flat, data }) => {
+const About = ({ cake, data }) => {
   return (
-    <Fade bottom duration={1000} distance="120px" key={data.heading}>
-      <AboutWrap flat={flat} width={[1, 525, 800, 800]}>
-        <Title>{data.heading}</Title>
-        <ImageWrap>
-          <ImageCircle>
-            <Image image={data.image} alt={data.alt} />
-          </ImageCircle>
-        </ImageWrap>
-        <TextBox px={5} py={4} mb={4}>
-          {data.description}
-        </TextBox>
-      </AboutWrap>
-    </Fade>
+    <Bounce duration={cake ? 0 : 1000} wait={200} key={data.heading}>
+      <Fade bottom={cake} duration={cake ? 1000 : 1200} distance="125px">
+        <AboutWrap flat={cake} width={[1, 525, 800, 800]}>
+          <Title>{data.heading}</Title>
+          <ImageWrap>
+            <ImageCircle>
+              <Image image={data.image} alt={data.alt} />
+            </ImageCircle>
+          </ImageWrap>
+          <TextBox px={5} py={4} mb={4}>
+            {data.description}
+          </TextBox>
+        </AboutWrap>
+      </Fade>
+    </Bounce>
   );
 };
 

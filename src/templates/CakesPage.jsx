@@ -111,7 +111,7 @@ export class CakesPage extends Component {
         />
         <CardsGrid px={[0, 40]} py={[15, 50]}>
           <AboutWrap>
-            <About flat data={this.state.currentData.about} />
+            <About cake data={this.state.currentData.about} />
           </AboutWrap>
 
           {this.state.currentData.cards.map(card => (

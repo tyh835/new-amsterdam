@@ -1,7 +1,14 @@
-* { box-sizing: border-box; margin: 0; padding: 0;}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-html, body {overflow-x: hidden}
+html,
+body {
+  overflow-x: hidden;
+}
 
-.active > button > span {
-  color: orange;
+.active {
+  color: orange !important;
 }
