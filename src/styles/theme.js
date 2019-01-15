@@ -15,7 +15,7 @@ export default {
     black: '#363636',
     blue: '#69D2E7',
     orange: 'orange',
-    darkorange: '#FA6900',
+    orangegrey: '#F5F3F0',
     teal: '#A7DBD8',
     white: '#FEFEFE',
     lightgreen: 'hsl(145, 80%, 60%, 0.04)',
