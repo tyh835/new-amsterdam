@@ -7,7 +7,7 @@ import { shake } from '../../../utils/animations.js';
 
 const Logo = styled.img`
   height: 55px;
-  filter: grayscale(15%);
+  filter: grayscale(40%);
 
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
     display: none;
