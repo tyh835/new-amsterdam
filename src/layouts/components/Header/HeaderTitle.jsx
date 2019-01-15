@@ -2,12 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 import NavLink from '../../../components/NavLink.jsx';
-import logo from '../../../img/android-chrome-192x192.png';
+import logo from '../../../img/windmill.svg';
 import { shake } from '../../../utils/animations.js';
 
 const Logo = styled.img`
   height: 55px;
-  filter: grayscale(40%);
 
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
     display: none;
@@ -40,7 +39,7 @@ const Title = styled.span`
 const HeaderTitle = () => {
   return (
     <NavLink to="/">
-      <Logo src={logo} alt="LOGO" />
+      <Logo src={logo} alt="Windmill Logo" />
       <Title>New Amsterdam Bakery</Title>
     </NavLink>
   );

@@ -22,6 +22,14 @@ export default () => {
     <Disclaimer>
       Windmill icons made by{' '}
       <a
+        href="https://www.flaticon.com/authors/zlatko-najdenovski"
+        title="Zlatko Najdenovski"
+        rel="noopener noreferrer"
+      >
+        Zlatko Najdenovski
+      </a>{' '}
+      and{' '}
+      <a
         href="https://www.flaticon.com/authors/roundicons"
         title="Roundicons"
         rel="noopener noreferrer"
