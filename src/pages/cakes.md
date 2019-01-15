@@ -4,6 +4,49 @@ title: We Love Making Cakes
 jumbotron: /img/jumbotron_cakes.jpg
 categories:
   - about:
+      alt: Flower Cakes
+      description: >-
+        We design cakes in a variety of shapes and sizes, from round to square
+        or rectangle, or your custom shape of choice. We will customize your
+        cake to your liking.
+      heading: Flower Cakes
+      image: /img/about_flower.jpg
+    cards:
+      - description: ''
+        image: /img/flower1.jpg
+        label: F1
+      - description: ''
+        image: /img/flower2.jpg
+        label: F2
+      - description: ''
+        image: /img/flower3.jpg
+        label: F3
+      - description: ''
+        image: /img/flower4.jpg
+        label: F4
+      - description: ''
+        image: /img/flower5.png
+        label: F5
+      - description: ''
+        image: /img/flower6.jpg
+        label: F6
+      - description: ''
+        image: /img/flower7.jpg
+        label: F7
+      - description: ''
+        image: /img/flower8.jpg
+        label: F8
+      - description: ''
+        image: /img/flower9.jpg
+        label: F9
+      - description: ''
+        image: /img/flower10.jpg
+        label: F10
+      - description: ''
+        image: /img/flower11.jpg
+        label: F11
+    name: Flower
+  - about:
       alt: Birthday Cakes
       description: >-
         We design cakes in a variety of shapes and sizes, from round to square
@@ -84,49 +127,6 @@ categories:
       - image: /img/fancy3.jpg
         label: T32
     name: Birthday
-  - about:
-      alt: Flower Cakes
-      description: >-
-        We design cakes in a variety of shapes and sizes, from round to square
-        or rectangle, or your custom shape of choice. We will customize your
-        cake to your liking.
-      heading: Flower Cakes
-      image: /img/about_flower.jpg
-    cards:
-      - description: ''
-        image: /img/flower1.jpg
-        label: F1
-      - description: ''
-        image: /img/flower2.jpg
-        label: F2
-      - description: ''
-        image: /img/flower3.jpg
-        label: F3
-      - description: ''
-        image: /img/flower4.jpg
-        label: F4
-      - description: ''
-        image: /img/flower5.png
-        label: F5
-      - description: ''
-        image: /img/flower6.jpg
-        label: F6
-      - description: ''
-        image: /img/flower7.jpg
-        label: F7
-      - description: ''
-        image: /img/flower8.jpg
-        label: F8
-      - description: ''
-        image: /img/flower9.jpg
-        label: F9
-      - description: ''
-        image: /img/flower10.jpg
-        label: F10
-      - description: ''
-        image: /img/flower11.jpg
-        label: F11
-    name: Flower
   - about:
       alt: Anniversary Cakes
       description: >-
