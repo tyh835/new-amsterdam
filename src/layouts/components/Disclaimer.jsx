@@ -20,16 +20,15 @@ const Disclaimer = styled(Box)`
 export default () => {
   return (
     <Disclaimer>
-      Windmill Icon made by
+      Windmill icons made by{' '}
       <a
-        href="https://www.flaticon.com/authors/zlatko-najdenovski"
-        title="Zlatko Najdenovski"
+        href="https://www.flaticon.com/authors/roundicons"
+        title="Roundicons"
         rel="noopener noreferrer"
       >
-        {' '}
-        Zlatko Najdenovski{' '}
-      </a>
-      from
+        Roundicons
+      </a>{' '}
+      from{' '}
       <a
         href="https://www.flaticon.com/"
         title="Flaticon"

@@ -12,3 +12,7 @@ body {
 .active {
   color: orange !important;
 }
+
+.active > span {
+  color: orange !important;
+}

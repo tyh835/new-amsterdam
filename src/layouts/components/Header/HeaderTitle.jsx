@@ -2,11 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 import NavLink from '../../../components/NavLink.jsx';
-import logo from '../../../img/windmill.svg';
+import logo from '../../../img/android-chrome-192x192.png';
 import { shake } from '../../../utils/animations.js';
 
 const Logo = styled.img`
   height: 55px;
+  filter: grayscale(15%);
 
   @media (max-width: ${props => props.theme.breakpoints[0]}) {
     display: none;
