@@ -73,7 +73,7 @@ Card.propTypes = {
     image: PropTypes.object,
     label: PropTypes.string
   }),
-  dimenstions: PropTypes.object
+  dimensions: PropTypes.object
 };
 
 export default Card;
