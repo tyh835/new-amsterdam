@@ -121,14 +121,6 @@ export const IndexPage = ({ data }) => {
           );
         })}
       </CardsWrap>
-      <Mobile>
-        <NavLink
-          to="/contact"
-          style={{ fontSize: '1.2rem', background: 'transparent' }}
-        >
-          Have Questions? Let Us Know &rarr;
-        </NavLink>
-      </Mobile>
     </>
   );
 };

@@ -6,7 +6,7 @@ export default () => {
     <>
       <NavLink to="/cakes">Our Cakes</NavLink>
       <NavLink to="/pastries">Bread and Pastries</NavLink>
-      <NavLink to="/contact">Contact Us</NavLink>
+      <NavLink to="#contact">Contact Us</NavLink>
     </>
   );
 };

@@ -59,6 +59,7 @@ const Footer = ({ className }) => {
 
   return (
     <FooterWrap
+      id="contact"
       as="footer"
       px={[0, 1, 3, 4]}
       py={[3, 3, 0]}
