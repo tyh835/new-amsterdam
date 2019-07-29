@@ -8,7 +8,6 @@ import uuid from 'uuid/v4';
 import Carousel from '../components/Carousel.jsx';
 import About from '../components/About.jsx';
 import Card from '../components/Card.jsx';
-import NavLink from '../components/NavLink.jsx';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -78,18 +77,6 @@ const Link = styled(GatsbyLink)`
   }
   @media (max-width: ${props => props.theme.breakpoints[1]}) {
     margin: 1.5rem 0;
-  }
-`;
-
-const Mobile = styled.div`
-  width: 100%;
-  display: none;
-  font-size: 1rem;
-
-  @media (max-width: ${props => props.theme.breakpoints[1]}) {
-    display: flex;
-    justify-content: center;
-    background-color: ${props => props.theme.color.lightgreen};
   }
 `;
 
