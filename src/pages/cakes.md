@@ -56,7 +56,7 @@ categories:
       image: /img/about_pop.jpg
     cards:
       - description: ''
-        image: /img/pop1.jpg
+        image: /img/pop1.png
         label: T1
       - description: ''
         image: /img/pop2.jpg
@@ -325,3 +325,4 @@ categories:
         label: B15
     name: Baby Shower
 ---
+
