@@ -56,7 +56,7 @@ categories:
       image: /img/about_pop.jpg
     cards:
       - description: ''
-        image: /img/pop1.png
+        image: /img/pop1.jpg
         label: T1
       - description: ''
         image: /img/pop2.jpg
