@@ -170,6 +170,10 @@ categories:
         label: T46
       - image: /img/custom2.jpg
         label: T47
+      - image: /img/fancy1.png
+        label: T48
+      - image: /img/fancy2.jpg
+        label: T49
     name: Birthday
   - about:
       alt: Anniversary Cakes
@@ -329,6 +333,8 @@ categories:
         label: M11
       - image: /img/n14.jpg
         label: M12
+      - image: /img/pop11.jpg
+        label: M13
     name: Men
   - about:
       alt: Baby Showers Cakes
