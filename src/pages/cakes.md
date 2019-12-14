@@ -160,6 +160,16 @@ categories:
         label: T41
       - image: /img/pop31.png
         label: T42
+      - image: /img/sport3.png
+        label: T43
+      - image: /img/sport4.jpg
+        label: T44
+      - image: /img/sport5.png
+        label: T45
+      - image: /img/sport6.png
+        label: T46
+      - image: /img/custom2.jpg
+        label: T47
     name: Birthday
   - about:
       alt: Anniversary Cakes
