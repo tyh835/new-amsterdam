@@ -59,48 +59,48 @@ categories:
         image: /img/pop1.jpg
         label: T1
       - description: ''
-        image: /img/pop2.jpg
+        image: /img/pop3.jpg
         label: T2
       - description: ''
-        image: /img/pop3.jpg
+        image: /img/new.png
         label: T3
       - description: ''
-        image: /img/pop4.jpg
+        image: /img/t30.jpg
         label: T4
       - description: ''
-        image: /img/pop5.jpg
+        image: /img/n7.jpg
         label: T5
       - description: ''
         image: /img/pop6.jpg
         label: T6
       - image: /img/pop7.1.jpg
         label: T7
-      - description: (Alcohol not included)
-        image: /img/pop8.jpg
+      - description: ''
+        image: /img/new1.png
         label: 'T8 '
-      - image: /img/pop9.jpg
+      - image: /img/n37.jpg
         label: T9
-      - image: /img/pop10.jpg
+      - image: /img/pop19.jpg
         label: T10
-      - image: /img/pop11.jpg
+      - image: /img/pop2.jpg
         label: T11
-      - image: /img/pop12.jpg
+      - image: /img/n4.jpg
         label: T12
       - image: /img/pop13.jpg
         label: T13
-      - image: /img/pop14.jpg
+      - image: /img/n37.png
         label: T14
-      - image: /img/pop15.jpg
+      - image: /img/custom5.jpg
         label: T15
       - image: /img/pop16.jpg
         label: T16
-      - image: /img/pop17.jpg
+      - image: /img/n9.jpg
         label: T17
-      - image: /img/pop18.jpg
+      - image: /img/pop5.jpg
         label: T18
-      - image: /img/pop19.jpg
+      - image: /img/n27.jpg
         label: T19
-      - image: /img/pop20.jpg
+      - image: /img/pop4.jpg
         label: T20
       - image: /img/pop21.jpg
         label: T21
@@ -108,24 +108,26 @@ categories:
         label: T22
       - image: /img/pop7.jpg
         label: T23
-      - image: /img/about_custom.jpg
+      - image: /img/pop8.jpg
         label: T24
-      - image: /img/custom1.jpg
+      - image: /img/about_custom.jpg
         label: T25
-      - image: /img/custom2.jpg
+      - image: /img/n31.jpg
         label: T26
       - image: /img/custom10.jpg
         label: T27
-      - image: /img/custom5.jpg
+      - image: /img/custom1.jpg
         label: T28
       - image: /img/custom9.jpg
         label: T29
-      - image: /img/fancy1.png
+      - image: /img/pop10.jpg
         label: T30
-      - image: /img/fancy2.jpg
+      - image: /img/pop18.jpg
         label: T31
-      - image: /img/fancy3.jpg
+      - image: /img/pop9.jpg
         label: T32
+      - image: /img/pop12.jpg
+        label: T33
     name: Birthday
   - about:
       alt: Anniversary Cakes
@@ -271,6 +273,10 @@ categories:
         label: M10
       - image: /img/boob.jpg
         label: M11
+      - image: /img/n14.jpg
+        label: M12
+      - image: /img/n15.jpg
+        label: M13
     name: Men
   - about:
       alt: Baby Showers Cakes
@@ -324,5 +330,6 @@ categories:
       - image: /img/baby15.jpg
         label: B15
     name: Baby Shower
+  - {}
 ---
 
