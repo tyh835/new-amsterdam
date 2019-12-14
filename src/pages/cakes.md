@@ -45,6 +45,20 @@ categories:
       - description: ''
         image: /img/flower11.jpg
         label: F11
+      - image: /img/flower12.png
+        label: F12
+      - image: /img/flower13.jpg
+        label: F13
+      - image: /img/flower14.jpg
+        label: F14
+      - image: /img/flower15.jpg
+        label: F15
+      - image: /img/flower16.jpg
+        label: F16
+      - image: /img/flower17.png
+        label: F17
+      - image: /img/flower18.png
+        label: F18
     name: Flower
   - about:
       alt: Birthday Cakes
@@ -128,6 +142,24 @@ categories:
         label: T32
       - image: /img/pop12.jpg
         label: T33
+      - image: /img/pop23.jpg
+        label: T34
+      - image: /img/pop24.png
+        label: T35
+      - image: /img/pop25.jpg
+        label: T36
+      - image: /img/pop26.jpg
+        label: T37
+      - image: /img/pop27.jpg
+        label: T38
+      - description: T39
+        image: /img/pop28.png
+      - image: /img/pop29.png
+        label: T40
+      - image: /img/pop30.png
+        label: T41
+      - image: /img/pop31.png
+        label: T42
     name: Birthday
   - about:
       alt: Anniversary Cakes
@@ -162,6 +194,8 @@ categories:
         label: A11
       - image: /img/love12.jpg
         label: A12
+      - image: /img/n13.png
+        label: A13
     name: Anniversary
   - about:
       alt: Wedding Cakes
@@ -233,6 +267,16 @@ categories:
         label: W22
       - image: /img/wedding25.jpg
         label: W23
+      - image: /img/wedding26.jpg
+        label: W24
+      - image: /img/wedding27.jpg
+        label: W25
+      - image: /img/wedding28.png
+        label: W26
+      - image: /img/wedding29.jpg
+        label: W27
+      - image: /img/wedding30.jpg
+        label: W28
     name: Wedding
   - about:
       alt: Men Cakes
@@ -267,7 +311,7 @@ categories:
       - description: ''
         image: /img/men8.png
         label: M8
-      - image: /img/men9.jpg
+      - image: /img/n15.jpg
         label: M9
       - image: /img/boob1.jpg
         label: M10
@@ -275,8 +319,6 @@ categories:
         label: M11
       - image: /img/n14.jpg
         label: M12
-      - image: /img/n15.jpg
-        label: M13
     name: Men
   - about:
       alt: Baby Showers Cakes
@@ -329,7 +371,46 @@ categories:
         label: B14
       - image: /img/baby15.jpg
         label: B15
+      - image: /img/baby16.jpg
+        label: B16
+      - image: /img/baby17.jpg
+        label: B17
+      - image: /img/baby18.jpg
+        label: B18
+      - image: /img/baby19.jpg
+        label: B19
+      - image: /img/baby20.jpg
+        label: B20
+      - image: /img/baby21.jpg
+        label: B21
+      - image: /img/baby22.png
+        label: B22
+      - image: /img/baby23.png
+        label: B23
+      - image: /img/baby24.png
+        label: B24
+      - image: /img/baby25.png
+        label: B25
     name: Baby Shower
-  - {}
+  - about:
+      alt: Sport Cakes
+      description: >-
+        We design cakes in a variety of shapes and sizes, from round to square
+        or rectangle, or your custom shape of choice. We will customize your
+        cake to your liking.
+      heading: Sport Cakes
+      image: /img/men9.jpg
+    cards:
+      - image: /img/pop14.jpg
+        label: S1
+      - image: /img/pop15.jpg
+        label: S2
+      - image: /img/pop17.jpg
+        label: S3
+      - image: /img/sport1.jpg
+        label: S4
+      - image: /img/sport2.png
+        label: S5
+    name: Sport
 ---
 
