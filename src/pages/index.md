@@ -3,13 +3,13 @@ templateKey: IndexPage
 title: New Amsterdam Bakery
 images:
   - path: /img/christmas-baking.jpg
-    text: Christmas Season Cookies
+    text: Christmas Cookies
   - path: /img/christmas1.jpg
     text: Fresh Christmas Stollen
   - path: /img/christmas2.jpeg
-    text: Hand-made Almond Sticks
+    text: Almond Sticks
   - path: /img/christmas3.jpeg
-    text: Christmas Almond Rings
+    text: ' Almond Rings'
 about:
   - description: >-
       Our seasonal baked goods are back!  We have Christmas Stollen, Almond
