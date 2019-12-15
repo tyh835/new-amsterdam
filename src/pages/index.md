@@ -6,7 +6,7 @@ images:
     text: Christmas Cookies
   - path: /img/christmas1.jpg
     text: Fresh Christmas Stollen
-  - path: /img/christmas2.jpeg
+  - path: /img/yum.jpg
     text: Almond Sticks
   - path: /img/christmas3.jpeg
     text: ' Almond Rings'
