@@ -11,6 +11,13 @@ images:
   - path: /img/christmas3.jpeg
     text: Christmas Almond Rings
 about:
+  - description: >-
+      Our seasonal baked goods are back!  We have Christmas Stollen, Almond
+      tarts, Almond rings, Almond Tarts, Minced Meat tarts and many pies
+      available. Our Almond paste and dessert is made by hand with 100% almonds.
+      Please give us a call to place an order while supplies last!
+    heading: 'CHRISTMAS SEASON SPECIAL! '
+    image: /img/tree.jpg
   - alt: New Amsterdam Bakery
     description: >-
       We are a local bakery making handmade specialty bread, cakes, and cookies
