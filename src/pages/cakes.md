@@ -59,6 +59,10 @@ categories:
         label: F17
       - image: /img/flower18.png
         label: F18
+      - image: /img/flower19.png
+        label: F19
+      - image: /img/flower20.jpg
+        label: F20
     name: Flower
   - about:
       alt: Birthday Cakes
@@ -152,8 +156,9 @@ categories:
         label: T37
       - image: /img/pop27.jpg
         label: T38
-      - description: T39
+      - description: ''
         image: /img/pop28.png
+        label: T39
       - image: /img/pop29.png
         label: T40
       - image: /img/pop30.png
@@ -174,6 +179,22 @@ categories:
         label: T48
       - image: /img/fancy2.jpg
         label: T49
+      - image: /img/pop31.1.jpg
+        label: T50
+      - image: /img/pop32.jpg
+        label: T51
+      - image: /img/pop33.jpg
+        label: T52
+      - image: /img/pop34.jpg
+        label: T53
+      - image: /img/pop35.jpg
+        label: T54
+      - image: /img/pop36.jpg
+        label: T55
+      - image: /img/pop37.jpg
+        label: T56
+      - image: /img/pop38.jpg
+        label: T57
     name: Birthday
   - about:
       alt: Anniversary Cakes
@@ -210,6 +231,8 @@ categories:
         label: A12
       - image: /img/n13.png
         label: A13
+      - image: /img/love15.jpg
+        label: A14
     name: Anniversary
   - about:
       alt: Wedding Cakes
@@ -291,6 +314,10 @@ categories:
         label: W27
       - image: /img/wedding30.jpg
         label: W28
+      - image: /img/wedding31.png
+        label: W29
+      - image: /img/wedding32.jpg
+        label: W30
     name: Wedding
   - about:
       alt: Men Cakes
@@ -335,6 +362,12 @@ categories:
         label: M12
       - image: /img/pop11.jpg
         label: M13
+      - image: /img/men9.jpg
+        label: M14
+      - image: /img/men11.jpg
+        label: M15
+      - image: /img/men10.jpg
+        label: M16
     name: Men
   - about:
       alt: Baby Showers Cakes
