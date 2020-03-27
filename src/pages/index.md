@@ -2,22 +2,19 @@
 templateKey: IndexPage
 title: New Amsterdam Bakery
 images:
-  - path: /img/christmas-baking.jpg
-    text: Christmas Cookies
-  - path: /img/christmas1.jpg
-    text: Fresh Christmas Stollen
-  - path: /img/yum.jpg
-    text: Almond Sticks
-  - path: /img/christmas3.jpeg
-    text: ' Almond Rings'
+  - path: /img/jumbotron1.jpg
+    text: Homemade
+  - path: /img/jumbotron2.jpg
+    text: Freshly baked bread
+  - path: /img/jumbotron_cakes.jpg
+    text: Customized Cakes
 about:
   - description: >-
-      Our seasonal baked goods are back!  We have Christmas Stollen, Almond
-      tarts, Almond rings, Almond Tarts, Minced Meat tarts and many pies
-      available. Our Almond paste and dessert is made by hand with 100% almonds.
-      Please give us a call to place an order while supplies last!
-    heading: 'CHRISTMAS SEASON SPECIAL! '
-    image: /img/tree.jpg
+      We will be open during this coronavirus season to provide essential bread
+      for families.  We take good care to sanitize and wash our counters daily
+      and also practice mandatory social distancing.
+    heading: WE ARE OPEN!
+    image: /img/about.jpg
   - alt: New Amsterdam Bakery
     description: >-
       We are a local bakery making handmade specialty bread, cakes, and cookies
