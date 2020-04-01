@@ -3,11 +3,15 @@ templateKey: IndexPage
 title: New Amsterdam Bakery
 images:
   - path: /img/jumbotron1.jpg
-    text: Homemade
+    text: Homemade Recipes
+  - path: /img/jumbotron4.jpg
+    text: We Are Open!
   - path: /img/jumbotron2.jpg
     text: Freshly baked bread
   - path: /img/jumbotron_cakes.jpg
-    text: Customized Cakes
+    text: Customly made Cakes
+  - path: /img/jumbotron3.jpg
+    text: A New Amsterdam
 about:
   - description: >-
       We will be open during this coronavirus season to provide essential bread
