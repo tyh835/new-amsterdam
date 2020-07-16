@@ -55,7 +55,7 @@ const Modal = ({ data, exitModal }) => {
 
 Modal.propTypes = {
   data: PropTypes.shape({
-    image: PropTypes.PropTypes.object,
+    image: PropTypes.object,
     label: PropTypes.string,
     alt: PropTypes.string
   }).isRequired,
