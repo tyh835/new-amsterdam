@@ -67,6 +67,14 @@ const AboutWrap = styled(Flex)`
       ${props => props.theme.color.beige}
     );
   }
+
+  &:nth-of-type(3) {
+    background: linear-gradient(
+      to bottom,
+      ${props => props.theme.color.beige},
+      ${props => props.theme.color.lightyellow}
+    );
+  }
 `;
 
 const Link = styled(GatsbyLink)`

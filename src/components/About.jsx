@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Bounce from 'react-reveal/Bounce';
+import Pulse from 'react-reveal/Pulse';
 import Fade from 'react-reveal/Fade';
 import { Flex, Box } from '@rebass/grid';
 
@@ -74,7 +74,7 @@ const Title = styled.h2`
 
 const About = ({ cake, data }) => {
   return (
-    <Bounce duration={cake ? 0 : 1000} key={data.heading}>
+    <Pulse key={data.heading} duration={cake ? 0 : 1000} bottom>
       <Fade bottom={cake} duration={1000} distance="125px">
         <AboutWrap flat={cake} width={[1, 525, 800, 800]}>
           <Title>{data.heading}</Title>
@@ -88,7 +88,7 @@ const About = ({ cake, data }) => {
           </TextBox>
         </AboutWrap>
       </Fade>
-    </Bounce>
+    </Pulse>
   );
 };
 
