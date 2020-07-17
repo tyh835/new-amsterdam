@@ -63,6 +63,24 @@ categories:
         label: F19
       - image: /img/flower20.jpg
         label: F20
+      - image: /img/flower21.jpg
+        label: F21
+      - image: /img/flower22.jpg
+        label: F22
+      - image: /img/flower23.jpg
+        label: F23
+      - image: /img/flower24.jpg
+        label: F24
+      - image: /img/flower25.jpg
+        label: F25
+      - image: /img/flower26pop.jpg
+        label: F26
+      - image: /img/flower27.jpg
+        label: F27
+      - image: /img/flower28.jpg
+        label: F28
+      - image: /img/flower29.jpg
+        label: F29
     name: Flower
   - about:
       alt: Birthday Cakes
@@ -195,6 +213,60 @@ categories:
         label: T56
       - image: /img/pop38.jpg
         label: T57
+      - image: /img/pop39.jpg
+        label: T58
+      - image: /img/pop41.jpg
+        label: T59
+      - image: /img/pop42.jpg
+        label: T60
+      - image: /img/pop43.jpg
+        label: T61
+      - image: /img/pop44.jpg
+        label: T62
+      - image: /img/pop45.jpg
+        label: T63
+      - image: /img/pop46.jpg
+        label: T64
+      - image: /img/pop47.jpg
+        label: T65
+      - image: /img/pop48.jpg
+        label: T66
+      - image: /img/pop49.jpg
+        label: T67
+      - image: /img/pop50.jpg
+        label: T68
+      - image: /img/pop51.jpg
+        label: T69
+      - image: /img/pop52.jpg
+        label: T70
+      - image: /img/pop53.jpg
+        label: T71
+      - image: /img/pop54.jpg
+        label: T72
+      - image: /img/pop55.jpg
+        label: T73
+      - image: /img/pop56.jpg
+        label: T74
+      - image: /img/pop57.jpg
+        label: T75
+      - image: /img/pop58.jpg
+        label: T76
+      - image: /img/pop59.jpg
+        label: T77
+      - image: /img/pop60.jpg
+        label: T78
+      - image: /img/pop61.jpg
+        label: T79
+      - image: /img/pop62.jpg
+        label: T80
+      - image: /img/pop63.jpg
+        label: T81
+      - image: /img/pop64.jpg
+        label: T82
+      - image: /img/pop65.jpg
+        label: T83
+      - image: /img/flower26pop.jpg
+        label: T84
     name: Birthday
   - about:
       alt: Anniversary Cakes
@@ -233,6 +305,24 @@ categories:
         label: A13
       - image: /img/love15.jpg
         label: A14
+      - image: /img/love13.jpg
+        label: A15
+      - image: /img/love14.jpg
+        label: A16
+      - image: /img/love16.jpg
+        label: A17
+      - image: /img/love17.jpg
+        label: A18
+      - image: /img/love18.jpg
+        label: A19
+      - image: /img/love19.jpg
+        label: A20
+      - image: /img/love20.jpg
+        label: A21
+      - image: /img/love21.jpg
+        label: A22
+      - image: /img/love22.jpg
+        label: A23
     name: Anniversary
   - about:
       alt: Wedding Cakes
@@ -318,6 +408,10 @@ categories:
         label: W29
       - image: /img/wedding32.jpg
         label: W30
+      - image: /img/wedding33.jpg
+        label: W31
+      - image: /img/wedding34.jpg
+        label: W32
     name: Wedding
   - about:
       alt: Men Cakes
@@ -368,6 +462,12 @@ categories:
         label: M15
       - image: /img/men10.jpg
         label: M16
+      - image: /img/men12.jpg
+        label: M17
+      - image: /img/men13.jpg
+        label: M18
+      - image: /img/men14.jpg
+        label: M19
     name: Men
   - about:
       alt: Baby Showers Cakes
@@ -440,6 +540,28 @@ categories:
         label: B24
       - image: /img/baby25.png
         label: B25
+      - image: /img/baby26.jpg
+        label: B26
+      - image: /img/baby27.jpg
+        label: B27
+      - image: /img/baby28.jpg
+        label: B28
+      - image: /img/baby29.jpg
+        label: B29
+      - image: /img/baby30.jpg
+        label: B30
+      - image: /img/baby31.jpg
+        label: B31
+      - image: /img/baby32.jpg
+        label: B32
+      - image: /img/baby33.jpg
+        label: B33
+      - image: /img/baby34.jpg
+        label: B34
+      - image: /img/baby35.jpg
+        label: B35
+      - image: /img/baby36.jpg
+        label: B36
     name: Baby Shower
   - about:
       alt: Sport Cakes
@@ -460,6 +582,8 @@ categories:
         label: S4
       - image: /img/sport2.png
         label: S5
+      - image: /img/sport7.jpg
+        label: S6
     name: Sport
 ---
 
