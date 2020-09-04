@@ -4,6 +4,7 @@ import NavLink from '../../../components/NavLink.jsx';
 
 export default () => {
   const navigateToContact = e => {
+    console.log('hello');
     e.preventDefault();
     navigate('#contact');
   };
@@ -12,7 +13,9 @@ export default () => {
     <>
       <NavLink to="/cakes">Our Cakes</NavLink>
       <NavLink to="/pastries">Bread and Pastries</NavLink>
-      <NavLink onClick={navigateToContact}>Contact Us</NavLink>
+      <NavLink to="#contact" onClick={navigateToContact}>
+        Contact Us
+      </NavLink>
     </>
   );
 };
