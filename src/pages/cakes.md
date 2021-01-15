@@ -15,72 +15,58 @@ categories:
       - description: ''
         image: /img/flower1.jpg
         label: F1
-      - description: ''
-        image: /img/flower2.jpg
+      - image: /img/flower2.jpg
         label: F2
-      - description: ''
-        image: /img/flower3.jpg
+      - image: /img/flower3.jpg
         label: F3
-      - description: ''
-        image: /img/flower4.jpg
+      - image: /img/flower4.jpg
         label: F4
-      - description: ''
-        image: /img/flower5.png
+      - image: /img/flower5.png
         label: F5
-      - description: ''
-        image: /img/flower6.jpg
+      - image: /img/flower6.jpg
         label: F6
-      - description: ''
-        image: /img/flower7.jpg
+      - image: /img/flower7.jpg
         label: F7
-      - description: ''
-        image: /img/flower8.jpg
+      - image: /img/flower8.jpg
         label: F8
-      - description: ''
-        image: /img/flower9.jpg
+      - image: /img/flower9.jpg
         label: F9
-      - description: ''
-        image: /img/flower10.jpg
+      - image: /img/flower10.jpg
         label: F10
-      - description: ''
-        image: /img/flower11.jpg
-        label: F11
       - image: /img/flower12.png
-        label: F12
+        label: F11
       - image: /img/flower13.jpg
-        label: F13
+        label: F12
       - image: /img/flower14.jpg
-        label: F14
+        label: F13
       - image: /img/flower15.jpg
-        label: F15
+        label: F14
       - image: /img/flower16.jpg
-        label: F16
+        label: F15
       - image: /img/flower17.png
-        label: F17
+        label: F16
       - image: /img/flower18.png
-        label: F18
+        label: F17
       - image: /img/flower19.png
-        label: F19
+        label: F18
       - image: /img/flower20.jpg
-        label: F20
+        label: F19
       - image: /img/flower21.jpg
-        label: F21
+        label: F20
       - image: /img/flower22.jpg
-        label: F22
+        label: F21
       - image: /img/flower23.jpg
-        label: F23
+        label: F22
       - image: /img/flower24.jpg
-        label: F24
+        label: F23
       - image: /img/flower25.jpg
-        label: F25
+        label: F24
       - image: /img/flower26pop.jpg
-        label: F26
-      - image: /img/flower27.jpg
-        label: F27
+        label: F25
       - image: /img/flower28.jpg
-        label: F28
+        label: F26
       - image: /img/flower29.jpg
-        label: F29
+        label: F27
     name: Flower
   - about:
       alt: Birthday Cakes
@@ -91,182 +77,160 @@ categories:
       heading: Birthday Cakes
       image: /img/about_pop.jpg
     cards:
-      - description: ''
-        image: /img/pop1.jpg
+      - image: /img/pop1.jpg
         label: T1
-      - description: ''
-        image: /img/pop3.jpg
+      - image: /img/pop3.jpg
         label: T2
-      - description: ''
-        image: /img/new.png
+      - image: /img/new.png
         label: T3
-      - description: ''
-        image: /img/t30.jpg
+      - image: /img/t30.jpg
         label: T4
-      - description: ''
-        image: /img/n7.jpg
+      - image: /img/n7.jpg
         label: T5
-      - description: ''
-        image: /img/pop6.jpg
+      - image: /img/pop6.jpg
         label: T6
       - image: /img/pop7.1.jpg
         label: T7
-      - description: ''
-        image: /img/new1.png
-        label: 'T8 '
-      - image: /img/n37.jpg
-        label: T9
+      - image: /img/new1.png
+        label: T8
       - image: /img/pop19.jpg
-        label: T10
+        label: T9
       - image: /img/pop2.jpg
-        label: T11
+        label: T10
       - image: /img/n4.jpg
-        label: T12
+        label: T11
       - image: /img/pop13.jpg
-        label: T13
+        label: T12
       - image: /img/n37.png
-        label: T14
+        label: T13
       - image: /img/custom5.jpg
-        label: T15
+        label: T14
       - image: /img/pop16.jpg
-        label: T16
+        label: T15
       - image: /img/n9.jpg
-        label: T17
+        label: T16
       - image: /img/pop5.jpg
-        label: T18
+        label: T17
       - image: /img/n27.jpg
-        label: T19
+        label: T18
       - image: /img/pop4.jpg
-        label: T20
+        label: T19
       - image: /img/pop21.jpg
-        label: T21
+        label: T20
       - image: /img/pop22.jpg
-        label: T22
-      - image: /img/pop7.jpg
-        label: T23
+        label: T21
       - image: /img/pop8.jpg
-        label: T24
+        label: T22
       - image: /img/about_custom.jpg
-        label: T25
+        label: T23
       - image: /img/n31.jpg
-        label: T26
+        label: T24
       - image: /img/custom10.jpg
-        label: T27
+        label: T25
       - image: /img/custom1.jpg
-        label: T28
+        label: T26
       - image: /img/custom9.jpg
-        label: T29
+        label: T27
       - image: /img/pop10.jpg
-        label: T30
-      - image: /img/pop18.jpg
-        label: T31
+        label: T28
       - image: /img/pop9.jpg
-        label: T32
+        label: T29
       - image: /img/pop12.jpg
-        label: T33
+        label: T30
       - image: /img/pop23.jpg
-        label: T34
+        label: T31
       - image: /img/pop24.png
-        label: T35
+        label: T32
       - image: /img/pop25.jpg
-        label: T36
+        label: T33
       - image: /img/pop26.jpg
-        label: T37
+        label: T34
       - image: /img/pop27.jpg
-        label: T38
-      - description: ''
-        image: /img/pop28.png
-        label: T39
+        label: T35
+      - image: /img/pop28.png
+        label: T36
       - image: /img/pop29.png
-        label: T40
+        label: T37
       - image: /img/pop30.png
-        label: T41
+        label: T38
       - image: /img/pop31.png
-        label: T42
+        label: T39
       - image: /img/sport3.png
-        label: T43
-      - image: /img/sport4.jpg
-        label: T44
-      - image: /img/sport5.png
-        label: T45
-      - image: /img/sport6.png
-        label: T46
+        label: T40
       - image: /img/custom2.jpg
-        label: T47
+        label: T41
       - image: /img/fancy1.png
-        label: T48
+        label: T42
       - image: /img/fancy2.jpg
-        label: T49
+        label: T43
       - image: /img/pop31.1.jpg
-        label: T50
+        label: T44
       - image: /img/pop32.jpg
-        label: T51
+        label: T45
       - image: /img/pop33.jpg
-        label: T52
+        label: T46
       - image: /img/pop34.jpg
-        label: T53
+        label: T47
       - image: /img/pop35.jpg
-        label: T54
+        label: T48
       - image: /img/pop36.jpg
-        label: T55
+        label: T49
       - image: /img/pop37.jpg
-        label: T56
+        label: T50
       - image: /img/pop38.jpg
-        label: T57
+        label: T51
       - image: /img/pop39.jpg
-        label: T58
+        label: T52
       - image: /img/pop41.jpg
-        label: T59
+        label: T53
       - image: /img/pop42.jpg
-        label: T60
-      - image: /img/pop43.jpg
-        label: T61
+        label: T54
       - image: /img/pop44.jpg
-        label: T62
+        label: T55
       - image: /img/pop45.jpg
-        label: T63
+        label: T56
       - image: /img/pop46.jpg
-        label: T64
+        label: T57
       - image: /img/pop47.jpg
-        label: T65
+        label: T58
       - image: /img/pop48.jpg
-        label: T66
+        label: T59
       - image: /img/pop49.jpg
-        label: T67
+        label: T60
       - image: /img/pop50.jpg
-        label: T68
+        label: T61
       - image: /img/pop51.jpg
-        label: T69
+        label: T62
       - image: /img/pop52.jpg
-        label: T70
+        label: T63
       - image: /img/pop53.jpg
-        label: T71
+        label: T64
       - image: /img/pop54.jpg
-        label: T72
+        label: T65
       - image: /img/pop55.jpg
-        label: T73
+        label: T66
       - image: /img/pop56.jpg
-        label: T74
+        label: T67
       - image: /img/pop57.jpg
-        label: T75
+        label: T68
       - image: /img/pop58.jpg
-        label: T76
+        label: T69
       - image: /img/pop59.jpg
-        label: T77
+        label: T70
       - image: /img/pop60.jpg
-        label: T78
+        label: T71
       - image: /img/pop61.jpg
-        label: T79
+        label: T72
       - image: /img/pop62.jpg
-        label: T80
+        label: T73
       - image: /img/pop63.jpg
-        label: T81
+        label: T74
       - image: /img/pop64.jpg
-        label: T82
+        label: T75
       - image: /img/pop65.jpg
-        label: T83
+        label: T76
       - image: /img/flower26pop.jpg
-        label: T84
+        label: T77
     name: Birthday
   - about:
       alt: Anniversary Cakes
@@ -333,50 +297,35 @@ categories:
       heading: Wedding Cakes
       image: /img/wedding0.jpg
     cards:
-      - description: ''
-        image: /img/wedding1.png
+      - image: /img/wedding1.png
         label: W1
-      - description: ''
-        image: /img/wedding2.jpg
+      - image: /img/wedding2.jpg
         label: W2
-      - description: ''
-        image: /img/wedding3.png
+      - image: /img/wedding3.png
         label: W3
-      - description: ''
-        image: /img/wedding4.jpg
+      - image: /img/wedding4.jpg
         label: W4
-      - description: ''
-        image: /img/wedding5.jpg
+      - image: /img/wedding5.jpg
         label: W5
-      - description: ''
-        image: /img/wedding6.jpg
+      - image: /img/wedding6.jpg
         label: W6
-      - description: ''
-        image: /img/wedding7.jpg
+      - image: /img/wedding7.jpg
         label: W7
-      - description: ''
-        image: /img/wedding8.png
+      - image: /img/wedding8.png
         label: W8
-      - description: ''
-        image: /img/wedding9.png
+      - image: /img/wedding9.png
         label: W9
-      - description: ''
-        image: /img/wedding11.png
+      - image: /img/wedding11.png
         label: W10
-      - description: ''
-        image: /img/wedding12.png
+      - image: /img/wedding12.png
         label: W11
-      - description: ''
-        image: /img/wedding13.jpg
+      - image: /img/wedding13.jpg
         label: W12
-      - description: ''
-        image: /img/wedding15.jpg
+      - image: /img/wedding15.jpg
         label: W13
-      - description: ''
-        image: /img/wedding16.jpg
+      - image: /img/wedding16.jpg
         label: W14
-      - description: ''
-        image: /img/wedding17.jpg
+      - image: /img/wedding17.jpg
         label: W15
       - image: /img/wedding18.jpg
         label: W16
@@ -422,29 +371,21 @@ categories:
       heading: Men Cakes
       image: /img/about_men.jpg
     cards:
-      - description: ''
-        image: /img/men1.jpg
+      - image: /img/men1.jpg
         label: M1
-      - description: ''
-        image: /img/men2.jpg
+      - image: /img/men2.jpg
         label: M2
-      - description: ''
-        image: /img/men3.jpg
+      - image: /img/men3.jpg
         label: M3
-      - description: ''
-        image: /img/men4.jpg
+      - image: /img/men4.jpg
         label: M4
-      - description: ''
-        image: /img/men5.jpg
+      - image: /img/men5.jpg
         label: M5
-      - description: ''
-        image: /img/men6.jpg
+      - image: /img/men6.jpg
         label: M6
-      - description: ''
-        image: /img/men7.png
+      - image: /img/men7.png
         label: M7
-      - description: ''
-        image: /img/men8.png
+      - image: /img/men8.png
         label: M8
       - image: /img/n15.jpg
         label: M9
@@ -478,90 +419,72 @@ categories:
       heading: Baby Showers Cakes
       image: /img/about_baby.jpg
     cards:
-      - description: ''
-        image: /img/baby1.jpg
+      - image: /img/baby2.jpg
         label: B1
-      - description: ''
-        image: /img/baby2.jpg
+      - image: /img/baby3.jpg
         label: B2
-      - description: ''
-        image: /img/baby3.jpg
+      - image: /img/baby4.jpg
         label: B3
-      - description: ''
-        image: /img/baby4.jpg
+      - image: /img/baby6.jpg
         label: B4
-      - description: ''
-        image: /img/baby5.jpg
+      - image: /img/baby7.jpg
         label: B5
-      - description: ''
-        image: /img/baby6.jpg
+      - image: /img/baby8.png
         label: B6
-      - description: ''
-        image: /img/baby7.jpg
+      - image: /img/baby9.png
         label: B7
-      - description: ''
-        image: /img/baby8.png
+      - image: /img/baby10.png
         label: B8
-      - description: ''
-        image: /img/baby9.png
+      - image: /img/baby11.jpg
         label: B9
-      - description: ''
-        image: /img/baby10.png
+      - image: /img/baby12.jpg
         label: B10
-      - description: ''
-        image: /img/baby11.jpg
-        label: B11
-      - description: ''
-        image: /img/baby12.jpg
-        label: B12
       - image: /img/baby13.jpg
-        label: B13
+        label: B11
       - image: /img/baby14.jpg
-        label: B14
+        label: B12
       - image: /img/baby15.jpg
-        label: B15
+        label: B13
       - image: /img/baby16.jpg
-        label: B16
+        label: B14
       - image: /img/baby17.jpg
-        label: B17
+        label: B15
       - image: /img/baby18.jpg
-        label: B18
+        label: B16
       - image: /img/baby19.jpg
-        label: B19
+        label: B17
       - image: /img/baby20.jpg
-        label: B20
+        label: B18
       - image: /img/baby21.jpg
-        label: B21
+        label: B19
       - image: /img/baby22.png
-        label: B22
+        label: B20
       - image: /img/baby23.png
-        label: B23
+        label: B21
       - image: /img/baby24.png
-        label: B24
-      - image: /img/baby25.png
-        label: B25
+        label: B22
       - image: /img/baby26.jpg
-        label: B26
+        label: B23
       - image: /img/baby27.jpg
-        label: B27
+        label: B24
       - image: /img/baby28.jpg
-        label: B28
+        label: B25
       - image: /img/baby29.jpg
-        label: B29
+        label: B26
       - image: /img/baby30.jpg
-        label: B30
+        label: B27
       - image: /img/baby31.jpg
-        label: B31
+        label: B28
       - image: /img/baby32.jpg
-        label: B32
+        label: B29
       - image: /img/baby33.jpg
-        label: B33
+        label: B30
       - image: /img/baby34.jpg
-        label: B34
+        label: B31
       - image: /img/baby35.jpg
-        label: B35
+        label: B32
       - image: /img/baby36.jpg
-        label: B36
+        label: B33
     name: Baby Shower
   - about:
       alt: Sport Cakes
@@ -586,4 +509,3 @@ categories:
         label: S6
     name: Sport
 ---
-
