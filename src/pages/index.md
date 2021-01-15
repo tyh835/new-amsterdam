@@ -2,37 +2,29 @@
 templateKey: IndexPage
 title: New Amsterdam Bakery
 images:
-  - path: /img/christmas-baking.jpg
-    text: Homemade Christmas Desserts
-  - path: /img/christmas1.jpg
-    text: Freshly baked Christmas Stollen
-  - path: /img/christmas3.jpeg
-    text: Almond Sticks & Almond Rings Available
-  - path: /img/christmas5.png
-    text: 'Made with 100% pure Almond paste '
-  - path: /img/christmas4.png
-    text: Coconut Macaroons
-  - path: /img/christmas-6.png
-    text: Fresh Mince Meat Tarts!
+  - path: /img/jumbotron1.jpg
+    text: Homemade Recipes
+  - path: /img/jumbotron4.jpg
+    text: We Are Open!
+  - path: /img/jumbotron2.jpg
+    text: Freshly baked bread
+  - path: /img/jumbotron_cakes.jpg
+    text: Customly made Cakes
+  - path: /img/jumbotron3.jpg
+    text: A New Amsterdam
 about:
   - description: >-
-      Happy Holidays! It that time of year again where we will be baking our
-      Christmas goodies until Christmas. We have mincemeat tarts, lemon tarts,
-      Christmas Stollen, Almond sticks, Almond rings, coconut macaroon, and many
-      more. Pre-order today by calling our store!
-    heading: Merry Christmas!
-    image: /img/christmas1.jpg
+      We will be open during this coronavirus season to provide essential bread
+      for families.  We take good care to sanitize and wash our counters daily
+      and also practice mandatory social distancing.
+    heading: WE ARE OPEN!
+    image: /img/about.jpg
   - alt: New Amsterdam Bakery
     description: >-
       We are a local bakery making handmade specialty bread, cakes, and cookies
       for over 25 years. Our baked good has no chemical or preservatives and
       baked fresh every day. We also carry many vegetarian selections (egg-free)
       , and healthy bread (sugar free, salt-free).
-
-
-      We will be open during this coronavirus season to provide essential bread
-      for families.  We take good care to sanitize and wash our counters daily
-      and also practice mandatory social distancing.
     heading: About Us
     image: /img/about.jpg
   - alt: Our Cakes
