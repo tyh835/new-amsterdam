@@ -67,6 +67,16 @@ categories:
         label: F26
       - image: /img/flower29.jpg
         label: F27
+      - image: /img/flo1.jpg
+        label: F28
+      - image: /img/flo2.jpg
+        label: F29
+      - image: /img/flo3.jpg
+        label: F30
+      - image: /img/flo4.jpg
+        label: F31
+      - image: /img/flo5.jpg
+        label: F32
     name: Flower
   - about:
       alt: Birthday Cakes
@@ -287,6 +297,16 @@ categories:
         label: A22
       - image: /img/love22.jpg
         label: A23
+      - image: /img/love23.jpg
+        label: A24
+      - image: /img/love24.jpg
+        label: A25
+      - image: /img/love25.jpg
+        label: A26
+      - image: /img/love26.jpg
+        label: A27
+      - image: /img/love27.jpg
+        label: A28
     name: Anniversary
   - about:
       alt: Wedding Cakes
@@ -361,6 +381,10 @@ categories:
         label: W31
       - image: /img/wedding34.jpg
         label: W32
+      - image: /img/wed1.jpg
+        label: W33
+      - image: /img/wed2.jpg
+        label: W34
     name: Wedding
   - about:
       alt: Men Cakes
@@ -485,6 +509,20 @@ categories:
         label: B32
       - image: /img/baby36.jpg
         label: B33
+      - image: /img/baby37.jpg
+        label: B34
+      - image: /img/baby38.jpg
+        label: B35
+      - image: /img/baby39.jpg
+        label: B36
+      - image: /img/baby40.jpg
+        label: B37
+      - image: /img/baby41.jpg
+        label: B38
+      - image: /img/baby42.jpg
+        label: B39
+      - image: /img/baby43.jpg
+        label: B40
     name: Baby Shower
   - about:
       alt: Sport Cakes
@@ -507,5 +545,7 @@ categories:
         label: S5
       - image: /img/sport7.jpg
         label: S6
+      - image: /img/sport8.jpg
+        label: S7
     name: Sport
 ---
