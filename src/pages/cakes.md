@@ -276,6 +276,7 @@ categories:
       - image: /img/new19.jpg
         label: T94
       - image: /img/new20.jpg
+        label: T95
     name: Birthday
   - about:
       alt: Anniversary Cakes
