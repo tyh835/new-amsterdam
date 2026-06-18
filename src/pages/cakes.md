@@ -431,6 +431,8 @@ categories:
       heading: Men Cakes
       image: /img/about_men.jpg
     cards:
+      - image: /img/mm1.jpg
+        label: M0
       - image: /img/men1.jpg
         label: M1
       - image: /img/men2.jpg
